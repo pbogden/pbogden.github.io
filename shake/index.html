@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+ <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+ <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+ <link rel="apple-touch-icon" sizes="114x114" href="shaking-retina.png">
+ <meta name="apple-touch-fullscreen" content="yes" />
+ <meta name="apple-mobile-web-app-capable" content="yes" />
+ <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+<style>
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.line {
+  fill: none;
+  stroke: blue;
+  stroke-width: 1.5px;
+}
+
+.stations, .stations svg {
+  position: absolute;
+}
+
+.stations svg {
+  width: 60px;
+  height: 20px;
+  padding-right: 100px;
+  font: 10px sans-serif;
+}
+
+.stations circle, .dot {
+  fill: brown;
+  stroke: black;
+  stroke-width: 1.5px;
+}
+
+.brush .extent {
+  stroke: #fff;
+  fill-opacity: .125;
+}
+
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="initialize.min.js"></script>
+</body>
