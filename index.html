@@ -33,42 +33,49 @@ title: Document Center
         
 <h3>Open Data, Open Standards & Open Source</h3>
 
-<p>Independently, they're changing the world. Together, they're even more amazing.  For example...</p>
+<p>The "open triad" can turn a browser into a powerful tool for analytics and visualization.
+You may be familiar with modern, data-driven graphics.
+<a href='http://www.nytimes.com/interactive/2013/05/25/sunday-review/corporate-taxes.html?_r=0'>
+For example</a>, the New York Times has them all the time, and 
+they're an amazing part of the story.  But the 
+<a href='http://www.economist.com/node/15579717'>data deluge</a> and various
+open data initiatives provide another part.
+</p>
 
-<h3>Example #1: USGS earthquake data</h3>
+<h4>An example -- earthquake data from USGS</h4>
 
-<h5>The triumvirate:</h5>
-<ol>
-<li>Open Data: <a href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">USGS earthquake data in real time</a></li>
-<li>Open Standards: <a href="http://www.json.org">JSON</a> & <a href="http://www.geojson.org">GeoJSON</a></li>
-<li>Open Source: <a href="http://www.d3js.org">D3</a></li>
-</ol>
+<p>
+The two plots below show earthquakes from the 7 days. The Google Map shows their 
+locations for the entire week, and the scatter plot underneath shows how their magnitudes evolved over time.
+<a href="http://www.usgs.gov">USGS</a> has been providing similar data for years, and 
+these kinds of plots have around for a while.  What's relatively new is that your browser automatically 
+loaded the data from USGS and then combined it with the Map it loaded from Google. 
+Thanks to open triad, this dynamic transaction happened with no effort on your part. 
+</p>
 
-<h5>The demo:</h5>
 <iframe src="shake/" width="640" height="500" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 <p>
-The map shows earthquake locations for the last week; the lower plot shows 
-earthquake magnitudes during that time period.
-That's cool, but it's not amazing -- <a href="http://www.usgs.gov">USGS</a> has been providing
-this kind of real time data stream for years.
+What you may not yet realize is that your browser also loaded software that you can use to start analyzing 
+the data in your browser.  Try it.  First, click and drag your mouse on 
+the <strong>lower</strong> plot to create a filter for the data displayed on the 
+map (use your finger if you're viewing this page on a tablet or smart phone). 
+After you create the filter, you can then drag it around on the lower plot to change the data 
+displayed on the map.  Once you get the hang of it, you can quickly drill down into 
+the data to geolocate the largest earthquakes, or smallest, or most recent, etc.
 </p>
 
 <p>
-What's amazing is that you can use your browser to analyze the data. Try it. 
-First, run your mouse along the <strong>lower</strong> plot to filter the data displayed on the map. 
-After you create a filter pane, you can also move it around with your mouse.
-Once you get the hang of it, you can quickly drill down into the data to geolocate the 
-largest earthquakes, or smallest, or most recent, etc.
+This only begins to demonstrate the power of modern, open standards (e.g., HTML5, SVG, JavaScript, JSON) 
+and their open source software implementations.  
 </p>
-
-<p>
-This example only begins to demonstrate power of <a href="http://www.d3js.org">D3</a>.
-And the demo became remarkably easy to create when USGS upgraded their
-<a href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">real-time data feeds</a>
-to conform to the <a href="http://www.geojson.org">GeoJSON</a> and
-<a href="http://www.json.org">JSON</a> open standards for data exchange.
-</p>
+<h4> Too much data for a browser? Not a problem...</h4>
+Okay. Maybe it's time to start talking about the cloud.
+<a href="http://potomacboatclub.org">Potomac Boat Club</a> is solving their big-data problem by putting
+their data in the cloud.  A prototype of their <a href='http://pbc.pbogden.com'>custom boat-scheduling app</a> 
+uses cloud-based servers for the data, and open source software for a variety of browser-based visualization
+and analytics tools, including real-time safety monitoring (i.e., who's on the water and how long have they been out?), 
+<a href='http://bl.ocks.org/pbogden/raw/6000283/'>racing ladders</a>, etc.
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
