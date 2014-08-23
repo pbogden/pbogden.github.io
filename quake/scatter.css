@@ -1,0 +1,32 @@
+
+rect {
+  fill: none;
+  stroke: black;
+  stroke-width: 1px;  /* half is inside the margin, half is outside */
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis, .y.axis, .x.label, .y.label {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.brush .extent {     /* CSS for brush */
+  fill: "gray";
+  stroke: #fff;
+  fill-opacity: .125;
+}
+
+.handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: .5;
+  stroke-width: 1.25px;
+  pointer-events: none;
+}
+
