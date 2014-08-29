@@ -1,0 +1,26 @@
+
+body {
+  font: 10px sans-serif;
+}
+
+.bar rect {
+  fill: steelblue;
+  shape-rendering: crispEdges;
+}
+
+.bar text {
+  fill: #fff;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1px;
+}
+
+form {
+  position: relative;
+  left: 350px;
+  top: 20px;
+  font: 20px sans-serif;
+}
