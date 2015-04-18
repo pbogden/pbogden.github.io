@@ -1,8 +1,8 @@
-DIR = ~/Sites/projects/frac/drafts/11
+DIR = ~/Sites/projects/frac/drafts/12
 
 all:
 	cp $(DIR)/index.html .
 	cp $(DIR)/my.min.js .
 	cp $(DIR)/ok.json .
 	cp $(DIR)/InjectionVolume.tsv .
-	cp $(DIR)/quakes.json .
+	cp $(DIR)/fracfocus.json .
