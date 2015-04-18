@@ -1,4 +1,4 @@
-DIR = ~/Sites/projects/frac/drafts/10
+DIR = ~/Sites/projects/frac/drafts/11
 
 all:
 	cp $(DIR)/index.html .
