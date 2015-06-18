@@ -20,6 +20,17 @@ path.state {
   stroke: #000;
 }
 
+#well-info {
+  border: 2px solid navy;
+  background-color: lightgray;
+  position: absolute;
+  left: 20px;
+  top: 300px;
+  overflow: auto;
+  height: 300px;
+  width: 300px;
+}
+
 </style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
@@ -27,6 +38,7 @@ path.state {
 <script src="http://d3js.org/topojson.v1.min.js"></script>
 <script src="colorado.js"></script>
 <body>
+<div id="well-info"></div>
 <script>
 
 var width = 200, height = 500;
