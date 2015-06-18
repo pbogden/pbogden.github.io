@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>colorado6</title>
+
+<style>
+
+svg {
+  font: 16px sans-serif;
+}
+
+path.counties, path.county-border {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+
+path.state {
+  fill: none;
+  stroke: #000;
+}
+
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<body>
+<script>
+
+var width = 960, height = 500;
+
+var formations = ["Dawson", "Upper Dawson", "Lower Dawson", "Denver",
+    "Arapahoe", "Upper Arapahoe", "Lower Arapahoe", "Laramie Fox Hills"];
+
+var projection = d3.geo.albers()
+    .scale(1)
+    .translate([0, 0]);
+
+var path = d3.geo.path()
+    .pointRadius(2)
+    .projection(projection);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var labels = d3.select("svg").selectAll(".formation")
+    .data(formations)
+  .enter().append("g")
+    .attr("class", "formation")
+    .attr("transform", function(d, i) { return "translate( 10," + i*10 + ")"; });
+
+labels.append("rect")
+    .attr("width", "150px")
+    .attr("height", "1.5em")
+    .attr("y", function(d, i) { return i * 1.1 + "em" })
+    .style("fill-opacity", 0.1);
+
+labels.append("text")
+    .attr("x", "1em")
+    .attr("y", function(d, i) { return (i + 1) * 1.1 + "em" })
+    .text(function(d) { return d; });
+
+queue()
+    .defer(d3.json, "co.json")
+    .defer(d3.json, "file.json")
+    .await(ready);
+
+function ready(error, co, data) {
+
+  var objects = co.objects.co;
+  var all = topojson.merge(co, objects.geometries);
+
+  var b = path.bounds(all),
+      s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
+      t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
+
+  projection
+      .scale(s)
+      .translate(t);
+
+  // Draw state boundary
+  svg.append("path")
+      .datum(all)
+      .attr("class", "state")
+      .attr("d", path);
+
+  // Draw county borders
+  svg.append("path")
+      .datum(topojson.mesh(co, objects, function(a, b) { return a !== b; }))
+      .attr("class", "county-border")
+      .attr("d", path);
+
+  labels.on("mouseover", plotFormation);
+
+  function plotFormation(d) {
+
+    // Filter by formation
+    var formation = d.replace(/\s/g,"_").toLowerCase();
+    var values = data.filter(function(d) { return d.hasOwnProperty(formation + "_base"); });
+    console.log(formation + " values.length:", values.length, ', values[0]', values[0]);
+
+    d3.selectAll(".formation rect").style("fill-opacity", 0.1);
+    d3.select(this).select("rect").style("fill-opacity", 0.3);
+
+    svg.selectAll(".circle").remove();
+
+    svg.append("text")
+        .attr("class", "circle")
+        .attr("x", "1em")
+        .attr("y", height / 2)
+        .style("font-size", "20px")
+        .text(d3.format(',.0f')(values.length) + " wells");
+
+    svg.selectAll("path.circle")
+        .data(values.map(function(d) { return d.location; }))
+      .enter()
+        .append("path")
+        .attr("class", "circle")
+        .style("fill", "steelblue")
+        .style("stroke", "black")
+        .style("stroke-width", 0.5)
+        .attr("d", path)
+  }
+}
+
+</script>

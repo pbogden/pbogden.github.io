@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>colorado7</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script src="histogram.js"></script>
+<style>
+
+div, svg {
+  display: inline-block;
+}
+
+text {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+text.frequency {
+  fill: #555;
+  stroke: none;
+}
+
+.bar rect {
+  fill: steelblue;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+    stroke: #fff;
+    fill: #333;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+}
+</style>
+<body>
+<script>
+
+var margin = {top: 50, right: 30, bottom: 30, left: 100},
+    width = 260 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var formations = ["Dawson", "Upper Dawson", "Lower Dawson", "Denver",
+    "Arapahoe", "Upper Arapahoe", "Lower Arapahoe", "Laramie Fox Hills"];
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var labels = d3.select("svg").selectAll(".formation")
+    .data(formations)
+  .enter().append("g")
+    .attr("class", "formation")
+    .attr("transform", function(d, i) { return "translate( 10," + i*10 + ")"; });
+
+labels.append("text")
+    .attr("x", "1em")
+    .attr("y", function(d, i) { return (i + 1) * 1.1 + "em" })
+    .text(function(d) { return d; });
+
+labels.append("rect")
+    .attr("width", "150px")
+    .attr("height", "1.5em")
+    .attr("y", function(d, i) { return i * 1.1 + "em" })
+    .style("fill-opacity", 0.1);
+
+d3.json("file.json", function(err, json) {
+
+  var histogram = d3.histogram();
+
+  labels.on('mouseover', moused)
+
+  moused.apply(labels.node(), [labels[0][0].__data__]);
+
+  function moused(d) {
+    var formation = d.replace(/\s/g,'_').toLowerCase() + "_base";
+    var data = json.filter(function(d) { return d.hasOwnProperty(formation); });
+    var values = data.map(function(d) { return + d[formation]; });
+    labels.selectAll("rect").style("fill-opacity", .1)
+    d3.select(this).select("rect").style("fill-opacity", .3)
+
+    histogram.clear();
+    histogram.data(values)();
+  }
+});
+  
+</script>
