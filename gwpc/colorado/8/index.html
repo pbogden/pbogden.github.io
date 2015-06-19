@@ -124,18 +124,35 @@ function ready(error, data) {
   function plotFormation() {
 
     // Filter by formation
-    var formation = formationName.replace(/\s/g,"_").toLowerCase();
-    var suffix = "_" + formationType.toLowerCase();
-    var values = data.filter(function(d) { return d.hasOwnProperty(formation + suffix); });
+    var formation = formationName.replace(/\s/g,"_").toLowerCase() + "_" + 
+                    formationType.toLowerCase();
+    var values = data.filter(function(d) { return d.hasOwnProperty(formation); });
 
     // Filter by existence of "location" property
     var n = values.length;
     var values = values.filter(function(d) { return (typeof d.location !== "undefined"); });
-    if (n != values.length) console.log('WARNING... # of data missing locations removed:', n - values.length);
+    if (n != values.length) console.log('WARNING... # of data missing locations (removed):', n - values.length);
+
+// AVOIDING BAD POLYGONS...NEED TO FILTER DUPLICATE VERTICES BEFORE CALLING VORONOI
+//
+//  Each well location has a unique 12-character "locnum" property. In some cases
+//  a single will will have multiple data values, in which case the "locnum" has an
+//  appended space followed by 'DWR#", where # is an integer. I can filter duplicate
+/// data locations by allowing either:
+//
+//  Unique data -- no trailing "DWR#" or
+//  Duplicate data -- keep only "DRW1" if it exists.
+//
+    console.log('# of data for ' + formation + ':', values.length);
+    var values = values.filter(function(d) {
+        var s = d.locnum.split(" ");
+        return (s.length == 1) || (s[1] == "DWR1") || (s[1] == "");
+    });
+    console.log('# of unique locations for ' + formation + ':', values.length);
 
     // Add "value" property that will be plotted
     values = values.map(function(d) { 
-        d.value = d[formation + "_base"]; 
+        d.value = d[formation]; 
         return d; 
     });
 
