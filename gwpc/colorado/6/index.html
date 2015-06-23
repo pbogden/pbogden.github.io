@@ -121,15 +121,13 @@ labels2.append("rect")
     .on('mouseover', chooseType);
 
 function chooseFormation(d) { 
-  formation = d; 
+  wells.plotFormation(formation = d, type); 
   labels.selectAll("rect").style("fill-opacity", 0.1);
   d3.select(this).style("fill-opacity", .4);
-  wells.plotFormation(formation, type); 
 }
 
 function chooseType(d) { 
-  type = d; 
-  wells.plotFormation(formation, type); 
+  wells.plotFormation(formation, type = d); 
   labels2.selectAll("rect").style("fill-opacity", 0.1);
   d3.select(this).style("fill-opacity", .4);
 }
