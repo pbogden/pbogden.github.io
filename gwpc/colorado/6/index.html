@@ -19,6 +19,32 @@ path.state {
   stroke: #000;
 }
 
+path.play {
+  stroke: black;
+  stroke-width: 1px;
+  fill: Orange;
+  fill-opacity: 0.3;
+}
+
+path.basin {
+  fill: AntiqueWhite;
+  fill-opacity: 0.8;
+}
+
+path.prospective {
+  fill: Pink;
+  fill-opacity: 1;
+}
+
+.tooltip {
+    margin: 20px 20px 20px 20px;
+    background-color: #D3D3D3;  /* light gray */
+    border-style: solid;
+    padding: 5px 5px 5px 5px;
+    font-size: 1.25em;
+    position: absolute;
+}
+
 </style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
@@ -40,9 +66,20 @@ var path = d3.geo.path()
     .pointRadius(2)
     .projection(projection);
 
+var tooltip = d3.select("body")
+    .append("div")
+    .attr("class", "tooltip")
+    .style("visibility", "hidden");
+
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
+
+queue()
+    .defer(d3.json, "co.json")
+    .defer(d3.json, "file.json")
+    .defer(d3.json, "shalegasplay.json")
+    .await(ready);
 
 var labels = d3.select("svg").selectAll(".formation")
     .data(formations)
@@ -61,15 +98,11 @@ labels.append("text")
     .attr("y", function(d, i) { return (i + 1) * 1.1 + "em" })
     .text(function(d) { return d; });
 
-queue()
-    .defer(d3.json, "co.json")
-    .defer(d3.json, "file.json")
-    .await(ready);
-
-function ready(error, co, data) {
+function ready(error, co, data, play) {
 
   var objects = co.objects.co;
   var all = topojson.merge(co, objects.geometries);
+  var features = Object.keys(play.objects).map(function(d) { return topojson.feature(play, play.objects[d]); });
 
   var b = path.bounds(all),
       s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
@@ -79,19 +112,52 @@ function ready(error, co, data) {
       .scale(s)
       .translate(t);
 
+  var g = svg.append("g");
+
   // Draw state boundary
-  svg.append("path")
+  g.append("path")
       .datum(all)
       .attr("class", "state")
       .attr("d", path);
 
+    // clipping region
+  g.append("defs").append("clipPath")
+      .attr("id", "state-clip")
+    .append("path")
+      .datum(all)
+      .attr("d", path);
+
   // Draw county borders
-  svg.append("path")
+  g.append("path")
       .datum(topojson.mesh(co, objects, function(a, b) { return a !== b; }))
       .attr("class", "county-border")
       .attr("d", path);
 
+  g.selectAll(".basin")
+      .data(features[0].features)
+    .enter()
+      .append("path")
+      .attr("class","basin")
+      .attr("clip-path", "url(#state-clip)")
+      .attr("d", path)
+      .on("mouseover", basinTooltip)
+      .on("mousemove", moveTooltip)
+      .on("mouseout", hideTooltip);
+
+  g.selectAll(".play")
+      .data(features[1].features)
+    .enter()
+      .append("path")
+      .attr("class","play")
+      .classed("prospective", function(d) { return (d.properties.Current === "N") })
+      .attr("clip-path", "url(#state-clip)")
+      .attr("d", path)
+      .on("mouseover", playTooltip)
+      .on("mousemove", moveTooltip)
+      .on("mouseout", hideTooltip);
+
   labels.on("mouseover", plotFormation);
+  plotFormation.apply(labels.node(), [formations[0]]);
 
   function plotFormation(d) {
 
@@ -122,6 +188,32 @@ function ready(error, co, data) {
         .style("stroke-width", 0.5)
         .attr("d", path)
   }
+}
+
+function basinTooltip(d) {
+    tooltip[0][0].innerHTML = d.properties.NAME + " Basin";
+    tooltip.style("visibility", "visible");
+    tooltip.style("top", (d3.event.pageY-10)+"px")
+           .style("left",(d3.event.pageX+20)+"px");
+}
+
+function playTooltip(d) {
+    var s = d.properties.Shale_Play + " Play";
+    if (d.properties.Current === "Y") s += " (current)";
+    if (d.properties.Current === "N") s += " (prospective)";
+    tooltip[0][0].innerHTML = s;
+    tooltip.style("visibility", "visible");
+    tooltip.style("top", (d3.event.pageY-10)+"px")
+           .style("left",(d3.event.pageX+20)+"px");
+}
+
+function moveTooltip(d) {
+    tooltip.style("top", (d3.event.pageY-10)+"px")
+           .style("left",(d3.event.pageX+20)+"px");
+}
+
+function hideTooltip(d) {
+    tooltip.style("visibility", "hidden");
 }
 
 </script>
