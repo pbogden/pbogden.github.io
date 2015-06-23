@@ -48,15 +48,22 @@ path.prospective {
 </style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
-<script src="http://d3js.org/queue.v1.min.js"></script>
-<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+<script src="wells.js"></script>
+
 <body>
 <script>
 
-var width = 960, height = 500;
+var width = 200, height = 500;
 
 var formations = ["Dawson", "Upper Dawson", "Lower Dawson", "Denver",
     "Arapahoe", "Upper Arapahoe", "Lower Arapahoe", "Laramie Fox Hills"];
+
+var types = ["Base", "Top", "Thickness"];
+
+var formation = formations[0],
+    type = types[0];
 
 var projection = d3.geo.albers()
     .scale(1)
@@ -75,11 +82,7 @@ var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
 
-queue()
-    .defer(d3.json, "co.json")
-    .defer(d3.json, "file.json")
-    .defer(d3.json, "shalegasplay.json")
-    .await(ready);
+var wells = d3.wells()(init);
 
 var labels = d3.select("svg").selectAll(".formation")
     .data(formations)
@@ -87,133 +90,54 @@ var labels = d3.select("svg").selectAll(".formation")
     .attr("class", "formation")
     .attr("transform", function(d, i) { return "translate( 10," + i*10 + ")"; });
 
-labels.append("rect")
-    .attr("width", "150px")
-    .attr("height", "1.5em")
-    .attr("y", function(d, i) { return i * 1.1 + "em" })
-    .style("fill-opacity", 0.1);
-
 labels.append("text")
     .attr("x", "1em")
     .attr("y", function(d, i) { return (i + 1) * 1.1 + "em" })
     .text(function(d) { return d; });
 
-function ready(error, co, data, play) {
+labels.append("rect")
+    .attr("width", "150px")
+    .attr("height", "1.5em")
+    .attr("y", function(d, i) { return i * 1.1 + "em" })
+    .style("fill-opacity", 0.1)
+    .on('mouseover', chooseFormation);
 
-  var objects = co.objects.co;
-  var all = topojson.merge(co, objects.geometries);
-  var features = Object.keys(play.objects).map(function(d) { return topojson.feature(play, play.objects[d]); });
+var labels2 = d3.select("svg").selectAll(".type")
+    .data(types)
+  .enter().append("g")
+    .attr("class", "type")
+    .attr("transform", function(d, i) { return "translate( 10," + ( 250 + i*10 ) + ")"; });
 
-  var b = path.bounds(all),
-      s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
-      t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
+labels2.append("text")
+    .attr("x", "1em")
+    .attr("y", function(d, i) { return (i + 1) * 1.1 + "em" })
+    .text(function(d) { return d; });
 
-  projection
-      .scale(s)
-      .translate(t);
+labels2.append("rect")
+    .attr("width", "150px")
+    .attr("height", "1.5em")
+    .attr("y", function(d, i) { return i * 1.1 + "em" })
+    .style("fill-opacity", 0.1)
+    .on('mouseover', chooseType);
 
-  var g = svg.append("g");
-
-  // Draw state boundary
-  g.append("path")
-      .datum(all)
-      .attr("class", "state")
-      .attr("d", path);
-
-    // clipping region
-  g.append("defs").append("clipPath")
-      .attr("id", "state-clip")
-    .append("path")
-      .datum(all)
-      .attr("d", path);
-
-  // Draw county borders
-  g.append("path")
-      .datum(topojson.mesh(co, objects, function(a, b) { return a !== b; }))
-      .attr("class", "county-border")
-      .attr("d", path);
-
-  g.selectAll(".basin")
-      .data(features[0].features)
-    .enter()
-      .append("path")
-      .attr("class","basin")
-      .attr("clip-path", "url(#state-clip)")
-      .attr("d", path)
-      .on("mouseover", basinTooltip)
-      .on("mousemove", moveTooltip)
-      .on("mouseout", hideTooltip);
-
-  g.selectAll(".play")
-      .data(features[1].features)
-    .enter()
-      .append("path")
-      .attr("class","play")
-      .classed("prospective", function(d) { return (d.properties.Current === "N") })
-      .attr("clip-path", "url(#state-clip)")
-      .attr("d", path)
-      .on("mouseover", playTooltip)
-      .on("mousemove", moveTooltip)
-      .on("mouseout", hideTooltip);
-
-  labels.on("mouseover", plotFormation);
-  plotFormation.apply(labels.node(), [formations[0]]);
-
-  function plotFormation(d) {
-
-    // Filter by formation
-    var formation = d.replace(/\s/g,"_").toLowerCase();
-    var values = data.filter(function(d) { return d.hasOwnProperty(formation + "_base"); });
-    console.log(formation + " values.length:", values.length, ', values[0]', values[0]);
-
-    d3.selectAll(".formation rect").style("fill-opacity", 0.1);
-    d3.select(this).select("rect").style("fill-opacity", 0.3);
-
-    svg.selectAll(".circle").remove();
-
-    svg.append("text")
-        .attr("class", "circle")
-        .attr("x", "1em")
-        .attr("y", height / 2)
-        .style("font-size", "20px")
-        .text(d3.format(',.0f')(values.length) + " wells");
-
-    svg.selectAll("path.circle")
-        .data(values.map(function(d) { return d.location; }))
-      .enter()
-        .append("path")
-        .attr("class", "circle")
-        .style("fill", "steelblue")
-        .style("stroke", "black")
-        .style("stroke-width", 0.5)
-        .attr("d", path)
-  }
+function chooseFormation(d) { 
+  formation = d; 
+  labels.selectAll("rect").style("fill-opacity", 0.1);
+  d3.select(this).style("fill-opacity", .4);
+  wells.plotFormation(formation, type); 
 }
 
-function basinTooltip(d) {
-    tooltip[0][0].innerHTML = d.properties.NAME + " Basin";
-    tooltip.style("visibility", "visible");
-    tooltip.style("top", (d3.event.pageY-10)+"px")
-           .style("left",(d3.event.pageX+20)+"px");
+function chooseType(d) { 
+  type = d; 
+  wells.plotFormation(formation, type); 
+  labels2.selectAll("rect").style("fill-opacity", 0.1);
+  d3.select(this).style("fill-opacity", .4);
 }
 
-function playTooltip(d) {
-    var s = d.properties.Shale_Play + " Play";
-    if (d.properties.Current === "Y") s += " (current)";
-    if (d.properties.Current === "N") s += " (prospective)";
-    tooltip[0][0].innerHTML = s;
-    tooltip.style("visibility", "visible");
-    tooltip.style("top", (d3.event.pageY-10)+"px")
-           .style("left",(d3.event.pageX+20)+"px");
-}
-
-function moveTooltip(d) {
-    tooltip.style("top", (d3.event.pageY-10)+"px")
-           .style("left",(d3.event.pageX+20)+"px");
-}
-
-function hideTooltip(d) {
-    tooltip.style("visibility", "hidden");
+function init() {
+  labels.selectAll("rect").style("fill-opacity", function(d) { return d === formation ? .4 : .1; });
+  labels2.selectAll("rect").style("fill-opacity", function(d) { return d === type ? .4 : .1; });
+  wells.plotFormation(formation, type);
 }
 
 </script>

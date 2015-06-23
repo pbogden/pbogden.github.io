@@ -5,6 +5,8 @@ colorado6:
 	cp ../../../colorado6/co.json ./6
 	cp ../../../colorado6/file.json ./6
 	cp ../../../colorado6/shalegasplay.json ./6
+	node app ../../../colorado6/wells.js
+	mv my.min.js ./6/wells.js
 
 colorado7:
 	cp ../../../colorado7/index.html ./7
