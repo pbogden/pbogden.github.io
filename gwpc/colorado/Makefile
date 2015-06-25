@@ -1,4 +1,4 @@
-all: colorado6 colorado7 colorado8 colorado9
+all: colorado6 colorado7 colorado8 colorado9 colorado12
 
 colorado6:
 	cp ../../../colorado6/index.html ./6
@@ -27,3 +27,11 @@ colorado9:
 	cp ../../../colorado9/file.json ./9
 	node app ../../../colorado9/colorado.js
 	mv my.min.js ./9/colorado.js
+
+colorado12:
+	cp ../../../colorado12/index.html ./12
+	cp ../../../colorado12/co.json ./12
+	cp ../../../colorado12/data.json ./12
+	cp ../../../colorado12/shalegasplay.json ./12
+	node app ../../../colorado12/wells.js
+	mv my.min.js ./12/wells.js

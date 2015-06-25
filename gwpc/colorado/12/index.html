@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>colorado12</title>
+
+<style>
+
+svg {
+  font: 16px sans-serif;
+}
+
+path.counties, path.county-border {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+
+path.state {
+  fill: none;
+  stroke: #000;
+}
+
+path.play {
+  stroke: black;
+  stroke-width: 1px;
+  fill: Orange;
+  fill-opacity: 0.3;
+}
+
+path.basin {
+  fill: AntiqueWhite;
+  fill-opacity: 0.8;
+}
+
+path.prospective {
+  fill: Pink;
+  fill-opacity: 1;
+}
+
+.tooltip {
+    margin: 20px 20px 20px 20px;
+    background-color: #D3D3D3;  /* light gray */
+    border-style: solid;
+    padding: 5px 5px 5px 5px;
+    font-size: 1.25em;
+    position: absolute;
+}
+
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+<script src="wells.js"></script>
+
+<body>
+<script>
+
+var width = 200, height = 500;
+
+var formations = ["Dawson", "Upper Dawson", "Lower Dawson", "Denver",
+    "Arapahoe", "Upper Arapahoe", "Lower Arapahoe", "Laramie Fox Hills"];
+
+var types = ["Base", "Top", "Thickness"];
+
+var formation = formations[0],
+    type = types[0];
+
+var tooltip = d3.select("body")
+    .append("div")
+    .attr("class", "tooltip")
+    .style("visibility", "hidden");
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var wells = d3.wells()(init);
+
+/*
+
+var labels = d3.select("svg").selectAll(".formation")
+    .data(formations)
+  .enter().append("g")
+    .attr("class", "formation")
+    .attr("transform", function(d, i) { return "translate( 10," + i*10 + ")"; });
+
+labels.append("text")
+    .attr("x", "1em")
+    .attr("y", function(d, i) { return (i + 1) * 1.1 + "em" })
+    .text(function(d) { return d; });
+
+labels.append("rect")
+    .attr("width", "150px")
+    .attr("height", "1.5em")
+    .attr("y", function(d, i) { return i * 1.1 + "em" })
+    .style("fill-opacity", 0.1)
+    .on('mouseover', chooseFormation);
+
+var labels2 = d3.select("svg").selectAll(".type")
+    .data(types)
+  .enter().append("g")
+    .attr("class", "type")
+    .attr("transform", function(d, i) { return "translate( 10," + ( 250 + i*10 ) + ")"; });
+
+labels2.append("text")
+    .attr("x", "1em")
+    .attr("y", function(d, i) { return (i + 1) * 1.1 + "em" })
+    .text(function(d) { return d; });
+
+labels2.append("rect")
+    .attr("width", "150px")
+    .attr("height", "1.5em")
+    .attr("y", function(d, i) { return i * 1.1 + "em" })
+    .style("fill-opacity", 0.1)
+    .on('mouseover', chooseType);
+
+function chooseFormation(d) { 
+  wells.plotFormation(formation = d, type); 
+  labels.selectAll("rect").style("fill-opacity", 0.1);
+  d3.select(this).style("fill-opacity", .4);
+}
+
+function chooseType(d) { 
+  wells.plotFormation(formation, type = d); 
+  labels2.selectAll("rect").style("fill-opacity", 0.1);
+  d3.select(this).style("fill-opacity", .4);
+}
+*/
+
+function init() {
+//  labels.selectAll("rect").style("fill-opacity", function(d) { return d === formation ? .4 : .1; });
+//  labels2.selectAll("rect").style("fill-opacity", function(d) { return d === type ? .4 : .1; });
+  wells.plotFormation(formation, type);
+}
+
+</script>
