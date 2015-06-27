@@ -1,4 +1,4 @@
-svg {
+svg, div {
   font: 16px sans-serif;
   display: inline-block;
 }
@@ -19,6 +19,17 @@ rect {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
+}
+
+path.well {
+  fill: steelblue;
+  stroke: black;
+  stroke-width: 0.5;
+}
+
+path.well.active {
+  fill: yellow;
+  stroke-width: 2;
 }
 
 path.quake, circle.quake {
@@ -65,7 +76,7 @@ path.prospective {
 }
 
 .welltip {
-    left: 650px;
+    left: 620px;
     top: 200px;
 }
 
