@@ -66,7 +66,7 @@ path.prospective {
   fill-opacity: 1;
 }
 
-.tooltip, .welltip {
+.tooltip, .welltip, .wellinfo {
     margin: 20px 20px 20px 20px;
     background-color: #D3D3D3;  /* light gray */
     border-style: solid;
@@ -78,6 +78,11 @@ path.prospective {
 .welltip {
     left: 620px;
     top: 200px;
+}
+
+.wellinfo {
+    left: 20px;
+    top: 520px;
 }
 
 .brush .extent {
