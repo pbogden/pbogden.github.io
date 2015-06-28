@@ -32,9 +32,9 @@ path.well.active {
   stroke-width: 2;
 }
 
-path.quake, circle.quake {
+path.quake, circle.quake-series {
   fill: crimson;
-  fill-opacity: 0.5;
+  fill-opacity: 0.4;
   pointer-events: none;
 }
 
