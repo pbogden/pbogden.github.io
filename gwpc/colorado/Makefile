@@ -1,4 +1,4 @@
-all: colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15
+all: colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16
 
 colorado6:
 	cp ../../../colorado6/index.html ./6
@@ -64,3 +64,13 @@ colorado15:
 	cp ../../../colorado15/styles.css ./15
 	node app ../../../colorado15/wells.js
 	mv my.min.js ./15/wells.js
+
+colorado16:
+	cp ../../../colorado16/index.html ./16
+	cp ../../../colorado16/co.json ./16
+	cp ../../../colorado16/data.json ./16
+	cp ../../../colorado16/quakes.json ./16
+	cp ../../../colorado16/shalegasplay.json ./16
+	cp ../../../colorado16/styles.css ./16
+	node app ../../../colorado16/wells.js
+	mv my.min.js ./16/wells.js
