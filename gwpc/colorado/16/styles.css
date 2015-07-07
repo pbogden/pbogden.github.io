@@ -9,6 +9,12 @@ svg, div {
   stroke-width: 1px;
 }
 
+.pressure {
+  fill: none;
+  stroke: red;
+  stroke-width: 2px;
+}
+
 rect {
   fill: none;
   stroke: black;
