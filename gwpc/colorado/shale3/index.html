@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>shale3</title>
+<style>
+
+path.play {
+  stroke: black;
+  stroke-width: 1px;
+  fill: Orange;
+  fill-opacity: 0.3;
+}
+
+path.basin {
+  fill: AntiqueWhite;
+  fill-opacity: 0.8;
+}
+
+path.prospective {
+  fill: Pink;
+  fill-opacity: 1;
+}
+        
+path:hover {
+  stroke: Black;
+  fill: Gray;
+}
+
+.tooltip {
+    margin: 20px 20px 20px 20px;
+    background-color: #D3D3D3;  /* light gray */
+    border-style: solid;
+    padding: 5px 5px 5px 5px;
+    font-size: 1.25em;
+    position: absolute;
+    z-index: 100;
+}
+</style>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+<script src="mymap.js"></script>

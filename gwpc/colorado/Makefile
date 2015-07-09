@@ -1,4 +1,13 @@
-all: colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16
+all: shale3 colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16
+
+.PHONY: shale3
+
+shale3:
+	cp ../../../shale3/index.html ./shale3
+	cp ../../../shale3/shalegas.json ./shale3
+	cp ../../../shale3/us.json ./shale3
+	node app ../../../shale3/mymap.js ./shale3
+	mv my.min.js ./shale3/mymap.js
 
 colorado6:
 	cp ../../../colorado6/index.html ./6
