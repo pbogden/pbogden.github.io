@@ -83,3 +83,19 @@ colorado16:
 	cp ../../../colorado16/styles.css ./16
 	node app ../../../colorado16/wells.js
 	mv my.min.js ./16/wells.js
+
+colorado18:
+	cp ../../../colorado18/index.html ./18
+	cp ../../../colorado18/co.json ./18
+	node app ../../../colorado18/map.js
+	mv my.min.js ./18/map.js
+	node app ../../../colorado18/tile.js
+	mv my.min.js ./18/tile.js
+
+colorado19:
+	cp ../../../colorado19/index.html ./19
+	cp ../../../colorado19/co.json ./19
+	node app ../../../colorado19/map.js
+	mv my.min.js ./19/map.js
+	node app ../../../colorado19/tile.js
+	mv my.min.js ./19/tile.js

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>colorado19</title>
+<style>
+
+svg {
+  font: 10px sans-serif;
+}
+
+path.state {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2;
+}
+
+path.county {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1;
+  stroke-opacity: .5;
+  stroke-dasharray: 5,5;
+}
+
+g.vectors {
+  fill: none;
+  stroke: #000;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.major_road { stroke: #776; }
+.minor_road { stroke: #ccb; }
+.highway { stroke: #f39; stroke-width: 1.5px; }
+.rail { stroke: #7de; }
+
+</style>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+<script src="tile.js"></script>
+<script src="map.js"></script>
