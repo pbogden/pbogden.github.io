@@ -1,4 +1,4 @@
-all: shale3 colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16
+all: shale3 colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16 colorado17 colorado18 colorado19
 
 .PHONY: shale3
 
@@ -83,6 +83,15 @@ colorado16:
 	cp ../../../colorado16/styles.css ./16
 	node app ../../../colorado16/wells.js
 	mv my.min.js ./16/wells.js
+
+colorado17:
+	cp ../../../colorado17/index.html ./17
+	cp ../../../colorado17/co.json ./17
+	cp ../../../colorado17/adams_first.json ./17
+	cp ../../../colorado17/adams_twnshp.json ./17
+	cp ../../../colorado17/adams_ladesc.json ./17
+	node app ../../../colorado17/map.js
+	mv my.min.js ./17/map.js
 
 colorado18:
 	cp ../../../colorado18/index.html ./18

@@ -3,25 +3,63 @@
 <title>colorado19</title>
 <style>
 
-svg {
-  font: 10px sans-serif;
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  color: black;
 }
 
-path.state {
-  fill: none;
-  stroke: #000;
-  stroke-width: 2;
+#myVectors, #myMap, #myForm {
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
-path.county {
-  fill: #fff;
+#myForm {
+  top: 10px;
+  left: 750px;
+}
+
+#myMap {
+  pointer-events: all;
+  overflow: hidden; 
+}
+
+.layer {
+  position: absolute;
+}
+
+.tile {
+  position: absolute;
+  width: 256px;
+  height: 256px;
+}
+
+.info {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.state, .county {
   stroke: steelblue;
-  stroke-width: 1;
-  stroke-opacity: .5;
+  stroke-width: 5px;
+}
+
+.state {
+  pointer-events: none;
+}
+
+.county {
+  pointer-events: all;
+  fill: "#000";
+  fill-opacity: 0.;
+  stroke-width: 2px;
   stroke-dasharray: 5,5;
 }
 
-g.vectors {
+path {
   fill: none;
   stroke: #000;
   stroke-linejoin: round;
@@ -35,6 +73,17 @@ g.vectors {
 
 </style>
 <body>
+<div id='myMap'></div>
+<div id='myVectors'></div>
+<div id='myForm'>
+  <form>
+    <input type="radio" name="position" value="0" checked> mapbox<br>
+    <input type="radio" name="position" value="1" > satellite<br>
+    <input type="radio" name="position" value="2" > thunderforest<br>
+    <input type="radio" name="position" value="3" > stamen<br>
+    <input type="radio" name="position" value="4" > none<br>
+  </form>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>

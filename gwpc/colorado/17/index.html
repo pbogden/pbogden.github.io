@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>colorado17</title>
+<style>
+
+svg {
+  font: 10px sans-serif;
+}
+
+path.counties, path.state {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1;
+  stroke-opacity: 0.5;
+}
+
+path.state {
+  stroke-width: 2;
+}
+
+path.county {
+  stroke: none;
+  fill: #000;
+  fill-opacity: 0;
+}
+
+path.first, path.twnshp {
+  pointer-events: none;
+  fill: none;
+  stroke-width: 1;
+}
+
+path.first {
+  stroke: crimson;
+}
+
+path.twnshp {
+  stroke: steelblue;
+}
+
+</style>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+<script src="map.js"></script>
