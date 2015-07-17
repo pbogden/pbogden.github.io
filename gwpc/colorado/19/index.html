@@ -16,6 +16,10 @@ body {
   left: 0px;
 }
 
+#myCheckbox {
+  visibility: hidden;
+}
+
 #myForm {
   top: 10px;
   left: 750px;
@@ -76,12 +80,20 @@ path {
 <div id='myMap'></div>
 <div id='myVectors'></div>
 <div id='myForm'>
-  <form>
-    <input type="radio" name="position" value="0" checked> mapbox<br>
-    <input type="radio" name="position" value="1" > satellite<br>
-    <input type="radio" name="position" value="2" > thunderforest<br>
-    <input type="radio" name="position" value="3" > stamen<br>
-    <input type="radio" name="position" value="4" > none<br>
+  <form id='myRadios'>
+    mapbox<br>
+    &nbsp;&nbsp;<input type="radio" name="position" value="0" checked> streets<br>
+    &nbsp;&nbsp;<input type="radio" name="position" value="1" > satellite<br>
+    thunderforest<br>
+    &nbsp;&nbsp;<input type="radio" name="position" value="2" > topo<br>
+    stamen<br>
+    &nbsp;&nbsp;<input type="radio" name="position" value="3" > terrain<br>
+    &nbsp;&nbsp;<input type="radio" name="position" value="4" > watercolor<br>
+    <input type="radio" name="position" value="5" > none<br>
+  </form>
+  <br>
+  <form id='myCheckbox'>
+    <input type="checkbox"> roads (vectors)<br>
   </form>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
