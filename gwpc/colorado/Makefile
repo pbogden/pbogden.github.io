@@ -1,4 +1,4 @@
-all: shale3 colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16 colorado17 colorado18 colorado19
+all: shale3 colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16 colorado17 colorado18 colorado19 colorado20
 
 .PHONY: shale3
 
@@ -108,3 +108,11 @@ colorado19:
 	mv my.min.js ./19/map.js
 	node app ../../../colorado19/tile.js
 	mv my.min.js ./19/tile.js
+
+colorado20:
+	cp ../../../colorado20/index.html ./20
+	cp ../../../colorado20/co.json ./20
+	node app ../../../colorado20/map.js
+	mv my.min.js ./20/map.js
+	node app ../../../colorado20/tile.js
+	mv my.min.js ./20/tile.js

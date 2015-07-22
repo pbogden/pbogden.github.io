@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>colorado19</title>
+<title>colorado20</title>
 <style>
 
 body {
@@ -25,7 +25,7 @@ body {
 }
 
 #myCheckbox {
-  visibility: hidden;
+  visibility: visible;
 }
 
 #myForm {
@@ -46,8 +46,8 @@ body {
 }
 
 .state, .county {
-  stroke: steelblue;
-  stroke-width: 5px;
+  stroke: #555;
+  stroke-width: 2px;
 }
 
 .state {
@@ -56,9 +56,9 @@ body {
 
 .county {
   pointer-events: all;
-  fill: "#000";
-  fill-opacity: 0.;
-  stroke-width: 2px;
+  fill: #000;
+  fill-opacity: 0;
+  stroke-width: 1px;
   stroke-dasharray: 5,5;
 }
 
@@ -95,10 +95,10 @@ path {
   </form>
   <br>
   <form id='myCheckbox'>
-    <input type="checkbox"> roads (vectors)<br>
+    <input type="checkbox" checked> roads (vectors)<br>
   </form>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
 <script src="tile.js"></script>
