@@ -1,6 +1,6 @@
 all: shale3 earthquake5 colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16 colorado17 colorado18 colorado19 colorado20 colorado23 colorado24
 
-.PHONY: shale3
+.PHONY: shale3 earthquake5
 
 shale3:
 	cp ../../../shale3/index.html ./shale3
@@ -11,10 +11,12 @@ shale3:
 
 earthquake5:
 	cp ../../../earthquake5/index.html ./earthquake5
-	cp ../../../earthquake5/shalegas.json ./earthquake5
-	cp ../../../earthquake5/us.json ./earthquake5
+	cp ../../../earthquake5/shalegasplay.json ./earthquake5
+	cp ../../../earthquake5/co.json ./earthquake5
+	cp ../../../earthquake5/quakes.json ./earthquake5
+	cp ../../../earthquake5/styles.css ./earthquake5
 	node app ../../../earthquake5/wells.js ./earthquake5
-	mv my.min.js ./earthquake5/mymap.js
+	mv my.min.js ./earthquake5/wells.js
 
 colorado6:
 	cp ../../../colorado6/index.html ./6
