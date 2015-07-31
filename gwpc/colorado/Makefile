@@ -1,6 +1,16 @@
-all: shale3 earthquake5 colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16 colorado17 colorado18 colorado19 colorado20 colorado23 colorado24
+all: plss shale3 earthquake5 colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16 colorado17 colorado18 colorado19 colorado20 colorado23 colorado24
 
-.PHONY: shale3 earthquake5
+.PHONY: plss shale3 earthquake5
+
+plss:
+	cp ../../../plss/index.html ./plss
+	cp ../../../plss/co.json ./plss
+	cp ../../../plss/first.json ./plss
+	cp ../../../plss/twnshp.json ./plss
+	node app ../../../plss/map.js
+	mv my.min.js ./plss/map.js
+	node app ../../../plss/tile.js
+	mv my.min.js ./plss/tile.js
 
 shale3:
 	cp ../../../shale3/index.html ./shale3
