@@ -1,5 +1,5 @@
 
-all: locations earthquake6 shale3 oklahoma1 oklahoma2
+all: locations earthquake6 shale3 oklahoma0 oklahoma1 oklahoma2
 
 .PHONY: locations earthquake6 shale3
 
@@ -23,6 +23,15 @@ earthquake6:
 	cp ../../../earthquake6/styles.css ./earthquake6
 	node app ../../../earthquake6/wells.js ./earthquake6
 	mv my.min.js ./earthquake6/wells.js
+
+oklahoma0:
+	cp ../../../oklahoma/index.html ./0
+	cp ../../../oklahoma/ok.json ./0
+	cp ../../../oklahoma/quakes.json ./0
+	cp ../../../oklahoma/data.json ./0
+	cp ../../../oklahoma/shalegasplay.json ./0
+	node app ../../../oklahoma/map.js
+	mv my.min.js ./0/map.js
 
 oklahoma1:
 	cp ../../../oklahoma1/index.html ./1
