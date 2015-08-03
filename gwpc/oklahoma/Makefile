@@ -1,5 +1,5 @@
 
-all: injection locations quakes earthquake6 shale3 oklahoma0 oklahoma1 oklahoma2
+all: injection locations quakes earthquake6 shale3 oklahoma0 oklahoma1 oklahoma2 oklahoma3
 
 .PHONY: injection locations quakes earthquake6 shale3
 
@@ -62,3 +62,13 @@ oklahoma2:
 	cp ../../../oklahoma2/wells.csv ./2
 	node app ../../../oklahoma2/map.js
 	mv my.min.js ./2/map.js
+
+oklahoma3:
+	cp ../../../oklahoma3/index.html ./3
+	cp ../../../oklahoma3/ok.json ./3
+	cp ../../../oklahoma3/quakes.json ./3
+	cp ../../../oklahoma3/junk.json ./3
+	cp ../../../oklahoma3/shalegasplay.json ./3
+	cp ../../../oklahoma3/wells.csv ./3
+	node app ../../../oklahoma3/map.js
+	mv my.min.js ./3/map.js
