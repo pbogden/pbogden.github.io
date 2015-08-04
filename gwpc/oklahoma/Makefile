@@ -26,8 +26,7 @@ shale3:
 	cp ../../../shale3/index.html ./shale3
 	cp ../../../shale3/shalegas.json ./shale3
 	cp ../../../shale3/us.json ./shale3
-	node app ../../../shale3/mymap.js ./shale3
-	mv my.min.js ./shale3/mymap.js
+	../../../d3/bin/uglify ../../../shale3/mymap.js > ./shale3/mymap.js
 
 earthquake6:
 	cp ../../../earthquake6/index.html ./earthquake6
@@ -35,8 +34,7 @@ earthquake6:
 	cp ../../../earthquake6/ok.json ./earthquake6
 	cp ../../../earthquake6/quakes.json ./earthquake6
 	cp ../../../earthquake6/styles.css ./earthquake6
-	node app ../../../earthquake6/wells.js ./earthquake6
-	mv my.min.js ./earthquake6/wells.js
+	../../../d3/bin/uglify ../../../earthquake6/wells.js > ./earthquake6/wells.js
 
 oklahoma0:
 	cp ../../../oklahoma/index.html ./0
@@ -44,14 +42,12 @@ oklahoma0:
 	cp ../../../oklahoma/quakes.json ./0
 	cp ../../../oklahoma/data.json ./0
 	cp ../../../oklahoma/shalegasplay.json ./0
-	node app ../../../oklahoma/map.js
-	mv my.min.js ./0/map.js
+	../../../d3/bin/uglify ../../../oklahoma/map.js > ./0/map.js
 
 oklahoma1:
 	cp ../../../oklahoma1/index.html ./1
 	cp ../../../oklahoma1/ok.json ./1
-	node app ../../../oklahoma1/map.js
-	mv my.min.js ./1/map.js
+	../../../d3/bin/uglify ../../../oklahoma1/map.js > ./1/map.js
 
 oklahoma2:
 	cp ../../../oklahoma2/index.html ./2
@@ -60,8 +56,7 @@ oklahoma2:
 	cp ../../../oklahoma2/data.json ./2
 	cp ../../../oklahoma2/shalegasplay.json ./2
 	cp ../../../oklahoma2/wells.csv ./2
-	node app ../../../oklahoma2/map.js
-	mv my.min.js ./2/map.js
+	../../../d3/bin/uglify ../../../oklahoma2/map.js > ./2/map.js
 
 oklahoma3:
 	cp ../../../oklahoma3/index.html ./3
@@ -70,5 +65,4 @@ oklahoma3:
 	cp ../../../oklahoma3/junk.json ./3
 	cp ../../../oklahoma3/shalegasplay.json ./3
 	cp ../../../oklahoma3/wells.csv ./3
-	node app ../../../oklahoma3/map.js
-	mv my.min.js ./3/map.js
+	../../../d3/bin/uglify ../../../oklahoma3/map.js > ./3/map.js
