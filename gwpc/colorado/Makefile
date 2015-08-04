@@ -153,7 +153,4 @@ colorado24:
 	cp ../../../colorado24/quakes.json ./24
 	cp ../../../colorado24/data.json ./24
 	cp ../../../colorado24/shalegasplay.json ./24
-	node app ../../../colorado24/map.js
-	mv my.min.js ./24/map.js
-	node app ../../../colorado24/tile.js
-	mv my.min.js ./24/tile.js
+	cp ../../../colorado24/bundle.min.js ./24
