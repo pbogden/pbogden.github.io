@@ -1,4 +1,4 @@
-all: plss shale3 earthquake5 colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16 colorado17 colorado18 colorado19 colorado20 colorado23 colorado24
+all: plss shale3 earthquake5 colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16 colorado17 colorado18 colorado20 colorado23 colorado24 colorado25
 
 .PHONY: plss shale3 earthquake5
 
@@ -120,21 +120,10 @@ colorado18:
 	node app ../../../colorado18/tile.js
 	mv my.min.js ./18/tile.js
 
-colorado19:
-	cp ../../../colorado19/index.html ./19
-	cp ../../../colorado19/co.json ./19
-	node app ../../../colorado19/map.js
-	mv my.min.js ./19/map.js
-	node app ../../../colorado19/tile.js
-	mv my.min.js ./19/tile.js
-
 colorado20:
 	cp ../../../colorado20/index.html ./20
 	cp ../../../colorado20/co.json ./20
-	node app ../../../colorado20/map.js
-	mv my.min.js ./20/map.js
-	node app ../../../colorado20/tile.js
-	mv my.min.js ./20/tile.js
+	cp ../../../colorado20/bundle.min.js ./20
 
 colorado23:
 	cp ../../../colorado23/index.html ./23
@@ -142,10 +131,7 @@ colorado23:
 	cp ../../../colorado23/quakes.json ./23
 	cp ../../../colorado23/data.json ./23
 	cp ../../../colorado23/shalegasplay.json ./23
-	node app ../../../colorado23/map.js
-	mv my.min.js ./23/map.js
-	node app ../../../colorado23/tile.js
-	mv my.min.js ./23/tile.js
+	cp ../../../colorado23/bundle.min.js ./23
 
 colorado24:
 	cp ../../../colorado24/index.html ./24
@@ -154,3 +140,11 @@ colorado24:
 	cp ../../../colorado24/data.json ./24
 	cp ../../../colorado24/shalegasplay.json ./24
 	cp ../../../colorado24/bundle.min.js ./24
+
+colorado25:
+	cp ../../../colorado25/index.html ./25
+	cp ../../../colorado25/co.json ./25
+	cp ../../../colorado25/quakes.json ./25
+	cp ../../../colorado25/data.json ./25
+	cp ../../../colorado25/shalegasplay.json ./25
+	cp ../../../colorado25/bundle.min.js ./25
