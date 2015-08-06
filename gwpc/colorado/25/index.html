@@ -46,9 +46,15 @@ body {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-.info {
+#mouse-coordinates {
   top: 0px;
-  left: 10px;
+  left: 0px;
+}
+
+#well-number {
+  right: 0px;
+  top: 0px;
+  text-align: right;
 }
 
 .tooltip {
@@ -88,8 +94,12 @@ path.well.active {
 
 .quake {
   fill: crimson;
-  fill-opacity: 0.4;
+  fill-opacity: 0;
   stroke: none;
+}
+
+.quake.inside {
+  fill-opacity: 0.4;
 }
 
 path.injection-volume {
@@ -158,6 +168,7 @@ function ready() {
       .plotem()
       .plotQuakeSeries()
   colorado.tooltip();
+  colorado.update();
 };
 
 </script>
