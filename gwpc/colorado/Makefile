@@ -30,14 +30,12 @@ colorado6:
 	cp ../../../colorado6/co.json ./6
 	cp ../../../colorado6/file.json ./6
 	cp ../../../colorado6/shalegasplay.json ./6
-	node app ../../../colorado6/wells.js
-	mv my.min.js ./6/wells.js
+	cp ../../../colorado7/bundle.min.js ./7
 
 colorado7:
 	cp ../../../colorado7/index.html ./7
 	cp ../../../colorado7/file.json ./7
-	node app ../../../colorado7/histogram.js
-	mv my.min.js ./8/histogram.js
+	cp ../../../colorado7/bundle.min.js ./7
 
 colorado8:
 	cp ../../../colorado8/index.html ./8
