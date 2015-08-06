@@ -13,8 +13,7 @@ shale3:
 	cp ../../../shale3/index.html ./shale3
 	cp ../../../shale3/shalegas.json ./shale3
 	cp ../../../shale3/us.json ./shale3
-	node app ../../../shale3/mymap.js ./shale3
-	mv my.min.js ./shale3/mymap.js
+	cp ../../../shale3/bundle.min.js ./shale3
 
 earthquake5:
 	cp ../../../earthquake5/index.html ./earthquake5
@@ -22,8 +21,7 @@ earthquake5:
 	cp ../../../earthquake5/co.json ./earthquake5
 	cp ../../../earthquake5/quakes.json ./earthquake5
 	cp ../../../earthquake5/styles.css ./earthquake5
-	node app ../../../earthquake5/wells.js ./earthquake5
-	mv my.min.js ./earthquake5/wells.js
+	cp ../../../earthquake5/bundle.min.js ./earthquake5
 
 colorado6:
 	cp ../../../colorado6/index.html ./6
