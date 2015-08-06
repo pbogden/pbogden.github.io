@@ -53,8 +53,7 @@ colorado9:
 	cp ../../../colorado9/index.html ./9
 	cp ../../../colorado9/co.json ./9
 	cp ../../../colorado9/file.json ./9
-	node app ../../../colorado9/colorado.js
-	mv my.min.js ./9/colorado.js
+	cp ../../../colorado9/bundle.min.js ./9
 
 colorado12:
 	cp ../../../colorado12/index.html ./12
