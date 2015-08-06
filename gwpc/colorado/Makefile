@@ -30,7 +30,7 @@ colorado6:
 	cp ../../../colorado6/co.json ./6
 	cp ../../../colorado6/file.json ./6
 	cp ../../../colorado6/shalegasplay.json ./6
-	cp ../../../colorado7/bundle.min.js ./7
+	cp ../../../colorado6/bundle.min.js ./6
 
 colorado7:
 	cp ../../../colorado7/index.html ./7
