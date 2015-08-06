@@ -70,8 +70,7 @@ colorado13:
 	cp ../../../colorado13/data.json ./13
 	cp ../../../colorado13/shalegasplay.json ./13
 	cp ../../../colorado13/styles.css ./13
-	node app ../../../colorado13/wells.js
-	mv my.min.js ./13/wells.js
+	cp ../../../colorado13/bundle.min.js ./13
 
 colorado14:
 	cp ../../../colorado14/index.html ./14
@@ -80,8 +79,6 @@ colorado14:
 	cp ../../../colorado14/quakes.json ./14
 	cp ../../../colorado14/shalegasplay.json ./14
 	cp ../../../colorado14/styles.css ./14
-	node app ../../../colorado14/wells.js
-	mv my.min.js ./14/wells.js
 
 colorado15:
 	cp ../../../colorado15/index.html ./15
@@ -90,7 +87,7 @@ colorado15:
 	cp ../../../colorado15/quakes.json ./15
 	cp ../../../colorado15/shalegasplay.json ./15
 	cp ../../../colorado15/styles.css ./15
-	cp ../../../colorado16/bundle.min.js ./15
+	cp ../../../colorado15/bundle.min.js ./15
 
 colorado16:
 	cp ../../../colorado16/index.html ./16
