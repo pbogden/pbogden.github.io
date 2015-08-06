@@ -1,4 +1,4 @@
-all: plss shale3 earthquake5 colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16 colorado17 colorado18 colorado20 colorado23 colorado24 colorado25
+all: plss shale3 earthquake5 colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16 colorado17 colorado20 colorado23 colorado24 colorado25
 
 .PHONY: plss shale3 earthquake5
 
@@ -111,14 +111,6 @@ colorado17:
 	cp ../../../colorado17/adams_ladesc.json ./17
 	node app ../../../colorado17/map.js
 	mv my.min.js ./17/map.js
-
-colorado18:
-	cp ../../../colorado18/index.html ./18
-	cp ../../../colorado18/co.json ./18
-	node app ../../../colorado18/map.js
-	mv my.min.js ./18/map.js
-	node app ../../../colorado18/tile.js
-	mv my.min.js ./18/tile.js
 
 colorado20:
 	cp ../../../colorado20/index.html ./20
