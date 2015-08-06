@@ -61,8 +61,7 @@ colorado12:
 	cp ../../../colorado12/co.json ./12
 	cp ../../../colorado12/data.json ./12
 	cp ../../../colorado12/shalegasplay.json ./12
-	node app ../../../colorado12/wells.js
-	mv my.min.js ./12/wells.js
+	cp ../../../colorado12/bundle.min.js ./12
 
 colorado13:
 	cp ../../../colorado13/index.html ./13
