@@ -100,8 +100,7 @@ colorado16:
 	cp ../../../colorado16/quakes.json ./16
 	cp ../../../colorado16/shalegasplay.json ./16
 	cp ../../../colorado16/styles.css ./16
-	node app ../../../colorado16/wells.js
-	mv my.min.js ./16/wells.js
+	cp ../../../colorado16/bundle.min.js ./16
 
 colorado17:
 	cp ../../../colorado17/index.html ./17
