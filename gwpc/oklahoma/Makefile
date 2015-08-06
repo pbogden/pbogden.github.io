@@ -5,22 +5,22 @@ all: injection locations quakes earthquake6 shale3 oklahoma0 oklahoma1 oklahoma2
 
 locations:
 	cp ~/Sites/gist/ok1/index.html ./locations
-	cp ~/Sites/gist/ok1/my.min.js ./locations
 	cp ~/Sites/gist/ok1/data.json ./locations
+	cp ~/Sites/gist/ok1/my.min.js ./locations
 
 injection:
 	cp ~/Sites/projects/frac/drafts/12/index.html ./injection
-	cp ~/Sites/projects/frac/drafts/12/my.min.js ./injection
 	cp ~/Sites/projects/frac/drafts/12/ok.json ./injection
 	cp ~/Sites/projects/frac/drafts/12/InjectionVolume.tsv ./injection
 	cp ~/Sites/projects/frac/drafts/12/fracfocus.json ./injection
+	cp ~/Sites/projects/frac/drafts/12/my.min.js ./injection
 
 quakes:
 	cp ~/Sites/projects/frac/drafts/10/index.html ./quakes
-	cp ~/Sites/projects/frac/drafts/10/my.min.js ./quakes
 	cp ~/Sites/projects/frac/drafts/10/ok.json ./quakes
 	cp ~/Sites/projects/frac/drafts/10/InjectionVolume.tsv ./quakes
 	cp ~/Sites/projects/frac/drafts/10/quakes.json ./quakes
+	cp ~/Sites/projects/frac/drafts/10/my.min.js ./quakes
 
 shale3:
 	cp ../../../shale3/index.html ./shale3
