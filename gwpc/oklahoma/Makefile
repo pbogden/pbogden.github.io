@@ -34,7 +34,7 @@ earthquake6:
 	cp ../../../earthquake6/ok.json ./earthquake6
 	cp ../../../earthquake6/quakes.json ./earthquake6
 	cp ../../../earthquake6/styles.css ./earthquake6
-	../../../d3/bin/uglify ../../../earthquake6/wells.js > ./earthquake6/wells.js
+	cp ../../../earthquake6/bundle.min.js ./earthquake6
 
 oklahoma0:
 	cp ../../../oklahoma/index.html ./0
