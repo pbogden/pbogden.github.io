@@ -46,8 +46,7 @@ colorado8:
 	cp ../../../colorado8/index.html ./8
 	cp ../../../colorado8/co.json ./8
 	cp ../../../colorado8/file.json ./8
-	node app ../../../colorado8/colorado.js
-	mv my.min.js ./8/colorado.js
+	cp ../../../colorado8/bundle.min.js ./8
 
 colorado9:
 	cp ../../../colorado9/index.html ./9
