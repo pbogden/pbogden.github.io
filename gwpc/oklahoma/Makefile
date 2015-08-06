@@ -42,12 +42,12 @@ oklahoma0:
 	cp ../../../oklahoma/quakes.json ./0
 	cp ../../../oklahoma/data.json ./0
 	cp ../../../oklahoma/shalegasplay.json ./0
-	../../../d3/bin/uglify ../../../oklahoma/map.js > ./0/map.js
+	cp ../../../oklahoma/bundle.min.js ./0
 
 oklahoma1:
 	cp ../../../oklahoma1/index.html ./1
 	cp ../../../oklahoma1/ok.json ./1
-	../../../d3/bin/uglify ../../../oklahoma1/map.js > ./1/map.js
+	cp ../../../oklahoma1/bundle.min.js ./1
 
 oklahoma2:
 	cp ../../../oklahoma2/index.html ./2
@@ -56,7 +56,7 @@ oklahoma2:
 	cp ../../../oklahoma2/data.json ./2
 	cp ../../../oklahoma2/shalegasplay.json ./2
 	cp ../../../oklahoma2/wells.csv ./2
-	../../../d3/bin/uglify ../../../oklahoma2/map.js > ./2/map.js
+	cp ../../../oklahoma2/bundle.min.js ./2
 
 oklahoma3:
 	cp ../../../oklahoma3/index.html ./3
@@ -65,4 +65,4 @@ oklahoma3:
 	cp ../../../oklahoma3/junk.json ./3
 	cp ../../../oklahoma3/shalegasplay.json ./3
 	cp ../../../oklahoma3/wells.csv ./3
-	../../../d3/bin/uglify ../../../oklahoma3/map.js > ./3/map.js
+	cp ../../../oklahoma3/bundle.min.js ./3
