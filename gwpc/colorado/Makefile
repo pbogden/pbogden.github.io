@@ -90,8 +90,7 @@ colorado15:
 	cp ../../../colorado15/quakes.json ./15
 	cp ../../../colorado15/shalegasplay.json ./15
 	cp ../../../colorado15/styles.css ./15
-	node app ../../../colorado15/wells.js
-	mv my.min.js ./15/wells.js
+	cp ../../../colorado16/bundle.min.js ./15
 
 colorado16:
 	cp ../../../colorado16/index.html ./16
@@ -108,8 +107,7 @@ colorado17:
 	cp ../../../colorado17/adams_first.json ./17
 	cp ../../../colorado17/adams_twnshp.json ./17
 	cp ../../../colorado17/adams_ladesc.json ./17
-	node app ../../../colorado17/map.js
-	mv my.min.js ./17/map.js
+	cp ../../../colorado17/bundle.min.js ./17
 
 colorado20:
 	cp ../../../colorado20/index.html ./20
