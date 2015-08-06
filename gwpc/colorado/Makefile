@@ -7,10 +7,7 @@ plss:
 	cp ../../../plss/co.json ./plss
 	cp ../../../plss/first.json ./plss
 	cp ../../../plss/twnshp.json ./plss
-	node app ../../../plss/map.js
-	mv my.min.js ./plss/map.js
-	node app ../../../plss/tile.js
-	mv my.min.js ./plss/tile.js
+	cp ../../../plss/bundle.min.js ./plss
 
 shale3:
 	cp ../../../shale3/index.html ./shale3
