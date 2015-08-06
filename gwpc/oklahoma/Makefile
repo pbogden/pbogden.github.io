@@ -26,7 +26,7 @@ shale3:
 	cp ../../../shale3/index.html ./shale3
 	cp ../../../shale3/shalegas.json ./shale3
 	cp ../../../shale3/us.json ./shale3
-	../../../d3/bin/uglify ../../../shale3/mymap.js > ./shale3/mymap.js
+	cp ../../../shale3/bundle.min.js ./shale3
 
 earthquake6:
 	cp ../../../earthquake6/index.html ./earthquake6
