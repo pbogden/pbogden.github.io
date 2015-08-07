@@ -69,6 +69,7 @@ colorado14:
 	cp ../../../colorado14/quakes.json ./14
 	cp ../../../colorado14/shalegasplay.json ./14
 	cp ../../../colorado14/styles.css ./14
+	cp ../../../colorado14/bundle.min.js ./14
 
 colorado15:
 	cp ../../../colorado15/index.html ./15

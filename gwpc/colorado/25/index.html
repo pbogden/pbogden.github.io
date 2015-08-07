@@ -39,6 +39,7 @@ body {
 }
 
 .info, .tooltip {
+  mouse-events: none;
   position: absolute;
   margin: 5px 5px 5px 5px;
   padding: 5px 5px 5px 5px;
@@ -100,6 +101,16 @@ path.well.active {
 
 .quake.inside {
   fill-opacity: 0.4;
+}
+
+path.quake {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+path.quake.active {
+  pointer-events: all;
+  visibility: visible;
 }
 
 path.injection-volume {
