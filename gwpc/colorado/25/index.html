@@ -17,7 +17,6 @@ body {
 }
 
 .map {
-  pointer-events: all;
   position: relative;
   overflow: visible;
 }
@@ -39,7 +38,7 @@ body {
 }
 
 .info, .tooltip {
-  mouse-events: none;
+  pointer-events: none;
   position: absolute;
   margin: 5px 5px 5px 5px;
   padding: 5px 5px 5px 5px;
@@ -63,8 +62,8 @@ body {
 }
 
 path.state, path.county {
-  fill: none;
   pointer-events: none;
+  fill: none;
   stroke: #555;
 }
 
@@ -84,31 +83,31 @@ path.play {
   fill-opacity: 0.3;
 }
 
-path.well {
+.mapcircle.well {
   fill: steelblue;
   stroke: black;
+  visibility: visible;
 }
 
-path.well.active {
+.mapcircle.well.active {
   fill: yellow;
 }
 
 .quake {
   fill: crimson;
   fill-opacity: 0;
-  stroke: none;
 }
 
 .quake.inside {
   fill-opacity: 0.4;
 }
 
-path.quake {
+.mapcircle.quake {
   pointer-events: none;
   visibility: hidden;
 }
 
-path.quake.active {
+.mapcircle.quake.active {
   pointer-events: all;
   visibility: visible;
 }
@@ -178,6 +177,7 @@ function ready() {
       .quakes(colorado.quakeData())
       .plotem()
       .plotQuakeSeries()
+
   colorado.tooltip();
   colorado.update();
 };
