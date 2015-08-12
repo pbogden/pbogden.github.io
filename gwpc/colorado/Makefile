@@ -12,6 +12,7 @@ plss:
 plss3:
 	cp ../../../plss3/index.html ./plss3
 	cp ../../../plss3/co.json ./plss3
+	cp ../../../plss3/countykeys.json ./plss3
 	cp ../../../plss3/data/twnshp.json ./plss3/data
 	cp ../../../plss3/data/topojson/*.json ./plss3/data/topojson
 	cp ../../../plss3/bundle.min.js ./plss3
