@@ -1,6 +1,6 @@
-all: plss plss2 shale3 earthquake5 colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16 colorado17 colorado20 colorado23 colorado24 colorado25
+all: plss plss3 shale3 earthquake5 colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16 colorado17 colorado20 colorado23 colorado24 colorado25
 
-.PHONY: plss plss2 shale3 earthquake5
+.PHONY: plss plss3 shale3 earthquake5
 
 plss:
 	cp ../../../plss/index.html ./plss
@@ -9,12 +9,12 @@ plss:
 	cp ../../../plss/twnshp.json ./plss
 	cp ../../../plss/bundle.min.js ./plss
 
-plss2:
-	cp ../../../plss2/index.html ./plss2
-	cp ../../../plss2/co.json ./plss2
-	cp ../../../plss2/data/twnshp.json ./plss2/data
-	cp ../../../plss2/data/topojson/*.json ./plss2/data/topojson
-	cp ../../../plss2/bundle.min.js ./plss2
+plss3:
+	cp ../../../plss3/index.html ./plss3
+	cp ../../../plss3/co.json ./plss3
+	cp ../../../plss3/data/twnshp.json ./plss3/data
+	cp ../../../plss3/data/topojson/*.json ./plss3/data/topojson
+	cp ../../../plss3/bundle.min.js ./plss3
 
 shale3:
 	cp ../../../shale3/index.html ./shale3
