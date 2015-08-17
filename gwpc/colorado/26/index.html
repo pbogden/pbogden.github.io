@@ -7,7 +7,11 @@ body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  color: black;
+  background-color: #ddd;
+}
+
+.map svg {
+  background-color: #fff;
 }
 
 #timeseries {
@@ -25,12 +29,6 @@ body {
   position: absolute;
 }
 
-#myForms {
-  position: absolute;
-  top: 460px;
-  left: 10px;
-}
-
 form {
   display: inline-block;
 }
@@ -41,13 +39,26 @@ form {
   height: 256px;
 }
 
-.info, .tooltip {
+.info, .tooltip, .metadata {
   pointer-events: none;
-  position: absolute;
   margin: 5px 5px 5px 5px;
-  padding: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px; 
   font-size: 1em;
   background-color: rgba(255, 255, 255, 0.7);
+}
+
+.info, .tooltip {
+  position: absolute;
+}
+
+.tooltip, .metadata {
+  border-style: solid;
+}
+
+.metadata {
+  position: absolute;
+  left: 10px;
+  top: 500px;
 }
 
 #mouse-coordinates {
@@ -68,10 +79,6 @@ form {
   right: 0px;
   top: 0px;
   text-align: right;
-}
-
-.tooltip {
-  border-style: solid;
 }
 
 path.state {
@@ -176,29 +183,40 @@ path.pressure-limit {
   shape-rendering: crispEdges;
 }
 
+#container, #myTimeseries, #myMetadata {
+  vertical-align: top;
+  display: inline-block;
+}
+
+#myMetadata {
+  vertical-align: bottom;
+}
 </style>
 <body>
-<div id='myForms'>
-  <form id='myPlays'>
-    <a href="http://www.eia.gov/pub/oil_gas/natural_gas/analysis_publications/maps/maps.htm">Shale plays (EIA):</a>
-    &nbsp;<input type="checkbox" name="select" value="1" >
-  </form>
-  <form id=myPlss>
-    &nbsp;&nbsp;
-    &nbsp;&nbsp;
-    &nbsp;&nbsp;
-    &nbsp;&nbsp;
-    <a href="http://www.geocommunicator.gov/Geocomm/lsis_home/home/index.htm">PLSS (BLM):</a>
-    &nbsp;<input type="checkbox" name="select" value="1" >
-  </form>
-  <br>
-  <form id='myMap'>
-    <a href="http://www.thunderforest.com">Maps (Thunderforest):</a>
-    &nbsp;&nbsp;<input type="radio" name="select" value="0" > landscape,
-    &nbsp;&nbsp;<input type="radio" name="select" value="1" > opencyclemap,
-    &nbsp;&nbsp;<input type="radio" name="select" value="2" checked> none
-  </form>
-</div>
+<div id="container">
+  <div id="myMap"></div>
+    <div id="myForms">
+      <form id="myPlays">
+        <a href="http://www.eia.gov/pub/oil_gas/natural_gas/analysis_publications/maps/maps.htm">Shale plays (EIA):</a>
+        &nbsp;<input type="checkbox" name="select" >
+      </form>
+      <form id="myPlss">
+        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+        <a href="http://www.geocommunicator.gov/Geocomm/lsis_home/home/index.htm">PLSS (BLM):</a>
+        &nbsp;<input type="checkbox" name="select" checked>
+      </form>
+      <br>
+      <form id="myTiles">
+        <a href="http://www.thunderforest.com">Maps (Thunderforest):</a>
+        &nbsp;&nbsp;<input type="radio" name="select" value="0" > landscape,
+        &nbsp;&nbsp;<input type="radio" name="select" value="1" > opencyclemap,
+        &nbsp;&nbsp;<input type="radio" name="select" value="2" checked> none
+      </form>
+    </div><!-- #myForms -->
+  </div><!-- #myMap -->
+  <div id="myTimeseries"></div>
+  <div id="myMetadata"></div>
+</div><!-- #container -->
 <script src="bundle.min.js"></script>
 <script>
 
