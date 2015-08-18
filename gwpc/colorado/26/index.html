@@ -31,6 +31,7 @@ body {
 
 form {
   display: inline-block;
+  padding-left: 1em;
 }
 
 .tile, .tile-element {
@@ -109,6 +110,22 @@ path.play {
   fill: steelblue;
   stroke: black;
   visibility: visible;
+}
+
+.mapcircle.well.null {
+  fill: gray;
+}
+
+.mapcircle.well.okay {
+  fill: green;
+}
+
+.mapcircle.well.warning {
+  fill: orange;
+}
+
+.mapcircle.well.danger {
+  fill: red;
 }
 
 .mapcircle.well.active {
@@ -198,40 +215,50 @@ path.pressure-limit {
     <div id="myForms">
       <form id="myPlays">
         <a href="http://www.eia.gov/pub/oil_gas/natural_gas/analysis_publications/maps/maps.htm">Shale plays (EIA):</a>
-        &nbsp;<input type="checkbox" name="select" >
+        <input type="checkbox" name="select" >
       </form>
       <form id="myPlss">
-        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
         <a href="http://www.geocommunicator.gov/Geocomm/lsis_home/home/index.htm">PLSS (BLM):</a>
-        &nbsp;<input type="checkbox" name="select" checked>
+        <input type="checkbox" name="select" checked>
+      </form>
+      <form id="myCheck">
+        Check:
+        <input type="radio" name="check" value="none" checked> none,
+        <input type="radio" name="check" value="tbg" > tbg,
+        <input type="radio" name="check" value="csg" > csg,
+        <input type="radio" name="check" value="vol" > vol
       </form>
       <br>
       <form id="myTiles">
-        <a href="http://www.thunderforest.com">Maps (Thunderforest):</a>
-        &nbsp;&nbsp;<input type="radio" name="select" value="0" > landscape,
-        &nbsp;&nbsp;<input type="radio" name="select" value="1" > opencyclemap,
-        &nbsp;&nbsp;<input type="radio" name="select" value="2" checked> none
+        <a href="http://www.thunderforest.com">Background map:</a>
+        <input type="radio" name="select" value="0" checked> none,
+        <input type="radio" name="select" value="1" > <a target="_blank" href="http://www.openstreetmap.org">OpenStreetMap</a>,
+        <input type="radio" name="select" value="2" > <a target="_blank" href="http://www.mapquest.com">Mapquest</a>,
+        <input type="radio" name="select" value="3" > <a target="_blank" href="http://www.thunerforest.com">Thunderforest</a>
       </form>
     </div><!-- #myForms -->
   </div><!-- #myMap -->
   <div id="myTimeseries"></div>
   <div id="myMetadata"></div>
 </div><!-- #container -->
+
 <script src="bundle.min.js"></script>
 <script>
 
 var colorado = d3.colorado()(ready)
-var timeseries = d3.timeseries();
+var timeseries = d3.timeseries()
 
 var wells, quakes;
 
 function ready() {
-
   timeseries()
       .wells(colorado.wellData())
       .quakes(colorado.quakeData())
       .plotem()
       .plotQuakeSeries()
+
+  d3.selectAll("#myCheck input")
+      .on("change", timeseries.check);
 
   colorado.update();
 };
