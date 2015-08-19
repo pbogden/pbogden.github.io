@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>colorado26</title>
+<title>colorado26 - test</title>
 <style>
 
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   background-color: #ddd;
 }
 
@@ -58,15 +58,6 @@ form {
 
 #mouse-coordinates {
   top: 0px;
-  left: 0px;
-}
-
-.place {
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.7);
-  margin: 5px 5px 5px 5px;
-  padding: 2px;
-  top: 28px;
   left: 0px;
 }
 
@@ -163,6 +154,10 @@ path.play {
   pointer-events: all;
 }
 
+.y.label, .p.label, .tick text {
+  font-size: 0.8em;
+}
+
 path.injection-volume {
   fill: none;
   stroke: black;
@@ -172,6 +167,12 @@ path.injection-volume {
 path.pressure {
   fill: none;
   stroke: red;
+  stroke-width: 1px;
+}
+
+path.casing {
+  fill: none;
+  stroke: yellow;
   stroke-width: 2px;
 }
 
@@ -220,7 +221,7 @@ path.pressure-limit {
         <input type="radio" name="check" value="none" checked> none,
         <input type="radio" name="check" value="tbg" > tbg,
         <input type="radio" name="check" value="csg" > csg,
-        <input type="radio" name="check" value="vol" > vol
+        <input type="radio" name="check" value="sum" > sum
       </form>
       <br>
       <form id="myTiles">
@@ -250,9 +251,6 @@ function ready() {
       .quakes(colorado.quakeData())
       .plotem()
       .plotQuakeSeries()
-
-  d3.selectAll("#myCheck input")
-      .on("change", timeseries.check);
 
   colorado.update();
 };
