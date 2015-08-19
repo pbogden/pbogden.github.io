@@ -237,6 +237,34 @@ path.pressure-limit {
   <div id="myMetadata"></div>
 </div><!-- #container -->
 
+<div class="info">
+<b>Interactive features:</b>
+<ul>
+ <li>Data/metadata -- mouse over features on the map to display their data & metadata
+ <li>Map filter -- pan and zoom with mouse to filter the values displayed on the earthquake time series
+ <li>Brush filter -- move & resize the translucent gray box on earthquake time series to filter values on the map
+ <li>Multiple formations (permits) -- Click on well locations to toggle data/metadata for each formation.
+ <ul>
+    <li>Blue well locations have one formation code.</li>
+    <li>Orange well locations have multiple formations.</li>
+ </ul>
+ <li>PLSS navigation -- toggles on/off with checkbox below map</li>
+ <ul>
+    <li>Double click on county -- zooms to that county and displays townships
+    <li>Double click on township -- zooms to that township and diplays sections (typically 1 square mile)
+ </ul>
+ <li>Permit limits -- toggle limit "Check" radio buttons below the map</li>
+ <ul>
+    <li>none -- default: wells with one formation (blue), multiple formations (orange)
+    <li>tbg -- tubing pressure: green (below limit), orange (near limit), red (exceeds limit)
+    <li>csg -- casing pressure: red (any positive value), green (zero pressure)
+    <li>sum -- cumulative injection volume: red (exceeds limit), green (below limit), gray (no limit data)
+ </ul>
+ <li>Map background -- add/change slippy map layers (streets, satellite, topography) with radio buttons below map</li>
+ <li>EIA shale plays (orange) & basins (light orange) -- toggle on/off with checkbox below map
+</ul>
+</div>
+
 <script src="bundle.min.js"></script>
 <script>
 
