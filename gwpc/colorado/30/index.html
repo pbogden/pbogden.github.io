@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>colorado30</title>
+<style>
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  color: black;
+}
+
+.map {
+  pointer-events: all;
+  position: relative;
+  overflow: hidden;
+}
+
+#myForm {
+  position: absolute;
+  top: 10px;
+  left: 750px;
+}
+
+.info {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.state, .county, .play {
+  fill: none;
+  stroke: #000;
+}
+
+.state {
+  pointer-events: none;
+}
+
+.county {
+  pointer-events: all;
+  fill: #000;
+  fill-opacity: 0;
+  stroke-opacity: 0.5;
+}
+
+circle.well {
+  fill: black;
+}
+
+.basin, .play {
+  fill: orange;
+  fill-opacity: 0.2;
+}
+
+</style>
+<body>
+<div id='myForm'>
+  <form id='myRadios'>
+    <a href="http://www.openstreetmap.org">openstreetmap</a><br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="0" > streets<br>
+    <a href="http://www.mapbox.com">mapbox</a><br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="1" > satellite<br>
+    <a href="http://www.mapquest.com">mapquest</a><br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="2"> streets<br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="3"> satellite<br>
+    <a href="http://www.thunderforest.com">thunderforest</a><br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="4" > landscape<br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="5" > opencyclemap<br>
+    <a href="http://www.stamen.com">stamen</a><br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="6" > terrain<br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="7" > toner<br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="8" > watercolor<br>
+    <a href="http://www.usgs.gov">usgs</a><br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="9" checked> dem data<br>
+    <input type="radio" name="select" value="10" > none<br>
+  </form>
+</div>
+<script src="bundle.min.js"></script>
+<script>
+
+var wells = d3.wells()
+    .svg(vector)
+    .size([width, height])
+    (init);
+
+function init() {
+  wells.plotFormation("Laramie Fox Hills", "Base");
+}
+
+</script>

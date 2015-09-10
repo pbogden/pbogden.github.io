@@ -1,4 +1,4 @@
-all: plss plss3 shale3 earthquake5 colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16 colorado17 colorado20 colorado23 colorado24 colorado25 colorado26 colorado27 colorado28
+all: plss plss3 shale3 earthquake5 colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16 colorado17 colorado20 colorado23 colorado24 colorado25 colorado26 colorado27 colorado28 colorado30
 
 .PHONY: plss plss3 shale3 earthquake5
 
@@ -167,3 +167,7 @@ colorado28:
 	cp ../../../colorado28/data/twnshp.json ./28/data
 	cp ../../../colorado28/data/topojson/*.json ./28/data/topojson
 	cp ../../../colorado28/bundle.min.js ./28
+
+colorado30:
+	cp ../../../colorado30/index.html ./30
+	cp ../../../colorado30/bundle.min.js ./30
