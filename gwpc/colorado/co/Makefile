@@ -3,11 +3,8 @@
 # data shared by colorado prototypes
 # -----------------------------------
 
-tiles:
+all:
 	cp -r ../../../../colorado11/tiles .
-
-shale:
 	cp ../../../../shale3/shalegas.json .
-
-states:
 	cp ../../../../colorado2/co.json .
+	cp ../../../../colorado6/file.json .
