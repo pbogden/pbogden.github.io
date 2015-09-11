@@ -1,6 +1,19 @@
-all: plss plss3 shale3 earthquake5 colorado6 colorado7 colorado8 colorado9 colorado12 colorado13 colorado14 colorado15 colorado16 colorado17 colorado20 colorado23 colorado24 colorado25 colorado26 colorado27 colorado28 colorado30
+all: 
 
-.PHONY: plss plss3 shale3 earthquake5
+.PHONY: co plss plss3 shale3 earthquake5 dem3
+
+co:
+	cp -r ../../../../colorado11/tiles co
+	cp ../../../../shale3/shalegas.json co
+	cp ../../../../colorado2/co.json 
+	cp ../../../../colorado6/file.json 
+
+dem3:
+	cp ../../../dem3/index.html ./dem3
+	cp ../../../dem3/hill.png ./dem3
+	cp ../../../dem3/hills.json ./dem3
+	cp ../../../dem3/dem.bin ./dem3
+	cp ../../../dem3/bundle.min.js ./dem3
 
 plss:
 	cp ../../../plss/index.html ./plss
