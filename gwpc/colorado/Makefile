@@ -184,3 +184,12 @@ colorado28:
 colorado30:
 	cp ../../../colorado30/index.html ./30
 	cp ../../../colorado30/bundle.min.js ./30
+
+colorado32:
+	cp ../../../colorado32/index.html ./32
+	cp ../../../colorado32/bundle.min.js ./32
+	cp ../../../colorado32/tmp/CDPHE_reg42.json ./32/tmp
+	cp ../../../colorado32/tmp/IJ_DIRLINES.json ./32/tmp
+	cp ../../../colorado32/tmp/IJ_Wells.json ./32/tmp
+	cp ../../../colorado32/tmp/IJ_Buffer_Merge_Dissolve.json ./32/tmp
+	cp ../../../colorado32/tmp/IJ_DIR_Wells_BHLS.json ./32/tmp
