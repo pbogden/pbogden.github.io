@@ -187,6 +187,7 @@ colorado30:
 
 colorado32:
 	cp ../../../colorado32/index.html ./32
+	cp ../../../colorado32/styles.css ./32
 	cp ../../../colorado32/bundle.min.js ./32
 	cp ../../../colorado32/tmp/CDPHE_reg42.json ./32/tmp
 	cp ../../../colorado32/tmp/IJ_DIRLINES.json ./32/tmp

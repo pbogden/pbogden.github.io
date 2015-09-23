@@ -1,0 +1,56 @@
+svg {
+  font: 20px sans-serif;
+  background-color: lightgray;
+}
+
+.background {
+  fill: none;
+  pointer-events: all;
+}
+
+path.state {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+
+path.county {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+
+path.data {
+  cursor: pointer;
+  stroke: #000;
+  stroke-opacity: 1;
+  fill: crimson;
+  fill-opacity: 0.3;
+}
+
+path.data.aquifer.protected {
+  fill: green;
+}
+
+path.data.active {
+  fill-opacity: 1;
+}
+
+rect.label {
+  fill-opacity: 0.1;
+}
+
+rect.label.active {
+  fill-opacity: 0.5;
+}
+
+text {
+  pointer-events: none;
+}
+
+div.info {
+  pointer-events: none;
+  position: absolute;
+  left: 20px;
+  top: 180px;
+}
