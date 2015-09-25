@@ -194,3 +194,9 @@ colorado32:
 	cp ../../../colorado32/tmp/IJ_Wells.json ./32/tmp
 	cp ../../../colorado32/tmp/IJ_Buffer_Merge_Dissolve.json ./32/tmp
 	cp ../../../colorado32/tmp/IJ_DIR_Wells_BHLS.json ./32/tmp
+
+colorado33:
+	cp ../../../colorado33/index.html ./33
+	cp ../../../colorado33/bundle.min.js ./33
+	cp ../../../colorado33/styles.css ./33
+	cp ../../../colorado33/reg42.json ./33

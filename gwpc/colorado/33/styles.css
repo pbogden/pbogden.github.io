@@ -1,0 +1,68 @@
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+.map {
+  pointer-events: all;
+  position: relative;
+  overflow: hidden;
+}
+
+#myForm {
+  position: absolute;
+  top: 10px;
+  left: 750px;
+}
+
+.info {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.state, .county, .play {
+  fill: none;
+  stroke: #000;
+}
+
+.state {
+  pointer-events: none;
+}
+
+.county {
+  pointer-events: all;
+  fill: #000;
+  fill-opacity: 0;
+  stroke-opacity: 0.5;
+}
+
+.reg42 {
+  fill: crimson;
+  fill-opacity: 0.3;
+}
+
+.reg42.exempt {
+  fill: green;
+  fill-opacity: 0.5;
+}
+
+circle.well {
+  fill: black;
+}
+
+.basin, .play {
+  fill: orange;
+  fill-opacity: 0.2;
+}
+
+.tooltip {
+    margin: 20px 20px 20px 20px;
+    background-color: #D3D3D3;  /* light gray */
+    border-style: solid;
+    padding: 5px 5px 5px 5px;
+    position: absolute;
+}
