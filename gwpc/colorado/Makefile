@@ -200,3 +200,4 @@ colorado33:
 	cp ../../../colorado33/bundle.min.js ./33
 	cp ../../../colorado33/styles.css ./33
 	cp ../../../colorado33/reg42.json ./33
+	cp ../../../colorado33/ij.json ./33

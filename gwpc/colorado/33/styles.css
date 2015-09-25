@@ -40,6 +40,12 @@ body {
   stroke-opacity: 0.5;
 }
 
+.ijwells {
+  fill: crimson;
+  stroke: crimson;
+  stroke-width: 2px;
+}
+
 .reg42 {
   fill: crimson;
   fill-opacity: 0.3;
