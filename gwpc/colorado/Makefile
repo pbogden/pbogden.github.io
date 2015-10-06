@@ -1,6 +1,6 @@
 all: 
 
-.PHONY: co plss plss3 shale3 earthquake5 dem3
+.PHONY: co plss plss3 shale3 earthquake5 dem3 dem4 dem6 dem7
 
 co:
 	cp -r ../../../../colorado11/tiles co
@@ -14,6 +14,21 @@ dem3:
 	cp ../../../dem3/hills.json ./dem3
 	cp ../../../dem3/dem.bin ./dem3
 	cp ../../../dem3/bundle.min.js ./dem3
+
+dem4:
+	cp ../../../dem4/index.html ./dem4
+	cp ../../../dem4/dem.bin ./dem4
+	cp ../../../dem4/bundle.min.js ./dem4
+
+dem6:
+	cp ../../../dem6/index.html ./dem6
+	cp ../../../dem6/dem.bin ./dem6
+	cp ../../../dem6/bundle.min.js ./dem6
+
+dem7:
+	cp ../../../dem7/index.html ./dem7
+	cp ../../../dem7/dem.bin ./dem7
+	cp ../../../dem7/bundle.min.js ./dem7
 
 plss:
 	cp ../../../plss/index.html ./plss
