@@ -216,3 +216,10 @@ colorado33:
 	cp ../../../colorado33/styles.css ./33
 	cp ../../../colorado33/reg42.json ./33
 	cp ../../../colorado33/ij.json ./33
+
+colorado34:
+	cp ../../../colorado34/index.html ./34
+	cp ../../../colorado34/bundle.min.js ./34
+	cp ../../../colorado34/styles.css ./34
+	cp ../../../colorado34/reg42.json ./34
+	cp ../../../colorado34/UicWells-20151006.csv ./34
