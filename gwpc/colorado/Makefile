@@ -71,7 +71,7 @@ colorado6:
 	cp ../../../colorado6/index.html ./6
 	cp ../../../colorado6/co.json ./6
 	cp ../../../colorado6/file.json ./6
-	cp ../../../colorado6/shalegasplay.json ./6
+	cp ../../../colorado6/shalegas.json ./6
 	cp ../../../colorado6/bundle.min.js ./6
 
 colorado7:
