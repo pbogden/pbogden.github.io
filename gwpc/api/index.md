@@ -3,9 +3,14 @@ title: RBDMS API spec
 layout: post
 ---
 
-## RBDMS API spec
+## Earthquake API spec
 
-Modeled after http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
+See: <a href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">USGS earthquake API</a>
+
+## RBDMS API spec
 
 ```
 var data = { api: 
+```
+
+
