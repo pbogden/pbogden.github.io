@@ -7,6 +7,8 @@ layout: post
 
 See: <a href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">USGS earthquake API</a>
 
+We can start with a single URI that provides all the earthquakes for the time period of interest.
+
 ## RBDMS API spec
 
 Minimal spec for RBDMS API output (following conventions of USGS API):
@@ -33,3 +35,5 @@ Minimal spec for RBDMS API output (following conventions of USGS API):
   ]
 }
 ```
+
+We can start with a single URI that provides all the well data for the time period of interest.
