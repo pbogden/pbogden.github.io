@@ -9,8 +9,21 @@ See: <a href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">USGS
 
 ## RBDMS API spec
 
+The following is a minimal spec for RBDMS API output, following the conventions of the USGS earthquake API:
 ```
-var data = { api: 
+{ api: String,
+  longitude, Decimal,
+  latitude, Decimal,
+  other: type,
+  data: [
+    { 
+        time: Long Integer,
+        volume: Integer,
+        tubing: Integer,
+        casing: Integer
+    }
+  ]
+}
 ```
 
 
