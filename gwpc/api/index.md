@@ -36,7 +36,9 @@ Minimal spec for RBDMS API output (following conventions of USGS API). This is t
 }
 ```
 
-The entry "other: type," represents the placeholder for all metadata relevant to the well.  The data array includes injection volume, tubing pressure and casing pressure. Any other variable that changes with time could be added to the data array object.
+* "other: type," -- a placeholder for all other metadata relevant to a well.  
+* "data" -- array of objects, including injection "volume," "tubing" pressure, and "casing" pressure
+* Any other variable that changes with time could be added to the "data" array.
 
 We can start with a single URI that provides all the well data for the time period of interest as an array of JSON objects, one for each well.
 
