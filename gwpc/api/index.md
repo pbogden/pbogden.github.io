@@ -11,7 +11,7 @@ We can start with a single URI that provides all the earthquakes for the time pe
 
 ## RBDMS API spec
 
-Minimal spec for RBDMS API output (following conventions of USGS API):
+Minimal spec for RBDMS API output (following conventions of USGS API). This is the JSON object for a single well:
 
 ```
 { api: String,
@@ -36,4 +36,7 @@ Minimal spec for RBDMS API output (following conventions of USGS API):
 }
 ```
 
-We can start with a single URI that provides all the well data for the time period of interest.
+The entry "other: type," represents the placeholder for all metadata relevant to the well.  The data array includes injection volume, tubing pressure and casing pressure. Any other variable that changes with time could be added to the data array object.
+
+We can start with a single URI that provides all the well data for the time period of interest as an array of JSON objects, one for each well.
+
