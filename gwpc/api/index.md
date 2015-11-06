@@ -14,25 +14,31 @@ We can start with a single URI that provides all the earthquakes for the time pe
 Minimal spec for RBDMS API output (following conventions of USGS API). This is the JSON object for a single well:
 
 ```
-{ api: String,
-  longitude: Decimal,
-  latitude: Decimal,
-  other: type,
-  data: [
-    { 
-        time: Long Integer,
-        volume: Integer,
-        tubing: Integer,
-        casing: Integer
-    },
-    { 
-        time: Long Integer,
-        volume: Integer,
-        tubing: Integer,
-        casing: Integer
-    }
-    ... 
-  ]
+{ 
+    api: String,
+    longitude: Decimal,
+    latitude: Decimal,
+    other: type,
+    data: [
+        { 
+            time: Long Integer,
+            volume: Integer,
+            tubing: Integer,
+            casing: Integer
+        },
+        { 
+            time: Long Integer,
+            volume: Integer,
+            tubing: Integer,
+            casing: Integer
+        },
+        {
+            ... 
+        },
+
+        ...
+
+    ]
 }
 ```
 
