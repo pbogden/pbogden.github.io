@@ -9,13 +9,11 @@ All apps created for GWPC use earthquake data from the (most excellent) USGS API
 
 <a href="http://earthquake.usgs.gov/fdsnws/event/1/">USGS earthquake catalog API</a>
 
-This API allows custom queries for global records that go back many years.
-
-Depending on their needs, it may make more sense (and may be much simpler) for Oklahoma to implement only a single URI with the most recent earthquakes. For example, USGS has a concise API spec for their real-time feeds:
+This API allows custom queries for global records that go back many years.  Depending on Oklahoma's needs, it may make more sense (and may be much simpler) to create a single URI with the most recent earthquakes. For example, USGS does this type of thing for their real-time feeds:
 
 <a href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">USGS earthquake feed API</a>
 
-And USGS provides a collection of URIs for the most common queries.  For example, all the earthquakes from across the globe in the last 30 days are returned instantly to your browser if you click on this URI:
+USGS uses this API spec to provide a collection of URIs for the most common queries.  For example, all the earthquakes from across the globe in the last 30 days are returned instantly to your browser if you click on this URI:
 
 http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson
 
