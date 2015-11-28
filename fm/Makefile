@@ -1,6 +1,6 @@
-all: fm5 fm6 fm7 fm8 fm9
+all: fm5 fm6 fm7 fm8 fm9 fm10
 
-.PHONY: 5 6 7 8 9
+.PHONY: fm5 fm6 fm7 fm8 fm9 fm10
 
 fm5:
 	cp ../../fm5/index.html 5
@@ -28,3 +28,9 @@ fm9:
 	cp ../../fm9/*.csv 9
 	cp ../../fm9/*.css 9
 	cp ../../fm9/bundle.min.js 9
+
+fm10:
+	cp ../../fm10/index.html 10
+	cp ../../fm10/*.csv 10
+	cp ../../fm10/*.css 10
+	cp ../../fm10/bundle.min.js 10
