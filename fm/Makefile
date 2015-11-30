@@ -25,12 +25,14 @@ fm8:
 
 fm9:
 	cp ../../fm9/index.html 9
+	cp ../../fm9/styles.css 9
 	cp ../../fm9/*.csv 9
 	cp ../../fm9/*.css 9
 	cp ../../fm9/bundle.min.js 9
 
 fm10:
 	cp ../../fm10/index.html 10
+	cp ../../fm10/styles.css 10
 	cp ../../fm10/*.csv 10
 	cp ../../fm10/*.css 10
 	cp ../../fm10/bundle.min.js 10

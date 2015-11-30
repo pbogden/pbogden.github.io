@@ -3,6 +3,20 @@ body {
   margin: 0px;
 }
 
+/* Using padding hack so SVG scales as expected in IE */
+#container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 52%;  /* padding uses percentage of container width for aspect ratio = 500 / 960 */
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 path {
   fill: none;
   stroke: #000;
