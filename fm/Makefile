@@ -50,3 +50,10 @@ fm12:
 	cp ../../fm12/*.csv 12
 	cp ../../fm12/*.css 12
 	cp ../../fm12/bundle.min.js 12
+
+fm13:
+	cp ../../fm13/index.html 13
+	cp ../../fm13/styles.css 13
+	cp ../../fm13/*.csv 13
+	cp ../../fm13/*.css 13
+	cp ../../fm13/bundle.min.js 13
