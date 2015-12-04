@@ -18,6 +18,7 @@ path {
   background-color: #D3D3D3;  /* light gray */
   border-style: ridge;
   padding: 5px 5px 5px 5px;
+  font-size: 0.7em;
 }
 
 #info{
