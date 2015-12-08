@@ -57,3 +57,9 @@ fm13:
 	cp ../../fm13/*.csv 13
 	cp ../../fm13/*.css 13
 	cp ../../fm13/bundle.min.js 13
+
+fms:
+	cp ../../fms/index.html s
+	cp ../../fms/styles.css s
+	cp ../../fms/*.csv s
+	cp ../../fms/bundle.min.js s
