@@ -34,3 +34,8 @@ body {
     z-index: 100;
 }
 
+.overlay {
+  fill: none;
+  pointer-events: all;
+  cursor: ew-resize;
+}

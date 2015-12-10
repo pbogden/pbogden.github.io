@@ -1,4 +1,4 @@
-all: fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12
+all: fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fms
 
 .PHONY: fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12
 
@@ -59,13 +59,7 @@ fm13:
 	cp ../../fm13/bundle.min.js 13
 
 fms:
-	cp ../../fms/index.html s
-	cp ../../fms/styles.css s
-	cp ../../fms/*.csv s
-	cp ../../fms/bundle.min.js s
-
-fms0:
-	cp ../../fms/index.html s0
-	cp ../../fms/styles.css s0
-	cp ../../fms/*.csv s0
-	cp ../../fms/bundle.min.js s0
+	cp ../../fms0/index.html s
+	cp ../../fms0/styles.css s
+	cp ../../fms0/*.json s
+	cp ../../fms0/bundle.min.js s
