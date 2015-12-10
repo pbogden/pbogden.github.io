@@ -63,3 +63,9 @@ fms:
 	cp ../../fms/styles.css s
 	cp ../../fms/*.csv s
 	cp ../../fms/bundle.min.js s
+
+fms0:
+	cp ../../fms/index.html s0
+	cp ../../fms/styles.css s0
+	cp ../../fms/*.csv s0
+	cp ../../fms/bundle.min.js s0

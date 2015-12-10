@@ -1,0 +1,65 @@
+Geography,Region,Division
+NORTHEAST, 1, 0
+New England, 1, 1
+Connecticut, 1, 1
+Maine, 1, 1
+Massachusetts, 1, 1
+New Hampshire, 1, 1
+Rhode Island, 1, 1
+Vermont, 1, 1
+Middle Atlantic, 1, 2
+New Jersey, 1, 2
+New York, 1, 2
+Pennsylvania, 1, 2
+MIDWEST, 2, 0
+East North Central, 2, 3
+Illinois, 2, 3
+Indiana, 2, 3
+Michigan, 2, 3
+Ohio, 2, 3
+Wisconsin, 2, 3
+West North Central, 2, 4
+Iowa, 2, 4
+Kansas, 2, 4
+Minnesota, 2, 4
+Missouri, 2, 4
+Nebraska, 2, 4
+North Dakota, 2, 4
+South Dakota, 2, 4
+SOUTH, 3, 0
+South Atlantic, 3, 5
+Delaware, 3, 5
+District Of Columbia, 3, 5
+Florida, 3, 5
+Georgia, 3, 5
+Maryland, 3, 5
+North Carolina, 3, 5
+South Carolina, 3, 5
+Virginia, 3, 5
+West Virginia, 3, 5
+East South Central, 3, 6
+Alabama, 3, 6
+Kentucky, 3, 6
+Mississippi, 3, 6
+Tennessee, 3, 6
+West South Central, 3, 7
+Arkansas, 3, 7
+Louisiana, 3, 7
+Oklahoma, 3, 7
+Texas, 3, 7
+WEST, 4, 0
+Mountain, 4, 8
+Arizona, 4, 8
+Colorado, 4, 8
+Idaho, 4, 8
+Montana, 4, 8
+Nevada, 4, 8
+New Mexico, 4, 8
+Utah, 4, 8
+Wyoming, 4, 8
+Pacific, 4, 9
+Alaska, 4, 9
+California, 4, 9
+Hawaii, 4, 9
+Oregon, 4, 9
+Washington, 4, 9
