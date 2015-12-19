@@ -1,0 +1,308 @@
+[
+   {
+      "state": "1",
+      "name": "Alabama",
+      "white": 3207965,
+      "minority": 1571771
+   },
+   {
+      "state": "2",
+      "name": "Alaska",
+      "white": 456394,
+      "minority": 253837
+   },
+   {
+      "state": "4",
+      "name": "Arizona",
+      "white": 3705038,
+      "minority": 2686979
+   },
+   {
+      "state": "5",
+      "name": "Arkansas",
+      "white": 2175716,
+      "minority": 740202
+   },
+   {
+      "state": "6",
+      "name": "California",
+      "white": 15028651,
+      "minority": 22225305
+   },
+   {
+      "state": "8",
+      "name": "Colorado",
+      "white": 3529377,
+      "minority": 1499819
+   },
+   {
+      "state": "9",
+      "name": "Connecticut",
+      "white": 2556993,
+      "minority": 1017104
+   },
+   {
+      "state": "10",
+      "name": "Delaware",
+      "white": 587923,
+      "minority": 310011
+   },
+   {
+      "state": "11",
+      "name": "District of Columbia",
+      "white": 210389,
+      "minority": 391334
+   },
+   {
+      "state": "12",
+      "name": "Florida",
+      "white": 10925528,
+      "minority": 7875782
+   },
+   {
+      "state": "13",
+      "name": "Georgia",
+      "white": 5427133,
+      "minority": 4260520
+   },
+   {
+      "state": "15",
+      "name": "Hawaii",
+      "white": 310756,
+      "minority": 1049545
+   },
+   {
+      "state": "16",
+      "name": "Idaho",
+      "white": 1318281,
+      "minority": 249301
+   },
+   {
+      "state": "17",
+      "name": "Illinois",
+      "white": 8181822,
+      "minority": 4648810
+   },
+   {
+      "state": "18",
+      "name": "Indiana",
+      "white": 5294209,
+      "minority": 1189593
+   },
+   {
+      "state": "19",
+      "name": "Iowa",
+      "white": 2703407,
+      "minority": 342948
+   },
+   {
+      "state": "20",
+      "name": "Kansas",
+      "white": 2233536,
+      "minority": 619582
+   },
+   {
+      "state": "21",
+      "name": "Kentucky",
+      "white": 3750091,
+      "minority": 589276
+   },
+   {
+      "state": "22",
+      "name": "Louisiana",
+      "white": 2740980,
+      "minority": 1792392
+   },
+   {
+      "state": "23",
+      "name": "Maine",
+      "white": 1255527,
+      "minority": 72834
+   },
+   {
+      "state": "24",
+      "name": "Maryland",
+      "white": 3166050,
+      "minority": 2607502
+   },
+   {
+      "state": "25",
+      "name": "Massachusetts",
+      "white": 5037303,
+      "minority": 1510326
+   },
+   {
+      "state": "26",
+      "name": "Michigan",
+      "white": 7579545,
+      "minority": 2304095
+   },
+   {
+      "state": "27",
+      "name": "Minnesota",
+      "white": 4410722,
+      "minority": 893203
+   },
+   {
+      "state": "28",
+      "name": "Mississippi",
+      "white": 1723885,
+      "minority": 1243412
+   },
+   {
+      "state": "29",
+      "name": "Missouri",
+      "white": 4855967,
+      "minority": 1132960
+   },
+   {
+      "state": "30",
+      "name": "Montana",
+      "white": 869419,
+      "minority": 119996
+   },
+   {
+      "state": "31",
+      "name": "Nebraska",
+      "white": 1501707,
+      "minority": 324634
+   },
+   {
+      "state": "32",
+      "name": "Nevada",
+      "white": 1466653,
+      "minority": 1233898
+   },
+   {
+      "state": "33",
+      "name": "New Hampshire",
+      "white": 1217211,
+      "minority": 99259
+   },
+   {
+      "state": "34",
+      "name": "New Jersey",
+      "white": 5238374,
+      "minority": 3553520
+   },
+   {
+      "state": "35",
+      "name": "New Mexico",
+      "white": 838173,
+      "minority": 1221006
+   },
+   {
+      "state": "36",
+      "name": "New York",
+      "white": 11344650,
+      "minority": 8033452
+   },
+   {
+      "state": "37",
+      "name": "North Carolina",
+      "white": 6235669,
+      "minority": 3299814
+   },
+   {
+      "state": "38",
+      "name": "North Dakota",
+      "white": 598436,
+      "minority": 74155
+   },
+   {
+      "state": "39",
+      "name": "Ohio",
+      "white": 9372701,
+      "minority": 2163803
+   },
+   {
+      "state": "40",
+      "name": "Oklahoma",
+      "white": 2578592,
+      "minority": 1172759
+   },
+   {
+      "state": "41",
+      "name": "Oregon",
+      "white": 3012347,
+      "minority": 818727
+   },
+   {
+      "state": "42",
+      "name": "Pennsylvania",
+      "white": 10108932,
+      "minority": 2593447
+   },
+   {
+      "state": "44",
+      "name": "Rhode Island",
+      "white": 810631,
+      "minority": 241936
+   },
+   {
+      "state": "45",
+      "name": "South Carolina",
+      "white": 2967563,
+      "minority": 1657801
+   },
+   {
+      "state": "46",
+      "name": "South Dakota",
+      "white": 690043,
+      "minority": 124137
+   },
+   {
+      "state": "47",
+      "name": "Tennessee",
+      "white": 4806681,
+      "minority": 1539424
+   },
+   {
+      "state": "48",
+      "name": "Texas",
+      "white": 11428638,
+      "minority": 13716923
+   },
+   {
+      "state": "49",
+      "name": "Utah",
+      "white": 2226363,
+      "minority": 537522
+   },
+   {
+      "state": "50",
+      "name": "Vermont",
+      "white": 590890,
+      "minority": 34851
+   },
+   {
+      "state": "51",
+      "name": "Virginia",
+      "white": 5198632,
+      "minority": 2802392
+   },
+   {
+      "state": "53",
+      "name": "Washington",
+      "white": 4888788,
+      "minority": 1835752
+   },
+   {
+      "state": "54",
+      "name": "West Virginia",
+      "white": 1727584,
+      "minority": 125410
+   },
+   {
+      "state": "55",
+      "name": "Wisconsin",
+      "white": 4742619,
+      "minority": 944367
+   },
+   {
+      "state": "56",
+      "name": "Wyoming",
+      "white": 484472,
+      "minority": 79154
+   }
+]

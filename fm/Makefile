@@ -1,6 +1,6 @@
-all: fm16
+all: fmr1
 
-.PHONY: fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16
+.PHONY: fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fms fmr1
 
 fm5:
 	cp ../../fm5/index.html 5
@@ -70,3 +70,8 @@ fms:
 	cp ../../fms0/styles.css s
 	cp ../../fms0/*.json s
 	cp ../../fms0/bundle.min.js s
+
+fmr1:
+	cp ../../fmr1/index.html r1
+	cp ../../fmr1/*.json r1
+	cp ../../fmr1/bundle.min.js r1
