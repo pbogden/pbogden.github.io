@@ -1,0 +1,42 @@
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#container {
+    padding: 1% 5%;   /* (top & bottom)  (left & right) */
+    width: 90%;       /* container will fit window (accommodates 5% padding on each side) */
+    background-color: #0d2e49;
+/*    background-color: #4778b5; */
+}
+
+#graphic {
+    background-color: #ebebeb;
+}
+
+.axis path, .axis line {
+    fill: none;
+    stroke: black;
+}
+
+.year.label {
+  font: 500 196px "Helvetica Neue";
+  fill: #ddd;
+}
+
+.tooltip {
+    margin: 30px 30px 30px 30px;
+    background-color: lightgray;
+    border-style: solid;
+    padding: 10px 10px 10px 10px;
+    font-size: 1.5em;
+    position: absolute;
+    z-index: 100;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+  cursor: ew-resize;
+}

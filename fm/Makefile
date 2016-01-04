@@ -1,4 +1,4 @@
-all: fmr1
+all: fmr1 fmr3 fms1 fms2 fms3
 
 .PHONY: fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fms fmr1
 
@@ -65,11 +65,34 @@ fm16:
 	cp ../../fm16/*.css 16
 	cp ../../fm16/bundle.min.js 16
 
+fms3:
+	cp ../../fms3/index.html s3
+	cp ../../fms3/styles.css s3
+	cp ../../fms3/*.json s3
+	cp ../../fms3/bundle.min.js s3
+
+fms2:
+	cp ../../fms2/index.html s2
+	cp ../../fms2/styles.css s2
+	cp ../../fms2/*.json s2
+	cp ../../fms2/bundle.min.js s2
+
+fms1:
+	cp ../../fms1/index.html s1
+	cp ../../fms1/styles.css s1
+	cp ../../fms1/*.json s1
+	cp ../../fms1/bundle.min.js s1
+
 fms:
 	cp ../../fms0/index.html s
 	cp ../../fms0/styles.css s
 	cp ../../fms0/*.json s
 	cp ../../fms0/bundle.min.js s
+
+fmr3:
+	cp ../../fmr3/index.html r3
+	cp ../../fmr3/*.json r3
+	cp ../../fmr3/bundle.min.js r3
 
 fmr1:
 	cp ../../fmr1/index.html r1
