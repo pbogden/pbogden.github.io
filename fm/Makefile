@@ -91,6 +91,7 @@ fms:
 
 fmr4:
 	cp ../../fmr4/index.html r4
+	cp ../../fmr4/styles.css r4
 	cp ../../fmr4/*.json r4
 	cp ../../fmr4/bundle.min.js r4
 
