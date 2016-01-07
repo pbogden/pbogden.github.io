@@ -1,0 +1,70 @@
+svg {
+  font-size: 24px;
+}
+
+path {
+  fill: none;
+  stroke: #000;
+}
+
+#info, #tooltip {
+  position: absolute;
+}
+
+#tooltip {
+  visibility: hidden;
+  background-color: #D3D3D3;  /* light gray */
+  border-style: ridge;
+  padding: 5px 5px 5px 5px;
+  font-size: 0.7em;
+}
+
+#info{
+  top: 150px;
+  left: 500px;
+  font: 40px sans-serif;
+}
+
+.axis {
+  font: 0.6em sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.axis line {
+  stroke: #000;
+}
+
+.slider {
+  font: 2em sans-serif;
+}
+
+.slider .axis .domain {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .3;
+/*  stroke-width: 10px; */
+  stroke-width: 30px;
+  stroke-linecap: round;
+}
+
+.axis .halo {
+  fill: none;
+  stroke: #ddd;
+/*  stroke-width: 8px; */
+  stroke-width: 28px; 
+  stroke-linecap: round;
+}
+
+.slider .handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: .5;
+  stroke-width: 1.25px;
+  cursor: crosshair;
+}
+
+#container {
+  width: 100%;
+}
