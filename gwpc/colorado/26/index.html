@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>colorado26</title>
+<style>
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background-color: #ddd;
+}
+
+.map svg {
+  background-color: #fff;
+}
+
+#timeseries {
+  position: absolute;
+  top: 0px;
+  left: 600px;
+}
+
+.map {
+  position: relative;
+  overflow: visible;
+}
+
+.layer {
+  position: absolute;
+}
+
+form {
+  display: inline-block;
+  padding-left: 1em;
+}
+
+.tile, .tile-element {
+  position: absolute;
+  width: 256px;
+  height: 256px;
+}
+
+.info, .tooltip, .metadata {
+  pointer-events: none;
+  margin: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px; 
+  font-size: 1em;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.info, .tooltip {
+  position: absolute;
+}
+
+.tooltip, .metadata {
+  border-style: solid;
+}
+
+#mouse-coordinates {
+  top: 0px;
+  left: 0px;
+}
+
+#well-number {
+  right: 0px;
+  top: 0px;
+  text-align: right;
+}
+
+path.state {
+  fill: none;
+  stroke: #555;
+}
+
+path.county {
+  fill: #000;
+  fill-opacity: 0;
+  stroke: #555;
+  stroke-opacity: 0.3;
+}
+
+path.basin {
+  stroke: none;
+  fill: orange;
+  fill-opacity: 0.2;
+}
+
+path.play {
+  stroke: black;
+  fill: Orange;
+  fill-opacity: 0.3;
+}
+
+.mapcircle.well {
+  fill: steelblue;
+  stroke: black;
+  visibility: visible;
+}
+
+.mapcircle.well.null {
+  fill: gray;
+}
+
+.mapcircle.well.okay {
+  fill: green;
+}
+
+.mapcircle.well.warning {
+  fill: orange;
+}
+
+.mapcircle.well.danger {
+  fill: red;
+}
+
+.mapcircle.well.active {
+  fill: yellow;
+}
+
+.quake {
+  fill: crimson;
+  fill-opacity: 0;
+}
+
+.quake.inside {
+  fill-opacity: 0.4;
+}
+
+.mapcircle.quake {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.mapcircle.quake.active {
+  pointer-events: all;
+  visibility: visible;
+}
+
+.twnshp {
+  pointer-events: none;
+  fill: #000;
+  fill-opacity: 0;
+  stroke: steelblue;
+}
+
+.first {
+  pointer-events: all;
+  fill: #000;
+  fill-opacity: 0;
+  stroke: crimson;
+}
+
+.active {
+  pointer-events: all;
+}
+
+.y.label, .p.label, .tick text {
+  font-size: 0.8em;
+}
+
+path.injection-volume {
+  fill: none;
+  stroke: black;
+  stroke-width: 1px;
+}
+
+path.pressure {
+  fill: none;
+  stroke: red;
+  stroke-width: 1px;
+}
+
+path.casing {
+  fill: none;
+  stroke: yellow;
+  stroke-width: 2px;
+}
+
+path.pressure-limit {
+  fill: none;
+  stroke: red;
+  stroke-width: 5px;
+  opacity: 0.5;
+}
+
+.brush .extent {
+  fill: gray;
+  stroke: #fff;
+  fill-opacity: .125;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#container, #myTimeseries, #myMetadata {
+  vertical-align: top;
+  display: inline-block;
+}
+
+#myMetadata {
+  vertical-align: bottom;
+}
+</style>
+<body>
+<div id="container">
+  <div id="myMap"></div>
+    <div id="myForms">
+      <form id="myPlays">
+        <a href="http://www.eia.gov/pub/oil_gas/natural_gas/analysis_publications/maps/maps.htm">Shale plays (EIA):</a>
+        <input type="checkbox" name="select" >
+      </form>
+      <form id="myPlss">
+        <a href="http://www.geocommunicator.gov/Geocomm/lsis_home/home/index.htm">PLSS (BLM):</a>
+        <input type="checkbox" name="select" checked>
+      </form>
+      <form id="myCheck">
+        Check:
+        <input type="radio" name="check" value="none" checked> none,
+        <input type="radio" name="check" value="tbg" > tbg,
+        <input type="radio" name="check" value="csg" > csg,
+        <input type="radio" name="check" value="sum" > sum
+      </form>
+      <br>
+      <form id="myTiles">
+        <a href="http://www.thunderforest.com">Background map:</a>
+        <input type="radio" name="select" value="0" checked> none,
+        <input type="radio" name="select" value="1" > <a target="_blank" href="http://www.openstreetmap.org">OpenStreetMap</a>,
+        <input type="radio" name="select" value="2" > <a target="_blank" href="http://www.mapquest.com">Mapquest</a>,
+        <input type="radio" name="select" value="3" > <a target="_blank" href="http://www.thunderforest.com">Thunderforest</a>
+      </form>
+    </div><!-- #myForms -->
+  </div><!-- #myMap -->
+  <div id="myTimeseries"></div>
+  <div id="myMetadata"></div>
+</div><!-- #container -->
+
+<div class="info">
+<b>Interactive capabilities:</b>
+<ul>
+ <li>Data/metadata -- mouse over features on the map to display their data & metadata
+ <li>Map filter -- pan and zoom with mouse to filter the values displayed on the earthquake time series
+ <li>Brush filter -- move & resize the translucent gray box on earthquake time series to filter values on the map
+ <li>Multiple formations (permits) -- Click on well locations to toggle data/metadata for each formation
+ <ul>
+    <li>Blue well locations have one formation code</li>
+    <li>Orange well locations have multiple formations</li>
+ </ul>
+ <li>PLSS navigation -- (default: on) toggles on/off with checkbox below map</li>
+ <ul>
+    <li>Double click on county -- zooms to that county and displays townships
+    <li>Double click on township -- zooms to that township and displays sections (typically 1 square mile)
+ </ul>
+ <li>Permit limits -- toggle limit that is "Check"ed using radio buttons below the map</li>
+ <ul>
+    <li>none -- (default) wells with one formation (blue), multiple formations (orange)
+    <li>tbg -- tubing pressure: green (below limit), orange (near limit), red (exceeds limit)
+    <li>csg -- casing pressure: red (any positive value), green (zero pressure)
+    <li>sum -- cumulative injection volume: red (exceeds limit), green (below limit), gray (no limit data)
+ </ul>
+ <li>Map background -- add/change slippy map layers (streets, satellite, topography) with radio buttons below map</li>
+ <li>EIA shale plays (orange) & basins (light orange) -- toggle on/off with checkbox below map
+</ul>
+</div>
+
+<script src="bundle.min.js"></script>
+<script>
+
+var colorado = d3.colorado()(ready)
+var timeseries = d3.timeseries()
+
+var wells, quakes;
+
+function ready() {
+  timeseries()
+      .wells(colorado.wellData())
+      .quakes(colorado.quakeData())
+      .plotem()
+      .plotQuakeSeries()
+
+  colorado.update();
+};
+
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65949751-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

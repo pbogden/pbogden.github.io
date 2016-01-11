@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>colorado20</title>
+<style>
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  color: black;
+}
+
+.map {
+  pointer-events: all;
+  position: relative;
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+}
+
+#myForm {
+  position: absolute;
+}
+
+#myCheckbox {
+  visibility: visible;
+}
+
+#myForm {
+  top: 10px;
+  left: 750px;
+}
+
+.tile {
+  position: absolute;
+  width: 256px;
+  height: 256px;
+}
+
+.info {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.state, .county {
+  stroke: #555;
+  stroke-width: 2px;
+}
+
+.state {
+  pointer-events: none;
+}
+
+.county {
+  pointer-events: all;
+  fill: #000;
+  fill-opacity: 0;
+  stroke-width: 1px;
+  stroke-dasharray: 5,5;
+}
+
+path {
+  fill: none;
+  stroke: #000;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.major_road { stroke: #776; }
+.minor_road { stroke: #ccb; }
+.highway { stroke: #f39; stroke-width: 1.5px; }
+.rail { stroke: #7de; }
+
+</style>
+<body>
+<div id='myForm'>
+  <form id='myRadios'>
+    <a href="http://www.openstreetmap.org">openstreetmap</a><br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="0" checked> streets<br>
+    <a href="http://www.mapbox.com">mapbox</a><br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="1" > satellite<br>
+    <a href="http://www.mapquest.com">mapquest</a><br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="2"> streets<br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="3"> satellite<br>
+    <a href="http://www.thunderforest.com">thunderforest</a><br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="4" > landscape<br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="5" > opencyclemap<br>
+    <a href="http://www.stamen.com">stamen</a><br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="6" > terrain<br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="7" > toner<br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="8" > watercolor<br>
+    <input type="radio" name="select" value="9"> none<br>
+  </form>
+  <br>
+  <form id='myCheckbox'>
+    <input type="checkbox" checked> roads (vectors)<br>
+  </form>
+</div>
+<script src="bundle.min.js"></script>

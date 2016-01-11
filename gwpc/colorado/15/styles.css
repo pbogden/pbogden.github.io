@@ -1,0 +1,89 @@
+svg, div {
+  font: 16px sans-serif;
+  display: inline-block;
+}
+
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 1px;
+}
+
+rect {
+  fill: none;
+  stroke: black;
+  stroke-width: 1px;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+path.well {
+  fill: steelblue;
+  stroke: black;
+}
+
+path.well.active {
+  fill: yellow;
+}
+
+path.quake, circle.quake-series {
+  fill: crimson;
+  fill-opacity: 0.4;
+  pointer-events: none;
+}
+
+path.county-border {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+
+path.state {
+  fill: #fff;
+  stroke: #000;
+}
+
+path.play {
+  stroke: black;
+  fill: Orange;
+  fill-opacity: 0.3;
+}
+
+path.basin {
+  fill: AntiqueWhite;
+  fill-opacity: 0.8;
+}
+
+path.prospective {
+  fill: Pink;
+  fill-opacity: 1;
+}
+
+.tooltip, .welltip, .wellinfo {
+    margin: 20px 20px 20px 20px;
+    background-color: #D3D3D3;  /* light gray */
+    border-style: solid;
+    padding: 5px 5px 5px 5px;
+    font-size: 1.25em;
+    position: absolute;
+}
+
+.welltip {
+    left: 620px;
+    top: 200px;
+}
+
+.wellinfo {
+    left: 20px;
+    top: 520px;
+}
+
+.brush .extent {
+  fill: gray;
+  stroke: #fff;
+  fill-opacity: .125;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>oklahoma2</title>
+<style>
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+#timeseries {
+  position: absolute;
+  top: 0px;
+  left: 700px;
+}
+
+.map {
+  pointer-events: all;
+  position: relative;
+  overflow: visible;
+}
+
+.layer {
+  position: absolute;
+}
+
+#myForm {
+  position: absolute;
+  top: 410px;
+  left: 10px;
+}
+
+.tile, .tile-element {
+  position: absolute;
+  width: 256px;
+  height: 256px;
+}
+
+.info {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.tooltip {
+    position: absolute;
+    margin: 20px 20px 20px 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-style: solid;
+    padding: 5px 5px 5px 5px;
+    font-size: 1em;
+}
+
+path.state, path.county {
+  fill: none;
+  pointer-events: none;
+  stroke: #555;
+}
+
+path.county {
+  stroke-opacity: 0.3;
+}
+
+path.basin {
+  stroke: none;
+  fill: orange;
+  fill-opacity: 0.2;
+}
+
+path.play {
+  stroke: black;
+  fill: Orange;
+  fill-opacity: 0.3;
+}
+
+path.well {
+  fill: steelblue;
+  stroke: black;
+}
+
+path.well.active {
+  fill: yellow;
+}
+
+.quake {
+  fill: crimson;
+  fill-opacity: 0.4;
+  stroke: none;
+}
+
+path.injection-volume {
+  fill: none;
+  stroke: black;
+  stroke-width: 1px;
+}
+
+path.pressure {
+  fill: none;
+  stroke: red;
+  stroke-width: 2px;
+}
+
+path.pressure-limit {
+  fill: none;
+  stroke: red;
+  stroke-width: 5px;
+  opacity: 0.5;
+}
+
+.brush .extent {
+  fill: gray;
+  stroke: #fff;
+  fill-opacity: .125;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+</style>
+<body>
+<div id='myForm'>
+  <form id='myRadios'>
+    <a href="http://www.openstreetmap.org">openstreetmap:</a>
+    <input type="radio" name="select" value="0" checked>streets,&nbsp&nbsp;
+    <a href="http://www.mapbox.com">mapbox:</a>
+    <input type="radio" name="select" value="1"> satellite,&nbsp;&nbsp;
+    &nbsp;&nbsp;<a href="http://www.mapquest.com">mapquest:</a>
+    &nbsp;&nbsp;<input type="radio" name="select" value="2"> streets
+    &nbsp;&nbsp;<input type="radio" name="select" value="3"> satellite
+    <br><a href="http://www.thunderforest.com">thunderforest:</a>
+    <input type="radio" name="select" value="4" > landscape
+    <input type="radio" name="select" value="5" > opencyclemap,
+    &nbsp;&nbsp;<a href="http://www.stamen.com">stamen:</a>
+    <input type="radio" name="select" value="6" > terrain
+    <input type="radio" name="select" value="7" > toner
+    <br>none:
+    <input type="radio" name="select" value="9">
+  </form>
+</div>
+<script src="bundle.min.js"></script>
+<script>
+
+var colorado = d3.colorado()(init)
+var timeseries;
+
+function init() {
+  timeseries = d3.timeseries()(cb);
+};
+
+function cb() {
+  timeseries.plotem()
+  timeseries.plotQuakeSeries()
+  colorado.tooltip();
+}
+
+</script>

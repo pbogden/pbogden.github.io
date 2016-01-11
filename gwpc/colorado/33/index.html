@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>colorado33</title>
+<link rel="stylesheet" href="styles.css" type="text/css">
+<body>
+<div id="myMap"></div>
+<div id='myForm'>
+<b>Map data</b><br>
+  <form id='myRadios'>
+    <a href="http://www.openstreetmap.org">openstreetmap</a><br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="0" > streets<br>
+    <a href="http://www.mapbox.com">mapbox</a><br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="1"> satellite<br>
+    <a href="http://www.mapquest.com">mapquest</a><br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="2"> streets<br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="3"> satellite<br>
+    <a href="http://www.thunderforest.com">thunderforest</a><br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="4" > landscape<br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="5" > opencyclemap<br>
+    <a href="http://www.stamen.com">stamen</a><br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="6" > terrain<br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="7" > toner<br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="8" > watercolor<br>
+    <a href="http://www.usgs.gov">usgs</a><br>
+    &nbsp;&nbsp;<input type="radio" name="select" value="9" checked> DEM<br>
+    <input type="radio" name="select" value="10" > none<br>
+  </form>
+</div>
+<div id="myText">
+<b>Vector data</b><br>
+Well geophysical logs (black): <a href="http://water.state.co.us/">Colorado Division of Water Resources</a><br>
+Aquifer exemptions (crimson): <a href="https://www.colorado.gov/pacific/cdphe/">Colorado Dept. of Public Health & Environment</a><br>
+Shale plays (gold): <a href="http://www.eia.gov/">EIA</a> -- <a href="http://www.eia.gov/oil_gas/rpd/shale_gas.pdf" target="_blank">publication</a>
+<h1>
+</div>
+<script src="bundle.min.js"></script>
