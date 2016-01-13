@@ -1,0 +1,58 @@
+svg {
+  font-size: 24px;
+}
+
+path {
+  fill: none;
+  stroke: #000;
+}
+
+#info, #tooltip {
+  position: absolute;
+}
+
+#tooltip {
+  visibility: hidden;
+  background-color: #D3D3D3;  /* light gray */
+  border-style: ridge;
+  padding: 5px 5px 5px 5px;
+  font-size: 0.7em;
+}
+
+#info{
+  top: 150px;
+  left: 500px;
+  font: 40px sans-serif;
+}
+
+.axis {
+  font: 0.6em sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.axis line {
+  stroke: #000;
+}
+
+.selector rect {
+  stroke: #000;
+  fill-opacity: 0.8;
+}
+
+.selector rect:hover {
+  fill-opacity: 1;
+}
+
+.select-year rect {
+  fill-opacity: 0.1;
+}
+
+.select-year rect:hover {
+  fill-opacity: 0.2;
+}
+
+#container {
+  width: 100%;
+}
