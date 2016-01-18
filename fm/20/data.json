@@ -3,41 +3,6 @@
       {
          "types": [
             {
-               "group": "Between 1 and 13",
-               "value": 0,
-               "name": "5-9 Apartments",
-               "y0": 0,
-               "y1": 0
-            },
-            {
-               "group": "Between 1 and 13",
-               "value": 0,
-               "name": "10-19 Apartments",
-               "y0": 0,
-               "y1": 0
-            },
-            {
-               "group": "Between 1 and 13",
-               "value": 0,
-               "name": "20-49 Apartments",
-               "y0": 0,
-               "y1": 0
-            },
-            {
-               "group": "Between 1 and 13",
-               "value": 0,
-               "name": "50 or More Apartments",
-               "y0": 0,
-               "y1": 0
-            }
-         ],
-         "group": 1,
-         "total": 0,
-         "generation": "m"
-      },
-      {
-         "types": [
-            {
                "group": "Between 14 and 18",
                "value": 21078,
                "name": "5-9 Apartments",
@@ -667,41 +632,6 @@
       }
    ],
    "d14": [
-      {
-         "types": [
-            {
-               "group": "Between 1 and 13",
-               "value": 0,
-               "name": " 5-9 Apartments",
-               "y0": 0,
-               "y1": 0
-            },
-            {
-               "group": "Between 1 and 13",
-               "value": 0,
-               "name": " 10-19 Apartments",
-               "y0": 0,
-               "y1": 0
-            },
-            {
-               "group": "Between 1 and 13",
-               "value": 0,
-               "name": " 20-49 Apartments",
-               "y0": 0,
-               "y1": 0
-            },
-            {
-               "group": "Between 1 and 13",
-               "value": 0,
-               "name": " 50 or More Apartments",
-               "y0": 0,
-               "y1": 0
-            }
-         ],
-         "group": 1,
-         "total": 0,
-         "generation": "m"
-      },
       {
          "types": [
             {
