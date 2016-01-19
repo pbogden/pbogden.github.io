@@ -95,6 +95,12 @@ fm21:
 	cp ../../fm21/*.css 21
 	cp ../../fm21/bundle.min.js 21
 
+fm22:
+	cp ../../fm22/index.html 22
+	cp ../../fm22/data.json 22
+	cp ../../fm22/*.css 22
+	cp ../../fm22/bundle.min.js 22
+
 fms3:
 	cp ../../fms3/index.html s3
 	cp ../../fms3/styles.css s3
