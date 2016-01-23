@@ -14,3 +14,8 @@ tree2:
 	cp ../../tree2/*.css tree2
 	cp ../../tree2/bundle.min.js tree2
 
+tree3:
+	cp ../../tree3/index.html tree3
+	cp ../../tree3/*.csv tree3
+	cp ../../tree3/*.css tree3
+	cp ../../tree3/bundle.min.js tree3
