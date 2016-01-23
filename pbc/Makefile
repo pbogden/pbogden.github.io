@@ -1,6 +1,6 @@
-all: tree2
+all: tree3
 
-.PHONY: tree1 tree2
+.PHONY: tree1 tree2 tree3
 
 tree1:
 	cp ../../tree1/index.html tree1
