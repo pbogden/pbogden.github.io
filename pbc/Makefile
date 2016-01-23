@@ -1,6 +1,6 @@
-all: tree3
+all: tree4
 
-.PHONY: tree1 tree2 tree3
+.PHONY: tree1 tree2 tree3 tree4
 
 tree1:
 	cp ../../tree1/index.html tree1
@@ -19,3 +19,8 @@ tree3:
 	cp ../../tree3/*.csv tree3
 	cp ../../tree3/*.css tree3
 	cp ../../tree3/bundle.min.js tree3
+
+tree4:
+	cp ../../tree4/index.html tree4
+	cp ../../tree4/*.css tree4
+	cp ../../tree4/bundle.min.js tree4
