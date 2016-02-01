@@ -5,7 +5,7 @@ body {
 }
 
 #container {
-    padding: 1% 5%;   /* (top & bottom)  (left & right) */
+    padding: 5% 5%;   /* (top & bottom)  (left & right) */
     width: 90%;       /* container will fit window (accommodates 5% padding on each side) */
     background-color: #0d2e49;
 /*    background-color: #4778b5; */
