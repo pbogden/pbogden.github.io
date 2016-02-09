@@ -1226,41 +1226,6 @@
          "group": 94,
          "total": 195876,
          "generation": "g"
-      },
-      {
-         "types": [
-            {
-               "group": "Between 99 and 99",
-               "value": 0,
-               "name": " 5-9 Apartments",
-               "y0": 0,
-               "y1": 0
-            },
-            {
-               "group": "Between 99 and 99",
-               "value": 0,
-               "name": " 10-19 Apartments",
-               "y0": 0,
-               "y1": 0
-            },
-            {
-               "group": "Between 99 and 99",
-               "value": 0,
-               "name": " 20-49 Apartments",
-               "y0": 0,
-               "y1": 0
-            },
-            {
-               "group": "Between 99 and 99",
-               "value": 0,
-               "name": " 50 or More Apartments",
-               "y0": 0,
-               "y1": 0
-            }
-         ],
-         "group": 99,
-         "total": 0,
-         "generation": "g"
       }
    ]
 }
