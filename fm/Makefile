@@ -1,4 +1,4 @@
-all: fm20
+all: fm23
 
 .PHONY: fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fms fmr1
 
@@ -100,6 +100,12 @@ fm22:
 	cp ../../fm22/data.json 22
 	cp ../../fm22/*.css 22
 	cp ../../fm22/bundle.min.js 22
+
+fm23:
+	cp ../../fm23/index.html 23
+	cp ../../fm23/data.json 23
+	cp ../../fm23/*.css 23
+	cp ../../fm23/bundle.min.js 23
 
 fms3:
 	cp ../../fms3/index.html s3
