@@ -1,6 +1,9 @@
-all: fm23
+all: map1
 
-.PHONY: fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fms fmr1
+.PHONY: fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fms fmr1 map1
+
+map1:
+	cp ../../fmap1/* map1
 
 fm5:
 	cp ../../fm5/index.html 5
