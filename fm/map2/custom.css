@@ -1,0 +1,70 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#container {
+  background-color: #ebebeb;
+}
+
+#scatter object, #scatter svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+circle.loans, circle.scatter {
+  fill: #0d2e49;
+  fill-opacity: .5;
+  shape-rendering: optimizeSpeed;
+}
+
+circle.loans {
+  fill: #fff;  /* EVERY MAP DOT IS WHITE AT THIS POINT */
+  fill-opacity: 1;
+}
+
+circle.loans.big {
+/*  fill: #0d2e49; */  /* BIG MAP DOTS HAVE A BLUE INTERIOR */
+  stroke: #fff;
+  stroke-width: 0.5px;   /* WHITE STROKE CAUSES SPARKLING */
+}
+
+.legend circle {
+  fill: none;
+  stroke: #777;
+}
+
+.legend text {
+  font-size: 100%;
+  text-anchor: middle;
+}
+
+#scatterButton rect {
+  fill: #0d2e49; 
+  fill-opacity: 0.7; 
+  stroke: #000000;
+  stroke-width: 1px;
+}
+
+#scatter text.x.label {
+  font-size: 150%;
+}
+
+/* DON'T CHANGE STYLES BELOW THIS LINE */
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis, .y.axis, .x.label, .y.label {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+
+.brush .extent {
+  fill: "gray";
+  stroke: #fff;
+  fill-opacity: .125;
+}
