@@ -3,10 +3,22 @@ all: map1
 .PHONY: fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fms fmr1 map1 map2
 
 map1:
-	cp ../../fmap1/* map1
+	cp ../../fmap1/*.png map1
+	cp ../../fmap1/*.css map1
+	cp ../../fmap1/index.html map1
+	cp ../../fmap1/map.html map1
+	cp ../../fmap1/data.json map1
+	cp ../../fmap1/single.svg map1
+	cp ../../fmap1/bundle.min.js map1
 
 map2:
-	cp ../../fmap1/* map2
+	cp ../../fmap2/*.png map2
+	cp ../../fmap2/*.css map2
+	cp ../../fmap2/index.html map2
+	cp ../../fmap2/map.html map2
+	cp ../../fmap2/data.json map2
+	cp ../../fmap2/single.svg map2
+	cp ../../fmap2/bundle.min.js map2
 
 fm5:
 	cp ../../fm5/index.html 5
