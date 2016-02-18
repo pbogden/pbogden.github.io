@@ -214,11 +214,6 @@ height: 240px; overflow:hidden; width:50px;}
 #footer span.copy { display:inline-block; padding-left:30px;
 }
 
-#map {}
-#iemap { display:none;}
-#iemap { display:block\9;}
-#iemap { display/*\**/:block\9;}
-
 #ievid { display:none;}
 #ievid { display:block\9;}
 #ievid { display/*\**/:block\9;}
