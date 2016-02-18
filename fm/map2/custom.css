@@ -2,16 +2,6 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-#container {
-  background-color: #ebebeb;
-}
-
-#scatter object, #scatter svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 circle.loans, circle.scatter {
   fill: #0d2e49;
   fill-opacity: .5;

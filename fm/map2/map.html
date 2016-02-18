@@ -3,11 +3,34 @@
 <meta charset="utf-8">
 <title>fml16</title>
 <link rel="stylesheet" href="custom.css" type="text/css">
+<style>
+
+#container {
+  background-color: #ebebeb;
+}
+
+#scatter {
+  position: relative;
+}
+
+#scatter img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#scatter svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+</style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
 <div id="container">
   <div id="scatter">
-    <object type="image/svg+xml" data="single.svg"></object>
+    <img src="single.svg">
   </div>
   <div id="map"></div>
 </div>

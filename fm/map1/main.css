@@ -218,8 +218,6 @@ height: 240px; overflow:hidden; width:50px;}
 #iemap { display:none;}
 #iemap { display:block\9;}
 #iemap { display/*\**/:block\9;}
-#map { display:none\9;}
-#map { display/*\**/:none\9;}
 
 #ievid { display:none;}
 #ievid { display:block\9;}
