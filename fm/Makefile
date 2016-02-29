@@ -1,4 +1,4 @@
-all: map1
+all: fm26
 
 .PHONY: fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fms fmr1 map1 map2
 
@@ -118,6 +118,13 @@ fm22:
 	cp ../../fm22/data.json 22
 	cp ../../fm22/*.css 22
 	cp ../../fm22/bundle.min.js 22
+
+fm26:
+	cp ../../fm26/index.html 26
+	cp ../../fm26/test.html 26
+	cp ../../fm26/data.json 26
+	cp ../../fm26/*.css 26
+	cp ../../fm26/bundle.min.js 26
 
 fm23:
 	cp ../../fm23/index.html 23
