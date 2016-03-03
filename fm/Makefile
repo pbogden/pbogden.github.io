@@ -126,6 +126,12 @@ fm26:
 	cp ../../fm26/*.css 26
 	cp ../../fm26/bundle.min.js 26
 
+fm25:
+	cp ../../fm25/index.html 25
+	cp ../../fm25/data.json 25
+	cp ../../fm25/*.css 25
+	cp ../../fm25/bundle.min.js 25
+
 fm23:
 	cp ../../fm23/index.html 23
 	cp ../../fm23/data.json 23
