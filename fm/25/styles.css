@@ -7,6 +7,10 @@ path {
   stroke: #000;
 }
 
+.story-text {
+  pointer-events: none; 
+}
+
 #info, #tooltip {
   position: absolute;
 }
