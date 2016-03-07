@@ -31,6 +31,7 @@ path {
 }
 
 button {
+    cursor: pointer;
     background-color: #d3d3d3;
 }
 
@@ -61,9 +62,14 @@ a.button {
   stroke: #000;
 }
 
-.selector rect {
+.selector rect, .backButton rect {
   stroke: #000;
   fill-opacity: 0.5;
+  cursor: pointer;
+}
+
+.selector rect.active {
+  fill-opacity: 0.9;
 }
 
 .selector rect:hover {
@@ -77,6 +83,7 @@ a.button {
 
 .select-year rect:hover {
   fill-opacity: 1;
+  cursor: pointer;
 }
 
 #container {
