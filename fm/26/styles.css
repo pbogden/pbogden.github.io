@@ -60,6 +60,7 @@ a.button {
   stroke: #000;
   stroke-width: 1px;
   fill-opacity: 0.8;
+  cursor: pointer;
 }
 
 .selector rect:hover {
@@ -68,6 +69,7 @@ a.button {
 
 .select-year rect {
   fill-opacity: 0.1;
+  cursor: pointer;
 }
 
 .select-year rect:hover {
