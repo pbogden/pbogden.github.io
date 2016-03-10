@@ -1,0 +1,1231 @@
+{
+   "d09": [
+      {
+         "types": [
+            {
+               "group": "Between 14 and 18",
+               "value": 21078,
+               "name": "5-9 Apartments",
+               "y0": 0,
+               "y1": 21078
+            },
+            {
+               "group": "Between 14 and 18",
+               "value": 19073,
+               "name": "10-19 Apartments",
+               "y0": 21078,
+               "y1": 40151
+            },
+            {
+               "group": "Between 14 and 18",
+               "value": 9949,
+               "name": "20-49 Apartments",
+               "y0": 40151,
+               "y1": 50100
+            },
+            {
+               "group": "Between 14 and 18",
+               "value": 10086,
+               "name": "50 or More Apartments",
+               "y0": 50100,
+               "y1": 60186
+            }
+         ],
+         "group": 14,
+         "total": 60186,
+         "generation": "m"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 19 and 23",
+               "value": 527912,
+               "name": "5-9 Apartments",
+               "y0": 0,
+               "y1": 527912
+            },
+            {
+               "group": "Between 19 and 23",
+               "value": 548029,
+               "name": "10-19 Apartments",
+               "y0": 527912,
+               "y1": 1075941
+            },
+            {
+               "group": "Between 19 and 23",
+               "value": 317337,
+               "name": "20-49 Apartments",
+               "y0": 1075941,
+               "y1": 1393278
+            },
+            {
+               "group": "Between 19 and 23",
+               "value": 265522,
+               "name": "50 or More Apartments",
+               "y0": 1393278,
+               "y1": 1658800
+            }
+         ],
+         "group": 19,
+         "total": 1658800,
+         "generation": "m"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 24 and 28",
+               "value": 790146,
+               "name": "5-9 Apartments",
+               "y0": 0,
+               "y1": 790146
+            },
+            {
+               "group": "Between 24 and 28",
+               "value": 786218,
+               "name": "10-19 Apartments",
+               "y0": 790146,
+               "y1": 1576364
+            },
+            {
+               "group": "Between 24 and 28",
+               "value": 505590,
+               "name": "20-49 Apartments",
+               "y0": 1576364,
+               "y1": 2081954
+            },
+            {
+               "group": "Between 24 and 28",
+               "value": 488890,
+               "name": "50 or More Apartments",
+               "y0": 2081954,
+               "y1": 2570844
+            }
+         ],
+         "group": 24,
+         "total": 2570844,
+         "generation": "m"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 29 and 33",
+               "value": 628175,
+               "name": "5-9 Apartments",
+               "y0": 0,
+               "y1": 628175
+            },
+            {
+               "group": "Between 29 and 33",
+               "value": 615525,
+               "name": "10-19 Apartments",
+               "y0": 628175,
+               "y1": 1243700
+            },
+            {
+               "group": "Between 29 and 33",
+               "value": 380478,
+               "name": "20-49 Apartments",
+               "y0": 1243700,
+               "y1": 1624178
+            },
+            {
+               "group": "Between 29 and 33",
+               "value": 409125,
+               "name": "50 or More Apartments",
+               "y0": 1624178,
+               "y1": 2033303
+            }
+         ],
+         "group": 29,
+         "total": 2033303,
+         "generation": "x"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 34 and 38",
+               "value": 483192,
+               "name": "5-9 Apartments",
+               "y0": 0,
+               "y1": 483192
+            },
+            {
+               "group": "Between 34 and 38",
+               "value": 469369,
+               "name": "10-19 Apartments",
+               "y0": 483192,
+               "y1": 952561
+            },
+            {
+               "group": "Between 34 and 38",
+               "value": 300219,
+               "name": "20-49 Apartments",
+               "y0": 952561,
+               "y1": 1252780
+            },
+            {
+               "group": "Between 34 and 38",
+               "value": 329449,
+               "name": "50 or More Apartments",
+               "y0": 1252780,
+               "y1": 1582229
+            }
+         ],
+         "group": 34,
+         "total": 1582229,
+         "generation": "x"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 39 and 43",
+               "value": 418529,
+               "name": "5-9 Apartments",
+               "y0": 0,
+               "y1": 418529
+            },
+            {
+               "group": "Between 39 and 43",
+               "value": 397041,
+               "name": "10-19 Apartments",
+               "y0": 418529,
+               "y1": 815570
+            },
+            {
+               "group": "Between 39 and 43",
+               "value": 263218,
+               "name": "20-49 Apartments",
+               "y0": 815570,
+               "y1": 1078788
+            },
+            {
+               "group": "Between 39 and 43",
+               "value": 283834,
+               "name": "50 or More Apartments",
+               "y0": 1078788,
+               "y1": 1362622
+            }
+         ],
+         "group": 39,
+         "total": 1362622,
+         "generation": "x"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 44 and 48",
+               "value": 406701,
+               "name": "5-9 Apartments",
+               "y0": 0,
+               "y1": 406701
+            },
+            {
+               "group": "Between 44 and 48",
+               "value": 386705,
+               "name": "10-19 Apartments",
+               "y0": 406701,
+               "y1": 793406
+            },
+            {
+               "group": "Between 44 and 48",
+               "value": 246275,
+               "name": "20-49 Apartments",
+               "y0": 793406,
+               "y1": 1039681
+            },
+            {
+               "group": "Between 44 and 48",
+               "value": 294919,
+               "name": "50 or More Apartments",
+               "y0": 1039681,
+               "y1": 1334600
+            }
+         ],
+         "group": 44,
+         "total": 1334600,
+         "generation": "b"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 49 and 53",
+               "value": 357541,
+               "name": "5-9 Apartments",
+               "y0": 0,
+               "y1": 357541
+            },
+            {
+               "group": "Between 49 and 53",
+               "value": 306003,
+               "name": "10-19 Apartments",
+               "y0": 357541,
+               "y1": 663544
+            },
+            {
+               "group": "Between 49 and 53",
+               "value": 230780,
+               "name": "20-49 Apartments",
+               "y0": 663544,
+               "y1": 894324
+            },
+            {
+               "group": "Between 49 and 53",
+               "value": 285268,
+               "name": "50 or More Apartments",
+               "y0": 894324,
+               "y1": 1179592
+            }
+         ],
+         "group": 49,
+         "total": 1179592,
+         "generation": "b"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 54 and 58",
+               "value": 284335,
+               "name": "5-9 Apartments",
+               "y0": 0,
+               "y1": 284335
+            },
+            {
+               "group": "Between 54 and 58",
+               "value": 252079,
+               "name": "10-19 Apartments",
+               "y0": 284335,
+               "y1": 536414
+            },
+            {
+               "group": "Between 54 and 58",
+               "value": 202963,
+               "name": "20-49 Apartments",
+               "y0": 536414,
+               "y1": 739377
+            },
+            {
+               "group": "Between 54 and 58",
+               "value": 274630,
+               "name": "50 or More Apartments",
+               "y0": 739377,
+               "y1": 1014007
+            }
+         ],
+         "group": 54,
+         "total": 1014007,
+         "generation": "b"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 59 and 63",
+               "value": 221046,
+               "name": "5-9 Apartments",
+               "y0": 0,
+               "y1": 221046
+            },
+            {
+               "group": "Between 59 and 63",
+               "value": 198119,
+               "name": "10-19 Apartments",
+               "y0": 221046,
+               "y1": 419165
+            },
+            {
+               "group": "Between 59 and 63",
+               "value": 172686,
+               "name": "20-49 Apartments",
+               "y0": 419165,
+               "y1": 591851
+            },
+            {
+               "group": "Between 59 and 63",
+               "value": 270291,
+               "name": "50 or More Apartments",
+               "y0": 591851,
+               "y1": 862142
+            }
+         ],
+         "group": 59,
+         "total": 862142,
+         "generation": "b"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 64 and 68",
+               "value": 153432,
+               "name": "5-9 Apartments",
+               "y0": 0,
+               "y1": 153432
+            },
+            {
+               "group": "Between 64 and 68",
+               "value": 135226,
+               "name": "10-19 Apartments",
+               "y0": 153432,
+               "y1": 288658
+            },
+            {
+               "group": "Between 64 and 68",
+               "value": 133477,
+               "name": "20-49 Apartments",
+               "y0": 288658,
+               "y1": 422135
+            },
+            {
+               "group": "Between 64 and 68",
+               "value": 233396,
+               "name": "50 or More Apartments",
+               "y0": 422135,
+               "y1": 655531
+            }
+         ],
+         "group": 64,
+         "total": 655531,
+         "generation": "g"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 69 and 73",
+               "value": 106710,
+               "name": "5-9 Apartments",
+               "y0": 0,
+               "y1": 106710
+            },
+            {
+               "group": "Between 69 and 73",
+               "value": 96898,
+               "name": "10-19 Apartments",
+               "y0": 106710,
+               "y1": 203608
+            },
+            {
+               "group": "Between 69 and 73",
+               "value": 105483,
+               "name": "20-49 Apartments",
+               "y0": 203608,
+               "y1": 309091
+            },
+            {
+               "group": "Between 69 and 73",
+               "value": 237900,
+               "name": "50 or More Apartments",
+               "y0": 309091,
+               "y1": 546991
+            }
+         ],
+         "group": 69,
+         "total": 546991,
+         "generation": "g"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 74 and 78",
+               "value": 86495,
+               "name": "5-9 Apartments",
+               "y0": 0,
+               "y1": 86495
+            },
+            {
+               "group": "Between 74 and 78",
+               "value": 74772,
+               "name": "10-19 Apartments",
+               "y0": 86495,
+               "y1": 161267
+            },
+            {
+               "group": "Between 74 and 78",
+               "value": 88787,
+               "name": "20-49 Apartments",
+               "y0": 161267,
+               "y1": 250054
+            },
+            {
+               "group": "Between 74 and 78",
+               "value": 234424,
+               "name": "50 or More Apartments",
+               "y0": 250054,
+               "y1": 484478
+            }
+         ],
+         "group": 74,
+         "total": 484478,
+         "generation": "g"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 79 and 83",
+               "value": 74565,
+               "name": "5-9 Apartments",
+               "y0": 0,
+               "y1": 74565
+            },
+            {
+               "group": "Between 79 and 83",
+               "value": 62324,
+               "name": "10-19 Apartments",
+               "y0": 74565,
+               "y1": 136889
+            },
+            {
+               "group": "Between 79 and 83",
+               "value": 101206,
+               "name": "20-49 Apartments",
+               "y0": 136889,
+               "y1": 238095
+            },
+            {
+               "group": "Between 79 and 83",
+               "value": 256675,
+               "name": "50 or More Apartments",
+               "y0": 238095,
+               "y1": 494770
+            }
+         ],
+         "group": 79,
+         "total": 494770,
+         "generation": "g"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 84 and 88",
+               "value": 49130,
+               "name": "5-9 Apartments",
+               "y0": 0,
+               "y1": 49130
+            },
+            {
+               "group": "Between 84 and 88",
+               "value": 44329,
+               "name": "10-19 Apartments",
+               "y0": 49130,
+               "y1": 93459
+            },
+            {
+               "group": "Between 84 and 88",
+               "value": 83773,
+               "name": "20-49 Apartments",
+               "y0": 93459,
+               "y1": 177232
+            },
+            {
+               "group": "Between 84 and 88",
+               "value": 272128,
+               "name": "50 or More Apartments",
+               "y0": 177232,
+               "y1": 449360
+            }
+         ],
+         "group": 84,
+         "total": 449360,
+         "generation": "g"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 89 and 93",
+               "value": 20258,
+               "name": "5-9 Apartments",
+               "y0": 0,
+               "y1": 20258
+            },
+            {
+               "group": "Between 89 and 93",
+               "value": 17673,
+               "name": "10-19 Apartments",
+               "y0": 20258,
+               "y1": 37931
+            },
+            {
+               "group": "Between 89 and 93",
+               "value": 47671,
+               "name": "20-49 Apartments",
+               "y0": 37931,
+               "y1": 85602
+            },
+            {
+               "group": "Between 89 and 93",
+               "value": 160175,
+               "name": "50 or More Apartments",
+               "y0": 85602,
+               "y1": 245777
+            }
+         ],
+         "group": 89,
+         "total": 245777,
+         "generation": "g"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 94 and 98",
+               "value": 5294,
+               "name": "5-9 Apartments",
+               "y0": 0,
+               "y1": 5294
+            },
+            {
+               "group": "Between 94 and 98",
+               "value": 6758,
+               "name": "10-19 Apartments",
+               "y0": 5294,
+               "y1": 12052
+            },
+            {
+               "group": "Between 94 and 98",
+               "value": 17447,
+               "name": "20-49 Apartments",
+               "y0": 12052,
+               "y1": 29499
+            },
+            {
+               "group": "Between 94 and 98",
+               "value": 49734,
+               "name": "50 or More Apartments",
+               "y0": 29499,
+               "y1": 79233
+            }
+         ],
+         "group": 94,
+         "total": 79233,
+         "generation": "g"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 99 and 99",
+               "value": 0,
+               "name": "5-9 Apartments",
+               "y0": 0,
+               "y1": 0
+            },
+            {
+               "group": "Between 99 and 99",
+               "value": 0,
+               "name": "10-19 Apartments",
+               "y0": 0,
+               "y1": 0
+            },
+            {
+               "group": "Between 99 and 99",
+               "value": 0,
+               "name": "20-49 Apartments",
+               "y0": 0,
+               "y1": 0
+            },
+            {
+               "group": "Between 99 and 99",
+               "value": 0,
+               "name": "50 or More Apartments",
+               "y0": 0,
+               "y1": 0
+            }
+         ],
+         "group": 99,
+         "total": 0,
+         "generation": "g"
+      }
+   ],
+   "d14": [
+      {
+         "types": [
+            {
+               "group": "Between 14 and 18",
+               "value": 14412,
+               "name": " 5-9 Apartments",
+               "y0": 0,
+               "y1": 14412
+            },
+            {
+               "group": "Between 14 and 18",
+               "value": 13476,
+               "name": " 10-19 Apartments",
+               "y0": 14412,
+               "y1": 27888
+            },
+            {
+               "group": "Between 14 and 18",
+               "value": 9596,
+               "name": " 20-49 Apartments",
+               "y0": 27888,
+               "y1": 37484
+            },
+            {
+               "group": "Between 14 and 18",
+               "value": 8619,
+               "name": " 50 or More Apartments",
+               "y0": 37484,
+               "y1": 46103
+            }
+         ],
+         "group": 14,
+         "total": 46103,
+         "generation": "m"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 19 and 23",
+               "value": 465461,
+               "name": " 5-9 Apartments",
+               "y0": 0,
+               "y1": 465461
+            },
+            {
+               "group": "Between 19 and 23",
+               "value": 474483,
+               "name": " 10-19 Apartments",
+               "y0": 465461,
+               "y1": 939944
+            },
+            {
+               "group": "Between 19 and 23",
+               "value": 290083,
+               "name": " 20-49 Apartments",
+               "y0": 939944,
+               "y1": 1230027
+            },
+            {
+               "group": "Between 19 and 23",
+               "value": 265646,
+               "name": " 50 or More Apartments",
+               "y0": 1230027,
+               "y1": 1495673
+            }
+         ],
+         "group": 19,
+         "total": 1495673,
+         "generation": "m"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 24 and 28",
+               "value": 799706,
+               "name": " 5-9 Apartments",
+               "y0": 0,
+               "y1": 799706
+            },
+            {
+               "group": "Between 24 and 28",
+               "value": 791254,
+               "name": " 10-19 Apartments",
+               "y0": 799706,
+               "y1": 1590960
+            },
+            {
+               "group": "Between 24 and 28",
+               "value": 516607,
+               "name": " 20-49 Apartments",
+               "y0": 1590960,
+               "y1": 2107567
+            },
+            {
+               "group": "Between 24 and 28",
+               "value": 546926,
+               "name": " 50 or More Apartments",
+               "y0": 2107567,
+               "y1": 2654493
+            }
+         ],
+         "group": 24,
+         "total": 2654493,
+         "generation": "m"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 29 and 33",
+               "value": 685577,
+               "name": " 5-9 Apartments",
+               "y0": 0,
+               "y1": 685577
+            },
+            {
+               "group": "Between 29 and 33",
+               "value": 657540,
+               "name": " 10-19 Apartments",
+               "y0": 685577,
+               "y1": 1343117
+            },
+            {
+               "group": "Between 29 and 33",
+               "value": 457924,
+               "name": " 20-49 Apartments",
+               "y0": 1343117,
+               "y1": 1801041
+            },
+            {
+               "group": "Between 29 and 33",
+               "value": 523452,
+               "name": " 50 or More Apartments",
+               "y0": 1801041,
+               "y1": 2324493
+            }
+         ],
+         "group": 29,
+         "total": 2324493,
+         "generation": "m"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 34 and 38",
+               "value": 545559,
+               "name": " 5-9 Apartments",
+               "y0": 0,
+               "y1": 545559
+            },
+            {
+               "group": "Between 34 and 38",
+               "value": 497089,
+               "name": " 10-19 Apartments",
+               "y0": 545559,
+               "y1": 1042648
+            },
+            {
+               "group": "Between 34 and 38",
+               "value": 333313,
+               "name": " 20-49 Apartments",
+               "y0": 1042648,
+               "y1": 1375961
+            },
+            {
+               "group": "Between 34 and 38",
+               "value": 373629,
+               "name": " 50 or More Apartments",
+               "y0": 1375961,
+               "y1": 1749590
+            }
+         ],
+         "group": 34,
+         "total": 1749590,
+         "generation": "x"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 39 and 43",
+               "value": 462107,
+               "name": " 5-9 Apartments",
+               "y0": 0,
+               "y1": 462107
+            },
+            {
+               "group": "Between 39 and 43",
+               "value": 423524,
+               "name": " 10-19 Apartments",
+               "y0": 462107,
+               "y1": 885631
+            },
+            {
+               "group": "Between 39 and 43",
+               "value": 266011,
+               "name": " 20-49 Apartments",
+               "y0": 885631,
+               "y1": 1151642
+            },
+            {
+               "group": "Between 39 and 43",
+               "value": 307473,
+               "name": " 50 or More Apartments",
+               "y0": 1151642,
+               "y1": 1459115
+            }
+         ],
+         "group": 39,
+         "total": 1459115,
+         "generation": "x"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 44 and 48",
+               "value": 423524,
+               "name": " 5-9 Apartments",
+               "y0": 0,
+               "y1": 423524
+            },
+            {
+               "group": "Between 44 and 48",
+               "value": 373250,
+               "name": " 10-19 Apartments",
+               "y0": 423524,
+               "y1": 796774
+            },
+            {
+               "group": "Between 44 and 48",
+               "value": 254468,
+               "name": " 20-49 Apartments",
+               "y0": 796774,
+               "y1": 1051242
+            },
+            {
+               "group": "Between 44 and 48",
+               "value": 281202,
+               "name": " 50 or More Apartments",
+               "y0": 1051242,
+               "y1": 1332444
+            }
+         ],
+         "group": 44,
+         "total": 1332444,
+         "generation": "x"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 49 and 53",
+               "value": 396386,
+               "name": " 5-9 Apartments",
+               "y0": 0,
+               "y1": 396386
+            },
+            {
+               "group": "Between 49 and 53",
+               "value": 363933,
+               "name": " 10-19 Apartments",
+               "y0": 396386,
+               "y1": 760319
+            },
+            {
+               "group": "Between 49 and 53",
+               "value": 250949,
+               "name": " 20-49 Apartments",
+               "y0": 760319,
+               "y1": 1011268
+            },
+            {
+               "group": "Between 49 and 53",
+               "value": 298235,
+               "name": " 50 or More Apartments",
+               "y0": 1011268,
+               "y1": 1309503
+            }
+         ],
+         "group": 49,
+         "total": 1309503,
+         "generation": "b"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 54 and 58",
+               "value": 357727,
+               "name": " 5-9 Apartments",
+               "y0": 0,
+               "y1": 357727
+            },
+            {
+               "group": "Between 54 and 58",
+               "value": 324962,
+               "name": " 10-19 Apartments",
+               "y0": 357727,
+               "y1": 682689
+            },
+            {
+               "group": "Between 54 and 58",
+               "value": 248799,
+               "name": " 20-49 Apartments",
+               "y0": 682689,
+               "y1": 931488
+            },
+            {
+               "group": "Between 54 and 58",
+               "value": 335246,
+               "name": " 50 or More Apartments",
+               "y0": 931488,
+               "y1": 1266734
+            }
+         ],
+         "group": 54,
+         "total": 1266734,
+         "generation": "b"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 59 and 63",
+               "value": 288224,
+               "name": " 5-9 Apartments",
+               "y0": 0,
+               "y1": 288224
+            },
+            {
+               "group": "Between 59 and 63",
+               "value": 254046,
+               "name": " 10-19 Apartments",
+               "y0": 288224,
+               "y1": 542270
+            },
+            {
+               "group": "Between 59 and 63",
+               "value": 220997,
+               "name": " 20-49 Apartments",
+               "y0": 542270,
+               "y1": 763267
+            },
+            {
+               "group": "Between 59 and 63",
+               "value": 327808,
+               "name": " 50 or More Apartments",
+               "y0": 763267,
+               "y1": 1091075
+            }
+         ],
+         "group": 59,
+         "total": 1091075,
+         "generation": "b"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 64 and 68",
+               "value": 224124,
+               "name": " 5-9 Apartments",
+               "y0": 0,
+               "y1": 224124
+            },
+            {
+               "group": "Between 64 and 68",
+               "value": 186109,
+               "name": " 10-19 Apartments",
+               "y0": 224124,
+               "y1": 410233
+            },
+            {
+               "group": "Between 64 and 68",
+               "value": 176605,
+               "name": " 20-49 Apartments",
+               "y0": 410233,
+               "y1": 586838
+            },
+            {
+               "group": "Between 64 and 68",
+               "value": 347611,
+               "name": " 50 or More Apartments",
+               "y0": 586838,
+               "y1": 934449
+            }
+         ],
+         "group": 64,
+         "total": 934449,
+         "generation": "b"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 69 and 73",
+               "value": 134298,
+               "name": " 5-9 Apartments",
+               "y0": 0,
+               "y1": 134298
+            },
+            {
+               "group": "Between 69 and 73",
+               "value": 116418,
+               "name": " 10-19 Apartments",
+               "y0": 134298,
+               "y1": 250716
+            },
+            {
+               "group": "Between 69 and 73",
+               "value": 134902,
+               "name": " 20-49 Apartments",
+               "y0": 250716,
+               "y1": 385618
+            },
+            {
+               "group": "Between 69 and 73",
+               "value": 281164,
+               "name": " 50 or More Apartments",
+               "y0": 385618,
+               "y1": 666782
+            }
+         ],
+         "group": 69,
+         "total": 666782,
+         "generation": "g"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 74 and 78",
+               "value": 97511,
+               "name": " 5-9 Apartments",
+               "y0": 0,
+               "y1": 97511
+            },
+            {
+               "group": "Between 74 and 78",
+               "value": 79880,
+               "name": " 10-19 Apartments",
+               "y0": 97511,
+               "y1": 177391
+            },
+            {
+               "group": "Between 74 and 78",
+               "value": 113280,
+               "name": " 20-49 Apartments",
+               "y0": 177391,
+               "y1": 290671
+            },
+            {
+               "group": "Between 74 and 78",
+               "value": 249009,
+               "name": " 50 or More Apartments",
+               "y0": 290671,
+               "y1": 539680
+            }
+         ],
+         "group": 74,
+         "total": 539680,
+         "generation": "g"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 79 and 83",
+               "value": 69896,
+               "name": " 5-9 Apartments",
+               "y0": 0,
+               "y1": 69896
+            },
+            {
+               "group": "Between 79 and 83",
+               "value": 63283,
+               "name": " 10-19 Apartments",
+               "y0": 69896,
+               "y1": 133179
+            },
+            {
+               "group": "Between 79 and 83",
+               "value": 101285,
+               "name": " 20-49 Apartments",
+               "y0": 133179,
+               "y1": 234464
+            },
+            {
+               "group": "Between 79 and 83",
+               "value": 255732,
+               "name": " 50 or More Apartments",
+               "y0": 234464,
+               "y1": 490196
+            }
+         ],
+         "group": 79,
+         "total": 490196,
+         "generation": "g"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 84 and 88",
+               "value": 45049,
+               "name": " 5-9 Apartments",
+               "y0": 0,
+               "y1": 45049
+            },
+            {
+               "group": "Between 84 and 88",
+               "value": 45809,
+               "name": " 10-19 Apartments",
+               "y0": 45049,
+               "y1": 90858
+            },
+            {
+               "group": "Between 84 and 88",
+               "value": 101491,
+               "name": " 20-49 Apartments",
+               "y0": 90858,
+               "y1": 192349
+            },
+            {
+               "group": "Between 84 and 88",
+               "value": 271525,
+               "name": " 50 or More Apartments",
+               "y0": 192349,
+               "y1": 463874
+            }
+         ],
+         "group": 84,
+         "total": 463874,
+         "generation": "g"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 89 and 93",
+               "value": 16263,
+               "name": " 5-9 Apartments",
+               "y0": 0,
+               "y1": 16263
+            },
+            {
+               "group": "Between 89 and 93",
+               "value": 18267,
+               "name": " 10-19 Apartments",
+               "y0": 16263,
+               "y1": 34530
+            },
+            {
+               "group": "Between 89 and 93",
+               "value": 53343,
+               "name": " 20-49 Apartments",
+               "y0": 34530,
+               "y1": 87873
+            },
+            {
+               "group": "Between 89 and 93",
+               "value": 154510,
+               "name": " 50 or More Apartments",
+               "y0": 87873,
+               "y1": 242383
+            }
+         ],
+         "group": 89,
+         "total": 242383,
+         "generation": "g"
+      },
+      {
+         "types": [
+            {
+               "group": "Between 94 and 98",
+               "value": 9767,
+               "name": " 5-9 Apartments",
+               "y0": 0,
+               "y1": 9767
+            },
+            {
+               "group": "Between 94 and 98",
+               "value": 14891,
+               "name": " 10-19 Apartments",
+               "y0": 9767,
+               "y1": 24658
+            },
+            {
+               "group": "Between 94 and 98",
+               "value": 39258,
+               "name": " 20-49 Apartments",
+               "y0": 24658,
+               "y1": 63916
+            },
+            {
+               "group": "Between 94 and 98",
+               "value": 131960,
+               "name": " 50 or More Apartments",
+               "y0": 63916,
+               "y1": 195876
+            }
+         ],
+         "group": 94,
+         "total": 195876,
+         "generation": "g"
+      }
+   ]
+}
