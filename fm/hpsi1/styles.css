@@ -1,0 +1,31 @@
+body {
+  font: 16px sans-serif;
+}
+
+.title {
+  font-size: 2em;
+  font: bold;
+}
+
+.line {
+  fill: none;
+  stroke: #cc9900;
+  stroke-width: 4px;
+}
+
+rect {
+  fill: none;
+  stroke: black;
+  stroke-width: 1px;  // half is inside the margin, half is outside
+}
+
+.bars {
+  fill: #ecf2f9;
+  stroke: none;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}

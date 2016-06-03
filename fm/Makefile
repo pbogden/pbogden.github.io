@@ -1,6 +1,11 @@
-all: fm26
+all: hpsi1
 
-.PHONY: fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fms fmr1 map1 map2
+.PHONY: fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fms fmr1 map1 map2 hpsi1
+
+hpsi1:
+	cp ~/Sites/fm/hpsi/index.html hpsi1
+	cp ~/Sites/fm/hpsi/styles.css hpsi1
+	cp ~/Sites/fm/hpsi/bundle.min.js hpsi1
 
 map1:
 	cp ../../fmap1/*.png map1
