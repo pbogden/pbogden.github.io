@@ -1,0 +1,12 @@
+This is the iframe on the fannie mae site...
+
+<iframe id="map" allowtransparency="yes" frameborder="0" width="100%"
+  src="http://pbogden.com/fm/map2/map.html" 
+  style="border:1px solid #2d323c; background:#ebebeb; margin-top:20px; height:580px;">
+</iframe>
+
+This is the iframe on my site...
+
+<iframe id="map" allowtransparency="yes" frameborder="0" width="100%"
+ src="map.html" 
+ style="border:1px solid #2d323c; background:#ebebeb; margin-top:20px; height: 480px"></iframe>
