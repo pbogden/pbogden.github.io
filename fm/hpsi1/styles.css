@@ -2,15 +2,43 @@ body {
   font: 16px sans-serif;
 }
 
+table {
+  position: absolute;
+  left: 650px;
+  top: 20px;
+  width: 400px;
+}
+
+.active {
+  background: #d9d7dc;
+}
+
 .title {
-  font-size: 2em;
+  font-size: 1.5em;
   font: bold;
 }
 
-.line {
+.line, .line.hpsi {
   fill: none;
   stroke: #cc9900;
   stroke-width: 4px;
+}
+
+.line.main {
+  stroke: black;
+  stroke-width: 2px;
+}
+
+.line.high {
+  stroke: crimson;
+  stroke-width: 1px;
+  stroke-dasharray: 5, 5;
+}
+
+.line.low {
+  stroke: steelblue;
+  stroke-width: 1px;
+  stroke-dasharray: 5, 5;
 }
 
 rect {
