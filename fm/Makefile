@@ -1,12 +1,16 @@
 all: hpsi1
 
-.PHONY: fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fms fmr1 map1 map2 hpsi0 hpsi1
+.PHONY: fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fms fmr1 map1 map2 hpsi0 hpsi1 gif
 
 hpsi1:
 	cp ~/Sites/fm/hpsi/1/index.html hpsi1
 	cp ~/Sites/fm/hpsi/1/styles.css hpsi1
 	cp ~/Sites/fm/hpsi/1/bundle.min.js hpsi1
 	cp ~/Sites/fm/hpsi/data/data.csv data
+
+gif:
+	cp ~/Sites/fm/hpsi/gif/index.html gif
+	cp ~/Sites/fm/hpsi/gif/final.gif gif
 
 hpsi0:
 	cp ~/Sites/fm/hpsi/0/index.html hpsi0

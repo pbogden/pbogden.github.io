@@ -2,15 +2,27 @@ body {
   font: 12px sans-serif;
 }
 
-.title {
+.title, .subtitle {
   font-size: 2em;
-  font: bold;
+}
+
+.subtitle {
+  fill: #cc9900;
+}
+
+.x.label {
+  font-style: italic;
+  font-size: 1.3em;
 }
 
 .line {
   fill: none;
   stroke: #cc9900;
   stroke-width: 4px;
+}
+
+circle {
+  fill: #cc9900;
 }
 
 rect {
