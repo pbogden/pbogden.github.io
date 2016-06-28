@@ -60,6 +60,10 @@ table td {
   margin: 10px 10px 0px 15px; /* top right bottom left */
 }
 
+.mouseover {
+  background: #eee;
+}
+
 .active {
   background: #d9d7dc;
 }
