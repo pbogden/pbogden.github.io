@@ -1,0 +1,66 @@
+
+body {
+  font: 16px sans-serif;
+}
+
+.overlay {
+  opacity: 0;
+  ponter-events: all;
+}
+
+#tweet {
+  position: absolute;
+  left: 50px;
+  top: 10px;
+  width: 800px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.axis.left, .axis.left path, .axis.left line {
+  stroke: #1f77b4;
+}
+
+.axis.left text, text.left {
+  stroke: none;
+  fill: #1f77b4;
+}
+
+.axis.right, .axis.right path, .axis.right line, .right {
+  stroke: #ff7f0e;
+}
+
+.axis.right text, text.right {
+  stroke: none;
+  fill: #ff7f0e;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.bars {
+  fill: #ecf2f9;
+  stroke: none;
+  pointer-events: none;
+}
+
+.mouse {
+  stroke: black;
+  stroke-width: 0.5px;
+}
+
+.mouse-text, .mouse-date {
+  text-anchor: end;
+}

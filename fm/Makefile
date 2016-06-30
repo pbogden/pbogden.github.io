@@ -1,6 +1,12 @@
-all: hpsi1
+all: twitter3
 
 .PHONY: fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fms fmr1 map1 map2 hpsi0 components0 gif
+
+twitter3:
+	cp ~/Sites/fm/twitter/3/index.html twitter/3
+	cp ~/Sites/fm/twitter/3/styles.css twitter/3
+	cp ~/Sites/fm/twitter/3/bundle.min.js twitter/3
+	cp ~/Sites/fm/twitter/data/TwitterPerformance_FannieMae_June15May16.csv twitter/data
 
 components0:
 	cp ~/Sites/fm/hpsi/1/index.html components0
