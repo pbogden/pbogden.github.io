@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+#container {
+  width: 100%;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.toggle rect:hover {
+  fill-opacity: 0.6;  /* brighter background on hover */
+}
+
+.toggle rect {
+  fill-opacity: 1;
+  fill: #666;
+  stroke: black;
+  stroke-width: 1px;
+}
+
+.toggle text {
+  fill: #ccc;
+}
+
+.toggle.active rect {
+  fill: steelblue;
+  stroke-width: 2px;
+}
+
+.toggle.active text {
+  fill: white;
+}
