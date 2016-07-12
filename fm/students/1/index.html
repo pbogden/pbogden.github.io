@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>student 1</title>
+<title>bar</title>
 <link href="styles.css" rel="stylesheet">
 <body>
 <script src="d3.min.js"></script>
 <script>
 
-var margin = { top: 30, left: 30, bottom:  0, right: 30 };
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+var width = 960,
+    height = 500;
 
 var text1 = ["54% of renters age 25-44 say they will buy on their next move.",
     "46% of renters age 25-44 say they will rent on their next move; 80% of those say they will buy eventually."];
@@ -57,24 +56,25 @@ var tip = { 'debt': 'Renters with student-loan debt are XX% LESS likely to buy t
 
 var container = d3.select("body").append("div")
     .attr('id', 'container')
-  .append("svg")
-    .attr('viewBox', "0, 0, " + (width + margin.left + margin.right) + ", " + (height + margin.top + margin.bottom))
+
+var g = container.append("svg")
+    .attr('viewBox', "0, 0, " + width + ", " + height)
     .attr('preserveAspectRatio', "xMinYMid")
   .append("g")
 
-container.append("rect")
+g.append("rect")
     .attr("width", width)
     .attr("height", height)
     .style("fill", "#ccc")
 
 // text #1
-container.append("text")
+g.append("text")
     .classed("text1", true)
     .attr("x", "0.5em")
     .attr("y", "1em")
 
 // text #1
-container.append("text")
+g.append("text")
     .classed("text2", true)
     .attr("x", "0.5em")
     .attr("y", "6em")
@@ -88,11 +88,10 @@ var chart = d3.barChart()
   .yDomain([-40, 100])
 
 // Plot data[0]
-container
-    .datum(data[0])
+g.datum(data[0])
     .call(chart);
 
-tooltip = d3.select('#container').append('div')
+tooltip = d3.select('body').append('div')
 
 d3.selectAll(".bar")
     .on('mouseover', moused)
@@ -108,11 +107,20 @@ function clear() {
 }
 
 function moused(d, i) {
+  var h = tooltip.node().clientHeight,
+      w = tooltip.node().clientWidth,
+      m = d3.mouse( container.node() ),
+      maxWidth = container.node().clientWidth;
+  console.log('m, maxWidth', m, maxWidth);
+
+  var l = Math.min( Math.max(10, m[0] - w / 2), maxWidth - w );
+  var t = m[1] - h - 10;
+
   tooltip
       .style('position', 'absolute')
       .style('pointer-events', 'none')
-      .style('left', function() { return (d3.mouse(container.node())[0] - 50) + "px"; })
-      .style('top',  function() { return (d3.mouse(container.node())[1] - 70) + "px"; })
+      .style('left', function() { return l + "px"; })
+      .style('top',  function() { return t + "px"; })
       .style('background', '#ccc')
       .style('border-style', 'solid')
       .style('border-color', 'black')
@@ -122,7 +130,7 @@ function moused(d, i) {
 }
 
 // Create toggle buttons
-var g = container.selectAll(".toggle")
+g.selectAll(".toggle")
     .data(['Buy on next move (54%)', 'Rent on next move (46%)'])
   .enter().append("g")
     .attr("class", "toggle")
@@ -177,10 +185,12 @@ function toggle(d, i) {
     .style("fill-opacity", 0)
     .transition()
     .style("fill-opacity", null)
-    .text(function() { return i == 0 ? "Buy" : " Buy Eventually" })
+    .style("font-weight", 900)
+    .style("stroke", null)
+    .text(function() { return i == 0 ? "Buy Next Time" : " Buy Eventually" })
 
   d3.select("#rent-label")
-    .text("Rent");
+    .text("");
 
   xAxis = chart.xAxis();
 
