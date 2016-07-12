@@ -118,7 +118,7 @@ function moused(d, i) {
       .style('border-color', 'black')
       .style('padding', '5px')
       .style('width', '200px')
-      .html(function() { return tip[d[0]].replace('XX', d[1]); })
+      .html(function() { return tip[d[0]].replace('XX', Math.abs(d[1])); })
 }
 
 // Create toggle buttons
