@@ -103,6 +103,7 @@ function clear() {
   tooltip
       .style('left', 0)
       .style('top', 0)
+      .style('border-color', 'transparent')
       .html(null)
 }
 
@@ -112,7 +113,9 @@ function moused(d, i) {
       .style('pointer-events', 'none')
       .style('left', function() { return (d3.mouse(container.node())[0] - 50) + "px"; })
       .style('top',  function() { return (d3.mouse(container.node())[1] - 70) + "px"; })
-      .style('background', 'lightgray')
+      .style('background', '#ccc')
+      .style('border-style', 'solid')
+      .style('border-color', 'black')
       .style('padding', '5px')
       .style('width', '200px')
       .html(function() { return tip[d[0]].replace('XX', d[1]); })
