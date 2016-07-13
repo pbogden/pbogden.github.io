@@ -1,88 +1,123 @@
 
 body {
     margin: 0;
-    background: #ebebeb;
-    font: normal 12px Arial,Helvetica,sans-serif;
+    background: #d9d7dc;
+    font-family: 'Glypha-55Roman',"Georgia","Century",serif;
 }
 
-#head {
-    display: block;
-    height: 55px;
-    padding-top: 8px;
-    margin: 0px auto;
+header {
+    height: 70px;
     width: 100%;
-    background: #14264d;
+    background: #000f2b;
+    width: 100%;
+    margin: 0px auto;
 }
 
 #nav_main {
-    height: 38px;
-    background: #fff;
+    height: 50px;
     width: 100%;
-    display: block;
-    z-index: 3;
-    position: relative;
+    background: #000f2b none repeat scroll 0 0;
+    border-top: 1px solid #808795;
+    min-width: 1244px;
 }
 
-.mid_container {
-    position: relative;
-    width: 940px;
-    margin: 0 auto;
-    background-color: white;
+.spacer {
+    height: 40px;
+    width: 100%;
+    background: #d9d7dc;
+}
+
+.page_title {
+    color: #000;
+    font: normal 26px 'Glypha-55Roman',"Georgia","Century",serif;
+    padding: 10px 0 0 20px;
 }
 
 .page_title_row {
-    margin: 0;
+    margin: 40px auto 0px;
     padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
     height: 45px;
-    width: 940px;
+    width: 1244px;
+}
+
+.ls_row {
+    width: 1244px;
+    min-height: 620px;
+    background: #fff;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 22px;
+    margin: 0 0 10px;
+    font-family: 'Glypha-55Roman',"Georgia","Century",serif;
+}
+
+.mid_container {
+    position: relative;
+    margin: 0 auto;
+    background-color: white;
 }
 
 #page_title {
-    padding: 10px 0 0 20px;
+/*    padding: 10px 0 0 20px;
     position: relative;
     z-index: 2;
     overflow: hidden;
     margin: 16px 0 0 0;
     border-top: 1px solid #e4e4e4;
-    background: #fff;
-}
-
-.page_title {
-    color: #023a7b;
-    font: normal 26px Arial, Helvetica, sans-serif;
-    padding: 0;
+    background: #fff; */
 }
 
 .content_container {
+    background: #d9d7dc none repeat scroll 0 0;
+    position: relative;
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
-    overflow: auto;
-/*    vertical-align: baseline; */
+    vertical-align: baseline;
 /*    min-height: 400px;  */
 }
 
 #col_left {
-    width: 167px;
-    display: block;
+    width: 250px;
+    padding: 10px 15px 0 20px;
+    min-height: 600px;
+    background: #fff;
     float: left;
 }
 
 #col_content {
-    width: 543px;
-    display: block;
+    width: 640px;
+    background: #fff;
+    margin-right: 30px;
     position: relative;
     float: left;
 }
 
 #col_right {
     width: 160px;
-    display: block;
     float: left;
+}
+
+#col_left, #col_content, #col_right {
+    display: block;
+}
+
+.col_content p {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+    font-family: 'Univers-55Roman',"Arial",sans-serif;
 }

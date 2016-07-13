@@ -134,10 +134,12 @@ g.selectAll(".toggle")
     .data(['Buy on next move (54%)', 'Rent on next move (46%)'])
   .enter().append("g")
     .attr("class", "toggle")
-    .attr("transform", function(d, i) { return "translate(" + [width * (1 / 2 + (i - 1) / 4), height / 8] + ")"; })
+    .attr("transform", function(d, i) { return "translate(" + [width / 2, height / 8] + ")"; })
   .append("text")
     .text(function(d) { return d; })
-    .style("text-align", 'center')
+    .attr("x", function(d, i) { return i ? '2em' : '-2em'; })
+    .style("text-anchor", function(d, i) { return i ? 'start' : 'end'; })
+    .style("font-size", '2em')
     .each(addBackgroundRect)
 
 // Click the first button, then wait a bit and click the 2nd
@@ -187,7 +189,7 @@ function toggle(d, i) {
     .style("fill-opacity", null)
     .style("font-weight", 900)
     .style("stroke", null)
-    .text(function() { return i == 0 ? "Buy Next Time" : " Buy Eventually" })
+    .text(function() { return i == 0 ? "Buy" : " Buy Eventually" })
 
   d3.select("#rent-label")
     .text("");
