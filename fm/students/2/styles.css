@@ -1,0 +1,48 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.bar {
+  fill: #007697;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+#container {
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#background-rect {
+  fill: #e8e7ea;
+}
+
+.toggle rect:hover {
+  fill-opacity: 0.6;  /* brighter background on hover */
+}
+
+.toggle rect {
+  fill-opacity: 1;
+  fill: #666f80;
+  stroke: black;
+  stroke-width: 1px;
+}
+
+.toggle text {
+  fill: #ccc;
+}
+
+.toggle.active rect {
+  fill: #007697;
+  stroke-width: 2px;
+}
+
+.toggle.active text {
+  fill: white;
+}

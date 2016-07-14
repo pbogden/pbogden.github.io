@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>students 2</title>
+<link href="styles.css" rel="stylesheet">
+<body>
+<script src="d3.min.js"></script>
+<script>
+
+var width = 960,
+    height = 500;
+
+var text1 = ["54% of renters age 25-44 say they will buy on their next move.",
+    "46% of renters age 25-44 say they will rent on their next move; 80% of those say they will buy eventually."];
+
+var text2 = ['',
+             ''];
+
+var data = [{key: 'debt',    value: -28 },
+            {key: ' ',    value: null},
+            {key: '30-34',     value: -9  },
+            {key: '35-39',     value: -5  },
+            {key: '40-44',     value: -2  },
+            {key: '  ',    value: null},
+            {key: '$25-49K',  value: 60  },
+            {key: '$50-74K',  value: 89  },
+            {key: '> $75K',   value: 61  },
+            {key: '   ',    value: null},
+            {key: 'married', value: 27  }];
+
+var data2 = [{key: 'debt',   value: -7 },
+             {key: ' ',    value: null},
+             {key: '30-34',     value: -23 },
+             {key: '35-39',     value: -6  },
+             {key: '40-44',     value: -31 },
+             {key: '  ',    value: null},
+             {key: '$25-49K',  value: 10  },
+             {key: '$50-74K',  value: 13  },
+             {key: '> $75K',   value: 34  },
+             {key: '   ',    value: null},
+             {key: 'married', value: 3  }];
+
+data = [data, data2];
+
+// tooltip content
+var tip = { 'debt': 'Renters with student-loan debt are XX% LESS likely to buy than renters without debt',
+             ' ':    null,
+             '30-34': '30-34 year old renters are XX% LESS likely to buy than 25-29 year olds',
+             '35-39': '35-39 year old renters are XX% LESS likely to buy than 25-29 year olds',
+             '40-44': '40-44 year old renters are XX% LESS likely to buy than 25-29 year olds',
+             '  ':   null,
+             '$25-49K': 'Renters making $25-49K are XX% MORE likely to buy than those making less than $25K',
+             '$50-74K': 'Renters making $50-74K are XX% MORE likely to buy than those making less than $25K',
+             '> $75K': 'Renters making more than $75K are XX% MORE likely to buy than those making less than $25K',
+             '   ':  null,
+             'married': 'Married renters are XX% more likely to buy than single renters' };
+
+var container = d3.select("body").append("div")
+    .attr('id', 'container')
+
+var g = container.append("svg")
+    .attr('viewBox', "0, 0, " + width + ", " + height)
+    .attr('preserveAspectRatio', "xMinYMid")
+  .append("g")
+
+g.append("rect")
+    .attr("id", "background-rect")
+    .attr("width", width)
+    .attr("height", height);
+
+// text #1
+g.append("text")
+    .classed("text1", true)
+    .attr("x", "0.5em")
+    .attr("y", "1em")
+
+// text #1
+g.append("text")
+    .classed("text2", true)
+    .attr("x", "0.5em")
+    .attr("y", "6em")
+
+// Create bar chart
+var chart = d3.barChart()
+  .x(function(d) { return d.key; })
+  .y(function(d) { return +d.value; })
+  .width(width)
+  .height(height)
+  .yDomain([-40, 100])
+
+// Plot data[0]
+g.datum(data[0])
+    .call(chart);
+
+tooltip = d3.select('body').append('div')
+
+d3.selectAll(".bar rect")
+    .on('mouseover', moused)
+    .on('mousemove', moused)
+    .on('mouseout', clear)
+
+function clear() {
+  tooltip
+      .style('left', 0)
+      .style('top', 0)
+      .style('border-color', 'transparent')
+      .html(null)
+}
+
+function moused(d, i) {
+  var h = tooltip.node().clientHeight,
+      w = tooltip.node().clientWidth,
+      m = d3.mouse( container.node() ),
+      maxWidth = container.node().clientWidth;
+
+  var l = Math.min( Math.max(10, m[0] - w / 2), maxWidth - w );
+  var t = m[1] - h - 10;
+
+  tooltip
+      .style('position', 'absolute')
+      .style('pointer-events', 'none')
+      .style('left', function() { return l + "px"; })
+      .style('top',  function() { return t + "px"; })
+      .style('background', '#ccc')
+      .style('border-style', 'solid')
+      .style('border-color', 'black')
+      .style('padding', '5px')
+      .style('width', '200px')
+      .html(function() { return tip[d[0]].replace('XX', Math.abs(d[1])); })
+}
+
+// Create toggle buttons
+g.selectAll(".toggle")
+    .data(['Buy on next move (54%)', 'Rent on next move (46%)'])
+  .enter().append("g")
+    .attr("class", "toggle")
+    .attr("transform", function(d, i) { return "translate(" + [width / 2, height / 8] + ")"; })
+  .append("text")
+    .text(function(d) { return d; })
+    .attr("x", function(d, i) { return i ? '2em' : '-2em'; })
+    .style("text-anchor", function(d, i) { return i ? 'start' : 'end'; })
+    .style("font-size", '2em')
+    .each(addBackgroundRect)
+
+// Click the first button, then wait a bit and click the 2nd
+//toggle.call(d3.select(".toggle rect").node(), null, 0);
+ setTimeout(function() {
+   toggle.call(d3.selectAll(".toggle rect").nodes()[0], null, 0);
+ }, 1000)
+
+function addBackgroundRect(d, i) {
+    // Add a rect underneath the text
+    var padding = 5;
+    var g = d3.select(this.parentNode);
+    var bbox = this.getBBox();
+    g.append("rect")
+        .attr("x", bbox.x - padding)
+        .attr("y", bbox.y - padding)
+        .attr("width", bbox.width + 2 * padding)
+        .attr("height", bbox.height + 2 * padding)
+        .on("click", function() { toggle.call(this, d, i); })
+
+    // Put the text on top (so you can see it)
+    var text = d3.select(this).remove();
+    g.append(function() { return text.node(); })
+        .style('pointer-events', 'none') // so you can click the rect
+}
+
+function toggle(d, i) {
+  console.log('toggle', d, i)
+  d3.selectAll('.toggle.active').classed("active", false)
+  d3.select(this.parentNode).classed("active", true);
+
+  // text along top
+  d3.selectAll(".text1")
+    .style('text-anchor', function() { return i == 0 ? "start" : "end" })
+    .attr('x', function() { return i == 0 ? 0 : width; })
+//    .text(text1[i]);
+
+  // text along top
+  d3.selectAll(".text2")
+    .text(text2[i]);
+
+  // buy label in plot
+  d3.select("#buy-label")
+    .transition()
+    .style("fill-opacity", 0)
+    .transition()
+    .style("fill-opacity", null)
+    .style("font-weight", 900)
+    .style("stroke", null)
+    .text(function() { return i == 0 ? "Buy" : " Buy Eventually" })
+
+  d3.select("#rent-label")
+    .text("");
+
+  xAxis = chart.xAxis();
+  yScale = chart.yScale();
+
+  // new data
+  d3.selectAll(".bar rect")
+      .data( data[i].map(function(d) { return [d.key, +d.value] }) )
+    .transition()
+      .duration(750)
+      .attr("y", function(d) { return ( yScale(0) - yScale(d[1]) ) > 0 ? yScale(d[1]) : yScale(0); })
+      .attr("height", function(d) { return Math.abs( yScale(0) - yScale(d[1]) ) });
+
+  // bar labels
+  d3.selectAll(".bar text")
+      .style('fill', 'none')
+      .data( data[i].map(function(d) { return [d.key, +d.value] }) )
+    .transition()
+      .duration(750)
+      .attr("y", function(d) { return ( yScale(0) - yScale(d[1]) ) > 0 ? yScale(d[1]) : yScale(d[1]); })
+      .attr("dy", function(d) { return d[1] < 0 ? '-.29em' : '1em'; })
+      .style('fill', function(d) { return (d[1] > 27 || d[1] < -22) ? '#fff' : 'none' })
+      .text(function(d) { return d[1] + "%"; })
+}
+
+setContainerHeight(); // initial load
+d3.select(window).on('resize', setContainerHeight);
+
+function setContainerHeight() {
+  var w = parseInt( container.style("width"), 10);
+  var a = width / height;
+  container.style('height', w / a  + 'px');
+}
+
+</script>
