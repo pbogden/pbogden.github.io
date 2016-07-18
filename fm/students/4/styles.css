@@ -2,6 +2,22 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
+.button rect {
+    stroke: #1f628d;
+    stroke-width: 2px;
+}
+
+.button text {
+  font-size: 35px;
+  font-family: sans-serif;
+  fill: #eee;
+  pointer-events: none;
+  text-anchor: middle;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 .bar {
   fill: rgb(33,108,43);
 }
@@ -45,30 +61,4 @@ text {
 
 #rect-negative {
   fill: rgb(209,116,108); /* 80% tint */
-}
-
-.toggle rect:hover {
-  fill-opacity: 0.6;  /* brighter background on hover */
-}
-
-.toggle rect {
-  fill-opacity: 1;
-  fill: #666f80;
-  stroke: black;
-  stroke-width: 1px;
-  border-radius: 8px;
-  border: solid 2px #000;
-}
-
-.toggle text {
-  fill: #ccc;
-}
-
-.toggle.active rect {
-  fill: #007697;
-  stroke-width: 2px;
-}
-
-.toggle.active text {
-  fill: white;
 }

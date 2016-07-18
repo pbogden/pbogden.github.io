@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>students 3</title>
+<title>students 4</title>
 <link href="styles.css" rel="stylesheet">
 <body>
 <script src="d3.min.js"></script>
+<script src="button.js"></script>
 <script>
 
 var width = 960,
-    height = 500;
+    height = 600;
 
-var text1 = ["54% of renters age 25-44 say they will buy on their next move.",
-    "46% of renters age 25-44 say they will rent on their next move; 80% of those say they will buy eventually."];
-
-var text2 = ['',
-             ''];
+var text1 = ["54% of renters will buy on next move.",
+    "80% of renters will buy eventually, if not on next move."];
 
 var data = [{key: 'debt',    value: -28 },
             {key: ' ',    value: null},
@@ -57,10 +55,11 @@ var tip = { 'debt': 'Renters with student-loan debt are XX% LESS likely to buy t
 var container = d3.select("body").append("div")
     .attr('id', 'container')
 
-var g = container.append("svg")
+var svg = container.append("svg")
     .attr('viewBox', "0, 0, " + width + ", " + height)
-    .attr('preserveAspectRatio', "xMinYMid")
-  .append("g")
+    .attr('preserveAspectRatio', "xMinYMid");
+
+var g = svg.append("g");
 
 g.append("rect")
     .attr("id", "background-rect")
@@ -70,14 +69,8 @@ g.append("rect")
 // text #1
 g.append("text")
     .classed("text1", true)
-    .attr("x", "0.5em")
-    .attr("y", "1em")
-
-// text #1
-g.append("text")
-    .classed("text2", true)
-    .attr("x", "0.5em")
-    .attr("y", "6em")
+    .attr("y", height / 4)
+    .attr("dy", '2.5em')
 
 // Create bar chart
 var chart = d3.barChart()
@@ -92,6 +85,7 @@ g.datum(data[0])
     .call(chart);
 
 tooltip = d3.select('body').append('div')
+      .classed('tooltip', true)
 
 d3.selectAll(".bar rect")
     .on('mouseover', moused)
@@ -104,12 +98,14 @@ function clear() {
       .style('top', '-100px')
       .style('border-color', 'transparent')
       .html(null)
+
+  d3.select(this).classed("active", false);
 }
 
 function moused(d, i) {
   var h = tooltip.node().clientHeight,
       w = tooltip.node().clientWidth,
-      m = d3.mouse( container.node() ),
+      m = d3.mouse( container.node() ),  // position relative to parent div
       maxWidth = container.node().clientWidth;
 
   var l = Math.min( Math.max(10, m[0] - w / 2), maxWidth - w );
@@ -120,68 +116,60 @@ function moused(d, i) {
       .style('pointer-events', 'none')
       .style('left', function() { return l + "px"; })
       .style('top',  function() { return t + "px"; })
-      .style('background', '#ccc')
       .style('border-style', 'solid')
       .style('border-color', 'black')
       .style('padding', '5px')
       .style('width', '200px')
       .html(function() { return tip[d[0]].replace('XX', Math.abs(d[1])); })
+
+  d3.select(this).classed("active", true);
 }
 
-// Create toggle buttons
-g.selectAll(".toggle")
-    .data(['Buy on next move (54%)', 'Buy eventually (46%)'])
+// Title for graphic
+g.append('text')
+    .attr("x", width / 2)
+    .attr("y", '1.7em')
+    .style("text-anchor", 'middle')
+    .style("font-size", '2.5em')
+    .text("Renters' aspirations for homeownership")
+
+// Buttons to toggle between the two calculations
+g.selectAll(".button")
+    .data(['Buy on next move', 'Buy eventually'])
   .enter().append("g")
-    .attr("class", "toggle")
-    .attr("transform", function(d, i) { return "translate(" + [width / 2, height / 8] + ")"; })
+    .attr("class", "button")
+    .attr("transform", function(d, i) { return "translate(" + [(i === 0) ? width / 3 : 2 * width / 3, height / 4] + ")"; })
   .append("text")
     .text(function(d) { return d; })
-    .attr("x", function(d, i) { return i ? '2em' : '-2em'; })
-    .style("text-anchor", function(d, i) { return i ? 'start' : 'end'; })
+    .style("text-anchor", 'middle')
     .style("font-size", '2em')
-    .each(addBackgroundRect)
+    .each(addButton)
 
-// Click the first button, then wait a bit and click the 2nd
+// Initial animation-- click the first button, then wait a bit and click the 2nd
 //toggle.call(d3.select(".toggle rect").node(), null, 0);
  setTimeout(function() {
    toggle.call(d3.selectAll(".toggle rect").nodes()[0], null, 0);
  }, 1000)
 
-function addBackgroundRect(d, i) {
-    // Add a rect underneath the text
-    var padding = 5;
-    var g = d3.select(this.parentNode);
-    var bbox = this.getBBox();
-    g.append("rect")
-        .attr("x", bbox.x - padding)
-        .attr("y", bbox.y - padding)
-        .attr("width", bbox.width + 2 * padding)
-        .attr("height", bbox.height + 2 * padding)
-        .on("click", function() { toggle.call(this, d, i); })
-
-    // Put the text on top (so you can see it)
-    var text = d3.select(this).remove();
-    g.append(function() { return text.node(); })
-        .style('pointer-events', 'none') // so you can click the rect
+function addButton(d, i) {
+    button()
+        .container( d3.select(this.parentNode) )
+        .text( d3.select(this) )
+        .count( i )
+        .cb(function() { return toggle.call(this, d, i); })
+        ();
 }
 
 function toggle(d, i) {
-  console.log('toggle', d, i)
-  d3.selectAll('.toggle.active').classed("active", false)
-  d3.select(this.parentNode).classed("active", true);
-
-  // text along top
+  // text below each button
   d3.selectAll(".text1")
-    .style('text-anchor', function() { return i == 0 ? "start" : "end" })
-    .attr('x', function() { return i == 0 ? 0 : width; })
-//    .text(text1[i]);
+    .style('text-anchor', 'middle')
+    .style('font-size', '1.2em')
+    .attr('x', function() { return i == 0 ? width / 3 : 2 * width / 3; })
+    .text(text1[i]);
 
-  // text along top
-  d3.selectAll(".text2")
-    .text(text2[i]);
-
-  // buy label in plot
-  d3.select("#buy-label")
+  // label in graph
+  d3.select("#graph-label")
     .transition()
     .style("fill-opacity", 0)
     .transition()
@@ -189,9 +177,6 @@ function toggle(d, i) {
     .style("font-weight", 900)
     .style("stroke", null)
     .text(function() { return i == 0 ? "Buy on next move" : " Buy eventually" })
-
-  d3.select("#rent-label")
-    .text("");
 
   xAxis = chart.xAxis();
   yScale = chart.yScale();
