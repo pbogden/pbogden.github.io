@@ -1,0 +1,74 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.bar {
+  fill: rgb(33,108,43);
+}
+
+.bar rect.active {
+  fill: rgb(77,137,85);  /* 80% */
+}
+
+.bar rect.negative {
+  fill: rgb(197,81,71);
+}
+
+.bar rect.negative.active {
+  fill: rgb(209,116,108);  /* 80% */
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+text {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.tooltip {
+  background: rgb(217,215,220); /* FM gray */
+}
+
+#background-rect {
+  fill: rgb(217,215,220); /* FM gray */
+}
+
+#rect-positive {
+  fill: rgb(77,137,85); /* 80% tint */
+}
+
+#rect-negative {
+  fill: rgb(209,116,108); /* 80% tint */
+}
+
+.toggle rect:hover {
+  fill-opacity: 0.6;  /* brighter background on hover */
+}
+
+.toggle rect {
+  fill-opacity: 1;
+  fill: #666f80;
+  stroke: black;
+  stroke-width: 1px;
+  border-radius: 8px;
+  border: solid 2px #000;
+}
+
+.toggle text {
+  fill: #ccc;
+}
+
+.toggle.active rect {
+  fill: #007697;
+  stroke-width: 2px;
+}
+
+.toggle.active text {
+  fill: white;
+}
