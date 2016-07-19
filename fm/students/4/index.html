@@ -205,7 +205,7 @@ function toggle(d, i) {
 
   // bar labels
   d3.selectAll(".bar text")
-      .style('fill', 'none')
+      .style('fill-opacity', '0')
       .data( data[i].map(function(d) { return [d.key, +d.value] }) )
     .transition()
       .duration(750)
@@ -213,6 +213,7 @@ function toggle(d, i) {
       .attr("dy", function(d) { return d[1] < 0 ? '-.29em' : '1em'; })
 //      .style('fill', function(d) { return (d[1] > 27 || d[1] < -22) ? '#fff' : 'none' })  // statistical significance
       .style('fill', function(d) { return (Math.abs(d[1]) > 5) ? '#fff' : 'none' })  // large
+      .style('fill-opacity', '1')
       .text(function(d) { return d[1] + "%"; })
 }
 
