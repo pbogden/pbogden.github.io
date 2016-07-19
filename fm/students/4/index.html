@@ -9,6 +9,9 @@
 var width = 960,
     height = 700;
 
+var title = ["Student loans significantly delay homeownership",
+    "Student loans do not affect long-term aspirations"]
+
 var text1 = ["54% of renters aged 25-44 will buy on next move.",
     "80% of renters will buy eventually, if not on next move."];
 
@@ -129,11 +132,11 @@ function moused(d, i) {
 
 // Title for graphic
 g.append('text')
+    .attr('id', 'title')
     .attr("x", width / 2)
     .attr("y", '1.7em')
     .style("text-anchor", 'middle')
     .style("font-size", '2.5em')
-    .text("Renters' aspirations for homeownership")
 
 // Buttons to toggle between the two calculations
 g.selectAll(".button")
@@ -163,6 +166,13 @@ function addButton(d, i) {
 }
 
 function toggle(d, i) {
+  // title for graphic
+  d3.select("#title")
+    .transition()
+    .style("fill-opacity", 0)
+    .transition()
+    .style("fill-opacity", null)
+    .text(title[i]);
   // text below each button
   d3.selectAll(".text1")
     .transition()
