@@ -9,7 +9,6 @@ body {
 
 .button text {
   font-size: 35px;
-  font-family: sans-serif;
   fill: #eee;
   pointer-events: none;
   text-anchor: middle;
@@ -17,7 +16,6 @@ body {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
-
 
 .button #gradient-start {
   stop-color: #4d9fb6; /* 70% */
