@@ -7,9 +7,9 @@
 <script>
 
 var width = 960,
-    height = 600;
+    height = 700;
 
-var text1 = ["54% of renters will buy on next move.",
+var text1 = ["54% of renters aged 25-44 will buy on next move.",
     "80% of renters will buy eventually, if not on next move."];
 
 var data = [{key: 'debt',    value: -28 },
@@ -68,8 +68,11 @@ g.append("rect")
 // text #1
 g.append("text")
     .classed("text1", true)
-    .attr("y", height / 4)
+    .attr("x", width / 2)
+    .attr("y", height / 5)
     .attr("dy", '2.5em')
+    .style('text-anchor', 'middle')
+    .style('font-size', '1.4em')
 
 // Create bar chart
 var chart = d3.barChart()
@@ -137,7 +140,7 @@ g.selectAll(".button")
     .data(['Buy on next move', 'Buy eventually'])
   .enter().append("g")
     .attr("class", "button")
-    .attr("transform", function(d, i) { return "translate(" + [(i === 0) ? width / 3 : 2 * width / 3, height / 4] + ")"; })
+    .attr("transform", function(d, i) { return "translate(" + [(i === 0) ? width / 3 : 2 * width / 3, height / 5] + ")"; })
   .append("text")
     .text(function(d) { return d; })
     .style("text-anchor", 'middle')
@@ -162,9 +165,11 @@ function addButton(d, i) {
 function toggle(d, i) {
   // text below each button
   d3.selectAll(".text1")
-    .style('text-anchor', 'middle')
-    .style('font-size', '1.2em')
-    .attr('x', function() { return i == 0 ? width / 3 : 2 * width / 3; })
+    .transition()
+    .style("fill-opacity", 0)
+    .transition()
+    .style("fill-opacity", null)
+//    .attr('x', function() { return i == 0 ? width / 3 : 2 * width / 3; })
     .text(text1[i]);
 
   // label in graph
@@ -205,8 +210,9 @@ setContainerHeight(); // initial load
 d3.select(window).on('resize', setContainerHeight);
 
 function setContainerHeight() {
-  var w = parseInt( container.style("width"), 10);
+  var w = Math.min(582, parseInt( container.style("width"), 10));
   var a = width / height;
+  container.style('width', w + 'px');
   container.style('height', w / a  + 'px');
 }
 
