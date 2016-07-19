@@ -1,5 +1,5 @@
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-family: Univers, Arial, sans-serif;
 }
 
 .button rect {
@@ -16,6 +16,25 @@ body {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+}
+
+
+.button #gradient-start {
+  stop-color: #4d9fb6; /* 70% */
+  stop-opacity: 1;
+}
+
+.button #gradient-stop {
+  stop-color: #1a84a2; /* 100% */
+  stop-opacity: 1;
+}
+
+.button #gradient-start.active {
+  stop-color: #99c8d5; /* 40% */
+}
+
+.button #gradient-stop.active {
+  stop-color: #4d9fb6; /* 70% */
 }
 
 .bar {
