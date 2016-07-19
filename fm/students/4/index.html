@@ -241,10 +241,9 @@ function toggle(d, i) {
       .duration(750)
       .attr("y", function(d) { return ( yScale(0) - yScale(d[1]) ) > 0 ? yScale(d[1]) : yScale(d[1]); })
       .attr("dy", function(d) { return d[1] < 0 ? '-.29em' : '1em'; })
-//      .style('fill', function(d) { return (d[1] > 27 || d[1] < -22) ? '#fff' : 'none' })  // statistical significance
       .style('fill', function(d) { return (Math.abs(d[1]) > 5) ? '#fff' : 'none' })  // large
       .style('fill-opacity', '1')
-      .text(function(d) { return d[1] + "%"; })
+      .text(function(d) { return d[1] + ((d[1] > 27 || d[1] < -22) ? '*' : '') })  // statistical significance
 }
 
 setContainerHeight(); // initial load
