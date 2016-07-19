@@ -46,7 +46,7 @@ header {
 
 .ls_row {
     width: 1244px;
-    min-height: 620px;
+    min-height: 640px;
     background: #fff;
     margin: 0 auto;
 }
@@ -90,7 +90,7 @@ h2 {
 #col_left {
     width: 250px;
     padding: 10px 15px 0 20px;
-    min-height: 600px;
+    min-height: 650px;
     background: #fff;
     float: left;
 }
