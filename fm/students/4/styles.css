@@ -2,6 +2,12 @@ body {
   font-family: Univers, Arial, sans-serif;
 }
 
+text.title {
+  text-anchor: middle;
+  font-size: 3em;
+  font-weight: bold;
+}
+
 .button rect {
     stroke: #1f628d;
     stroke-width: 2px;
