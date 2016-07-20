@@ -10,6 +10,8 @@ students5:
 	cp ~/Sites/fm/students/5/d3.min.js  students/5
 
 students4:
+	cp ~/Sites/fm/students/4/iframe.html students/4
+	cp ~/Sites/fm/students/4/custom.css students/4
 	cp ~/Sites/fm/students/4/index.html students/4
 	cp ~/Sites/fm/students/4/styles.css students/4
 	cp ~/Sites/fm/students/4/d3.min.js  students/4
