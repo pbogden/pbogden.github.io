@@ -9,6 +9,8 @@
 var width = 960,
     height = 700;
 
+var btn = [];
+
 var title = ["What factors affect renters'",
     "aspirations for homeownership?"];
 
@@ -188,11 +190,17 @@ g.selectAll(".button")
  }, 1000)
 
 function addButton(d, i) {
-    d3.button()
+    btn[i] = d3.button()
         .container( d3.select(this.parentNode) )
         .text( d3.select(this) )
         .count( i )
-        .cb(function() { return toggle.call(this, d, i); })
+        .cb(function() {
+          console.log('cb here...', i)
+          var k = (i == 0) ? 1 : 0;
+          btn[k].darken();
+          btn[k].letGo();
+          toggle.call(this, d, i);
+        })
         ();
 }
 
@@ -209,6 +217,7 @@ function toggle(d, i) {
       .attr('dx', '3em')
       .attr('x', x2)
       .attr('y', y)
+      .attr('dy', '-0.5em')
     .transition()
       .style("fill-opacity", null)
 
