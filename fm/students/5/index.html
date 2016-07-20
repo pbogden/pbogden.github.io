@@ -186,6 +186,7 @@ g.selectAll(".button")
 // Initial animation-- click the first button, then wait a bit and click the 2nd
 //toggle.call(d3.select(".toggle rect").node(), null, 0);
  setTimeout(function() {
+   btn[0].press();
    toggle.call(d3.selectAll(".toggle rect").nodes()[0], null, 0);
  }, 1000)
 
