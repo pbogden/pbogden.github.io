@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>students 5</title>
+<link href="styles.css" rel="stylesheet">
+<body>
+<script src="d3.min.js"></script>
+<script>
+
+var width = 960,
+    height = 700;
+
+var title = ["What factors affect renters'",
+    "aspirations for homeownership?"];
+
+text1 = [["54% of renters aged 25-44",
+              "say they expect to buy on",
+              "their next move."],
+             ["80% of renters say they",
+              "will buy eventually, if not",
+              "on their next move."]];
+
+var data = [{key: 'debt',    value: -28 },
+            {key: ' ',    value: null},
+            {key: '30-34',     value: -9  },
+            {key: '35-39',     value: -5  },
+            {key: '40-44',     value: -2  },
+            {key: '  ',    value: null},
+            {key: '$25-49K',  value: 60  },
+            {key: '$50-74K',  value: 89  },
+            {key: '> $75K',   value: 61  },
+            {key: '   ',    value: null},
+            {key: 'married', value: 27  }];
+
+var data2 = [{key: 'debt',   value: -7 },
+             {key: ' ',    value: null},
+             {key: '30-34',     value: -23 },
+             {key: '35-39',     value: -6  },
+             {key: '40-44',     value: -31 },
+             {key: '  ',    value: null},
+             {key: '$25-49K',  value: 10  },
+             {key: '$50-74K',  value: 13  },
+             {key: '> $75K',   value: 34  },
+             {key: '   ',    value: null},
+             {key: 'married', value: 3  }];
+
+data = [data, data2];
+
+// tooltip content
+var tip = { 'debt': 'Renters with student-loan debt are XX% LESS likely to buy than renters without debt',
+             ' ':    null,
+             '30-34': '30-34 year old renters are XX% LESS likely to buy than 25-29 year olds',
+             '35-39': '35-39 year old renters are XX% LESS likely to buy than 25-29 year olds',
+             '40-44': '40-44 year old renters are XX% LESS likely to buy than 25-29 year olds',
+             '  ':   null,
+             '$25-49K': 'Renters making $25-49K are XX% MORE likely to buy than those making less than $25K',
+             '$50-74K': 'Renters making $50-74K are XX% MORE likely to buy than those making less than $25K',
+             '> $75K': 'Renters making more than $75K are XX% MORE likely to buy than those making less than $25K',
+             '   ':  null,
+             'married': 'Married renters are XX% more likely to buy than single renters' };
+
+var container = d3.select("body").append("div")
+    .attr('id', 'container')
+
+var svg = container.append("svg")
+    .attr('viewBox', "0, 0, " + width + ", " + height)
+    .attr('preserveAspectRatio', "xMinYMid");
+
+var g = svg.append("g");
+
+g.append("rect")
+    .attr("id", "background-rect")
+    .attr("width", width)
+    .attr("height", height);
+
+g.append("rect")
+    .attr("x", 7)
+    .attr("y", 7)
+    .attr("width", width - 14)
+    .attr("height", height - 14)
+    .style('stroke', 'black')
+    .style('stroke-width', '5px')
+    .style('fill', 'none');
+
+// Create bar chart
+var chart = d3.barChart()
+  .x(function(d) { return d.key; })
+  .y(function(d) { return +d.value; })
+  .width(width)
+  .height(height)
+  .yDomain([-50, 110])
+
+// Plot data[0]
+g.datum(data[0])
+    .call(chart);
+
+tooltip = d3.select('body').append('div')
+      .classed('tooltip', true)
+
+d3.selectAll(".bar rect")
+    .on('mouseover', moused)
+    .on('mousemove', moused)
+    .on('mouseout', clear)
+
+function clear() {
+  tooltip
+      .style('left', '-100px')
+      .style('top', '-100px')
+      .style('border-color', 'transparent')
+      .html(null)
+
+  d3.select(this).classed("active", false);
+}
+
+function moused(d, i) {
+  var h = tooltip.node().clientHeight,
+      w = tooltip.node().clientWidth,
+      m = d3.mouse( container.node() ),  // position relative to parent div
+      maxWidth = container.node().clientWidth;
+
+  var l = Math.min( Math.max(10, m[0] - w / 2), maxWidth - w );
+  var t = m[1] - h - 10;
+
+  tooltip
+      .style('position', 'absolute')
+      .style('pointer-events', 'none')
+      .style('left', function() { return l + "px"; })
+      .style('top',  function() { return t + "px"; })
+      .style('border-style', 'solid')
+      .style('border-color', 'black')
+      .style('padding', '5px')
+      .style('width', '200px')
+      .html(function() { return tip[d[0]].replace('XX', Math.abs(d[1])); })
+
+  d3.select(this).classed("active", true);
+}
+
+// Title for graphic
+g.append('text')
+    .attr('class', 'title')
+    .attr("x", width / 2)
+    .attr("y", '1.7em')
+    .text(title[0])
+
+// Line #2 for title
+g.append('text')
+    .attr('class', 'title')
+    .attr("x", width / 2)
+    .attr("y", '2.9em')
+    .text(title[1])
+
+// vs. (between two buttons)
+g.append('text')
+    .attr('class', 'testing')
+    .attr("x", width / 2)
+    .attr("y", 0.29 * height)
+    .style("text-anchor", 'middle')
+    .style("font-size", '1.5em')
+    .text('vs.')
+
+// Text below button
+var texts = g.selectAll(".text1")
+    .data(text1[0])
+  .enter().append('text')
+    .attr('class', 'text1')
+    .style("font-size", '1.5em')
+    .style("fill-opacity", 0)
+
+var text2 = g.append('text')
+    .style("fill-opacity", 0)
+    .text('(click to view stats)')
+
+// Buttons to toggle between the two calculations
+g.selectAll(".button")
+    .data(['Buy on next move', 'Buy eventually'])
+  .enter().append("g")
+    .attr("class", "button")
+    .attr("transform", function(d, i) { return "translate(" + [(i === 0) ? 0.31 * width : 0.66 * width, 0.29 * height ] + ")"; })
+  .append("text")
+    .text(function(d) { return d; })
+    .style("text-anchor", 'middle')
+    .style("font-size", '2em')
+    .each(addButton)
+
+// Initial animation-- click the first button, then wait a bit and click the 2nd
+//toggle.call(d3.select(".toggle rect").node(), null, 0);
+ setTimeout(function() {
+   toggle.call(d3.selectAll(".toggle rect").nodes()[0], null, 0);
+ }, 1000)
+
+function addButton(d, i) {
+    d3.button()
+        .container( d3.select(this.parentNode) )
+        .text( d3.select(this) )
+        .count( i )
+        .cb(function() { return toggle.call(this, d, i); })
+        ();
+}
+
+function toggle(d, i) {
+  // text below each button
+  texts.data(text1[i])
+
+  var x = (i === 0) ? 0.31 * width - 138 : 0.66 * width - 114;
+  var x2 = (i === 1) ? 0.31 * width - 138 : 0.66 * width - 114;
+  var y = 0.29 * height + 50;
+  text2.transition()
+      .style("fill-opacity", 0)
+    .transition()
+      .attr('dx', '3em')
+      .attr('x', x2)
+      .attr('y', y)
+    .transition()
+      .style("fill-opacity", null)
+
+  texts.transition()
+      .style("fill-opacity", 0)
+    .transition()
+      .attr('x', x)
+      .attr('y', y)
+      .attr('dy', function(d, i) { return (i * 1.3) + "em" ; })
+      .text(function(d) { return d; })
+    .transition()
+      .style("fill-opacity", null)
+
+  xAxis = chart.xAxis();
+  yScale = chart.yScale();
+
+  // new data
+  d3.selectAll(".bar rect")
+      .data( data[i].map(function(d) { return [d.key, +d.value] }) )
+    .transition()
+      .duration(750)
+      .attr("y", function(d) { return ( yScale(0) - yScale(d[1]) ) > 0 ? yScale(d[1]) : yScale(0); })
+      .attr("height", function(d) { return Math.abs( yScale(0) - yScale(d[1]) ) });
+
+  // bar labels
+  d3.selectAll(".bar text")
+      .style('fill-opacity', '0')
+      .data( data[i].map(function(d) { return [d.key, +d.value] }) )
+    .transition()
+      .duration(750)
+      .attr("y", function(d) { return ( yScale(0) - yScale(d[1]) ) > 0 ? yScale(d[1]) : yScale(d[1]); })
+      .attr("dy", function(d) { return d[1] < 0 ? '-.29em' : '1em'; })
+      .style('fill', function(d) { return (Math.abs(d[1]) > 5) ? '#fff' : 'none' })  // large
+      .style('fill-opacity', '1')
+      .text(function(d) { return d[1] + ((d[1] > 27 || d[1] < -22) ? '*' : '') })  // statistical significance
+}
+
+setContainerHeight(); // initial load
+d3.select(window).on('resize', setContainerHeight);
+
+function setContainerHeight() {
+  var w = Math.min(582, parseInt( container.style("width"), 10));
+  var a = width / height;
+  container.style('width', w + 'px');
+  container.style('height', w / a  + 'px');
+}
+
+</script>
