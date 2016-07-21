@@ -14,6 +14,9 @@ var btn = [];
 var title = ["What factors affect renters'",
     "aspirations for homeownership?"];
 
+var ylabel = ["Change in likelihood (Buy on next move)",
+              "Change in likelihood (Buy eventually)"];
+
 text1 = [["54% of renters aged 25-44",
               "say they expect to buy on",
               "their next move."],
@@ -229,6 +232,13 @@ function toggle(d, i) {
       .attr('y', y)
       .attr('dy', function(d, i) { return (i * 1.3) + "em" ; })
       .text(function(d) { return d; })
+    .transition()
+      .style("fill-opacity", null)
+
+  d3.select('.y.axis text.ylabel').transition()
+      .style("fill-opacity", 0)
+    .transition()
+      .text(function() { return ylabel[i]; })
     .transition()
       .style("fill-opacity", null)
 
