@@ -14,8 +14,8 @@ var btn = [];
 var title = ["What factors affect renters'",
     "aspirations for homeownership?"];
 
-var ylabel = ["Change in likelihood (Buy on next move)",
-              "Change in likelihood (Buy eventually)"];
+var ylabel = [" (Buy on next move)",
+              " (Buy eventually)"];
 
 text1 = [["54% of renters aged 25-44",
               "say they expect to buy on",
@@ -235,7 +235,7 @@ function toggle(d, i) {
     .transition()
       .style("fill-opacity", null)
 
-  d3.select('.y.axis text.ylabel').transition()
+  d3.select('.y.axis text.ylabel tspan').transition()
       .style("fill-opacity", 0)
     .transition()
       .text(function() { return ylabel[i]; })
