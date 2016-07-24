@@ -102,8 +102,8 @@ tooltip = d3.select('body').append('div')
       .classed('tooltip', true)
 
 d3.selectAll(".bar rect")
-    .on('mouseover', moused)
-    .on('mousemove', moused)
+    .on('mouseover', showTooltip)
+    .on('mousemove', showTooltip)
     .on('mouseout', clear)
 
 function clear() {
@@ -116,7 +116,7 @@ function clear() {
   d3.select(this).classed("active", false);
 }
 
-function moused(d, i) {
+function showTooltip(d, i) {
   var h = tooltip.node().clientHeight,
       w = tooltip.node().clientWidth,
       m = d3.mouse( container.node() ),  // position relative to parent div
@@ -153,7 +153,7 @@ g.append('text')
     .attr("y", '2.9em')
     .text(title[1])
 
-// vs. (between two buttons)
+// "vs." (between two buttons)
 g.append('text')
     .attr('class', 'testing')
     .attr("x", width / 2)
@@ -190,6 +190,7 @@ g.selectAll(".button")
 //toggle.call(d3.select(".toggle rect").node(), null, 0);
  setTimeout(function() {
    btn[0].press();
+   btn[1].release();
    toggle.call(d3.selectAll(".toggle rect").nodes()[0], null, 0);
  }, 1000)
 
@@ -199,10 +200,9 @@ function addButton(d, i) {
         .text( d3.select(this) )
         .count( i )
         .cb(function() {
-          console.log('cb here...', i)
           var k = (i == 0) ? 1 : 0;
-          btn[k].darken();
-          btn[k].letGo();
+          btn[i].press();
+          btn[k].release();
           toggle.call(this, d, i);
         })
         ();

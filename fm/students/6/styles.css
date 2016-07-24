@@ -23,24 +23,29 @@ text.title {
   -ms-user-select: none;
 }
 
-.button #gradient-start {
-  stop-color: #4d9fb6; /* 70% */
-  stop-opacity: 1;
+.button rect {
+  stroke: #1f628d;
+  stroke-width: 2px;
 }
 
-.button #gradient-stop {
-  stop-color: #1a84a2; /* 100% */
-  stop-opacity: 1;
+.button linearGradient .gradientStart {
+  stop-color: #66ADC1; /* 60% */
 }
 
-.button #gradient-start.active {
-/*  stop-color: #99c8d5; /* 40% */
-  stop-color: #66adc1; /* 60% */
+.button linearGradient .gradientStop {
+  stop-color: #007697; /* 100% */
 }
 
-.button #gradient-stop.active {
+.button.active linearGradient .gradientStart {
+/*  stop-color: #66ADC1; /* 60% */
+/*  stop-color: #7FBACB; /* 50% */
+  stop-color: #99c8d5; /* 40% */
+}
+
+.button.active linearGradient .gradientStop {
+/*  stop-color: #1A84A2; /* 90% */
+  stop-color: #3391AC; /* 80% */
 /*  stop-color: #4d9fb6; /* 70% */
-  stop-color: #1a84a2; /* 90% */
 }
 
 .bar {
