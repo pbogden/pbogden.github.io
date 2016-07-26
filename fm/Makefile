@@ -52,7 +52,7 @@ components0:
 
 gif:
 	cp ~/Sites/fm/hpsi/gif/index.html gif
-	cp ~/Sites/fm/hpsi/gif/final.gif gif
+	cp ~/Sites/fm/hpsi/gif/chart.gif gif
 
 hpsi0:
 	cp ~/Sites/fm/hpsi/0/index.html hpsi0
