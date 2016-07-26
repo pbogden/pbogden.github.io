@@ -51,8 +51,8 @@ components0:
 	cp ~/Sites/fm/hpsi/data/data.csv data
 
 gif:
-	cp ~/Sites/fm/hpsi/gif/index.html gif
-	cp ~/Sites/fm/hpsi/gif/chart.gif gif
+	cp ~/Sites/fm/hpsi/2/chart.gif gif
+	cp ~/Sites/fm/hpsi/2/final.gif gif
 
 hpsi0:
 	cp ~/Sites/fm/hpsi/0/index.html hpsi0
