@@ -64,12 +64,6 @@ text.title {
   fill: rgb(209,116,108);  /* 80% */
 }
 
-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 text {
   user-select: none;
   -moz-user-select: none;
