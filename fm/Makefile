@@ -1,6 +1,6 @@
 all: students6
 
-.PHONY: fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fms fmr1 map1 map2 hpsi0 components0 gif
+.PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif
 
 students7:
 	cp ~/Sites/fm/students/7/final.gif students/7
@@ -181,12 +181,8 @@ fm22:
 	cp ../../fm22/*.css 22
 	cp ../../fm22/bundle.min.js 22
 
-fm26:
-	cp ../../fm26/index.html 26
-	cp ../../fm26/test.html 26
-	cp ../../fm26/data.json 26
-	cp ../../fm26/*.css 26
-	cp ../../fm26/bundle.min.js 26
+fm27:
+	cp ../../fm/millenials/27/millenials.zip millenials/27
 
 fm25:
 	cp ../../fm25/index.html 25
