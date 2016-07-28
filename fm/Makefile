@@ -2,6 +2,9 @@ all: students6
 
 .PHONY: fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fms fmr1 map1 map2 hpsi0 components0 gif
 
+students7:
+	cp ~/Sites/fm/students/7/final.gif students/7
+
 students6:
 	cp ~/Sites/fm/students/6/iframe.html students/6
 	cp ~/Sites/fm/students/6/custom.css students/6
