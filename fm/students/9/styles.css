@@ -1,0 +1,88 @@
+body {
+  font-family: Univers, Arial, sans-serif;
+}
+
+text.title {
+  text-anchor: middle;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.button rect {
+    stroke: #1f628d;
+    stroke-width: 2px;
+}
+
+.button text {
+  font-size: 35px;
+  fill: #eee;
+  pointer-events: none;
+  text-anchor: middle;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.button rect {
+  stroke: #1f628d;
+  stroke-width: 2px;
+}
+
+.button linearGradient .gradientStart {
+  stop-color: #66ADC1; /* 60% */
+}
+
+.button linearGradient .gradientStop {
+  stop-color: #007697; /* 100% */
+}
+
+.button.active linearGradient .gradientStart {
+/*  stop-color: #66ADC1; /* 60% */
+/*  stop-color: #7FBACB; /* 50% */
+  stop-color: #99c8d5; /* 40% */
+}
+
+.button.active linearGradient .gradientStop {
+/*  stop-color: #1A84A2; /* 90% */
+  stop-color: #3391AC; /* 80% */
+/*  stop-color: #4d9fb6; /* 70% */
+}
+
+.bar {
+  fill: rgb(33,108,43);
+}
+
+.bar rect.active {
+  fill: rgb(77,137,85);  /* 80% */
+}
+
+.bar rect.negative {
+  fill: rgb(197,81,71);
+}
+
+.bar rect.negative.active {
+  fill: rgb(209,116,108);  /* 80% */
+}
+
+text {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.tooltip {
+  background: rgb(217,215,220); /* FM gray */
+}
+
+#background-rect {
+  fill: rgb(217,215,220); /* FM gray */
+}
+
+#rect-positive {
+  fill: rgb(77,137,85); /* 80% tint */
+}
+
+#rect-negative {
+  fill: rgb(209,116,108); /* 80% tint */
+}
