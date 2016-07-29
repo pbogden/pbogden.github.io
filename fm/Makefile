@@ -1,4 +1,4 @@
-all: students6
+all: students9
 
 .PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif
 
