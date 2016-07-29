@@ -1,4 +1,4 @@
-all: students9
+all: hpsi2
 
 .PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif
 
@@ -66,10 +66,14 @@ gif:
 	cp ~/Sites/fm/hpsi/2/final.gif gif
 	cp ~/Sites/fm/hpsi/2/chart.png gif
 
+hpsi2:
+	cp ~/Sites/fm/hpsi/2/final.gif hpsi/2
+	cp ~/Sites/fm/hpsi/2/final.png hpsi/2
+
 hpsi0:
-	cp ~/Sites/fm/hpsi/0/index.html hpsi0
-	cp ~/Sites/fm/hpsi/0/styles.css hpsi0
-	cp ~/Sites/fm/hpsi/0/bundle.min.js hpsi0
+	cp ~/Sites/fm/hpsi/0/index.html hpsi/0
+	cp ~/Sites/fm/hpsi/0/styles.css hpsi/0
+	cp ~/Sites/fm/hpsi/0/bundle.min.js hpsi/0
 	cp ~/Sites/fm/hpsi/data/data.csv data
 
 map1:
