@@ -69,6 +69,7 @@ gif:
 hpsi2:
 	cp ~/Sites/fm/hpsi/2/final.gif hpsi/2
 	cp ~/Sites/fm/hpsi/2/final.png hpsi/2
+	cp ~/Sites/fm/hpsi/2/hpsi.gif hpsi/2
 
 hpsi0:
 	cp ~/Sites/fm/hpsi/0/index.html hpsi/0
