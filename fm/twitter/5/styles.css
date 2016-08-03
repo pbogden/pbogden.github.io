@@ -1,0 +1,87 @@
+
+body {
+  font: 16px sans-serif;
+}
+
+.overlay {
+  opacity: 0;
+  ponter-events: all;
+}
+
+#tweet {
+  position: absolute;
+  left: 50px;
+  top: 10px;
+  width: 550px;
+}
+
+#labels {
+  position: absolute;
+  left: 650px;
+  top: 10px;
+  width: 500px;
+}
+
+#labels td {
+  background-color: #eee;
+}
+
+#labels td:hover {
+  background-color: #ccc;
+}
+
+circle.active {
+  fill: yellow;
+  stroke: red;
+  stroke-width: 2px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.axis.left, .axis.left path, .axis.left line {
+  stroke: #1f77b4;
+}
+
+.axis.left text, text.left {
+  stroke: none;
+  fill: #1f77b4;
+}
+
+.axis.right, .axis.right path, .axis.right line, .right {
+  stroke: #ff7f0e;
+}
+
+.axis.right text, text.right {
+  stroke: none;
+  fill: #ff7f0e;
+}
+
+.dot {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.bars {
+  fill: #ecf2f9;
+  stroke: none;
+  pointer-events: none;
+}
+
+.mouse {
+  stroke: black;
+  stroke-width: 0.5px;
+}
+
+.mouse-text, .mouse-date {
+  text-anchor: end;
+}
