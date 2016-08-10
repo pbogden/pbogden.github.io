@@ -7,6 +7,7 @@ students9:
 	cp ~/Sites/fm/students/9/index.html students/9
 	cp ~/Sites/fm/students/9/styles.css students/9
 	cp ~/Sites/fm/students/9/iframe.html students/9
+	cp ~/Sites/fm/students/9/custom.css students/9
 
 students8:
 	cp ~/Sites/fm/students/8/graphic.zip students/8
