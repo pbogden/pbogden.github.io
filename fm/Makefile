@@ -70,9 +70,9 @@ components0:
 	cp ~/Sites/fm/hpsi/data/data.csv data
 
 gif:
-	cp ~/Sites/fm/hpsi/2/chart.gif gif
-	cp ~/Sites/fm/hpsi/2/final.gif gif
-	cp ~/Sites/fm/hpsi/2/chart.png gif
+	cp ~/Sites/fm/hpsi/2/hpsi.gif gif   # animated once through
+	cp ~/Sites/fm/hpsi/2/final.gif gif  # continuous loop
+	cp ~/Sites/fm/hpsi/2/final.png gif  # PNG of final image
 
 hpsi2:
 	cp ~/Sites/fm/hpsi/2/final.gif hpsi/2
