@@ -95,7 +95,7 @@ hpsi0:
 	cp ~/Sites/fm/hpsi/0/index.html hpsi/0
 	cp ~/Sites/fm/hpsi/0/styles.css hpsi/0
 	cp ~/Sites/fm/hpsi/0/bundle.min.js hpsi/0
-	cp ~/Sites/fm/hpsi/data/data.csv data
+	cp ~/Sites/fm/hpsi/data/data.csv hpsi/data
 
 map1:
 	cp ../../fmap1/*.png map1
