@@ -1,0 +1,132 @@
+body {
+  font: 16px sans-serif;
+  margin: 0;
+}
+
+.header {
+  height: 70px;
+  width: 100%;
+  background: #000f2b;
+}
+
+.header2 {
+  height: 40px;
+  width: 100%;
+  background: #d9d7dc;
+}
+
+.title {
+  position: relative;
+  background: #fff;
+  font: normal 26px 'Glypha-55Roman',"Georgia","Century", serif;
+  height: 48px;
+}
+
+.title-text {
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+}
+
+table td {
+  font-size: 0.7em;
+  border: 1px #000f2b solid;
+}
+
+#left-hand-column {
+/*  display: inline-block; */
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin: 10px 15px 0px 20px; /* top right bottom left */
+  width: 285px; /* 250px; */  /* website uses width = 250px */
+  height: 100vmin;
+}
+
+#middle-column {
+/*  display: inline-block; */
+  position: absolute;
+  left: 285px;
+  top: 0px;
+  vertical-align: top;
+  width: 620px;
+  margin: 0px 10px 0px 10px; /* top right bottom left */
+}
+
+#right-hand-column {
+  display: inline-block;
+  vertical-align: top;
+  width:  275px;
+  margin: 10px 10px 0px 15px; /* top right bottom left */
+}
+
+.mouseover {
+  background: #eee;
+}
+
+.active {
+  background: #d9d7dc;
+}
+
+.title {
+  font-size: 1.5em;
+  font: bold;
+}
+
+.subtitle {
+  font-size: 0.6em;
+  stroke: none;
+  fill: black;
+}
+
+.mouse {
+  stroke: black;
+  stroke-width: 0.5px;
+}
+
+.mouse-text, .mouse-date {
+  text-anchor: end;
+}
+
+.line, .line .hpsi {
+  fill: none;
+  stroke: #cc9900;
+  stroke-width: 4px;
+}
+
+.line .main {
+  stroke: black;
+  stroke-width: 2px;
+}
+
+.line .high {
+  stroke: crimson;
+  stroke-width: 2px;
+  stroke-dasharray: 3, 3;
+}
+
+.line .low {
+  stroke: steelblue;
+  stroke-width: 2px;
+  stroke-dasharray: 3, 3;
+}
+
+.line .dotted {
+  stroke-dasharray: 3, 3;
+}
+
+.line .solid {
+  stroke-dasharray: 1, 0;
+}
+
+.bars {
+  fill: #ecf2f9;
+  stroke: none;
+  pointer-events: none;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}

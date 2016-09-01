@@ -85,6 +85,12 @@ hpsi2:
 	cp ~/Sites/fm/hpsi/2/final.png hpsi/2
 	cp ~/Sites/fm/hpsi/2/hpsi.gif hpsi/2
 
+hpsi1:
+	cp ~/Sites/fm/hpsi/1/index.html hpsi/1
+	cp ~/Sites/fm/hpsi/1/styles.css hpsi/1
+	cp ~/Sites/fm/hpsi/1/bundle.min.js hpsi/1
+	cp ~/Sites/fm/hpsi/data/data.csv hpsi/data
+
 hpsi0:
 	cp ~/Sites/fm/hpsi/0/index.html hpsi/0
 	cp ~/Sites/fm/hpsi/0/styles.css hpsi/0
