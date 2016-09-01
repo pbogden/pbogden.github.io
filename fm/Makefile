@@ -67,7 +67,7 @@ hpsi4:
 	cp ~/Sites/fm/hpsi/4/index.html hpsi/4
 	cp ~/Sites/fm/hpsi/4/styles.css hpsi/4
 	cp ~/Sites/fm/hpsi/4/bundle.min.js hpsi/4
-	cp ~/Sites/fm/hpsi/data/data.csv data
+	cp ~/Sites/fm/hpsi/data/data.csv hpsi/data
 
 components0:
 	cp ~/Sites/fm/hpsi/1/index.html components0
