@@ -18,7 +18,7 @@ body {
 .title {
   position: relative;
   background: #fff;
-  font: normal 26px 'Glypha-55Roman',"Georgia","Century",serif;
+  font: normal 26px 'Glypha-55Roman',"Georgia","Century", serif;
   height: 48px;
 }
 
