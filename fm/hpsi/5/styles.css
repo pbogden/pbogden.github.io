@@ -18,7 +18,8 @@ body {
 .title {
   position: relative;
   background: #fff;
-  font: normal 26px 'Glypha-55Roman',"Georgia","Century",serif;
+  font: 26px;
+/*  font: normal 26px 'Glypha-55Roman',"Georgia","Century",serif; */
   height: 48px;
 }
 
@@ -66,14 +67,6 @@ table td {
   margin: 10px 10px 0px 15px; /* top right bottom left */
 }
 
-.mouseover {
-  background: #eee;
-}
-
-.active {
-  background: #d9d7dc;
-}
-
 .title {
   font-size: 1.5em;
   font: bold;
@@ -96,7 +89,7 @@ table td {
 
 .line, .line .hpsi {
   fill: none;
-  stroke: #cc9900;
+  stroke: #cc9900;  /* gold */
   stroke-width: 4px;
 }
 
@@ -135,4 +128,33 @@ table td {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
+}
+
+.handle {
+  stroke: #000f2b;
+  fill: #000f2b;
+  stroke-width: 2px;
+}
+
+.slider {
+  fill: #d9d7dc;
+  stroke: #000;
+}
+
+.header rect {
+  fill: steelblue;
+  stroke: #333;
+}
+
+.header text {
+  font-weight: bold;
+}
+
+.row rect {
+  fill: crimson;
+  stroke: #333;
+}
+
+.row text, .header text {
+  text-anchor: middle;
 }
