@@ -67,14 +67,6 @@ table td {
   margin: 10px 10px 0px 15px; /* top right bottom left */
 }
 
-.mouseover {
-  background: #eee;
-}
-
-.active {
-  background: #d9d7dc;
-}
-
 .title {
   font-size: 1.5em;
   font: bold;
@@ -100,20 +92,6 @@ table td {
   stroke: #cc9900;  /* gold */
   stroke-width: 4px;
 }
-
-.buy { stroke: #1f77b4; }
-.prices { stroke: #ff7f0e; }
-.sell { stroke: #2ca02c; }
-.rates { stroke: #d62728; }
-.job { stroke: #9467bd; }
-.income { stroke: #8c564b; }
-
-td.buy { background-color: #1f77b4; }
-td.prices { background-color: #ff7f0e; }
-td.sell { background-color: #2ca02c; }
-td.rates { background-color: #d62728; }
-td.job { background-color: #9467bd; }
-td.income { background-color: #8c564b; }
 
 .line .main {
   stroke: black;
@@ -161,4 +139,22 @@ td.income { background-color: #8c564b; }
 .slider {
   fill: #d9d7dc;
   stroke: #000;
+}
+
+.header rect {
+  fill: steelblue;
+  stroke: #333;
+}
+
+.header text {
+  font-weight: bold;
+}
+
+.row rect {
+  fill: crimson;
+  stroke: #333;
+}
+
+.row text, .header text {
+  text-anchor: middle;
 }
