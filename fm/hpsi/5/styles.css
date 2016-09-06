@@ -35,6 +35,10 @@ table {
   left: 100px;
 }
 
+.column rect {
+  cursor: pointer;
+}
+
 table td {
   font-size: 0.7em;
   border: 1px #000f2b solid;
@@ -139,6 +143,14 @@ table td {
 .slider {
   fill: #d9d7dc;
   stroke: #000;
+}
+
+text {
+  pointer-events: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .header rect {
