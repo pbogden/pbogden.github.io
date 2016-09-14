@@ -1,6 +1,11 @@
 all: hpsi6
 
-.PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif
+.PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk
+
+talk:
+	cp ~/Sites/fm/talk/index.html talk
+	cp ~/Sites/fm/talk/stylesheets/* talk/stylesheets
+	cp ~/Sites/fm/talk/images/* talk/images
 
 students9:
 	cp ~/Sites/fm/students/9/bundle.min.js students/9
