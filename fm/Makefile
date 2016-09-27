@@ -56,6 +56,30 @@ students1:
 	cp ~/Sites/fm/students/1/styles.css students/1
 	cp ~/Sites/fm/students/1/d3.min.js  students/1
 
+twitter18:
+	cp ~/Sites/fm/twitter/18/index.html twitter/18
+	cp ~/Sites/fm/twitter/18/source.html twitter/18
+	cp ~/Sites/fm/twitter/18/styles.css twitter/18
+	cp ~/Sites/fm/twitter/18/bundle.min.js twitter/18
+	cp ~/Sites/fm/twitter/data/FannieMaeTwitterMentions_Intelligence.csv twitter/data
+
+twitter16:
+	cp ~/Sites/fm/twitter/16/index.html twitter/16
+	cp ~/Sites/fm/twitter/16/styles.css twitter/16
+	cp ~/Sites/fm/twitter/16/bundle.min.js twitter/16
+	cp ~/Sites/fm/twitter/16/data.json twitter/16
+
+twitter14:
+	cp ~/Sites/fm/twitter/14/index.html twitter/14
+	cp ~/Sites/fm/twitter/14/styles.css twitter/14
+	cp ~/Sites/fm/twitter/14/bundle.min.js twitter/14
+	cp ~/Sites/fm/twitter/14/data.json twitter/14
+
+twitter6:
+	cp ~/Sites/fm/twitter/6/index.html twitter/6
+	cp ~/Sites/fm/twitter/6/styles.css twitter/6
+	cp ~/Sites/fm/twitter/6/bundle.min.js twitter/6
+
 twitter5:
 	cp ~/Sites/fm/twitter/5/index.html twitter/5
 	cp ~/Sites/fm/twitter/5/styles.css twitter/5

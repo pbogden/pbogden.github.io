@@ -1,0 +1,118 @@
+
+body {
+  font-family: sans-serif;
+}
+
+#tweet {
+  position: relative;
+  left: 50px;
+  top: 10px;
+  width: 550px;
+  height: 5em;
+}
+
+text {
+  pointer-events: none;
+  /*user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;*/
+}
+
+text.active {
+  font-size: 2em;
+}
+
+.dot {
+  fill: steelblue;
+  clip-path: url(#clip);
+}
+
+circle.active {
+  fill: yellow;
+  stroke: red;
+  stroke-width: 2px;
+}
+
+circle.selected {
+  stroke: black;
+  stroke-width: 3px;
+}
+
+.zoom {
+  cursor: move;
+  fill: none;
+}
+
+.mouse {
+  fill: crimson;
+  stroke: black;
+  stroke-width: 0.5px;
+}
+
+.mouse-text, .mouse-date {
+  fill: black;
+}
+
+#labels {
+  position: absolute;
+  left: 620px;
+  top: 10px;
+}
+
+#labels td, #keywords td {
+  background-color: #eee;
+}
+
+#labels td:hover, #keywords td:hover {
+  background-color: #ccc;
+}
+
+#keywords {
+  position: absolute;
+  left: 900px;
+  top: 10px;
+  height: 5em;
+}
+
+.polygon {
+  fill: none;
+  stroke: #eee;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+button {
+  position: absolute;
+  cursor: pointer;
+  top: 0%;
+  left: 0%;
+  margin-top: 1em;
+  margin-left: 0em;
+  width: 9em;
+  padding: 0.5em 0em;
+  background: #ccc;
+  color: #fff;
+  border-radius: 8px;
+  border: solid 2px #000;
+  font: 14px "Helvetica Neue", sans-serif;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  text-shadow: 0 1px 0 #000;
+  background: #444;
+}
+
+button.active {
+  background: #222;
+}
