@@ -1,6 +1,7 @@
 body {
   font: 16px sans-serif;
   margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -42,33 +43,6 @@ table {
 table td {
   font-size: 0.7em;
   border: 1px #000f2b solid;
-}
-
-#left-hand-column {
-/*  display: inline-block; */
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  margin: 10px 15px 0px 20px; /* top right bottom left */
-  width: 285px; /* 250px; */  /* website uses width = 250px */
-  height: 100vmin;
-}
-
-#middle-column {
-/*  display: inline-block; */
-  position: absolute;
-  left: 285px;
-  top: 0px;
-  vertical-align: top;
-  width: 620px;
-  margin: 0px 10px 0px 10px; /* top right bottom left */
-}
-
-#right-hand-column {
-  display: inline-block;
-  vertical-align: top;
-  width:  275px;
-  margin: 10px 10px 0px 15px; /* top right bottom left */
 }
 
 .title {
