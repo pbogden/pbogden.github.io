@@ -93,16 +93,16 @@ twitter3:
 	cp ~/Sites/fm/twitter/data/TwitterPerformance_FannieMae_June15May16.csv twitter/data
 
 hpsi6:
-	cp ~/Sites/fm/hpsi/6/index.html hpsi/6
-	cp ~/Sites/fm/hpsi/6/styles.css hpsi/6
+	cp ~/Sites/fm/hpsi/6/index.html    hpsi/6
+	cp ~/Sites/fm/hpsi/6/styles.css    hpsi/6
 	cp ~/Sites/fm/hpsi/6/bundle.min.js hpsi/6
-	cp ~/Sites/fm/hpsi/6/data.csv hpsi/6
+	cp ~/Sites/fm/hpsi/6/data.csv      hpsi/6
 
 hpsi5:
-	cp ~/Sites/fm/hpsi/5/index.html hpsi/5
-	cp ~/Sites/fm/hpsi/5/styles.css hpsi/5
+	cp ~/Sites/fm/hpsi/5/index.html    hpsi/5
+	cp ~/Sites/fm/hpsi/5/styles.css    hpsi/5
 	cp ~/Sites/fm/hpsi/5/bundle.min.js hpsi/5
-	cp ~/Sites/fm/hpsi/5/data.csv hpsi/5
+	cp ~/Sites/fm/hpsi/5/data.csv      hpsi/5
 
 hpsi4:
 	cp ~/Sites/fm/hpsi/4/index.html hpsi/4
