@@ -108,9 +108,9 @@ table td {
   shape-rendering: crispEdges;
 }
 
-rect.handle {
+.handle {
   stroke: #000f2b;
-  fill: #666f80;
+  fill: #000f2b;
   stroke-width: 2px;
 }
 
