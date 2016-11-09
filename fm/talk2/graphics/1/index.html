@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>ga - 8</title>
+<link rel='stylesheet' href='styles.css' type='text/css'>
+<body>
+
+<script src="d3.min.js"></script>
+<script src="barChart.js"></script>
+<script>
+
+var margin = {top: 0, right: 0, bottom: 0, left: 0};
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var message = 'Mouse over the bars for detail (click to change years)',
+    timerId = null;
+
+var container = d3.select("body").append("div").append("svg")
+    .attr('viewBox', "0, 0, " + (width + margin.left + margin.right) + ", " + (height + margin.top + margin.bottom))
+    .attr('preserveAspectRatio', "xMinYMid")
+  .append("g")
+    .attr("id", "container")
+    .attr("transform", "translate(" + margin.left + ", " + margin.top + ")");
+
+container.append("rect")
+    .attr("width", width)
+    .attr("height", height)
+    .style("fill", "#fff")
+
+var chart = barChart()
+    .x(function(d) { return d[0]; })
+    .y(function(d) { return d[1]; })
+    .width(width)
+    .height(height);
+
+var text = container.append('text')
+    .attr('x', 140)
+    .attr('y', 100)
+    .text('Just a second...arranging the data')
+
+var file1 = 'dec2015.json'
+var file2 = 'jul2016.json'
+
+// HTML button selects year
+d3.select('body').selectAll('.file')
+    .data([file1, file2])
+  .enter().append('button')
+    .attr('class', 'file')
+    .style('left', function(d, i) { return (i + 1) * 10 + "em"; })
+    .text(function(d, i) { return i == 0 ? "Dec 2015" : "Jul 2016"; })
+    .on('click', clicked)
+
+setContainerHeight(); // initial load
+d3.select(window).on('resize', setContainerHeight);
+
+d3.queue()
+    .defer(d3.json, file1)
+    .defer(d3.json, file2)
+    .await(ready);
+
+function ready(error, json1, json2) {
+  if (error) return console.log(error);
+
+  // QUICK FIX FOR DATA MODEL
+  json1 = json1['thehomestory.com']
+  json2 = json2['thehomestory.com']
+  console.log('json', json1, json2)
+
+// Experiment with consolidating equivalent URLs  (e.g., with or without www.)
+ // csv1 = fixDuplicates(csv1);
+ // csv2 = fixDuplicates(csv2);
+
+  json = [json1, json2];
+
+  setup(1);
+  clicked.call(d3.selectAll('button').nodes()[0], null, 0)
+  text.text(message);
+  setTimeout(function() {
+    clicked.call(d3.selectAll('button').nodes()[1], null, 1)
+  }, 5000);
+};
+
+function fixDuplicates(csv) {
+  console.log('# of rows', csv.length);
+
+  // sort (Note: this doesn't seem to do anything -- data are already sorted)
+  // csv.forEach(function(d,i) { if (i < 10) console.log('BEFORE', d[0], d[1]); })
+  // csv = csv.sort(function(a,b) { return b[1] - a[1]; })
+  // csv.forEach(function(d,i) { if (i < 10) console.log('AFTER', d[0], d[1]); })
+
+  // Combine all URLs that differ by the string: "www."
+  var urls = d3.set(csv.map(function(d) { return d[0].replace('www.', ''); })).values();
+  console.log('# of unique URLs BEFORE', urls.length);
+//  urls = d3.set(urls.map(function(d) { d += '/'; return d.replace('//','/'); })).values();
+//  console.log('# of unique URLs AFTER', urls.length);
+  urls = urls.map(function(url, i) {
+        var count = 0;
+        csv.forEach(function(d) {
+            var str = d[0];
+//            var str = (d[0] + '/').replace('//', '/');
+            if (str.indexOf(url) > -1) {
+            console.log('found one:', i, url, d[0], d[1], count);
+              count += d[1];
+            }
+        });
+        return [url, count];
+      });
+  urls.forEach(function(d,i) { if (i < 10) console.log('URLS BEFORE', d); })
+  urls = urls.sort(function(a, b) { return b[1] - a[1]; });
+  urls.forEach(function(d,i) { if (i < 10) console.log('URLS AFTER', d); })
+
+  console.log('# of unique URLs', urls.length);
+
+  return urls;
+}
+
+function moused(d, i) {
+  if (timerId) clearTimeout(timerId);
+  text.text(d[0] + "  --  " + d3.format(',d')(d[1]) + " Pageviews");
+}
+
+function setup(i) {
+  console.log('setup', d3.select(this).text())
+  data = json[i].filter(function(d) { return d[1] > 200; })
+  console.log('setup data', data)
+
+  container
+    .datum(data)
+    .call(chart);
+
+  // Remove x-axis (labels aren't any good)
+  d3.selectAll('.x.axis').remove();
+
+  d3.selectAll('.bar')
+      .on('mouseover', moused)
+}
+
+function clicked(d, i) {
+  d3.selectAll('button').classed('active', false);
+  d3.select(this).classed('active', true);
+  console.log('clicked', this, d3.select(this).text())
+
+  data = json[i];
+
+  var yScale = chart.yScale();
+
+  container.selectAll(".bar")
+      .data(data)
+    .transition()
+      .attr("y", function(d) { return ( yScale(0) - yScale(d[1]) ) > 0 ? yScale(d[1]) : yScale(0); })
+      .attr("height", function(d) { return Math.abs( yScale(0) - yScale(d[1]) ) });
+
+  // Remove x-axis (labels aren't any good)
+  d3.selectAll('.x.axis').remove();
+
+  d3.selectAll('.bar')
+      .on('mouseover', moused)
+      .on('mouseout', function() { timerId = window.setTimeout(function() { text.text(message) }, 10000); });
+}
+
+function type(d) {
+  return [d.Page, +d.Pageviews.replace(',','')];
+}
+
+function checkStr(data, str) {
+  var aa = data.filter(function(d) { return d[0].indexOf(str) > -1; })
+  console.log('\n', aa.length, 'URLs containing', str);
+}
+
+function setContainerHeight() {
+  var w = parseInt( container.style("width"), 10);
+  var a = width / height;
+  container.style('height', w / a  + 'px');
+}
+
+</script>

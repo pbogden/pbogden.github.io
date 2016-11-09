@@ -1,11 +1,26 @@
 all: hpsi6
 
-.PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk
+.PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2
 
 talk:
 	cp ~/Sites/fm/talk/index.html talk
 	cp ~/Sites/fm/talk/stylesheets/* talk/stylesheets
 	cp ~/Sites/fm/talk/images/* talk/images
+
+talk2:
+	cp ~/Sites/fm/talk2/index.html     talk2
+	cp ~/Sites/fm/talk2/d3.v3.min.js   talk2
+	cp ~/Sites/fm/talk2/stack.v1.js    talk2
+	cp ~/Sites/fm/talk2/stylesheet.css talk2
+	cp ~/Sites/fm/talk2/graphics/0/*   talk2/graphics/0
+	cp ~/Sites/fm/talk2/graphics/0a/*  talk2/graphics/0a
+	cp ~/Sites/fm/talk2/graphics/1/*   talk2/graphics/1
+	cp ~/Sites/fm/talk2/graphics/2/*   talk2/graphics/2
+	cp ~/Sites/fm/talk2/graphics/3/*   talk2/graphics/3
+	cp ~/Sites/fm/talk2/graphics/4/*   talk2/graphics/4
+	cp ~/Sites/fm/talk2/graphics/5/*   talk2/graphics/5
+	cp ~/Sites/fm/talk2/graphics/6/*   talk2/graphics/6
+
 
 students9:
 	cp ~/Sites/fm/students/9/bundle.min.js students/9

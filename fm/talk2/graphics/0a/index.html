@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>ga - 7</title>
+<link rel='stylesheet' href='styles.css' type='text/css'>
+<body>
+
+<script src="d3.min.js"></script>
+<script src="barChart.js"></script>
+<script>
+
+var margin = {top: 0, right: 0, bottom: 0, left: 0};
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var message = 'Mouse over the bars for detail (click to change years)',
+    timerId = null;
+
+var container = d3.select("body").append("div").append("svg")
+    .attr('viewBox', "0, 0, " + (width + margin.left + margin.right) + ", " + (height + margin.top + margin.bottom))
+    .attr('preserveAspectRatio', "xMinYMid")
+  .append("g")
+    .attr("id", "container")
+    .attr("transform", "translate(" + margin.left + ", " + margin.top + ")");
+
+container.append("rect")
+    .attr("width", width)
+    .attr("height", height)
+    .style("fill", "#fff")
+
+var chart = barChart()
+    .x(function(d) { return d[0]; })
+    .y(function(d) { return d[1]; })
+    .width(width)
+    .height(height);
+
+var text = container.append('text')
+    .attr('x', 140)
+    .attr('y', 100)
+    .text('Just a second...arranging the data')
+
+var file1 = 'dec2015.json'
+var file2 = 'jul2016.json'
+
+// HTML button selects year
+d3.select('body').selectAll('.file')
+    .data([file1, file2])
+  .enter().append('button')
+    .attr('class', 'file')
+    .style('left', function(d, i) { return (i + 1) * 10 + "em"; })
+    .text(function(d, i) { return i == 0 ? "Dec 2015" : "Jul 2016"; })
+    .on('click', clicked)
+
+setContainerHeight(); // initial load
+d3.select(window).on('resize', setContainerHeight);
+
+d3.queue()
+    .defer(d3.json, file1)
+    .defer(d3.json, file2)
+    .await(ready);
+
+function ready(error, json1, json2) {
+  if (error) return console.log(error);
+
+  // QUICK FIX FOR DATA MODEL
+  json1 = json1['fanniemae.com']
+  json2 = json2['fanniemae.com']
+  console.log(file1 + ' pageviews: ' + d3.sum(json1, function(d) { return d[1]; }) + ' BEFORE');
+  console.log(file2 + ' pageviews: ' + d3.sum(json2, function(d) { return d[1]; }) + ' BEFORE');
+
+//  json1 = json1.filter(function(d) { return d[0].indexOf('videoembed') == -1; });
+//  json2 = json2.filter(function(d) { return d[0].indexOf('videoembed') == -1; });
+//  console.log(file1 + ' pageviews: ' + d3.sum(json1, function(d) { return d[1]; }) + ' w/videoembed removed');
+//  console.log(file2 + ' pageviews: ' + d3.sum(json2, function(d) { return d[1]; }) + ' w/videoembed removed');
+
+  json = [json1, json2];
+
+  setup(1);
+  clicked.call(d3.selectAll('button').nodes()[0], null, 0)
+  text.text(message);
+  setTimeout(function() {
+    clicked.call(d3.selectAll('button').nodes()[1], null, 1)
+  }, 5000);
+};
+
+function moused(d, i) {
+  if (timerId) clearTimeout(timerId);
+  text.text(d[0] + "  --  " + d3.format(',d')(d[1]) + " Pageviews");
+}
+
+function setup(i) {
+  console.log('setup', d3.select(this).text())
+  data = json[i].filter(function(d) { return d[1] > 1000; })
+  console.log('setup data', data)
+
+  container
+    .datum(data)
+    .call(chart);
+
+  // Replace x-axis labels with indices
+  d3.selectAll('.x.axis text').text(function(d, i) { return i; });
+
+  d3.selectAll('.bar')
+      .on('mouseover', moused)
+}
+
+function clicked(d, i) {
+  d3.selectAll('button').classed('active', false);
+  d3.select(this).classed('active', true);
+  console.log('clicked', this, d3.select(this).text())
+
+  data = json[i];
+
+  var yScale = chart.yScale();
+
+  container.selectAll(".bar")
+      .data(data)
+    .transition()
+      .attr("y", function(d) { return ( yScale(0) - yScale(d[1]) ) > 0 ? yScale(d[1]) : yScale(0); })
+      .attr("height", function(d) { return Math.abs( yScale(0) - yScale(d[1]) ) });
+
+  // Replace x-axis labels with indices
+  d3.selectAll('.x.axis text').text(function(d, i) { return i; });
+
+  d3.selectAll('.bar')
+      .on('mouseover', moused)
+      .on('mouseout', function() { timerId = window.setTimeout(function() { text.text(message) }, 10000); });
+}
+
+function type(d) {
+  return [d.Page, +d.Pageviews.replace(',','')];
+}
+
+function checkStr(data, str) {
+  var aa = data.filter(function(d) { return d[0].indexOf(str) > -1; })
+  console.log('\n', aa.length, 'URLs containing', str);
+}
+
+function setContainerHeight() {
+  var w = parseInt( container.style("width"), 10);
+  var a = width / height;
+  container.style('height', w / a  + 'px');
+}
+
+</script>

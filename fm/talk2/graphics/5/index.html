@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>ga - 12</title>
+<style>
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #fff;
+}
+
+text {
+  font-size: 1.0em;
+}
+
+form {
+  position: absolute;
+  top: 15%;
+  left: 70%;
+  font-size: 1.3vw;
+}
+
+.axis--x path {
+  display: none;
+}
+
+</style>
+<body>
+<form>
+  <label><input type="radio" name="city" value="fanniemae.com" checked> fanniemae.com</label><br>
+  <label><input type="radio" name="city" value="corporate-news" > corporate-news</label><br>
+  <label><input type="radio" name="city" value="housing-survey" > housing-survey</label><br>
+  <label><input type="radio" name="city" value="commentary" > commentary</label><br>
+  <label><input type="radio" name="city" value="rosenblatt"> rosenblatt</label><br>
+  <label><input type="radio" name="city" value="palim"> palim</label><br>
+  <label><input type="radio" name="city" value="shahdad"> shahdad</label><br>
+  <label><input type="radio" name="city" value="simmons"> simmons</label><br>
+  <label><input type="radio" name="city" value="?sf"> ?sf</label>
+</form>
+<!-- <svg width="960" height="500"></svg> -->
+<script src="d3.min.js"></script>
+<script>
+
+var margin = {top: 30, right: 30, bottom: 30, left: 60};
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var g = d3.select("body").append("div").append("svg")
+    .attr('viewBox', "0, 0, " + (width + margin.left + margin.right) + ", " + (height + margin.top + margin.bottom))
+    .attr('preserveAspectRatio', "xMinYMid")
+  .append("g")
+    .attr("transform", "translate(" + margin.left + ", " + margin.top + ")");
+
+var url = g.append('text').attr('x', 150).attr('y', 25),
+    ref = g.append('text').attr('x', 150).attr('y', 25).attr('dy', '1.3em'),
+    pageviews = g.append('text').attr('x', 150).attr('y', 25).attr('dy', '2.6em');
+
+var x = d3.scaleBand()
+    .rangeRound([0, width])
+    .padding(0.1)
+    .align(0.1);
+
+var y = d3.scaleSqrt()
+    .rangeRound([height, 0]);
+
+var z = d3.scaleOrdinal()
+    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#303030"]);
+
+var stack = d3.stack();
+
+d3.json("sorted.json", function(error, json) {
+  if (error) throw error;
+
+  // Remove videoembed
+  console.log('json[0]', json[0])
+  console.log('json.length BEFORE:', json.length);
+  json = json.filter(function(d) { return d[0].indexOf('videoembed') == -1; });
+  console.log('json.length AFTER removing videoembed:', json.length);
+
+  data = getData(json)
+
+  x.domain(data.map(function(d) { return d.key; }));
+  y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+  z.domain(data.keys);
+
+  g.selectAll(".serie")
+    .data(stack.keys(data.keys)(data))
+    .enter().append("g")
+      .attr("class", "serie")
+      .attr("fill", function(d) { return z(d.key); })
+    .selectAll("rect")
+    .data(function(d) { return d; })
+    .enter().append("rect")
+      .attr("x", function(d) { return x(d.data.key); })
+      .attr("y", function(d) { return y(d[1]); })
+      .attr("height", function(d) { return y(d[0]) - y(d[1]); })
+      .attr("width", x.bandwidth())
+      .on('mouseover', moused)
+      .on('mouseout', mousedout);
+
+  g.append("g")
+      .attr("class", "axis axis--x")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+  g.append("g")
+      .attr("class", "axis axis--y")
+      .call(d3.axisLeft(y).ticks(8, ",d"))
+    .append("text")
+      .attr("x", 2)
+      .attr("y", y(y.ticks(10).pop()))
+      .attr("dy", "0.35em")
+      .attr("text-anchor", "start")
+      .attr("fill", "#000")
+      .text("pageviews");
+
+  d3.selectAll('form')
+      .on('change', function() { changed(json) })
+});
+
+// Aggregate all the referrers for each URL
+function getData(json) {
+  var bars = d3.range(0,42)
+  var filterString = d3.selectAll('form input:checked').node().value
+  var n = z.range().length;
+  var data = json.filter(function(d, i) { return d[0].indexOf(filterString) > -1; })
+             .filter(function(d, i) { return i < bars.length; })
+             .map(function(d, i) {
+                var datum = {};
+                var sum = 0;
+                var refs = {};
+                var values = {};
+                var referrers = d[2].map(function(d) { return d; });
+
+                // pad with zeroes if there are to few data
+                while (referrers.length < n) {
+                  referrers.push([0,''])
+                }
+
+                referrers.filter(function(dd, i) { return i < n; })
+                    .forEach(function(dd, j) {
+                        datum[j] = dd[0];
+                        values[j] = dd[0];
+                        refs[j] = dd[1];
+                        sum += (j === (n-1)) ? 0 : dd[0];
+                    });
+
+                datum.key = bars[i];
+                datum.URL = d[0];
+                datum.refs = refs;
+                datum.values = values;
+                datum.total = d[1];
+
+                // Final element is aggregate of all remaining references
+                datum.refs[n - 1] = 'other';
+                datum[n - 1] = datum.total - sum; // remaining values
+                datum.values[n-1] = datum[n - 1]; // array of values used in mouseover
+                return datum;
+              })
+  data.keys = d3.range(0, n);
+
+  // pad with zeroes (when there aren't enough filtered URLs to fill plot)
+  var i = data.length;
+  while (data.length < bars.length) {
+    var datum = {};
+    var refs = {};
+    var values = {};
+    data.keys.forEach(function(key) {
+      datum[key] = 0;
+      refs[key] = '';
+      values[key] = 0;
+    })
+    datum.URL = '';
+    datum.key = i++;
+    datum.refs = refs;
+    datum.values = values;
+    data.push(datum);
+  }
+
+  return data;
+}
+
+function changed(json) {
+  var data = getData(json)
+
+//  x.domain(data.map(function(d) { return d.key; }));
+  y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+
+  g.selectAll(".serie")
+    .data(stack.keys(data.keys)(data))
+    .selectAll("rect")
+    .data(function(d) { return d; })
+      .transition()
+      .duration(1000)
+      .attr("x", function(d) { return x(d.data.key); })
+      .attr("y", function(d) { return y(d[1]); })
+      .attr("height", function(d) { return y(d[0]) - y(d[1]); })
+      .attr("width", x.bandwidth())
+
+  g.select(".axis.axis--y")
+    .transition()
+      .duration(1000)
+      .call(d3.axisLeft(y).ticks(8, ",d"))
+}
+
+function moused(d, i) {
+  var key = this.parentElement.__data__.key;
+  var pc = d.data.values[key] / d.data.total;
+  var f = d3.format(",d")
+  url.text("URL: " + d.data.URL)
+  ref.text("Referrer: " + d.data.refs[key])
+  pageviews.text("Pageviews: " + f(d.data.values[key]) + "  (" + d3.format(".0%")(pc) + ' of ' + f(d.data.total) + ")")
+}
+
+function mousedout() {
+    url.text('')
+    ref.text('')
+    pageviews.text('')
+}
+
+</script>
