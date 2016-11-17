@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>responsive circles</title>
+<style>
+
+body {
+    margin: 0;
+}
+
+#container {
+    position: relative;
+    width: 100%;       /* container fits window (accommodates padding) */
+    background-color: #666;
+}
+
+#graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ccc;
+}
+
+</style>
+<script src="d3.min.js"></script>
+
+<body>
+<div id='container'></div>
+
+<script>
+
+var n = 6,  // "n" random circles determine the SVG's aspect ratio
+    radii = d3.range(n).map(function(){ return Math.random(); }),
+    x = radii.map(function(d, i) { return d + 2 * d3.sum( radii.slice(0, i) ); }),
+    width = 2 * d3.sum(radii),
+    height = 2 * d3.max(radii);
+
+var container = d3.select("#container");
+
+var svg = container.append('svg')
+    .attr('id', 'graphic')
+    .attr('viewBox', "0, 0, " + width + ", " + height)  // min-x, min-y, width, height
+    .attr('preserveAspectRatio', "xMinYMid");
+
+svg.selectAll('circle')
+    .data(radii)
+  .enter()
+    .append('circle')
+    .attr('r', function(d) { return d; })
+    .attr('cx', function(d,i) { return x[i]; })
+    .attr('cy', height / 2)
+    .style('fill', function(d,i) { return d3.schemeCategory10[i]; });
+
+// Set the container height explicitly (fixes IE problem)
+setContainerHeight();
+
+d3.select(window).on('resize', setContainerHeight);
+
+function setContainerHeight() {
+  var w = parseInt( container.style("width"), 10); // computed width
+  var a = width / height; // = aspect ratio to be applied to the container
+  container.style('height', w / a  + 'px');
+}
+
+</script>

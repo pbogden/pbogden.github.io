@@ -1,7 +1,72 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>iframe</title>
-<link href="custom.css" rel="stylesheet">
+<title>resopnsive iframe</title>
+<style>
+
+body {
+    margin: 0;
+    background: #fff;
+    font-family: 'Glypha-55Roman',"Georgia","Century",serif;
+}
+
+header {
+    height: 70px;
+    width: 100%;
+    background: #000f2b;
+    margin: 0px auto;
+}
+
+.column {
+  width: 26%;
+  display: inline-block;
+  padding: 2%;
+  vertical-align: top;
+  float: left;
+}
+
+.container {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+}
+
+.graphic-wrapper {
+  position: relative;
+  padding-bottom: 20.83%; /*  0.4 * 500/960 = 0.4 * .5208 */
+  padding-top: 0px;
+  height: 0;
+  overflow: hidden;  /* needed ? */
+  max-width: 100%;  /* needed ? */
+  height: auto;  /* needed ? */
+}
+
+.graphic {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.row {
+  width: 100%;
+  background: #fff;
+}
+
+.spacer {
+    height: 40px;
+    width: 100%;
+    background: #d9d7dc;
+}
+
+.page_title {
+    color: #000;
+    font-size: 26px;
+    padding: 10px 0px 0px 20px;
+}
+
+</style>
 <body>
 
 <header></header>
@@ -10,25 +75,22 @@
 
 <div class='spacer'></div>
 
-<div class="ls_row">
-
-  <div id="col_left">
-    <span class="page_title">Prototype</span>
+<div class="row">
+  <div class="page_title">
+    Responsive
   </div>
+</div>
 
-  <div class="col_content">
-      <p><h2>Whose Homeownership Rates Does Student Debt Hurt Most?</h2>
-Obtaining a college degree...
-      </p>
-
-      <div id="container">
-        <iframe src="../students/6/index.html" allowtransparency="yes" frameborder="0" width="582" height="424" scrolling="no"></iframe>
-      </div>
-      <p><i>This interactive chart presents an analysis of renters aged 25-44. The buttons toggle
-            between renters who will buy a home on their next move and renters who will buy eventually,
-            if not on their next move.
-            Run your cursor over each bar for detail about the regression calculation.
-            Asterisks indicate statistically significant results.</i></p>
-  </div><!-- /.col_content -->
-
-</div><!-- /.ls_row -->
+<div class="row">
+<div class='column' style="background: crimson;">
+    The graphic is embedded in an iframe, which the parent CSS wraps with a fixed aspect ratio of 960:500.
+  </div>
+  <div class='container graphic-wrapper' style="background: black;">
+    <iframe class='graphic' src="graphic.html" frameborder="0" scrolling="no"></iframe>
+  </div>
+  <div class='column' style="background: steelblue;">
+    Since the iframe wrapper has a fixed aspect ratio of 960:500, you can see the black iframe background
+    when the (random) aspect ratio of the graphic is smaller than 960:500 (most of the time).
+    If you resize the window, the graphic and its container scale accordingly.
+</div>
+</div>
