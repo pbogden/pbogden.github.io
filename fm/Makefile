@@ -3,9 +3,7 @@ all: hpsi6
 .PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe
 
 iframe:
-	cp ~/Sites/gist/e5ab20468d5d1252b5ed0bb69e5a432f/index.html iframe
-	cp ~/Sites/gist/e5ab20468d5d1252b5ed0bb69e5a432f/graphic.html iframe
-	cp ~/Sites/gist/e5ab20468d5d1252b5ed0bb69e5a432f/d3.min.js iframe
+	cp ~/Sites/fm/iframe/index.html iframe
 
 talk:
 	cp ~/Sites/fm/talk/index.html talk
