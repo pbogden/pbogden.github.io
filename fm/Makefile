@@ -4,6 +4,8 @@ all: hpsi6
 
 iframe:
 	cp ~/Sites/fm/iframe/index.html iframe
+	cp ~/Sites/fm/iframe/d3.min.js iframe
+	cp ~/Sites/fm/iframe/graphic.html iframe
 
 talk:
 	cp ~/Sites/fm/talk/index.html talk
