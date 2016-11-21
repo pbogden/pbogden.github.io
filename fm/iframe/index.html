@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>resopnsive iframe</title>
+<title>responsive iframe</title>
 <style>
 
 body {
@@ -16,42 +16,46 @@ header {
     margin: 0px auto;
 }
 
-.column {
+.row {
+  width: 100%;
+  background: #fff;
+}
+
+.left-column, .right-column {
   width: 26%;
-  display: inline-block;
   padding: 2%;
+  float:left;
   vertical-align: top;
-  float: left;
 }
 
-.container {
+.middle-column {
   width: 40%;
-  display: inline-block;
+  float:left;
   vertical-align: top;
-  float: left;
 }
 
-.graphic-wrapper {
+.left-column {
+  background: crimson;
+}
+
+.right-column {
+  background: steelblue;
+}
+
+.wrapper {
   position: relative;
-  padding-bottom: 20.83%; /*  0.4 * 500/960 = 0.4 * .5208 */
+  padding-bottom: 52.08%; /*  500/960 = 0.5208 */
   padding-top: 0px;
   height: 0;
-  overflow: hidden;  /* needed ? */
-  max-width: 100%;  /* needed ? */
-  height: auto;  /* needed ? */
+  background: black;
 }
 
-.graphic {
+iframe {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-.row {
-  width: 100%;
-  background: #fff;
 }
 
 .spacer {
@@ -77,20 +81,37 @@ header {
 
 <div class="row">
   <div class="page_title">
-    Responsive
+    Responsive iframe
   </div>
 </div>
 
 <div class="row">
-<div class='column' style="background: crimson;">
-    The graphic is embedded in an iframe, which the parent CSS wraps with a fixed aspect ratio of 960:500.
+  <div class='left-column'>
+    The SVG is embedded in an iframe that has a black background.
+    The iframe fills the containing block of a wrapper element
+    that has a constant aspect ratio of 960:500.
   </div>
-  <div class='container graphic-wrapper' style="background: black;">
-    <iframe class='graphic' src="graphic.html" frameborder="0" scrolling="no"></iframe>
+  <div class='middle-column'>
+    <div class='wrapper'>
+      <iframe src="graphic.html" frameborder="0" scrolling="no"></iframe>
+    </div>
   </div>
-  <div class='column' style="background: steelblue;">
-    Since the iframe wrapper has a fixed aspect ratio of 960:500, you can see the black iframe background
-    when the (random) aspect ratio of the graphic is smaller than 960:500 (most of the time).
-    If you resize the window, the graphic and its container scale accordingly.
+  <div class='right-column'>
+    The SVG has a random aspect ratio that changes every time the
+    window is refreshed. So does the size of black region below
+    the SVG, which is there because the iframe has a constant aspect ratio.
+  </div>
 </div>
-</div>
+
+<script src="../../d3/d3.min.js"></script>
+<script>
+
+var computedStyle = window.getComputedStyle( d3.select('.wrapper').node() );
+console.log('wrapper width & height:', computedStyle.width, computedStyle.height)
+
+computedStyle = window.getComputedStyle( d3.select('iframe').node() );
+console.log('iframe width & height:', computedStyle.width, computedStyle.height)
+
+console.log( d3.select('iframe').node() );
+
+</script>
