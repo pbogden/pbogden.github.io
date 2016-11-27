@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>ga 13</title>
+<body>
+<style>
+body {
+  font-family: sans-serif;
+}
+form {
+  position: absolute;
+  top: 30px;
+  left: 800px;
+}
+</style>
+<script src="../../../d3/d3.min.js"></script>
+<form>
+  <input type='radio' name='id' value='0' checked /> Combined<br>
+  <input type='radio' name='id' value='1' /> Grouped<br>
+  <input type='radio' name='id' value='2' /> Grid
+</form>
+<script>
+
+var width = 960,
+    height = 500,
+    maxRadius = 12;
+
+var circle, nodes = [], clusters = [], refs, tip, ticks = 0;
+
+var choice = [combined, grouped, gridded];
+
+var group = { direct: 2, 'portal/index': 0, google: 1,
+              '.com': 3, 't.co': 3, 'lnkd.in': 3 },
+    groupLabels = [{text: 'Home page',      x: - width / 4, y: - height / 6 },
+                   {text: 'Google',         x: - width / 4, y:   height / 4 },
+                   {text: 'Direct',         x:  width / 15, y: - height / 6 },
+
+//var group = { 'ESRList': 0, 'SFPortal': 1, 'facebook': 2,
+//              't.co': 2, 'lnkd.in': 2, '.com': 3 },
+//    groupLabels = [{text: 'Marketing',      x: - width / 4, y: - height / 6 },
+//                   {text: 'SpredFast',      x: - width / 4, y:   height / 4 },
+//                   {text: 'Social media',   x:  width / 15, y: - height / 6 },
+//                   {text: 'External links', x:  width / 15, y:   height / 4 }];
+
+var color = d3.scaleOrdinal(d3.schemeCategory10);
+
+var forceCollide = d3.forceCollide()
+    .radius(function(d) { return d.radius + 1.5; })
+    .iterations(1);
+
+var simulation = d3.forceSimulation()
+    .on("tick", tick);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+  .append('g')
+    .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
+
+svg.append('text')
+    .style('font-size', '2em')
+    .attr('x', '-8em')
+    .attr('y', - height / 2)
+    .attr('dy', '1em')
+    .text('Referred page views (1 month)')
+
+d3.selectAll('input')
+    .on('change', function() { ticks = 0; choice[this.value].call(); })
+
+d3.json('data.json', function(error, json) {
+  if (error) console.error(error);
+
+  refs = json[0].value.map(function(d) { return d.key; });
+
+  json.forEach(function(cluster, i) {
+    var anorm = 30 / d3.max(cluster.value, function(d) { return d.value; })
+    cluster.value.forEach(function(node) {
+      var datum = {cluster: i, radius: anorm * node.value, value: node.value,
+                   product: cluster.key, referrer: node.key };
+      nodes.push(datum)
+      if (!clusters[i]) clusters.push(datum);
+      if (node.value > clusters[i].radius) clusters[i] = datum;
+    })
+  })
+
+  color.domain(clusters.map(function(d) { return d.cluster; }));
+
+  circle = svg.selectAll("circle")
+      .data(nodes)
+    .enter().append("circle")
+      .attr("r", function(d) { return d.radius; })
+      .style("fill", function(d) { return color(d.cluster); })
+      .on('mouseover', mousedover)
+      .on('mousemove', mousemoved)
+      .on('mouseout', mousedout)
+
+  simulation.nodes(nodes).stop();
+  d3.selectAll('input:checked').each(function(d) { choice[this.value].call(); })
+});
+
+function tick() {
+  circle
+      .attr("cx", function(d) { return d.x; })
+      .attr("cy", function(d) { return d.y; });
+}
+
+// force nodes to collapse on the largest node in their cluster
+function forceCluster(alpha) {
+  for (var i = 0, n = nodes.length, node, cluster, k = alpha * 1; i < n; ++i) {
+    node = nodes[i];
+    cluster = clusters[node.cluster];
+    node.vx -= (node.x - cluster.x) * k;
+    node.vy -= (node.y - cluster.y) * k;
+  }
+}
+
+function mousedover(d) {
+  tip = svg.append('g')
+      .attr('id', 'tip')
+      .style('pointer-events', 'none')
+
+  tip.append('rect')
+
+  tip.append('text')
+      .attr('x', function() { return d3.mouse(this)[0] })
+      .attr('y', function() { return d3.mouse(this)[1] - 15 })
+      .text(d.product + ", " + d.referrer + ", " + d.value)
+
+  var bbox = tip.select('text').node().getBBox();
+  var dx = bbox.height / 5;
+  tip.select('rect')
+      .attr('x', bbox.x - dx)
+      .attr('y', bbox.y - dx)
+      .attr('width', bbox.width + 2 * dx)
+      .attr('height', bbox.height + 2 * dx)
+      .style('fill', '#eee')
+      .style('stroke', '#333')
+      .style('rx', dx)
+      .style('ry', dx)
+      .style('fill-opacity', 0.9)
+}
+
+
+function mousemoved(d) {
+  tip.select('text')
+      .attr('x', function() { return d3.mouse(this)[0] })
+      .attr('y', function() { return d3.mouse(this)[1] - 15 })
+
+  var bbox = tip.select('text').node().getBBox();
+  var dx = bbox.height / 5;
+  tip.select('rect')
+      .attr('x', bbox.x - dx)
+      .attr('y', bbox.y - dx)
+}
+
+function grouped() {
+  refs.forEach(function(ref) {
+    if (typeof group[ref] === 'undefined') {
+      svg.selectAll('.label').remove();
+      svg.append('text')
+          .attr('x', - width / 4)
+          .attr('y', - height / 3)
+          .text('ERROR: Referrers need to be grouped... ' + ref);
+      throw ref;
+    };
+  });
+
+  var forceX = d3.forceX(function(d) { return groupLabels[group[d.referrer]].x; });
+  var forceY = d3.forceY(function(d) { return groupLabels[group[d.referrer]].y; });
+
+  simulation
+      .force("center", undefined)
+      .force('collide', forceCollide)
+      .force('cluster', undefined)
+      .force('gravity', undefined)
+      .force('x', forceX)
+      .force('y', forceY)
+      .alpha(1).restart();
+
+  addGroupedLabels();
+}
+
+function combined() {
+  simulation
+    .force("center", d3.forceCenter())
+    .force("collide", forceCollide)
+    .force("cluster", forceCluster)
+    .force("gravity", d3.forceManyBody(30))
+    .force('x', d3.forceX().strength(.4))
+    .force('y', d3.forceY().strength(.4))
+    .alpha(1).restart();
+
+  addCombinedLabels();
+}
+
+function gridded() {
+  var forceY = d3.forceY(function(d) { return (3 + refs.indexOf(d.referrer)) * 58 - height / 2; });
+  var forceX = d3.forceX(function(d) { return (1 + d.cluster) * 80 - width / 2; });
+
+  simulation
+      .force("center", undefined)
+      .force('collide', undefined)
+      .force('cluster', undefined)
+      .force('gravity', undefined)
+      .force('x', forceX)
+      .force('y', forceY)
+      .alpha(1).restart();
+
+  addGridLabels();
+}
+
+function mousedout() {
+  tip.remove()
+}
+
+function addCombinedLabels() {
+  svg.selectAll('.label').remove();
+  var x = 100 - width / 2;
+  svg.append('text').attr('class', 'label')
+    .attr('x', x)
+    .attr('y', -100)
+    .text( 'URL strings:' )
+    .style('font-size', '1.5em')
+  clusters.forEach(function(d, i) {
+    var x = 100 - width / 2, y = i * 30 - 70;
+    svg.append('text').attr('class', 'label')
+        .attr('x', x)
+        .attr('y', y)
+        .text( d.product )
+        .style('fill', color(d.cluster))
+        .style('font-size', '1.5em')
+  });
+
+  var labels = ['Referrers:'].concat(refs.map(function(d) { return d; }));
+  labels.forEach(function(d, i) {
+    var x = 230, y = i * 30 - 100;
+    svg.append('text').attr('class', 'label')
+        .attr('x', x)
+        .attr('y', y)
+        .text( d )
+        .style('font-size', '1.5em')
+  });
+}
+
+function addGroupedLabels() {
+  svg.selectAll('.label').remove();
+  groupLabels.forEach(function(d) {
+    svg.append('text').attr('class', 'label').attr('x', d.x - 30).attr('y', d.y - 90).text(d.text)
+  });
+}
+
+function addGridLabels() {
+  svg.selectAll('.label').remove();
+  svg.selectAll('.label')
+      .data(refs)
+    .enter().append('text')
+      .attr('class', 'label')
+      .attr('x', 200)
+      .attr('y', function(d, i) { return (3 + i) * 60 - height / 2; })
+      .text(function(d) { return d; })
+
+  clusters.forEach(function(d, i) {
+    var x = (i + 1) * 80 - width / 2, y = 2.3 * 60 - height / 2;
+    svg.append('text').attr('class', 'label')
+        .attr('transform', 'rotate(-35,' + x + ',' + y + ')')
+        .attr('x', x)
+        .attr('y', y)
+        .text( d.product )
+        .style('fill', color(d.cluster))
+  })
+}
+
+</script>

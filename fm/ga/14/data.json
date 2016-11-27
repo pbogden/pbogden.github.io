@@ -1,0 +1,234 @@
+[
+    {
+        "value": [
+            {
+                "value": 26, 
+                "key": "ESRList"
+            }, 
+            {
+                "value": 4, 
+                "key": "SFPortal"
+            }, 
+            {
+                "value": 78, 
+                "key": "facebook"
+            }, 
+            {
+                "value": 31, 
+                "key": "t.co"
+            }, 
+            {
+                "value": 11, 
+                "key": "lnkd.in"
+            }, 
+            {
+                "value": 583, 
+                "key": ".com"
+            }
+        ], 
+        "key": "corporate-news"
+    }, 
+    {
+        "value": [
+            {
+                "value": 54, 
+                "key": "ESRList"
+            }, 
+            {
+                "value": 0, 
+                "key": "SFPortal"
+            }, 
+            {
+                "value": 0, 
+                "key": "facebook"
+            }, 
+            {
+                "value": 20, 
+                "key": "t.co"
+            }, 
+            {
+                "value": 8, 
+                "key": "lnkd.in"
+            }, 
+            {
+                "value": 36, 
+                "key": ".com"
+            }
+        ], 
+        "key": "housing-survey"
+    }, 
+    {
+        "value": [
+            {
+                "value": 37, 
+                "key": "ESRList"
+            }, 
+            {
+                "value": 0, 
+                "key": "SFPortal"
+            }, 
+            {
+                "value": 22, 
+                "key": "facebook"
+            }, 
+            {
+                "value": 136, 
+                "key": "t.co"
+            }, 
+            {
+                "value": 35, 
+                "key": "lnkd.in"
+            }, 
+            {
+                "value": 262, 
+                "key": ".com"
+            }
+        ], 
+        "key": "financial-news"
+    }, 
+    {
+        "value": [
+            {
+                "value": 105, 
+                "key": "ESRList"
+            }, 
+            {
+                "value": 191, 
+                "key": "SFPortal"
+            }, 
+            {
+                "value": 40, 
+                "key": "facebook"
+            }, 
+            {
+                "value": 127, 
+                "key": "t.co"
+            }, 
+            {
+                "value": 49, 
+                "key": "lnkd.in"
+            }, 
+            {
+                "value": 378, 
+                "key": ".com"
+            }
+        ], 
+        "key": "commentary"
+    }, 
+    {
+        "value": [
+            {
+                "value": 8, 
+                "key": "ESRList"
+            }, 
+            {
+                "value": 0, 
+                "key": "SFPortal"
+            }, 
+            {
+                "value": 0, 
+                "key": "facebook"
+            }, 
+            {
+                "value": 12, 
+                "key": "t.co"
+            }, 
+            {
+                "value": 0, 
+                "key": "lnkd.in"
+            }, 
+            {
+                "value": 6, 
+                "key": ".com"
+            }
+        ], 
+        "key": "simmons"
+    }, 
+    {
+        "value": [
+            {
+                "value": 34, 
+                "key": "ESRList"
+            }, 
+            {
+                "value": 2, 
+                "key": "SFPortal"
+            }, 
+            {
+                "value": 24, 
+                "key": "facebook"
+            }, 
+            {
+                "value": 27, 
+                "key": "t.co"
+            }, 
+            {
+                "value": 21, 
+                "key": "lnkd.in"
+            }, 
+            {
+                "value": 51, 
+                "key": ".com"
+            }
+        ], 
+        "key": "shahdad"
+    }, 
+    {
+        "value": [
+            {
+                "value": 0, 
+                "key": "ESRList"
+            }, 
+            {
+                "value": 0, 
+                "key": "SFPortal"
+            }, 
+            {
+                "value": 6, 
+                "key": "facebook"
+            }, 
+            {
+                "value": 36, 
+                "key": "t.co"
+            }, 
+            {
+                "value": 0, 
+                "key": "lnkd.in"
+            }, 
+            {
+                "value": 193, 
+                "key": ".com"
+            }
+        ], 
+        "key": "palim"
+    }, 
+    {
+        "value": [
+            {
+                "value": 0, 
+                "key": "ESRList"
+            }, 
+            {
+                "value": 0, 
+                "key": "SFPortal"
+            }, 
+            {
+                "value": 20, 
+                "key": "facebook"
+            }, 
+            {
+                "value": 148, 
+                "key": "t.co"
+            }, 
+            {
+                "value": 86, 
+                "key": "lnkd.in"
+            }, 
+            {
+                "value": 71, 
+                "key": ".com"
+            }
+        ], 
+        "key": "?sf"
+    }
+]

@@ -1,0 +1,234 @@
+[
+    {
+        "value": [
+            {
+                "value": 1046, 
+                "key": "direct"
+            }, 
+            {
+                "value": 2150, 
+                "key": "portal/index"
+            }, 
+            {
+                "value": 2560, 
+                "key": "google"
+            }, 
+            {
+                "value": 31, 
+                "key": "t.co"
+            }, 
+            {
+                "value": 11, 
+                "key": "lnkd.in"
+            }, 
+            {
+                "value": 583, 
+                "key": ".com"
+            }
+        ], 
+        "key": "corporate-news"
+    }, 
+    {
+        "value": [
+            {
+                "value": 158, 
+                "key": "direct"
+            }, 
+            {
+                "value": 306, 
+                "key": "portal/index"
+            }, 
+            {
+                "value": 361, 
+                "key": "google"
+            }, 
+            {
+                "value": 20, 
+                "key": "t.co"
+            }, 
+            {
+                "value": 8, 
+                "key": "lnkd.in"
+            }, 
+            {
+                "value": 36, 
+                "key": ".com"
+            }
+        ], 
+        "key": "housing-survey"
+    }, 
+    {
+        "value": [
+            {
+                "value": 1125, 
+                "key": "direct"
+            }, 
+            {
+                "value": 2695, 
+                "key": "portal/index"
+            }, 
+            {
+                "value": 2167, 
+                "key": "google"
+            }, 
+            {
+                "value": 136, 
+                "key": "t.co"
+            }, 
+            {
+                "value": 35, 
+                "key": "lnkd.in"
+            }, 
+            {
+                "value": 262, 
+                "key": ".com"
+            }
+        ], 
+        "key": "financial-news"
+    }, 
+    {
+        "value": [
+            {
+                "value": 803, 
+                "key": "direct"
+            }, 
+            {
+                "value": 1049, 
+                "key": "portal/index"
+            }, 
+            {
+                "value": 542, 
+                "key": "google"
+            }, 
+            {
+                "value": 127, 
+                "key": "t.co"
+            }, 
+            {
+                "value": 49, 
+                "key": "lnkd.in"
+            }, 
+            {
+                "value": 378, 
+                "key": ".com"
+            }
+        ], 
+        "key": "commentary"
+    }, 
+    {
+        "value": [
+            {
+                "value": 48, 
+                "key": "direct"
+            }, 
+            {
+                "value": 162, 
+                "key": "portal/index"
+            }, 
+            {
+                "value": 43, 
+                "key": "google"
+            }, 
+            {
+                "value": 12, 
+                "key": "t.co"
+            }, 
+            {
+                "value": 0, 
+                "key": "lnkd.in"
+            }, 
+            {
+                "value": 6, 
+                "key": ".com"
+            }
+        ], 
+        "key": "simmons"
+    }, 
+    {
+        "value": [
+            {
+                "value": 175, 
+                "key": "direct"
+            }, 
+            {
+                "value": 62, 
+                "key": "portal/index"
+            }, 
+            {
+                "value": 57, 
+                "key": "google"
+            }, 
+            {
+                "value": 27, 
+                "key": "t.co"
+            }, 
+            {
+                "value": 21, 
+                "key": "lnkd.in"
+            }, 
+            {
+                "value": 51, 
+                "key": ".com"
+            }
+        ], 
+        "key": "shahdad"
+    }, 
+    {
+        "value": [
+            {
+                "value": 189, 
+                "key": "direct"
+            }, 
+            {
+                "value": 45, 
+                "key": "portal/index"
+            }, 
+            {
+                "value": 40, 
+                "key": "google"
+            }, 
+            {
+                "value": 36, 
+                "key": "t.co"
+            }, 
+            {
+                "value": 0, 
+                "key": "lnkd.in"
+            }, 
+            {
+                "value": 193, 
+                "key": ".com"
+            }
+        ], 
+        "key": "palim"
+    }, 
+    {
+        "value": [
+            {
+                "value": 172, 
+                "key": "direct"
+            }, 
+            {
+                "value": 22, 
+                "key": "portal/index"
+            }, 
+            {
+                "value": 12, 
+                "key": "google"
+            }, 
+            {
+                "value": 148, 
+                "key": "t.co"
+            }, 
+            {
+                "value": 86, 
+                "key": "lnkd.in"
+            }, 
+            {
+                "value": 71, 
+                "key": ".com"
+            }
+        ], 
+        "key": "?sf"
+    }
+]

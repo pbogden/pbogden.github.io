@@ -1,6 +1,14 @@
 all: hpsi6
 
-.PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe
+.PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga
+
+ga:
+	cp ~/Sites/fm/ga/13/index.html ga/13/
+	cp ~/Sites/fm/ga/13/data.json  ga/13/
+	cp ~/Sites/fm/ga/14/index.html ga/14/
+	cp ~/Sites/fm/ga/14/data.json  ga/14/
+	cp ~/Sites/fm/ga/15/index.html ga/15/
+	cp ~/Sites/fm/ga/15/data.json  ga/15/
 
 iframe:
 	cp ~/Sites/fm/iframe/index.html iframe
