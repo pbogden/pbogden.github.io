@@ -4,10 +4,13 @@ all: hpsi6
 
 ga:
 	cp ~/Sites/fm/ga/13/index.html ga/13/
+	cp ~/Sites/fm/ga/13/script.js ga/13/
 	cp ~/Sites/fm/ga/13/data.json  ga/13/
 	cp ~/Sites/fm/ga/14/index.html ga/14/
+	cp ~/Sites/fm/ga/13/script.js ga/14/
 	cp ~/Sites/fm/ga/14/data.json  ga/14/
 	cp ~/Sites/fm/ga/15/index.html ga/15/
+	cp ~/Sites/fm/ga/13/script.js ga/15/
 	cp ~/Sites/fm/ga/15/data.json  ga/15/
 
 iframe:
