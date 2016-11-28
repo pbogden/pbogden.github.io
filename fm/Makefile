@@ -3,6 +3,20 @@ all: hpsi6
 .PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga
 
 ga:
+	cp ~/Sites/fm/ga/3/index.html ga/3/
+	cp ~/Sites/fm/ga/3/script.js ga/3/
+	cp ~/Sites/fm/ga/3/barChart.js ga/3/
+	cp ~/Sites/fm/ga/3/styles.css ga/3/
+	cp ~/Sites/fm/ga/3/data.json ga/3/
+	cp ~/Sites/fm/ga/3/d3.min.js ga/3/
+	cp ~/Sites/fm/ga/5/index.html ga/5/
+	cp ~/Sites/fm/ga/5/script.js ga/5/
+	cp ~/Sites/fm/ga/5/barChart.js ga/5/
+	cp ~/Sites/fm/ga/5/styles.css ga/5/
+	cp ~/Sites/fm/ga/5/data.json ga/5/
+	cp ~/Sites/fm/ga/5/d3.min.js ga/5/
+	cp ~/Sites/fm/ga/13/script.js ga/13/
+	cp ~/Sites/fm/ga/13/data.json  ga/13/
 	cp ~/Sites/fm/ga/13/index.html ga/13/
 	cp ~/Sites/fm/ga/13/script.js ga/13/
 	cp ~/Sites/fm/ga/13/data.json  ga/13/
