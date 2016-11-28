@@ -9,10 +9,8 @@ var choice = [combined, grouped, gridded];
 
 var color = d3.scaleOrdinal(d3.schemeCategory10);
 
-var groupLocations = [{ x: - width / 4, y: - height / 6 },
-                      { x: - width / 4, y:   height / 4 },
-                      { x:  width / 15, y: - height / 6 },
-                      { x:  width / 15, y:   height / 4 }];
+var groupLocations = [{ x: - width / 4, y: - height / 6 }, { x:  width / 15, y: - height / 6 },
+                      { x: - width / 4, y:   height / 4 }, { x:  width / 15, y:   height / 4 }];
 
 var forceCollide = d3.forceCollide()
     .radius(function(d) { return d.radius + 1.5; })
@@ -29,7 +27,7 @@ var svg = d3.select("body").append("svg")
 
 svg.append('text')
     .style('font-size', '2em')
-    .attr('x', - width / 3)
+    .style('text-anchor', 'middle')
     .attr('y', - height / 2)
     .attr('dy', '1em')
     .text(title)
@@ -189,8 +187,8 @@ function addCombinedLabels() {
   svg.append('text').attr('class', 'label')
     .attr('x', x)
     .attr('y', -100)
-    .text( 'URL strings:' )
-    .style('font-size', '1.5em')
+    .text( 'Content (URL text):' )
+    .style('font-size', '1.3em')
   clusters.forEach(function(d, i) {
     var x = 100 - width / 2, y = i * 30 - 70;
     svg.append('text').attr('class', 'label')
@@ -198,26 +196,39 @@ function addCombinedLabels() {
         .attr('y', y)
         .text( d.product )
         .style('fill', color(d.cluster))
-        .style('font-size', '1.5em')
+        .style('font-size', '1.3em')
   });
 
   var labels = ['Referrers:'].concat(refs.map(function(d) { return d; }));
   labels.forEach(function(d, i) {
-    var x = 230, y = i * 30 - 100;
+    var x = 150, y = i * 30 - 100;
+    var text = groupLabels[group[d]] || null;
     svg.append('text').attr('class', 'label')
         .attr('x', x)
         .attr('y', y)
-        .text( d )
-        .style('font-size', '1.5em')
+        .text( d + (text ? ' (' + text + ')' : ''))
+        .style('font-size', '1.3em')
   });
+
+  var total = d3.sum(circle.data(), function(d) { return d.value; });
+  svg.append('text').attr('class', 'label')
+      .attr('y', -175)
+      .text( d3.format(',d')(total) + " pageviews/month" )
+      .style('font-size', '1.5em')
+      .style('text-anchor', 'middle')
 }
 
 function addGroupedLabels() {
   svg.selectAll('.label').remove();
   groupLabels.forEach(function(d, i) {
+    var circles = circle.data().filter(function(d) { return group[d.referrer] == i; })
+    var total = d3.sum(circles, function(d) { return d.value; });
     svg.append('text').attr('class', 'label')
-        .attr('x', groupLocations[i].x - 30)
-        .attr('y', groupLocations[i].y - 90).text(d)
+        .style('text-anchor', 'middle')
+        .style('font-size', '1.3em')
+        .attr('x', groupLocations[i].x)
+        .attr('y', groupLocations[i].y - 90)
+        .text(d + '  (' + d3.format(',d')(total) + ')' )
   });
 }
 
@@ -229,7 +240,7 @@ function addGridLabels() {
       .attr('class', 'label')
       .attr('x', 200)
       .attr('y', function(d, i) { return (3 + i) * 60 - height / 2; })
-      .text(function(d) { return d; })
+      .text(function(d) { return d + ' (' + groupLabels[group[d]] + ')'; })
 
   clusters.forEach(function(d, i) {
     var x = (i + 1) * 80 - width / 2, y = 2.3 * 60 - height / 2;

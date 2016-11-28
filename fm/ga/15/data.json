@@ -2,12 +2,37 @@
     {
         "value": [
             {
-                "value": 4, 
-                "key": "nytimes.com"
+                "value": 92, 
+                "key": "fhfa.gov"
+            }, 
+            {
+                "value": 6, 
+                "key": "finance.yahoo.com"
+            }, 
+            {
+                "value": 48, 
+                "key": "mortgagenewsdaily.com"
             }, 
             {
                 "value": 2, 
+                "key": "realtor.org"
+            }, 
+            {
+                "value": 0, 
+                "key": "nytimes.com"
+            }, 
+            {
+                "value": 0, 
                 "key": "cnn.com"
+            }
+        ], 
+        "key": "financial-news"
+    }, 
+    {
+        "value": [
+            {
+                "value": 30, 
+                "key": "fhfa.gov"
             }, 
             {
                 "value": 0, 
@@ -22,8 +47,12 @@
                 "key": "realtor.org"
             }, 
             {
-                "value": 30, 
-                "key": "fhfa.gov"
+                "value": 4, 
+                "key": "nytimes.com"
+            }, 
+            {
+                "value": 2, 
+                "key": "cnn.com"
             }
         ], 
         "key": "corporate-news"
@@ -31,12 +60,37 @@
     {
         "value": [
             {
+                "value": 2, 
+                "key": "fhfa.gov"
+            }, 
+            {
+                "value": 4, 
+                "key": "finance.yahoo.com"
+            }, 
+            {
                 "value": 0, 
+                "key": "mortgagenewsdaily.com"
+            }, 
+            {
+                "value": 0, 
+                "key": "realtor.org"
+            }, 
+            {
+                "value": 2, 
                 "key": "nytimes.com"
             }, 
             {
                 "value": 0, 
                 "key": "cnn.com"
+            }
+        ], 
+        "key": "commentary"
+    }, 
+    {
+        "value": [
+            {
+                "value": 0, 
+                "key": "fhfa.gov"
             }, 
             {
                 "value": 0, 
@@ -52,7 +106,11 @@
             }, 
             {
                 "value": 0, 
-                "key": "fhfa.gov"
+                "key": "nytimes.com"
+            }, 
+            {
+                "value": 0, 
+                "key": "cnn.com"
             }
         ], 
         "key": "housing-survey"
@@ -60,70 +118,8 @@
     {
         "value": [
             {
-                "value": 0, 
-                "key": "nytimes.com"
-            }, 
-            {
-                "value": 0, 
-                "key": "cnn.com"
-            }, 
-            {
-                "value": 6, 
-                "key": "finance.yahoo.com"
-            }, 
-            {
-                "value": 48, 
-                "key": "mortgagenewsdaily.com"
-            }, 
-            {
-                "value": 2, 
-                "key": "realtor.org"
-            }, 
-            {
-                "value": 92, 
-                "key": "fhfa.gov"
-            }
-        ], 
-        "key": "financial-news"
-    }, 
-    {
-        "value": [
-            {
-                "value": 2, 
-                "key": "nytimes.com"
-            }, 
-            {
-                "value": 0, 
-                "key": "cnn.com"
-            }, 
-            {
-                "value": 4, 
-                "key": "finance.yahoo.com"
-            }, 
-            {
-                "value": 0, 
-                "key": "mortgagenewsdaily.com"
-            }, 
-            {
-                "value": 0, 
-                "key": "realtor.org"
-            }, 
-            {
                 "value": 2, 
                 "key": "fhfa.gov"
-            }
-        ], 
-        "key": "commentary"
-    }, 
-    {
-        "value": [
-            {
-                "value": 0, 
-                "key": "nytimes.com"
-            }, 
-            {
-                "value": 0, 
-                "key": "cnn.com"
             }, 
             {
                 "value": 0, 
@@ -138,8 +134,12 @@
                 "key": "realtor.org"
             }, 
             {
-                "value": 2, 
-                "key": "fhfa.gov"
+                "value": 0, 
+                "key": "nytimes.com"
+            }, 
+            {
+                "value": 0, 
+                "key": "cnn.com"
             }
         ], 
         "key": "simmons"
@@ -148,11 +148,7 @@
         "value": [
             {
                 "value": 0, 
-                "key": "nytimes.com"
-            }, 
-            {
-                "value": 0, 
-                "key": "cnn.com"
+                "key": "fhfa.gov"
             }, 
             {
                 "value": 4, 
@@ -168,7 +164,11 @@
             }, 
             {
                 "value": 0, 
-                "key": "fhfa.gov"
+                "key": "nytimes.com"
+            }, 
+            {
+                "value": 0, 
+                "key": "cnn.com"
             }
         ], 
         "key": "shahdad"
@@ -176,12 +176,8 @@
     {
         "value": [
             {
-                "value": 2, 
-                "key": "nytimes.com"
-            }, 
-            {
                 "value": 0, 
-                "key": "cnn.com"
+                "key": "fhfa.gov"
             }, 
             {
                 "value": 0, 
@@ -196,8 +192,12 @@
                 "key": "realtor.org"
             }, 
             {
+                "value": 2, 
+                "key": "nytimes.com"
+            }, 
+            {
                 "value": 0, 
-                "key": "fhfa.gov"
+                "key": "cnn.com"
             }
         ], 
         "key": "palim"
@@ -205,12 +205,8 @@
     {
         "value": [
             {
-                "value": 80, 
-                "key": "nytimes.com"
-            }, 
-            {
-                "value": 116, 
-                "key": "cnn.com"
+                "value": 1643, 
+                "key": "fhfa.gov"
             }, 
             {
                 "value": 101, 
@@ -225,8 +221,12 @@
                 "key": "realtor.org"
             }, 
             {
-                "value": 1643, 
-                "key": "fhfa.gov"
+                "value": 80, 
+                "key": "nytimes.com"
+            }, 
+            {
+                "value": 116, 
+                "key": "cnn.com"
             }
         ], 
         "key": "fanniemae.com"
