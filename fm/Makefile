@@ -1,4 +1,4 @@
-all: hpsi6
+all: hpsi9
 
 .PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga
 
@@ -136,6 +136,12 @@ twitter3:
 	cp ~/Sites/fm/twitter/3/styles.css twitter/3
 	cp ~/Sites/fm/twitter/3/bundle.min.js twitter/3
 	cp ~/Sites/fm/twitter/data/TwitterPerformance_FannieMae_June15May16.csv twitter/data
+
+hpsi9:
+	cp ~/Sites/fm/hpsi/9/test.html     hpsi/9/index.html
+	cp ~/Sites/fm/hpsi/9/styles.css    hpsi/9
+	cp ~/Sites/fm/hpsi/9/bundle.min.js hpsi/9
+	cp ~/Sites/fm/hpsi/9/data.csv      hpsi/9
 
 hpsi8:
 	cp ~/Sites/fm/hpsi/8/test.html     hpsi/8/index.html

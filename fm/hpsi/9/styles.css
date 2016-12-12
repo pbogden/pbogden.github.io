@@ -1,0 +1,129 @@
+body {
+  font: 16px sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 70px;
+  width: 100%;
+  background: #000f2b;
+}
+
+.header2 {
+  height: 40px;
+  width: 100%;
+  background: #d9d7dc;
+}
+
+.title {
+  position: relative;
+  background: #fff;
+  font: 26px;
+/*  font: normal 26px 'Glypha-55Roman',"Georgia","Century",serif; */
+  height: 48px;
+}
+
+.title-text {
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+}
+
+table {
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+
+.column rect {
+  cursor: pointer;
+}
+
+table td {
+  font-size: 0.7em;
+  border: 1px #000f2b solid;
+}
+
+.title {
+  font-size: 1.5em;
+  font: bold;
+}
+
+path.curve { stroke: #cc9900; fill:none; }  /* HPSI gold */
+.hpsi path.curve { stroke: #cc9900; stroke-width: 4px; fill:none; }
+path.buy   { stroke: #1f77b4; fill:none; }
+path.sell  { stroke: #ff7f0e; fill:none; }
+path.prices{ stroke: #2ca02c; fill:none; }
+path.rates { stroke: #d62728; fill:none; }
+path.job   { stroke: #8c564b; fill:none; }
+path.income{ stroke: #e377c2; fill:none; }
+path.high  { stroke: crimson; stroke-dasharray: 3 3; }
+path.low   { stroke: steelblue; stroke-dasharray: 3 3; }
+path.zero-crossing { stroke: #aaa; stroke-width: 1px; stroke-dasharray: 2 2; }
+
+rect.all   { fill: #999; }
+rect.buy   { fill: #1f77b4; }
+rect.sell  { fill: #ff7f0e; }
+rect.prices{ fill: #2ca02c; }
+rect.rates { fill: #d62728; }
+rect.job   { fill: #8c564b; }
+rect.income{ fill: #e377c2; }
+
+.mouse {
+  stroke: black;
+  stroke-width: 0.5px;
+}
+
+.mouse-text, .mouse-date {
+  text-anchor: end;
+}
+
+.bar {
+  fill: #ecf2f9;
+  stroke: none;
+  pointer-events: none;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.handle {
+  stroke: #000f2b;
+  fill: #000f2b;
+  stroke-width: 2px;
+}
+
+.slider {
+  fill: #d9d7dc;
+  stroke: #000;
+}
+
+text {
+  pointer-events: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.header rect {
+  fill: steelblue;
+  stroke: #333;
+}
+
+.header text {
+  font-weight: bold;
+}
+
+.row rect {
+  fill: crimson;
+  stroke: #333;
+}
+
+.row text, .header text {
+  text-anchor: middle;
+}
