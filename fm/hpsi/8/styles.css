@@ -91,12 +91,6 @@ rect.income{ fill: #e377c2; }
   shape-rendering: crispEdges;
 }
 
-.handle {
-  stroke: #000f2b;
-  fill: #000f2b;
-  stroke-width: 2px;
-}
-
 .slider {
   fill: #d9d7dc;
   stroke: #000;
