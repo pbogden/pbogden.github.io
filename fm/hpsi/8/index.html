@@ -5,8 +5,9 @@
 
 #container {
   position: relative;
-  max-width: 580px;  /* TEMPORARY -- return to 580 or similar after testing */
+  max-width: 500px;  /* TEMPORARY -- return to 580 or similar after testing */
   min-width: 300px;
+  margin: 0 auto;
 }
 
 svg {
@@ -33,41 +34,6 @@ line.mouse {
   visibility: hidden;
 }
 
-.dropdown .button {
-    fill: steelblue;
-}
-
-.dropdown .button:hover {
-    fill: rgb(59, 109, 151); /* steelblue darker(.5) */
-}
-
-.dropdown.active .button {
-    fill: rgb(49, 91, 126); /* steelblue darker(1) */
-}
-
-.dropdown text, .dropdown .arrow {
-  font-size: 12px;
-  fill: #eee;
-  pointer-events: none;
-  text-anchor: left;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.dropdown .menu text {
-  text-anchor: start;
-}
-
-.dropdown .menu {
-  visibility: hidden;
-}
-
-.menu.active {
-  visibility: visible;
-}
-
 </style>
 <link rel="stylesheet" href="styles.css" type="text/css">
 
@@ -75,4 +41,10 @@ line.mouse {
   <svg></svg>
 </div>
 
-<script src="bundle.min.js"></script>
+<script src="../../../d3/d3.min.js"></script>
+<script src="dropdown.js"></script>
+<script src="d3.chart.js"></script>
+<script src="d3.multichart.js"></script>
+<script src="d3.mouseline.js"></script>
+<script src="getdata.js"></script>
+<script src="script.js"></script>

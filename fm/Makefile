@@ -145,6 +145,7 @@ hpsi9:
 
 hpsi8:
 	cp ~/Sites/fm/hpsi/8/test.html     hpsi/8/index.html
+	cp ~/Sites/fm/hpsi/8/iframe.html   hpsi/8/
 	cp ~/Sites/fm/hpsi/8/styles.css    hpsi/8
 	cp ~/Sites/fm/hpsi/8/bundle.min.js hpsi/8
 	cp ~/Sites/fm/hpsi/8/data.csv      hpsi/8

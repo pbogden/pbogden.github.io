@@ -1,5 +1,6 @@
 body {
-  font: 16px sans-serif;
+/*  font: 16px sans-serif; */
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -19,7 +20,7 @@ body {
 .title {
   position: relative;
   background: #fff;
-  font: 26px;
+/*  font: 26px; */
 /*  font: normal 26px 'Glypha-55Roman',"Georgia","Century",serif; */
   height: 48px;
 }
@@ -51,7 +52,6 @@ table td {
 }
 
 path.curve { stroke: #cc9900; fill:none; }  /* HPSI gold */
-.hpsi path.curve { stroke: #cc9900; stroke-width: 4px; fill:none; }
 path.buy   { stroke: #1f77b4; fill:none; }
 path.sell  { stroke: #ff7f0e; fill:none; }
 path.prices{ stroke: #2ca02c; fill:none; }
@@ -60,9 +60,9 @@ path.job   { stroke: #8c564b; fill:none; }
 path.income{ stroke: #e377c2; fill:none; }
 path.high  { stroke: crimson; stroke-dasharray: 3 3; }
 path.low   { stroke: steelblue; stroke-dasharray: 3 3; }
-path.zero-crossing { stroke: #aaa; stroke-width: 1px; stroke-dasharray: 2 2; }
+path.zero-crossing { stroke: #aaa; stroke-dasharray: 2 2; }
 
-rect.all   { fill: #999; }
+rect.all   { fill: #777; }
 rect.buy   { fill: #1f77b4; }
 rect.sell  { fill: #ff7f0e; }
 rect.prices{ fill: #2ca02c; }
@@ -126,4 +126,48 @@ text {
 
 .row text, .header text {
   text-anchor: middle;
+}
+
+/*                     */
+/*   Dropdown menu     */
+/*                     */
+
+.dropdown .button {
+  fill: #fff;
+  stroke: #333;
+  cursor: pointer;
+}
+
+.dropdown .button:hover {
+  /*  fill: rgb(59, 109, 151); /* steelblue darker(.5) */
+  fill: #eee;
+}
+
+.dropdown .button.active {
+  /*  fill: rgb(49, 91, 126); /* steelblue darker(1) */
+  fill: #ddd;
+}
+
+.dropdown text, .dropdown .arrow {
+/*  font-size: 12px; */
+  fill: #000;
+  pointer-events: none;
+  text-anchor: left;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dropdown .menu text {
+  text-anchor: start;
+}
+
+.dropdown .menu {
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.menu.active {
+  visibility: visible;
 }
