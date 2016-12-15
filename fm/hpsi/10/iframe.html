@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>responsive iframe</title>
+<style>
+
+body {
+    margin: 0;
+    background: #fff;
+    font-family: 'Glypha-55Roman',"Georgia","Century",serif;
+}
+
+header {
+    height: 70px;
+    width: 100%;
+    background: #000f2b;
+    margin: 0px auto;
+}
+
+.row {
+  width: 100%;
+  background: #fff;
+}
+
+.left-column, .right-column {
+  width: 26%;
+  padding: 2%;
+  float:left;
+  vertical-align: top;
+}
+
+.middle-column {
+  width: 40%;
+  min-width: 200px;
+  float:left;
+  vertical-align: top;
+}
+
+.left-column {
+  background: crimson;
+}
+
+.right-column {
+  background: steelblue;
+}
+
+.wrapper {
+  padding: 30px;
+  position: relative;
+  background: goldenrod;
+}
+
+/* In HTML5, iframe width & height must be in px */
+iframe {
+  position: absolute;
+  top: 30px; /* allow for container padding */
+  left: 30px;
+}
+
+.spacer {
+    height: 40px;
+    width: 100%;
+    background: #d9d7dc;
+}
+
+.page_title {
+    color: #000;
+    font-size: 26px;
+    padding: 10px 0px 0px 20px;
+}
+
+</style>
+<body>
+
+<header></header>
+
+<div id="nav_main"></div>
+
+<div class='spacer'></div>
+
+<div class="row">
+  <div class="page_title">
+    Responsive iframe
+  </div>
+</div>
+
+<div class="row">
+  <div class='left-column'>
+    The left column...
+  </div>
+  <div class='middle-column'>
+    <div class='wrapper'>
+      <img src="demo.png" width="100%" style="display: block; opacity: 1;"/>
+      <iframe src="index.html" frameborder="0" scrolling="no"></iframe>
+  </div>
+  </div>
+  <div class='right-column'>
+    The right column...
+  </div>
+</div>
+
+<script src="d3.min.js"></script>
+<script>
+
+d3.resized = function() {
+  var wrapperStyle = window.getComputedStyle( d3.select('.wrapper').node() );
+  console.log('wrapper width & height:', wrapperStyle.width, wrapperStyle.height)
+
+  var iframeStyle = window.getComputedStyle( d3.select('iframe').node() );
+  console.log('iframe width & height BEFORE:', iframeStyle.width, iframeStyle.height)
+
+  d3.select('.wrapper iframe')
+      .style('height', wrapperStyle.height)
+      .style('width', wrapperStyle.width)
+
+  iframeStyle = window.getComputedStyle( d3.select('iframe').node() );
+  console.log('iframe width & height AFTER:', iframeStyle.width, iframeStyle.height)
+}
+d3.select(window).on('resize', d3.resized)
+d3.resized();
+
+</script>

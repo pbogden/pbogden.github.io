@@ -137,6 +137,9 @@ twitter3:
 	cp ~/Sites/fm/twitter/3/bundle.min.js twitter/3
 	cp ~/Sites/fm/twitter/data/TwitterPerformance_FannieMae_June15May16.csv twitter/data
 
+hpsi10:
+	cp ~/Sites/fm/hpsi/10/* hpsi/10
+
 hpsi9:
 	cp ~/Sites/fm/hpsi/9/test.html     hpsi/9/index.html
 	cp ~/Sites/fm/hpsi/9/styles.css    hpsi/9
