@@ -126,20 +126,18 @@ text {
 /*   Dropdown menu     */
 /*                     */
 
-.dropdown .button {
+.dropdown .button rect {
   fill: #fff;
   stroke: #333;
   cursor: pointer;
 }
 
-.dropdown .button:hover {
-  /*  fill: rgb(59, 109, 151); /* steelblue darker(.5) */
-  fill: #eee;
+.dropdown .button rect:hover {
+  fill: #ddd;
 }
 
-.dropdown .button.active {
-  /*  fill: rgb(49, 91, 126); /* steelblue darker(1) */
-  fill: #ddd;
+.dropdown .button.active rect {
+  fill: #bbb;
 }
 
 .dropdown text, .dropdown .arrow {
