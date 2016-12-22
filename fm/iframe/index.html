@@ -5,7 +5,7 @@
 
 body {
     margin: 0;
-    background: #fff;
+    background: goldenrod;
     font-family: 'Glypha-55Roman',"Georgia","Century",serif;
 }
 
@@ -42,12 +42,13 @@ header {
   background: steelblue;
 }
 
-.wrapper {
+.container {
   position: relative;
-  padding-bottom: 52.08%; /*  500/960 = 0.5208 */
+/*  padding-bottom: 52.08%; /*  use this with height / width = 500/960 = 0.5208 */
+  padding-bottom: 100%; /*  for aspect ratio 1:1 */
   padding-top: 0px;
   height: 0;
-  background: black;
+  background: white;
 }
 
 iframe {
@@ -81,33 +82,32 @@ iframe {
 
 <div class="row">
   <div class="page_title">
-    Responsive iframe
+    Responsive iframe demo
   </div>
 </div>
 
 <div class="row">
   <div class='left-column'>
-    The SVG is embedded in an iframe that has a black background.
-    The iframe fills the containing block of a wrapper element
-    that has a constant aspect ratio of 960:500.
+    The SVG is embedded in a responsive iframe that fills its div container.
+    CSS sets the dimensions of both the container and iframe;
+    there is no JavaScript in the main window.
   </div>
   <div class='middle-column'>
-    <div class='wrapper'>
-      <iframe src="http://www.pbogden.com/fm/iframe/graphic.html" frameborder="0" scrolling="no"></iframe>
+    <div class='container'>
+      <iframe src="http://www.pbogden.com/fm/hpsi/8" frameborder="0" scrolling="no"></iframe>  
     </div>
   </div>
   <div class='right-column'>
-    The SVG has a random aspect ratio that changes every time the
-    window is refreshed. So does the size of black region below
-    the SVG, which is there because the iframe has a constant aspect ratio.
+    The SVG is responsive with a constant aspect ratio of 1:1.
+    It comes from a remote URL.
   </div>
 </div>
 
 <script src="d3.min.js"></script>
 <script>
 
-var computedStyle = window.getComputedStyle( d3.select('.wrapper').node() );
-console.log('wrapper width & height:', computedStyle.width, computedStyle.height)
+var computedStyle = window.getComputedStyle( d3.select('.container').node() );
+console.log('container width & height:', computedStyle.width, computedStyle.height)
 
 computedStyle = window.getComputedStyle( d3.select('iframe').node() );
 console.log('iframe width & height:', computedStyle.width, computedStyle.height)
