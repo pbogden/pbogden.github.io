@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>responsive iframe</title>
 <style>
 
@@ -46,7 +47,7 @@ header {
   background: steelblue;
 }
 
-.wrapper {
+.container {
   position: relative;
   padding-bottom: 100%; /*  310/310 = 1 */
   padding-top: 0px;
@@ -93,7 +94,7 @@ iframe {
     The left column...
   </div>
   <div class='middle-column'>
-    <div class='wrapper'>
+    <div class='container'>
       <iframe src="index.html" frameborder="0" scrolling="no"></iframe>
     </div>
   </div>
@@ -105,8 +106,8 @@ iframe {
 <script src="../../../d3/d3.min.js"></script>
 <script>
 
-var computedStyle = window.getComputedStyle( d3.select('.wrapper').node() );
-console.log('wrapper width & height:', computedStyle.width, computedStyle.height)
+var computedStyle = window.getComputedStyle( d3.select('.container').node() );
+console.log('container width & height:', computedStyle.width, computedStyle.height)
 
 computedStyle = window.getComputedStyle( d3.select('iframe').node() );
 console.log('iframe width & height:', computedStyle.width, computedStyle.height)
