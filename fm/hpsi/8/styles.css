@@ -51,6 +51,12 @@ table td {
   font: bold;
 }
 
+
+/*                     */
+/*  Multichart styles  */
+/*                     */
+
+
 path.curve { stroke: #cc9900; fill:none; }  /* HPSI gold */
 path.buy   { stroke: #1f77b4; fill:none; }
 path.sell  { stroke: #ff7f0e; fill:none; }
