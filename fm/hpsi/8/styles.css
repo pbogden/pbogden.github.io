@@ -76,7 +76,7 @@ rect.rates { fill: #d62728; }
 rect.job   { fill: #8c564b; }
 rect.income{ fill: #e377c2; }
 
-.mouse {
+.mouse line {
   stroke: black;
   stroke-width: 0.5px;
 }
