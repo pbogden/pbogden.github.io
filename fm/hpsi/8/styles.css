@@ -55,26 +55,9 @@ table td {
 /*                     */
 /*  Multichart styles  */
 /*                     */
-
-
-path.curve { stroke: #cc9900; fill:none; }  /* HPSI gold */
-path.buy   { stroke: #1f77b4; fill:none; }
-path.sell  { stroke: #ff7f0e; fill:none; }
-path.prices{ stroke: #2ca02c; fill:none; }
-path.rates { stroke: #d62728; fill:none; }
-path.job   { stroke: #8c564b; fill:none; }
-path.income{ stroke: #e377c2; fill:none; }
-path.high  { stroke: crimson; stroke-dasharray: 3 3; }
-path.low   { stroke: steelblue; stroke-dasharray: 3 3; }
+path.high  { stroke-dasharray: 3 3; }
+path.low   { stroke-dasharray: 3 3; }
 path.zero-crossing { stroke: #aaa; stroke-dasharray: 2 2; }
-
-rect.all   { fill: #777; }
-rect.buy   { fill: #1f77b4; }
-rect.sell  { fill: #ff7f0e; }
-rect.prices{ fill: #2ca02c; }
-rect.rates { fill: #d62728; }
-rect.job   { fill: #8c564b; }
-rect.income{ fill: #e377c2; }
 
 .mouse line {
   stroke: black;
