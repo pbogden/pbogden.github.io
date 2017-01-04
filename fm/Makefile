@@ -140,11 +140,12 @@ twitter3:
 hpsi10:
 	cp ~/Sites/fm/hpsi/10/* hpsi/10
 
+# NOTE: Everything is from hpsi/8 *except* bundle.min.js
 hpsi9:
-	cp ~/Sites/fm/hpsi/9/test.html     hpsi/9/index.html
-	cp ~/Sites/fm/hpsi/9/styles.css    hpsi/9
+	cp ~/Sites/fm/hpsi/8/test.html     hpsi/9/index.html
+	cp ~/Sites/fm/hpsi/8/styles.css    hpsi/9
+	cp ~/Sites/fm/hpsi/8/data.csv      hpsi/9
 	cp ~/Sites/fm/hpsi/9/bundle.min.js hpsi/9
-	cp ~/Sites/fm/hpsi/9/data.csv      hpsi/9
 
 hpsi8:
 	cp ~/Sites/fm/hpsi/8/test.html     hpsi/8/index.html
