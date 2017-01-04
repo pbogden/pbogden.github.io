@@ -1,7 +1,7 @@
-
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>responsive iframe</title>
+<title>hpsi 10 - iframe</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 
 body {
@@ -20,41 +20,38 @@ header {
 .row {
   width: 100%;
   background: #fff;
-}
-
-.left-column, .right-column {
-  width: 26%;
-  padding: 2%;
-  float:left;
-  vertical-align: top;
-}
-
-.middle-column {
-  width: 40%;
-  min-width: 200px;
-  float:left;
-  vertical-align: top;
+  display: inline-block;
 }
 
 .left-column {
-  background: crimson;
+  width: 60%;
+  min-width: 320px;  /* min column width on FM */
+  vertical-align: top;
+  float:left;
 }
 
 .right-column {
+  width: 38%;
+  padding: 1%;
   background: steelblue;
+  vertical-align: top;
+  float:left;
 }
 
-.wrapper {
-  padding: 30px;
+.container {
+  padding: 45px;  /* padding used on FM */
   position: relative;
   background: goldenrod;
+}
+
+img {
 }
 
 /* In HTML5, iframe width & height must be in px */
 iframe {
   position: absolute;
-  top: 30px; /* allow for container padding */
-  left: 30px;
+  top: 45px; /* allow for container padding */
+  left: 45px;
 }
 
 .spacer {
@@ -86,16 +83,23 @@ iframe {
 
 <div class="row">
   <div class='left-column'>
-    The left column...
-  </div>
-  <div class='middle-column'>
-    <div class='wrapper'>
-      <img src="demo.png" width="100%" style="display: block; opacity: 1;"/>
+    <div class='container'>
+      <img src="demo.png" width="100%" style="display: inline-block;"/>
       <iframe src="index.html" frameborder="0" scrolling="no"></iframe>
-  </div>
-  </div>
-  <div class='right-column'>
-    The right column...
+    </div>
+  </div><div class='right-column'>
+    The dynamic graphic is embedded in a responsive iframe.
+    The iframe automatically fills its container while it maintains a constant aspect ratio.
+    Change the width of the browser window to see the effect.
+    Images such PNGs or GIFs automatically maintain a constant aspect
+    ratio when they resize, but iframes do not.
+    <p>
+    For this demo, the iframe is in a div container along with and on top of a PNG.
+    The PNG has width: 100%, which causes the container to maintain
+    to maintain a constant aspect ratio.
+    When the main page loads or resizes, a few lines of JavaScript detect the
+    container dimensions and use them to set the height and width of the iframe.
+    </thead>
   </div>
 </div>
 
@@ -103,15 +107,15 @@ iframe {
 <script>
 
 d3.resized = function() {
-  var wrapperStyle = window.getComputedStyle( d3.select('.wrapper').node() );
-  console.log('wrapper width & height:', wrapperStyle.width, wrapperStyle.height)
+  var containerStyle = window.getComputedStyle( d3.select('.container').node() );
+  console.log('container width & height:', containerStyle.width, containerStyle.height)
 
   var iframeStyle = window.getComputedStyle( d3.select('iframe').node() );
   console.log('iframe width & height BEFORE:', iframeStyle.width, iframeStyle.height)
 
-  d3.select('.wrapper iframe')
-      .style('height', wrapperStyle.height)
-      .style('width', wrapperStyle.width)
+  d3.select('.container iframe')
+      .style('height', containerStyle.height)
+      .style('width', containerStyle.width)
 
   iframeStyle = window.getComputedStyle( d3.select('iframe').node() );
   console.log('iframe width & height AFTER:', iframeStyle.width, iframeStyle.height)

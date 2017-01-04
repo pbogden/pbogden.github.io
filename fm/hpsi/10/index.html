@@ -24,6 +24,10 @@ svg {
 <script src="bundle.min.js"></script>
 <script>
 
+d3.select('body')
+    .on('touchstart', nozoom)
+    .on('touchmove', nozoom)
+
 d3.select(window).on('resize', resized);
 resized();
 
@@ -35,6 +39,10 @@ function resized() {
   d3.select('#container svg').style('height', size) .style('width', size)
   containerStyle = window.getComputedStyle( d3.select('#container').node() );
   console.log('INNER container width & height AFTER:', containerStyle.width, containerStyle.height)
+}
+
+function nozoom() {
+  d3.event.preventDefault();
 }
 
 </script>
