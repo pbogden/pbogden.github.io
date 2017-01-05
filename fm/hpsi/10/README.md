@@ -1,10 +1,7 @@
 
 ###Responsive iframe
 
-Demo of a responsive (i.e., constant aspect ratio) iframe for FannieMae.com.
-
-FannieMae.com supports responsive images.  However, FannieMae.com 
-does not support variable-height iframe elements.
+FM has responsive containers for images (PNG & GIF), but not iframes.
 
 This demo shows how to create a constant aspect ratio iframe
 on FannieMae.com by putting it in a <div> container designed for a PNG.

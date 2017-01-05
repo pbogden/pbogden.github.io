@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>hpsi 10</title>
+<style>
+
+#container {
+  position: relative;
+  width: 100%
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+svg {
+  margin: 0 auto;
+}
+
+</style>
+<link rel="stylesheet" href="styles.css" type="text/css">
+
+<div id='container'>
+  <svg></svg>
+</div>
+
+<script src="bundle.min.js"></script>
+<script>
+
+d3.select('body')
+    .on('touchstart', nozoom)
+    .on('touchmove', nozoom)
+
+d3.select(window).on('resize', resized);
+resized();
+
+function resized() {
+  var size = innerWidth + 'px';
+  var containerStyle = window.getComputedStyle( d3.select('#container').node() );
+  console.log('INNER container width & height (& innerWidth) BEFORE:', containerStyle.width, containerStyle.height, size)
+  d3.select('#container').style('height', size).style('width', size)
+  d3.select('#container svg').style('height', size) .style('width', size)
+  containerStyle = window.getComputedStyle( d3.select('#container').node() );
+  console.log('INNER container width & height AFTER:', containerStyle.width, containerStyle.height)
+}
+
+function nozoom() {
+  d3.event.preventDefault();
+}
+
+</script>

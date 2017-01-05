@@ -1,48 +1,181 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>hpsi 10</title>
+<title>hpsi 10 - iframe</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 
-#container {
-  position: relative;
-  width: 100%
-  max-width: 500px;
-  margin: 0 auto;
+body {
+    margin: 0;
+    background: #fff;
+    font-family: 'Glypha-55Roman',"Georgia","Century",serif;
 }
 
-svg {
-  margin: 0 auto;
+header {
+    height: 70px;
+    width: 100%;
+    background: #000f2b;
+    margin: 0px auto;
+}
+
+.row {
+  width: 100%;
+  background: #fff;
+  display: inline-block;
+}
+
+.left-column {
+  width: 60%;
+  min-width: 320px;  /* min column width on FM */
+  vertical-align: top;
+  float:left;
+}
+
+.right-column {
+  width: 38%;
+  padding: 1%;
+  background: #7fbacb;
+  vertical-align: top;
+  float:left;
+}
+
+.container, .filler {
+  padding: 30px 45px;  /* top-side padding on FM */
+  position: relative;
+/*  background: #99660f; */
+  background: #0fa987;
+  min-width: 230px;
+}
+
+img {
+}
+
+/* In HTML5, iframe width & height must be in px */
+iframe {
+  position: absolute;
+  top: 30px; /* allows for container padding */
+  left: 45px;
+}
+
+.spacer {
+    height: 40px;
+    width: 100%;
+    background: #d9d7dc;
+}
+
+.page_title {
+    color: #000;
+    font-size: 26px;
+    padding: 10px 0px 0px 20px;
 }
 
 </style>
-<link rel="stylesheet" href="styles.css" type="text/css">
+<body>
 
-<div id='container'>
-  <svg></svg>
+<header></header>
+
+<div id="nav_main"></div>
+
+<div class='spacer'></div>
+
+<div class="row">
+  <div class="page_title">
+    Mobile demo
+  </div>
 </div>
 
-<script src="bundle.min.js"></script>
+<div class="row">
+    <div class='container' style="width: 230px;">
+      <img src="demo.png" width="100%" style="display: inline-block;"/>
+      <iframe src="graphic.html" frameborder="0" scrolling="no"></iframe>
+      <div style="padding-top: 30px">
+        The smallest browsers (e.g., iPhone 5) have a screen width of 320px.
+        Since the FM website puts 45px borders on each side (30px top/bottom),
+        the content must fit in a 230px-wide container.
+        In this demo, both the container and graphic are responsive
+        so the text hugs the bottom of the graphic.
+      </div>
+    </div>
+</div>
+
+<div class='spacer'></div>
+
+<div class="row">
+  <div class="page_title">
+    Mobile fixed-height demo
+  </div>
+</div>
+
+<div class="row">
+    <div class='container' style="width: 230px; height: 500px;">
+      <img src="demo.png" width="100%" style="display: inline-block;"/>
+      <iframe src="graphic.html" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div>
+    <div class='filler' style="width: 230px;">
+      <div style="padding-top: 30px">
+        This demo shows what happens with the current version of the FM site,
+        which is <b>not</b> fully responsive.
+        Instead, the site imposes a fixed-height constraint the graphic's
+        container.
+        For desktops, this isn't noticeable. But on narrow
+        devices (such as iPhones) the text no longer hugs the bottom
+        of the graphic.  Instead, there's a big blank space that ends
+        up being about the same size as the graphic.
+      </div>
+    </div>
+</div>
+
+<div class='spacer'></div>
+
+<div class="row">
+  <div class="page_title">
+    Responsive demo
+  </div>
+</div>
+
+<div class="row">
+  <div class='left-column'>
+    <div class='container'>
+      <img src="demo.png" width="100%" style="display: inline-block;"/>
+      <iframe src="graphic.html" frameborder="0" scrolling="no"></iframe>
+    </div>
+  </div><div class='right-column' style="min-width: 320px;">
+    This shows what happens when the container for the graphic
+    is fully responsive.
+    On wide screens, the text goes on the right.
+    On narrow screens, it moves to the bottom of the graphic
+    with no blank space.
+    Regardless of browser size, the graphic fills the container.
+    You can adjust the width of your browser to see the effect.
+    Eventually, the FM site will behave this way.
+    <p>
+    <b>How it works:</b> This demo uses a div container that contains both
+    the graphic and a PNG.
+    The PNG determines the container dimensions, which makes the
+    container fully responsive.
+    The FM site behaves this way for for images, but not yet
+    for the interactive graphics.
+    The solution demonstrated here is to put the graphic in the same container
+    as (and on top of) the PNG. This requires only one line of HTML code.
+    When the main page loads or resizes, a few lines of JavaScript
+    detect the new container dimensions (as determined by the PNG),
+    and reset the height and width of the graphic accordingly.
+  </div>
+</div>
+
+<script src="d3.min.js"></script>
 <script>
 
-d3.select('body')
-    .on('touchstart', nozoom)
-    .on('touchmove', nozoom)
-
-d3.select(window).on('resize', resized);
-resized();
-
-function resized() {
-  var size = innerWidth + 'px';
-  var containerStyle = window.getComputedStyle( d3.select('#container').node() );
-  console.log('INNER container width & height (& innerWidth) BEFORE:', containerStyle.width, containerStyle.height, size)
-  d3.select('#container').style('height', size).style('width', size)
-  d3.select('#container svg').style('height', size) .style('width', size)
-  containerStyle = window.getComputedStyle( d3.select('#container').node() );
-  console.log('INNER container width & height AFTER:', containerStyle.width, containerStyle.height)
+// Set the iframe dimensions to fill the container
+d3.resized = function() {
+  var containerStyle = window.getComputedStyle( this );
+  d3.select(this).select('iframe')
+      .style('height', containerStyle.height)
+      .style('width', containerStyle.width)
 }
 
-function nozoom() {
-  d3.event.preventDefault();
-}
+function resize() { d3.selectAll('.container').each(d3.resized) }
+d3.select(window).on('resize', resize);
+resize();
 
 </script>
