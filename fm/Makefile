@@ -3,7 +3,7 @@ all: hpsi9
 .PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga zip
 
 zip:
-	cp ~/Sites/fm/hpsi/8/graphic.zip ./zip
+	cp ~/Sites/single/bundle/graphic.zip ./zip
 
 ga:
 	cp ~/Sites/fm/ga/3/index.html ga/3/
