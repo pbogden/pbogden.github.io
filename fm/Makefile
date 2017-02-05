@@ -1,4 +1,4 @@
-all: hpsi9
+all: homeownership2
 
 .PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga zip
 
@@ -34,6 +34,9 @@ iframe:
 	cp ~/Sites/fm/iframe/index.html iframe
 	cp ~/Sites/fm/iframe/d3.min.js iframe
 	cp ~/Sites/fm/iframe/graphic.html iframe
+
+homeownership2:
+	cp ~/Sites/fm/homeownership/2/* homeownership/2
 
 talk:
 	cp ~/Sites/fm/talk/index.html talk

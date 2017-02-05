@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>homeownership 2</title>
+<style>
+
+#container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+}
+
+svg {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+</style>
+<body>
+<script src="d3.min.js"></script>
+<script src="d3.barStack.js"></script>
+<script>
+
+var width = 960,
+    height = 500,
+    margin = { top: 50, left: 80, bottom: 80, right: 50 };
+
+var container = d3.select("body").append("div")
+    .attr("id", "container");
+
+var g = container.append("svg")
+    .attr('viewBox', "0, 0, " + width + ", " + height)
+    .attr('preserveAspectRatio', "xMinYMid")
+  .append("g");
+
+var g2 = container.append("svg")
+    .attr('viewBox', "0, 0, " + width + ", " + height)
+    .attr('preserveAspectRatio', "xMinYMid")
+  .append("g");
+
+var label = g.append("text")
+    .attr('class', 'label')
+    .attr('x', margin.left)
+    .attr('y', margin.top)
+    .attr('font-size', 160)
+    .attr('font-family', 'sans-serif')
+    .style('fill', 'steelblue')
+    .attr('dx', "0.5em")
+    .attr('dy', "1em");
+
+g.insert("rect", "text")
+    .attr("width", width)
+    .attr("height", height)
+    .style("fill", "#ccc")
+
+g2.append("rect")
+    .attr("width", width)
+    .attr("height", height)
+    .style("fill", "#ccc")
+
+g.append("text")
+    .attr('class', 'title')
+    .attr('x', width / 2)
+    .attr('y', margin.top)
+    .style('font', "2em sans-serif")
+    .style('text-anchor', "middle")
+    .text('Cohorts (Red = Growth over previous 2 years)')
+
+var chart = d3.barStack()
+    .x(function(d) { return d[0]; })
+    .y(function(d) { return +d[1]; })
+    .margin(margin)
+    .width(width)
+    .height(height)
+    .extent([0, 0.3]); // optional
+
+var chart2 = d3.barStack()
+    .x(function(d) { return d[0]; })
+    .y(function(d) { return +d[1]; })
+    .margin(margin)
+    .width(width)
+    .height(height)
+    .extent([0, 0.05]); // optional
+
+setContainerHeight(); // initial load
+d3.select(window).on('resize', setContainerHeight);
+
+d3.tsv("rates.tsv", function(error, tsv) {
+  if (error) throw error;
+
+  console.log('columns', tsv.columns)
+  console.log('tsv', tsv)
+  tsv.forEach(function(d, i) { console.log('tsv[' + i + ']', tsv[i]) });
+  var years = tsv.columns.slice(1, tsv.columns.length);
+  var cohorts = tsv.map(function(d) { return d.Age; });
+  var yearPairs = d3.pairs(years);
+  console.log('years', years);
+  console.log('yearPairs', yearPairs);
+  console.log('cohorts', cohorts);
+  var data = yearPairs.map(function(yearPair, i) {
+    var thisYear = yearPair[0];
+    var nextYear = yearPair[1];
+    return cohorts.map(function(cohort, cohortIndex) {
+      // Rate last year for this cohort
+      var lastRate = (cohortIndex !== 0) ? +tsv[ cohortIndex - 1 ][ thisYear ] : 0;
+      var thisRate = +tsv[ cohortIndex ][ nextYear ];
+      var values = [[0, lastRate], [lastRate, thisRate]];
+      console.log(i, cohort, ', yearPair:', yearPair, values[0], values[1]);
+      values = values.map(function(d){ return [d[0] / 100, d[1] / 100]; });
+      return { cohort: cohort, yearPair: yearPair, values: values };
+    });
+  });
+  console.log('data', data)
+  console.log('data[0]', data[0])
+
+  var data2 = data.map(function(d) {
+    return d.map(function(d) {
+      var datum = { cohort: d.cohort, yearPair: d.yearPair };
+      datum.values = [[0, 0], [0, d.values[1][1] - d.values[1][0]]];
+      return datum;
+    });
+  });
+
+  var d = data[0];
+  var year = d[0].yearPair[1];
+  label.text(year);
+
+  g.datum(d)
+    .call(chart);
+
+  g2.datum(data2[0])
+    .call(chart2);
+
+  setContainerHeight(); // initial load
+
+  var xScale = chart.xScale();
+  var yScale = chart.yScale();
+  var yScale2 = chart2.yScale();
+  var duration = 1000;
+  g.selectAll('.axis').attr('font-size', 20);
+  g2.selectAll('.axis').attr('font-size', 20);
+
+  // Recursive updating
+  update(0, true);
+  function update(yearIndex, recurse) {
+    if (yearIndex === yearPairs.length) return;
+    var d = data[yearIndex];
+    var year = d[0].yearPair[1];
+
+    label.transition()
+         .delay(duration / 2)
+         .text(year)
+
+    g.selectAll(".group")
+        .data(d)
+      .selectAll('.bar')
+        .data(function(d, i) { return d.values; })
+      .transition()
+        .ease(d3.easeLinear)
+        .duration(duration)
+        .attr("y", function(d) { return yScale(d[1]); })
+        .attr("height", function(d) { return Math.abs( yScale(d[0]) - yScale(d[1]) ) })
+        .on('end', function(d, i) { if (recurse && i ===0 && this.parentNode.__data__.cohort === '20-21') update(++yearIndex, recurse); });
+
+    g2.selectAll(".group")
+        .data(data2[yearIndex])
+      .selectAll('.bar')
+        .data(function(d, i) { return d.values; })
+      .transition()
+        .ease(d3.easeLinear)
+        .duration(duration)
+        .attr("y", function(d) { return yScale2(d[1]); })
+        .attr("height", function(d) { return Math.abs( yScale2(d[0]) - yScale2(d[1]) ) })
+  }
+});
+
+function setContainerHeight() {
+  var w = parseInt( container.style("width"), 10);
+  var a = width / height;
+  container.style('height', w / a  + 'px');
+}
+
+</script>
