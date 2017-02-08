@@ -65,7 +65,15 @@ g.append("text")
     .attr('y', margin.top)
     .style('font', "2em sans-serif")
     .style('text-anchor', "middle")
-    .text('Cohorts (Red = Growth over previous 2 years)')
+    .text('Homeownership Rate by Age (2-year age ranges)')
+
+g2.append("text")
+    .attr('class', 'title')
+    .attr('x', width / 2)
+    .attr('y', margin.top)
+    .style('font', "2em sans-serif")
+    .style('text-anchor', "middle")
+    .text('Rate Change by Cohort (previous 2 years)')
 
 var chart = d3.barStack()
     .x(function(d) { return d[0]; })
@@ -138,8 +146,9 @@ d3.tsv("rates.tsv", function(error, tsv) {
   var yScale = chart.yScale();
   var yScale2 = chart2.yScale();
   var duration = 1000;
-  g.selectAll('.axis').attr('font-size', 20);
-  g2.selectAll('.axis').attr('font-size', 20);
+  container.selectAll('.axis .tick text').attr('font-size', '20')
+  container.selectAll('.x.axis .tick text').attr('dy', '14')
+  container.selectAll('.x.axis .tick line').remove()
 
   // Recursive updating
   update(0, true);

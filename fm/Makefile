@@ -1,6 +1,6 @@
-all: homeownership2
+all: homeownership
 
-.PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga zip
+.PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga zip homeownerdhip
 
 zip:
 	cp ~/Sites/single/bundle/graphic.zip ./zip
@@ -35,8 +35,9 @@ iframe:
 	cp ~/Sites/fm/iframe/d3.min.js iframe
 	cp ~/Sites/fm/iframe/graphic.html iframe
 
-homeownership2:
+homeownership: Makefile
 	cp ~/Sites/fm/homeownership/2/* homeownership/2
+	cp ~/Sites/fm/homeownership/3/* homeownership/3
 
 talk:
 	cp ~/Sites/fm/talk/index.html talk
@@ -188,11 +189,6 @@ gif:
 	cp ~/Sites/fm/hpsi/2/hpsi.gif gif   # animated once through
 	cp ~/Sites/fm/hpsi/2/final.gif gif  # continuous loop
 	cp ~/Sites/fm/hpsi/2/final.png gif  # PNG of final image
-
-hpsi2:
-	cp ~/Sites/fm/hpsi/2/final.gif hpsi/2
-	cp ~/Sites/fm/hpsi/2/final.png hpsi/2
-	cp ~/Sites/fm/hpsi/2/hpsi.gif hpsi/2
 
 hpsi1:
 	cp ~/Sites/fm/hpsi/1/index.html hpsi/1
