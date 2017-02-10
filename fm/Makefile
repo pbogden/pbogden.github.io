@@ -7,6 +7,8 @@ zip:
 
 static:
 	cp ~/Sites/single/svg-only/svg-only.svg ./single/static
+	cp ~/Sites/single/svg-only/bubbles.svg ./single/static
+	cp ~/Sites/single/svg-only/legend.svg ./single/static
 	cp ~/Sites/single/bluemarble/masked-big.png ./single/static
 
 ga:
