@@ -65,7 +65,7 @@ g.append("text")
     .attr('y', margin.top)
     .style('font', "2em sans-serif")
     .style('text-anchor', "middle")
-    .text('Homeownership Rate by Age (2-year age ranges)')
+    .text('By Cohort')
 
 g2.append("text")
     .attr('class', 'title')
@@ -73,7 +73,7 @@ g2.append("text")
     .attr('y', margin.top)
     .style('font', "2em sans-serif")
     .style('text-anchor', "middle")
-    .text('Rate Change by Cohort (previous 2 years)')
+    .text('Change by cohort (previous 2 years)')
 
 var chart = d3.barStack()
     .x(function(d) { return d[0]; })
@@ -100,47 +100,77 @@ d3.tsv("rates.tsv", function(error, tsv) {
   console.log('columns', tsv.columns)
   console.log('tsv', tsv)
   tsv.forEach(function(d, i) { console.log('tsv[' + i + ']', tsv[i]) });
-  var years = tsv.columns.slice(1, tsv.columns.length);
-  var cohorts = tsv.map(function(d) { return d.Age; });
-  var yearPairs = d3.pairs(years);
-  console.log('years', years);
-  console.log('yearPairs', yearPairs);
-  console.log('cohorts', cohorts);
-  var data = yearPairs.map(function(yearPair, i) {
-    var thisYear = yearPair[0];
-    var nextYear = yearPair[1];
-    return cohorts.map(function(cohort, cohortIndex) {
-      // Rate last year for this cohort
-      var lastRate = (cohortIndex !== 0) ? +tsv[ cohortIndex - 1 ][ thisYear ] : 0;
-      var thisRate = +tsv[ cohortIndex ][ nextYear ];
-      var values = [[0, lastRate], [lastRate, thisRate]];
-      console.log(i, cohort, ', yearPair:', yearPair, values[0], values[1]);
-      values = values.map(function(d){ return [d[0] / 100, d[1] / 100]; });
-      return { cohort: cohort, yearPair: yearPair, values: values };
-    });
-  });
-  console.log('data', data)
-  console.log('data[0]', data[0])
 
-  var data2 = data.map(function(d) {
+  // All years
+  var years = tsv.columns.slice(1, tsv.columns.length);
+  console.log('years', years);
+
+  // Ages groups that will appear in chart
+  var Ages = tsv.map(function(d) { return d.Age; });
+
+  // All ages of all cohorts over all years
+  var ages = d3.merge([["12-13", "14-15", "16-17", "18-19"],
+                       Ages,
+                       ["34-35", "36-37", "38-39", "40-41"] ]);
+
+  // Cohorts that will appear in the chart
+  var cohorts = ages.slice(0, 12);
+  cohorts = ages;
+//  console.log('cohorts', cohorts);
+
+  // Create a nest to help re-organize the data
+  var nest = d3.nest().key(function(d) { return d.Age }).map(tsv);
+
+  // Reorganize the data
+  var data = years.map(function(year, j) {
+    return cohorts.map(function(cohort, i) {
+      var age = ages[ i + j ];  // Age of cohort "i" in year "j"
+      var d = nest.get(age);
+      if (!d) return null;
+      var thisYear = +d[0][year] / 100;
+
+      var ageLastYear = ages[ i + j - 1];
+      d = nest.get(ageLastYear);
+      var lastYear = (!d) ? 0 : d[0][years[ j - 1 ]];
+      lastYear = (typeof lastYear === 'undefined') ? 0 : lastYear / 100;
+
+      var values = [[0, lastYear], [lastYear, thisYear]]
+      return { cohort: cohort, age: age, year: year, values: values };
+    }).filter(function(d) { return d !== null; });
+  });
+
+  // Print reorganized data to console
+  var fmt = d3.format('.1f');
+  var f = function(d) { return ", values: " +
+        fmt(100 * d[0][0]) + " " + fmt(100 * d[0][1]) + ", " +
+        fmt(100 * d[1][0]) + " " + fmt(100 * d[1][1]) };
+  console.log('data', data)
+  data.forEach(function(d, i) {
+    console.log(i, years[i], ', data[i]:', data[i])
+    data[i].forEach(function(d, i) {
+      console.log("  ", i, 'cohort, age:', d.cohort + ", " + d.age, f(d.values));
+    })
+  });
+
+  var data2 = data.map(function(d, i) {
     return d.map(function(d) {
-      var datum = { cohort: d.cohort, yearPair: d.yearPair };
-      datum.values = [[0, 0], [0, d.values[1][1] - d.values[1][0]]];
+      var datum = { cohort: d.cohort, age: d.age, year: d.year, values: [[0, 0], [0, 0]] };
+      datum.values[1] = (i === 0) ? [0, 0] : [0, d.values[1][1] - d.values[1][0]];
       return datum;
     });
   });
 
-  var d = data[0];
-  var year = d[0].yearPair[1];
-  label.text(year);
+  // INITIAL CONDITION based on "Age"
+  var f = function(d) { return d['2006'] / 100 };
+  var data0 = tsv.map(function(d) { return { cohort: d.Age, age: d.Age, values: [[0, f(d)], [ f(d), f(d)]] }; });
 
-  g.datum(d)
-    .call(chart);
+  // Create charts with the initial condition
+  label.text('20').append('tspan').text(years[0].slice(2, 4))
+  g.datum(data0).call(chart);
+  g2.datum(data2[0]).call(chart2);
 
-  g2.datum(data2[0])
-    .call(chart2);
-
-  setContainerHeight(); // initial load
+  console.log('data0', data0)
+  console.log('data2[0]', data2[0])
 
   var xScale = chart.xScale();
   var yScale = chart.yScale();
@@ -150,27 +180,68 @@ d3.tsv("rates.tsv", function(error, tsv) {
   container.selectAll('.x.axis .tick text').attr('dy', '14')
   container.selectAll('.x.axis .tick line').remove()
 
+  // Assign an "x" coordinate for all the cohorts
+  function xCohort(cohort) {
+    var x0 = xScale('32-33');
+    var dx = xScale('32-33') - xScale('30-31');
+    var i0 = cohorts.indexOf('32-33');
+    var i =  cohorts.indexOf(cohort);
+    return x0 - (i0 - i) * dx;
+  }
+
   // Recursive updating
-  update(0, true);
+  update(1, true);
   function update(yearIndex, recurse) {
-    if (yearIndex === yearPairs.length) return;
-    var d = data[yearIndex];
-    var year = d[0].yearPair[1];
-
-    label.transition()
-         .delay(duration / 2)
-         .text(year)
-
-    g.selectAll(".group")
-        .data(d)
-      .selectAll('.bar')
-        .data(function(d, i) { return d.values; })
+    label.select('tspan').transition()
+        .duration(duration / 2)
+        .style('fill-opacity', 0)
       .transition()
-        .ease(d3.easeLinear)
+        .duration(duration / 2)
+        .text(years[yearIndex].slice(2, 4))
+        .style('fill-opacity', 1)
+
+    var dx = xScale('32-33') - xScale('30-31');
+    var chart = g.select(".chart");
+    var group = chart.selectAll(".group")
+        .data(data[yearIndex], function(d, i) { return d.cohort })
+
+    group.exit().selectAll(".bar")
+      .transition()
+      .ease(d3.easeLinear)
+      .duration(duration / 2)
+      .attr("x", yearIndex * dx )
+      .style("fill", '#ccc')
+      .on('end', function() { d3.select(this).remove(); })
+
+    group = group.enter().append("g")
+        .attr("class", "group")
+        .attr("transform", function(d) { return "translate(" + xCohort(d.cohort) + ",0)"; })
+      .merge(group)
+
+    var bar = group.selectAll('.bar')
+        .data(function(d, i) { return d.values; })
+
+    bar = bar.enter().append("rect")
+        .attr("class", "bar")
+        .attr("width", xScale.bandwidth())
+        .attr("x", 0)
+        .attr("y", function(d) { return yScale(0); })
+        .attr("height", 0)
+        .on('mouseover', function(d, i) { console.log('moused', d, i) })
+        .style("fill", function(d, i) { return (i === 0) ? 'steelblue' : 'crimson'; } )
+      .merge(bar)
+
+    bar.transition()
         .duration(duration)
+        .ease(d3.easeLinear)
+        .attr("x", yearIndex * dx )
         .attr("y", function(d) { return yScale(d[1]); })
         .attr("height", function(d) { return Math.abs( yScale(d[0]) - yScale(d[1]) ) })
-        .on('end', function(d, i) { if (recurse && i ===0 && this.parentNode.__data__.cohort === '20-21') update(++yearIndex, recurse); });
+        .style("fill", function(d, i) { return (i === 0) ? 'steelblue' : 'crimson'; } )
+        .on('end', function(d, i) { if ((recurse) && (i === 0) &&
+              (this.parentNode.__data__.cohort === '20-21') &&
+              (yearIndex < years.length - 1)) update(++yearIndex, recurse);
+        })
 
     g2.selectAll(".group")
         .data(data2[yearIndex])
@@ -181,6 +252,7 @@ d3.tsv("rates.tsv", function(error, tsv) {
         .duration(duration)
         .attr("y", function(d) { return yScale2(d[1]); })
         .attr("height", function(d) { return Math.abs( yScale2(d[0]) - yScale2(d[1]) ) })
+        .style("fill", "crimson")
   }
 });
 

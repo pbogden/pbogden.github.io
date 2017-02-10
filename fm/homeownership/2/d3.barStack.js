@@ -16,12 +16,13 @@ d3.barStack = function() {
     selection.each(function(data) {
 
       var g = d3.select(this).append("g")
+          .attr('class', 'chart')
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
       xScale
           .range([0, width - margin.left - margin.right])
           .padding(.1)
-          .domain(data.map(function(d) { return d.cohort; }));
+          .domain(data.map(function(d) { return d.age; }));
 
       extent = extent || d3.extent(data, function(d) { return d[1]; });
       extent[0] = Math.min(0, extent[0]);
@@ -52,10 +53,10 @@ d3.barStack = function() {
 
       // Bind the data -- one .group for each stack
       var group = g.selectAll(".group")
-          .data(data)
+          .data(data, function(d) { return d.age; })
         .enter().append("g")
           .attr("class", "group")
-          .attr("transform", function(d) { return "translate(" + xScale(d.cohort) + ",0)"; })
+          .attr("transform", function(d) { return "translate(" + xScale(d.age) + ",0)"; })
 
       // Draw a stack
       group.selectAll(".bar")
@@ -66,7 +67,8 @@ d3.barStack = function() {
           .attr("x", 0)
           .attr("y", function(d) { return yScale(d[1]); })
           .attr("height", function(d) { return Math.abs( yScale(d[0]) - yScale(d[1]) ) })
-          .style("fill", function(d, i) { return (i === 0) ? 'steelblue' : 'crimson'; } )
+          .style("fill", function(d, i) { return (i === 0) ? 'steelblue' : 'crimson'; } );
+//          .style("fill", "steelblue");
 
       // Zero crossing
       g.append("path")
