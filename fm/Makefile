@@ -6,7 +6,8 @@ zip:
 	cp ~/Sites/single/bundle/graphic.zip ./zip
 
 static:
-	cp ~/Sites/single/svg-only/svg-only.svg ./single/svg-only
+	cp ~/Sites/single/svg-only/svg-only.svg ./single/static
+	cp ~/Sites/single/bluemarble/masked-big.png ./single/static
 
 ga:
 	cp ~/Sites/fm/ga/3/index.html ga/3/
