@@ -1,6 +1,9 @@
-all: homeownership static
+all: multi
 
-.PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga zip homeownerdhip
+.PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga zip homeownership multi
+
+multi:
+	cp ~/Sites/fm/multi/10/final.gif ./multi/final.gif
 
 zip:
 	cp ~/Sites/single/bundle/graphic.zip ./zip
