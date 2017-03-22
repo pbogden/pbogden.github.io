@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>hexbin</title>
+<title>verizon</title>
 <style>
 
 .hexagons {
@@ -25,9 +25,32 @@ p, form {
   <label for="#background">background</label><br>
 <p>
 
-<form style="top: 250px;">
+<form id='strokewidth' style="top: 100px;">
+<b>Line width</b><br>
+  <input id="width1" type="radio" name="width" value="1px" checked>
+  <label for="#width1">width 1px</label><br>
+  <input id="width2" type="radio" name="width" value="2px">
+  <label for="#width1">width 2px</label><br>
+</form>
+
+<form id="strokeshade" style="top: 170px;">
+<b>Line strength</b><br>
+  <input id="width1" type="radio" name="shade" value="0.1" checked>
+  <label for="#width1">10%</label><br>
+  <input id="width2" type="radio" name="shade" value="0.2">
+  <label for="#width2">20%</label><br>
+  <input id="width5" type="radio" name="shade" value="0.5">
+  <label for="#width5">50%</label><br>
+  <input id="width10" type="radio" name="shade" value="1.0">
+  <label for="#width10">100%</label><br>
+</form>
+
+<form style="top: 280px;">
+<b>Circle color</b></br>
   <input id="fmblue" type="radio" name="color" value="interpolateFMblue" checked>
   <label for="#fmblue">FM blue</label><br>
+  <input id="fmnavy" type="radio" name="color" value="interpolateFMnavy">
+  <label for="#fmnavy">FM navy</label><br>
   <input id="blue" type="radio" name="color" value="interpolateBlues">
   <label for="#blue">blue</label><br>
   <input id="red" type="radio" name="color" value="interpolateReds">
