@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>hexbin</title>
+<style>
+
+.hexagons {
+  fill: none;
+  stroke-width: 0.5px;
+/*  stroke: #000; */
+}
+
+p, form {
+  position: absolute;
+  left: 1em;
+}
+
+</style>
+
+<p>
+  <input id="land" type="checkbox">
+  <label for="#land">land</label><br>
+  <input id="flat" type="checkbox">
+  <label for="#flat">flat</label><br>
+  <input id="background" type="checkbox">
+  <label for="#background">background</label><br>
+<p>
+
+<form style="top: 250px;">
+  <input id="fmblue" type="radio" name="color" value="interpolateFMblue" checked>
+  <label for="#fmblue">FM blue</label><br>
+  <input id="blue" type="radio" name="color" value="interpolateBlues">
+  <label for="#blue">blue</label><br>
+  <input id="red" type="radio" name="color" value="interpolateReds">
+  <label for="#red">red</label><br>
+  <input id="green" type="radio" name="color" value="interpolateGreens">
+  <label for="#green">green</label><br>
+  <input id="orange" type="radio" name="color" value="interpolateOranges">
+  <label for="#orange">orange</label><br>
+  <input id="brown" type="radio" name="color" value="interpolateYlOrBr">
+  <label for="#brown">brown</label><br>
+  <input id="purple-blue" type="radio" name="color" value="interpolatePuBu">
+  <label for="#purple-blue">purple-blue</label><br>
+  <input id="purple-red" type="radio" name="color" value="interpolatePuRd">
+  <label for="#purple-red">purple-red</label><br>
+  <input id="yellow-green" type="radio" name="color" value="interpolateYlGn">
+  <label for="#yellow-green">yellow-green</label><br>
+<form>
+
+<body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="bundle.min.js"></script>
