@@ -14,7 +14,16 @@ form, img {
   left: 1em;
 }
 
+#download-link {
+  position: absolute;
+  top: 1em;
+  left: 900px;
+  padding: 5px;
+}
+
 </style>
+
+<a id="download-link" download='verizon.png'>Download as PNG</a>
 
 <form>
   <input id="land" type="checkbox">
@@ -51,11 +60,11 @@ form, img {
 
 <form style="top: 300px;">
 <b>Circle color</b></br>
-  <input id="fmblue" type="radio" name="color" value="interpolateFMblue" checked>
+  <input id="fmblue" type="radio" name="color" value="interpolateFMblue">
   <label for="#fmblue">FM blue</label><br>
   <input id="fmnavy" type="radio" name="color" value="interpolateFMnavy">
   <label for="#fmnavy">FM navy</label><br>
-  <input id="blue" type="radio" name="color" value="interpolateBlues">
+  <input id="blue" type="radio" name="color" value="interpolateBlues" checked>
   <label for="#blue">blue</label><br>
   <input id="red" type="radio" name="color" value="interpolateReds">
   <label for="#red">red</label><br>
@@ -73,10 +82,14 @@ form, img {
   <label for="#yellow-green">yellow-green</label><br>
 </form>
 
-<img src="att.png" width="200px" style="left: 750px; top:320px;"/>
+<!-- <img src="att.png" width="200px" style="left: 750px; top:320px;"/> -->
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 <script src="https://d3js.org/topojson.v2.min.js"></script>
 <script src="bundle.min.js"></script>
+<script src="svg2png.js"></script>
+<script>
+setTimeout(svg2png, 3000);
+</script>

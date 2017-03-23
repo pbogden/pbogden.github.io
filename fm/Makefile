@@ -7,6 +7,8 @@ verizon:
 	cp ~/Sites/single/verizon/bundle.min.js single/verizon
 	cp ~/Sites/single/verizon/bins2016.json single/verizon
 	cp ~/Sites/single/verizon/att.png single/verizon
+	cp ~/Sites/single/verizon/verizon.png single/verizon
+	cp ~/Sites/single/verizon/verizon.svg single/verizon
 	cp ~/Sites/single/data/us.json single/data
 
 multi:
