@@ -9,6 +9,7 @@ verizon:
 	cp ~/Sites/single/verizon/att.png single/verizon
 	cp ~/Sites/single/verizon/verizon.png single/verizon
 	cp ~/Sites/single/verizon/verizon.svg single/verizon
+	cp ~/Sites/single/verizon/svg2png.js single/verizon
 	cp ~/Sites/single/data/us.json single/data
 
 multi:
