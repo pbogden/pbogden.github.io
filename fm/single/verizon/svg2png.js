@@ -1,7 +1,7 @@
 
 function svg2png() {
   // Serialize the SVG to a String
-  var svgString = new XMLSerializer().serializeToString( svg.node() );
+  var svgString = new XMLSerializer().serializeToString( d3.select('svg').node() );
 
   // Convert SVG to a Blob
   var svgBlob = new Blob([svgString], {type: "image/svg+xml;charset=utf-8"});
@@ -24,7 +24,7 @@ function svg2png() {
     // Draw the image on a canvas
     ctx.drawImage(img, 0, 0);
     var png = canvas.toDataURL("image/png");
-    d3.select('body').append('img').style('top', height + "px").attr('src', png)
+//    d3.select('body').append('img').style('top', height + "px").attr('src', png)
     URL.revokeObjectURL(png);
 
     // Download link uses .toBlob() to allow large images
