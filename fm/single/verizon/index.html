@@ -9,21 +9,21 @@
 /*  stroke: #000; */
 }
 
-p, form, img {
+form, img {
   position: absolute;
   left: 1em;
 }
 
 </style>
 
-<p>
+<form>
   <input id="land" type="checkbox">
   <label for="#land">land</label><br>
   <input id="flat" type="checkbox" checked>
-  <label for="#flat">flat</label><br>
+  <label for="#flat">flat 70%</label><br>
   <input id="background" type="checkbox">
   <label for="#background">background</label><br>
-<p>
+</form>
 
 <form id='strokewidth' style="top: 90px;">
 <b>Line width</b><br>
@@ -51,11 +51,11 @@ p, form, img {
 
 <form style="top: 300px;">
 <b>Circle color</b></br>
-  <input id="fmblue" type="radio" name="color" value="interpolateFMblue">
+  <input id="fmblue" type="radio" name="color" value="interpolateFMblue" checked>
   <label for="#fmblue">FM blue</label><br>
   <input id="fmnavy" type="radio" name="color" value="interpolateFMnavy">
   <label for="#fmnavy">FM navy</label><br>
-  <input id="blue" type="radio" name="color" value="interpolateBlues" checked>
+  <input id="blue" type="radio" name="color" value="interpolateBlues">
   <label for="#blue">blue</label><br>
   <input id="red" type="radio" name="color" value="interpolateReds">
   <label for="#red">red</label><br>
