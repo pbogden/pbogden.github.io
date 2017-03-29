@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>iframe</title>
+
+<body>
+<iframe id='container' src="index.html" style="width: 100%;"></iframe>
+
+<script>
+window.onresize = resized;
+window.onload = resized;
+function resized() {
+  var w = window.innerWidth;
+  var h = Math.round(500 * w / 960);
+
+  console.log('innerWidth', w)
+  console.log('h', h)
+
+  document.getElementById('container')
+      .setAttribute("style", "width:" + w + "px; height:" + h + "px");
+}
+</script>

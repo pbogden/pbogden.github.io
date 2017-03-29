@@ -22,6 +22,9 @@ form, img {
 }
 
 </style>
+<body>
+
+<div id="container"></div>
 
 <form class="force" style="top: 20px; left: 400px">
 <b>Restart</b><br>
@@ -96,10 +99,20 @@ form, img {
   <label for="#yellow-green">yellow-green</label><br>
 </form>
 
-<!-- <img src="att.png" width="200px" style="left: 750px; top:320px;"/> -->
-
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 <script src="https://d3js.org/topojson.v2.min.js"></script>
 <script src="bundle.min.js"></script>
+<script>
+window.onresize = resized;
+resized();
+
+function resized() {
+  var w = window.innerWidth;
+  var h = Math.round(500 * w / 960);
+
+  document.getElementById('container')
+      .setAttribute("style", "width:" + w + "px; height:" + h + "px");
+}
+</script>
