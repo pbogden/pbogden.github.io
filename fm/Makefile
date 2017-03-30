@@ -4,7 +4,8 @@ all: progress2017
 
 progress2017: 
 	cp ~/Sites/single/progress2017/test.html single/progress2017/index.html
-	cp ~/Sites/single/dynamic2/bundle.min.js single/dynamic2
+	cp ~/Sites/single/progress2017/d3.min.js single/progress2017
+	cp ~/Sites/single/progress2017/bundle.min.js single/progress2017
 
 dynamic2: verizon
 	cp ~/Sites/single/dynamic2/test.html single/dynamic2/index.html
