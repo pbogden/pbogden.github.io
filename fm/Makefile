@@ -1,6 +1,12 @@
 all: progress2017
 
-.PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga zip homeownership multi progress2017
+.PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga zip homeownership multi progress2017 test
+
+test:
+	cp ~/Sites/single/test/index.html test
+	cp ~/Sites/single/test/d3.min.js test
+	cp ~/Sites/single/test/bundle.min.js test
+	cp ~/Sites/single/test/*.svg test
 
 progress2017: 
 	cp ~/Sites/single/progress2017/test.html single/progress2017/index.html
