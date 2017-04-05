@@ -19,6 +19,9 @@ dynamic2: verizon
 	cp ~/Sites/single/dynamic2/iframe.html single/dynamic2
 	cp ~/Sites/single/dynamic2/bundle.min.js single/dynamic2
 	cp ~/Sites/single/dynamic2/final.gif single/dynamic2
+	cp ~/Sites/single/dynamic2/final4.gif single/dynamic2
+	cp ~/Sites/single/dynamic2/final16.gif single/dynamic2
+	cp ~/Sites/single/dynamic2/final256.gif single/dynamic2
 	cp ~/Sites/single/data/us.json single/data
 
 verizon:
