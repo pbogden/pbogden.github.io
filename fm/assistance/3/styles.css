@@ -1,0 +1,101 @@
+body {
+  font-family: Univers, Arial, sans-serif;
+}
+
+.container {
+  max-width: 585px;  // TEMPORARY
+}
+
+text.title {
+  text-anchor: middle;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+/* Buttons */
+.button rect {
+  stroke: #999faa; /* navy 40% */
+  stroke-width: 2px;
+}
+
+.button rect.pressed {
+  fill: #000f2b; /* navy 100% */
+}
+
+.button #gradient-start {
+  stop-color: #999faa; /* navy 40% */
+  stop-opacity: 1;
+}
+
+.button #gradient-stop {
+  stop-color: #4d576b; /* navy 70% */
+  stop-opacity: 1;
+}
+
+.button #gradient-start.active, .button #gradient-start.pressed {
+  stop-color: #4d576b; /* navy 70% */
+}
+
+.button #gradient-stop.active, .button #gradient-stop.pressed {
+  stop-color: #000f2b; /* navy 100% */
+}
+
+.button text {
+  font-size: 30px;
+  fill: #eee;
+  pointer-events: none;
+  text-anchor: middle;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Bar chart */
+
+.bar {
+//  fill: rgb(33,108,43);
+  fill: #000f2b;  /* 100% FM Navy */
+}
+
+.bar1 {
+  fill: #007697;  /* 100% FM Blue */
+}
+
+.bar rect.active {
+  fill: rgb(77,137,85);  /* 80% */
+}
+
+.bar rect.negative {
+  fill: rgb(197,81,71);
+}
+
+.bar rect.negative.active {
+  fill: rgb(209,116,108);  /* 80% */
+}
+
+.x.axis text, .y.axis text {
+  font-size: 2em;
+}
+
+text {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.tooltip {
+  background: rgb(217,215,220); /* FM gray */
+}
+
+#background-rect {
+  fill: rgb(217,215,220); /* FM gray */
+}
+
+#rect-positive {
+  fill: rgb(77,137,85); /* 80% tint */
+}
+
+#rect-negative {
+  fill: rgb(209,116,108); /* 80% tint */
+}

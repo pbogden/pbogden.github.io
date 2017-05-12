@@ -1,0 +1,56 @@
+[{ "key": "recipients",
+   "values": {
+      "label": "Recipients", "x": 0.15, "y": 0
+    , "data": [
+          {"key": "Renters", "value": 0.10},
+          {"key": "Owners",  "value": 0.20}
+      ]
+    , "text0": "Only 10% of renters expect financial help"
+    , "text1": "But<br> 20% of owners received financial help"
+    }
+ },
+ { "key": "providers",
+   "values": {
+      "label": "Providers",  "x": 0.34, "y": 0
+    , "data": [
+          {"key": "Renters", "value": 0.38},
+          {"key": "Owners",  "value": 0.16}
+      ]
+    , "text0": "38% of renters expect to be providers in the future"
+    , "text1": "But only 16% of owners actually provided help"
+    }
+ },
+ { "key": "impact",
+   "values": {
+      "label": "Impact",    "x": 0.50, "y": 0
+    , "data": [
+          {"key": "Needed", "value": 0.64},
+          {"key": "Didn't need",  "value": 0.36}
+      ]
+    , "text0": "64% of owners needed financial assistance"
+    , "text1": "36% said assistance made no difference"
+    }
+ },
+ { "key":"education",
+   "values": {
+      "label": "Education", "x": 0.67, "y": 0
+    , "data": [
+          {"key": "Renters", "value": 0.15},
+          {"key": "Owners",  "value": 0.28}
+      ]
+    , "text0": "Only 15% of those who stopped at high school will get assistance"
+    , "text1": "Post-graduate education doubles the assistance"
+    }
+ },
+ { "key":"race",
+   "values": {
+      "label": "Race",      "x": 0.84, "y": 0
+    , "data": [
+          {"key": "Minorities",         "value": 0.52},
+          {"key": "General Population", "value": 0.38}
+      ]
+    , "text0": "Over half of minorities expect to be providers"
+    , "text1": "38% of the general population expects to be providers"
+    }
+ }
+]
