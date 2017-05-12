@@ -39,15 +39,16 @@ var info0 = container.append("div")
     .style("position", "absolute")
     .style("left", bbox.left + 0.05 * bbox.width + "px")
     .style("top",  bbox.top +  0.40 * bbox.height + "px")
-    .style("width",bbox.width / 5 + "px")
+    .style("width",bbox.width / 3 + "px")
 
 var info1 = container.append("div")
     .attr("class", "info")
     .style("font-size", bbox.width / 24 + "px")
+    .style("text-align", "right")
     .style("position", "absolute")
-    .style("left", bbox.left + 0.75 * bbox.width + "px")
+    .style("left", bbox.left + 0.60 * bbox.width + "px")
     .style("top",  bbox.top +  0.40 * bbox.height + "px")
-    .style("width",bbox.width / 5 + "px")
+    .style("width",bbox.width / 3 + "px")
 
 g.append("rect")
     .attr("id", "background-rect")
@@ -67,7 +68,7 @@ g.append("rect")
 var chart = d3.barChart()
   .x(function(d) { return d.key; })
   .y(function(d) { return +d.value; })
-  .margin({ top: 300, right: 250, bottom: 75, left: 275 })
+  .margin({ top: 400, right: 250, bottom: 75, left: 275 })
   .width(width)
   .height(height)
   .extent([0, .58]);
@@ -175,11 +176,17 @@ function pressedButton(d, i) {
 // TODO: Update the chart with new data
 function update(d) {
   var yScale = chart.yScale();
-  g.selectAll('.bar')
+  g.selectAll('.bar rect')
       .data(d)
     .transition()
       .attr("y", function(d) { return ( yScale(0) - yScale(d.value) ) > 0 ? yScale(d.value) : yScale(0); })
       .attr("height", function(d) { return Math.abs( yScale(0) - yScale(d.value) ) });
+
+  g.selectAll('.bar text')
+      .data(d)
+    .transition()
+      .attr("y", function(d) { return ( yScale(0) - yScale(d.value) ) > 0 ? yScale(d.value) : yScale(0); })
+      .text(function(d) { return Math.round( 100 * d.value ) + " %"; })
 
   var xScale = chart.xScale()
       .domain(d.map(function(d) { return d.key; }));

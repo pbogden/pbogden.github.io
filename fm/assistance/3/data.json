@@ -6,7 +6,7 @@
           {"key": "Owners",  "value": 0.20}
       ]
     , "text0": "Only 10% of renters expect financial help"
-    , "text1": "But<br> 20% of owners received financial help"
+    , "text1": "But 20% of owners received financial help"
     }
  },
  { "key": "providers",
@@ -39,7 +39,7 @@
           {"key": "Owners",  "value": 0.28}
       ]
     , "text0": "Only 15% of those who stopped at high school will get assistance"
-    , "text1": "Post-graduate education doubles the assistance"
+    , "text1": "Post-graduate education doubles the likelihood"
     }
  },
  { "key":"race",
@@ -50,7 +50,7 @@
           {"key": "General Population", "value": 0.38}
       ]
     , "text0": "Over half of minorities expect to be providers"
-    , "text1": "38% of the general population expects to be providers"
+    , "text1": "For the general population, it's only 38%"
     }
  }
 ]

@@ -58,14 +58,25 @@ d3.barChart = function() {
       //     .style("fill", "black")
       //     .text("Frequency");
 
-      g.selectAll(".bar")
+      var bar = g.selectAll(".bar")
           .data(data)
-        .enter().append("rect")
+        .enter().append("g")
           .attr("class", "bar")
+
+      bar.append("rect")
           .attr("x", function(d) { return xScale(d[0]); })
           .attr("width", xScale.bandwidth())
           .attr("y", function(d) { return ( yScale(0) - yScale(d[1]) ) > 0 ? yScale(d[1]) : yScale(0); })
           .attr("height", function(d) { return Math.abs( yScale(0) - yScale(d[1]) ) });
+
+      bar.append("text")
+          .attr("x", function(d) { return xScale(d[0]) + xScale.bandwidth() / 2; })
+          .attr("y", function(d) { return ( yScale(0) - yScale(d[1]) ) > 0 ? yScale(d[1]) : yScale(0); })
+          .attr("font-size", "1.3em")
+          .attr("dy", "1.3em")
+          .text(function(d) { return 100 * d[1] + " %"; })
+          .style("fill", "white")
+          .style("text-anchor", "middle")
 
       g.append("path")
           .datum([ [d3.min(xScale.range()), yScale(0)], [d3.max(xScale.range()), yScale(0)] ])
