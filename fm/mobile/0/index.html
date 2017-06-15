@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>production</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+body {
+    margin: 0;
+    background: #fff;
+    font-family: 'Glypha-55Roman',"Georgia","Century",serif;
+}
+
+header {
+    height: 70px;
+    width: 100%;
+    background: #000f2b;
+    margin: 0px auto;
+}
+
+.row {
+  width: 100%;
+  background: #fff;
+  display: inline-block;
+}
+
+p {
+  padding: 5px;
+}
+
+.left-column {
+  min-width: 320px;  /* min column width on FM */
+  vertical-align: top;
+  float:left;
+  background: #eee;
+}
+
+.right-column {
+  width: 38%;
+  background: #7fbacb;
+  vertical-align: top;
+  float:left;
+}
+
+.container {
+  position: relative;
+  padding-bottom: 52.08%; /*  for (1 / aspect ratio) = 500 / 960 = 0.5208 */
+  padding-bottom: 100%;   /*  (1 / aspect ratio) = height / width = 1 */
+  padding-top: 0px;
+  height: 0;
+}
+
+/* In HTML5, iframe width & height must be in px */
+iframe {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.spacer {
+    height: 40px;
+    width: 100%;
+    background: #d9d7dc;
+}
+
+.page_title {
+    color: #000;
+    font-size: 26px;
+    padding: 10px 0px 0px 20px;
+}
+
+</style>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>if (typeof d3 === 'undefined') document.write("<script src='/~pbogden/d3/d3.min.js'><\/script>")</script>
+<body>
+
+<header></header>
+
+<div id="nav_main"></div>
+
+<div class='spacer'></div>
+
+<div class="row">
+  <div class="page_title">
+    Mobile demo
+  </div>
+</div>
+
+<div class="row">
+    <div style="width: 330px">  <!-- simulate mobile width -->
+      <div class='container'>
+        <iframe src="graphic.html" frameborder="0" scrolling="no"></iframe>
+      </div>
+      <div class='left-column'>
+        <p>
+        The smallest mobile devices (e.g., iPhone 5 and SE) have a screen width of 320px,
+          which is the width of this paragraph.
+	<p>
+          This demo has no borders.
+          By default, the FM website puts 45px borders on each side. So if the
+          borders cannot be removed, content will need to be 230px wide.
+        </p>
+      </div>
+    </div>
+</div>
+
+<div class='spacer'></div>
+
+<div class="row">
+  <div class="page_title">
+    Responsive demo
+  </div>
+</div>
+
+<div class="row">
+  <div style="max-width: 783px">
+    <div class='container'>
+      <iframe src="graphic.html" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div class='left-column' style="min-width: 320px;">
+      <p>
+      In this demo, the container for the graphic is responsive.
+      Regardless of browser size, the graphic fills the container, which has a maximum width of 783px. 
+      The maximum content width on the FM website -- maximum column width is 843px, with 30px of padding on all sides.
+      Adjust the width of your browser to see the effect.
+   </div>
+  </div>
+</div>
