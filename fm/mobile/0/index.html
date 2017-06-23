@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>production</title>
+<title>mobile production</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 
@@ -43,10 +43,14 @@ p {
 
 .container {
   position: relative;
-  padding-bottom: 52.08%; /*  for (1 / aspect ratio) = 500 / 960 = 0.5208 */
-  padding-bottom: 100%;   /*  (1 / aspect ratio) = height / width = 1 */
+  padding-bottom: 52.08%;  /*  for (1 / aspect ratio) = 500 / 960 = 0.5208 */
+  padding-bottom: 104.73%; /*  for (1 / aspect ratio) = 820 / 783 = 1.0473 */
   padding-top: 0px;
   height: 0;
+}
+
+.mobile {
+  padding-bottom: 117.50%; /*  for (1 / aspect ratio) = 920 / 783 = 1.0473 */
 }
 
 /* In HTML5, iframe width & height must be in px */
@@ -86,19 +90,14 @@ iframe {
 </div>
 
 <div class="row">
-    <div style="width: 330px">  <!-- simulate mobile width -->
-      <div class='container'>
-        <iframe src="graphic.html" frameborder="0" scrolling="no"></iframe>
+    <div style="max-width: 330px">  <!-- 330px simulates mobile width -->
+      <div class='container mobile'>
+        <iframe src="../production3" frameborder="0" scrolling="no"></iframe>
       </div>
       <div class='left-column'>
         <p>
-        The smallest mobile devices (e.g., iPhone 5 and SE) have a screen width of 320px,
-          which is the width of this paragraph.
-	<p>
-          This demo has no borders.
-          By default, the FM website puts 45px borders on each side. So if the
-          borders cannot be removed, content will need to be 230px wide.
-        </p>
+          This demo is 330px wide.
+          With 45px borders, content needs to be 230px wide.
       </div>
     </div>
 </div>
@@ -114,14 +113,12 @@ iframe {
 <div class="row">
   <div style="max-width: 783px">
     <div class='container'>
-      <iframe src="graphic.html" frameborder="0" scrolling="no"></iframe>
+      <iframe src="../production2" frameborder="0" scrolling="no"></iframe>
     </div>
     <div class='left-column' style="min-width: 320px;">
       <p>
-      In this demo, the container for the graphic is responsive.
-      Regardless of browser size, the graphic fills the container, which has a maximum width of 783px. 
-      That's the maximum content width on the FM website -- maximum column width is 843px, with 30px of padding on all sides.
-      Adjust the width of your browser to see the effect.
+      This demo is responsive, meaning that it adjusts to browser width.
+      The maximum content width is 783px, which is 843px minus 30px borders.
    </div>
   </div>
 </div>

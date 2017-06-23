@@ -3,10 +3,15 @@ all: mobile
 .PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga zip homeownership multi progress2017 test assistance mobile
 
 mobile:
-	cp ~/Sites/d3-components/production/*.html mobile/0
-	cp ~/Sites/d3-components/production/*.css mobile/0
-	cp ~/Sites/d3-components/production/bundle.min.js mobile/0
-	cp ~/Sites/d3-components/production/data.csv mobile/0
+	cp ~/Sites/d3-components/mobile/test.html mobile/0/index.html
+	cp ~/Sites/d3-components/production2/*.html mobile/production2
+	cp ~/Sites/d3-components/production2/*.css mobile/production2
+	cp ~/Sites/d3-components/production2/bundle.min.js mobile/production2
+	cp ~/Sites/d3-components/production2/data.csv mobile/production2
+	cp ~/Sites/d3-components/production3/*.html mobile/production3
+	cp ~/Sites/d3-components/production3/*.css mobile/production3
+	cp ~/Sites/d3-components/production3/bundle.min.js mobile/production3
+	cp ~/Sites/d3-components/production3/data.csv mobile/production3
 
 assistance:
 	cp ~/Sites/fm/assistance/3/* assistance/3
