@@ -1,0 +1,18 @@
+.button text {
+  fill: #eee;
+  pointer-events: none;
+  text-anchor: middle;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.button rect {
+  stroke: #999faa; /* navy 40% */
+  stroke-width: 2px;
+  fill: url(#gradient1);
+}
+
+.button rect:hover, .button rect.pressed {
+  fill: url(#dark-gradient1);
+}

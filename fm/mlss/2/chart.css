@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.chart .curve {
+  fill: none;
+  stroke: steelblue;
+}
+
+.chart .stripe {
+  fill: #ecf2f9;
+  stroke: none;
+}
