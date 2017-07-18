@@ -6,6 +6,7 @@ body {
 .chart .curve {
   fill: none;
   stroke: steelblue;
+  stroke-width: 3;
 }
 
 .chart .stripe {

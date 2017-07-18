@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>mlss mobile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+body {
+    margin: 0;
+    background: #fff;
+    font-family: 'Glypha-55Roman',"Georgia","Century",serif;
+}
+
+header {
+    height: 70px;
+    width: 100%;
+    background: #000f2b;
+    margin: 0px auto;
+}
+
+.row {
+  width: 100%;
+  background: #fff;
+  display: inline-block;
+}
+
+p {
+  padding: 5px;
+}
+
+.left-column {
+  min-width: 230px;  /* min column width on FM */
+  vertical-align: top;
+  float:left;
+  background: #eee;
+}
+
+.container {
+  position: relative;
+  padding-bottom: 104.73%; /*  for (1 / aspect ratio) = 820 / 783 = 1.0473 */
+  padding-bottom: 52.08%;  /*  for (1 / aspect ratio) = 500 / 960 = 0.5208 */
+  padding-top: 0px;
+  height: 0;
+}
+
+/* In HTML5, iframe width & height must be in px */
+iframe {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.spacer {
+    height: 40px;
+    width: 100%;
+    background: #d9d7dc;
+}
+
+.page_title {
+    color: #000;
+    font-size: 26px;
+    padding: 10px 0px 0px 20px;
+}
+
+</style>
+
+<body>
+
+<div id="nav_main"></div>
+
+<div class='spacer'></div>
+
+<div class="row">
+  <div class="page_title">
+    Mobile demo
+  </div>
+</div>
+
+<div class="row">
+    <div style="max-width: 320px">  <!-- 330px simulates mobile width -->
+      <div class='container'>
+        <iframe src="../2" frameborder="0" scrolling="no"></iframe>
+      </div>
+      <div class='left-column'>
+        <p>
+          This demo is 320px wide, which is the width of the iPhone SE.
+        <p>
+          With additional padding, the width would be even smaller:
+          FM's component (.iw_component) is 290px, and
+          FM's article (.article-wrapper.padding-30) leaves 230px.
+      </div>
+    </div>
+</div>
+
+<div class='spacer'></div>
+
+<div class="row">
+  <div class="page_title">
+    Responsive demo
+  </div>
+</div>
+
+<div class="row">
+  <div style="max-width: 783px; margin: 0 auto;">
+    <div class='container'>
+      <iframe src="../2" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div class='left-column' style="min-width: 320px;">
+      <p>
+      This demo is responsive -- it adjusts to browser width.
+      The maximum content width is 783px, which is maximum FM column width (843px) minus 30px borders.
+      It's easy to limit the chart to a smaller maximum.
+   </div>
+  </div>
+</div>
