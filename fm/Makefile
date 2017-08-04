@@ -3,15 +3,15 @@ all: mlss
 .PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga zip homeownership multi progress2017 test assistance mobile mlss
 
 mobile:
-	cp ~/Sites/d3-components/mobile/test.html mobile/0/index.html
+	cp ~/Sites/d3-components/mobile/index.html mobile/0/index.html
+	cp ~/Sites/d3-components/production1/*.html mobile/production1
+	cp ~/Sites/d3-components/production1/*.css mobile/production1
+	cp ~/Sites/d3-components/production1/bundle.min.js mobile/production1
+	cp ~/Sites/d3-components/production1/data.csv mobile/production1
 	cp ~/Sites/d3-components/production2/*.html mobile/production2
 	cp ~/Sites/d3-components/production2/*.css mobile/production2
 	cp ~/Sites/d3-components/production2/bundle.min.js mobile/production2
 	cp ~/Sites/d3-components/production2/data.csv mobile/production2
-	cp ~/Sites/d3-components/production3/*.html mobile/production3
-	cp ~/Sites/d3-components/production3/*.css mobile/production3
-	cp ~/Sites/d3-components/production3/bundle.min.js mobile/production3
-	cp ~/Sites/d3-components/production3/data.csv mobile/production3
 
 mlss:
 	cp ~/Sites/fm/mlss/2/index.html mlss/2
