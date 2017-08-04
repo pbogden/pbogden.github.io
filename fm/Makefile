@@ -4,14 +4,14 @@ all: mlss
 
 mobile:
 	cp ~/Sites/d3-components/mobile/index.html mobile/0/index.html
-	cp ~/Sites/d3-components/production1/*.html mobile/production1
-	cp ~/Sites/d3-components/production1/*.css mobile/production1
-	cp ~/Sites/d3-components/production1/bundle.min.js mobile/production1
-	cp ~/Sites/d3-components/production1/data.csv mobile/production1
-	cp ~/Sites/d3-components/production2/*.html mobile/production2
-	cp ~/Sites/d3-components/production2/*.css mobile/production2
-	cp ~/Sites/d3-components/production2/bundle.min.js mobile/production2
-	cp ~/Sites/d3-components/production2/data.csv mobile/production2
+	cp ~/Sites/d3-components/hpsi1/test.html mobile/hpsi1/index.html
+	cp ~/Sites/d3-components/hpsi1/*.css mobile/hpsi1
+	cp ~/Sites/d3-components/hpsi1/bundle.min.js mobile/hpsi1
+	cp ~/Sites/d3-components/hpsi1/data.csv mobile/hpsi1
+	cp ~/Sites/d3-components/hpsi2/test.html mobile/hpsi2/index.html
+	cp ~/Sites/d3-components/hpsi2/*.css mobile/hpsi2
+	cp ~/Sites/d3-components/hpsi2/bundle.min.js mobile/hpsi2
+	cp ~/Sites/d3-components/hpsi2/data.csv mobile/hpsi2
 
 mlss:
 	cp ~/Sites/fm/mlss/production/*.html mlss/3
