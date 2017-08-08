@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>hpsi1</title>
+<title>hpsi3</title>
 <style>
 
 body {
@@ -10,16 +10,32 @@ body {
   padding: 0;
 }
 
+#outer {
+  position: relative;
+  margin: 0 auto;    /* center container horizontally in FM's wide iframe */
+  max-width: 500px;
+}
+
 #container {
   position: relative;
-  height: 388px;     /* IE needs this */
+  height: 0;                  /* IE needs this */
+  padding-bottom: 104.73%;    /* IE needs this too */
+  width: 100%;
   margin: 0 auto;    /* center container horizontally in FM's wide iframe */
-  max-width: 330px;
+  max-width: 783px;
 }
 
 svg {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+}
+
+#download-link {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 text {
@@ -31,7 +47,12 @@ text {
 }
 
 </style>
-
-<div id='container'><svg></svg></div>
+<body>
+<div id="outer">
+  <div id='container'>
+    <svg></svg>
+    <a id="download-link"></a>
+  </div>
+</div>
 
 <script src="bundle.min.js"></script>

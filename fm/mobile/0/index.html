@@ -43,13 +43,17 @@ p {
 
 .container {
   position: relative;
-  padding-bottom: 130.27%; /*  desktop */
+  padding-bottom: 126.44%; /*  desktop */
   padding-top: 0px;
   height: 0;
 }
 
 .mobile {
   padding-bottom: 122.61%; /* mobile */
+}
+
+.responsive1 {
+  padding-bottom: 104.73%; /* desktop, no brush */
 }
 
 /* In HTML5, iframe width & height must be in px */
@@ -105,7 +109,30 @@ iframe {
 
 <div class="row">
   <div class="page_title">
-    Responsive demo
+    Responsive 1
+  </div>
+</div>
+
+<div class="row">
+  <div style="max-width: 400px">
+    <div class='container responsive1'>
+      <iframe src="../hpsi3" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div class='left-column' style="min-width: 320px;">
+      <p>
+      This demo is responsive -- it adjusts to browser width.
+      The maximum content width is 400px.  
+      <p>
+      This version has a PNG-download link, which only works on desktop.
+   </div>
+  </div>
+</div>
+
+<div class='spacer'></div>
+
+<div class="row">
+  <div class="page_title">
+    Responsive 2
   </div>
 </div>
 
@@ -116,9 +143,9 @@ iframe {
     </div>
     <div class='left-column' style="min-width: 320px;">
       <p>
-      This demo is responsive, meaning that it adjusts to browser width.
-      The maximum content width is 783px, which is 843px minus 30px borders.
+      This responsive demo has maximum content width of 783px, which is 843px minus 30px borders.
+      <p>
+      This version has a "brush" for adjusting the horizontal scale.
    </div>
   </div>
 </div>
-
