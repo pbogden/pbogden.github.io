@@ -31,8 +31,19 @@ text {
   user-select: none;
 }
 
-</style>
+#download-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
-<div id='container'><svg></svg></div>
+</style>
+<body>
+<div id="outer">
+  <div id='container'>
+    <svg></svg>
+    <a id="download-link"></a>
+  </div>
+</div>
 
 <script src="bundle.min.js"></script>
