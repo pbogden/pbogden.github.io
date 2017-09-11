@@ -10,16 +10,10 @@ body {
   padding: 0;
 }
 
-#outer {
-  position: relative;
-  margin: 0 auto;    /* center container horizontally in FM's wide iframe */
-  max-width: 500px;
-}
-
 #container {
   position: relative;
   height: 0;                  /* IE needs this */
-  padding-bottom: 104.73%;    /* IE needs this too */
+  padding-bottom: 130.27%;    /* IE needs this too */
   width: 100%;
   margin: 0 auto;    /* center container horizontally in FM's wide iframe */
   max-width: 783px;
@@ -32,18 +26,15 @@ svg {
   width: 100%;
 }
 
+text {
+  pointer-events: none;
+  user-select: none;
+}
+
 #download-link {
   position: absolute;
   top: 0;
   right: 0;
-}
-
-text {
-  pointer-events: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
 }
 
 </style>
