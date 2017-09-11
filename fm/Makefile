@@ -2,6 +2,11 @@ all: mlss
 
 .PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga zip homeownership multi progress2017 test assistance mobile mlss
 
+mobile1:
+	cp ~/Sites/d3-components/hpsi1/test.html mobile/hpsi1/index.html
+	cp ~/Sites/d3-components/hpsi1/bundle.min.js mobile/hpsi1
+	cp ~/Sites/d3-components/hpsi1/data.csv mobile/hpsi1
+
 mobile2:
 	cp ~/Sites/d3-components/hpsi2/test.html mobile/hpsi2/index.html
 	cp ~/Sites/d3-components/hpsi2/bundle.min.js mobile/hpsi2
