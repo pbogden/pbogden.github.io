@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>mlss 2</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mlss</title>
 <style>
 
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0;
 }
 
 #container {
-    width: 100%;
+  position: relative;
+  height: 500px;     /* because FM sets iframe "height: 500px" && IE needs this */
+  margin: 0 auto;    /* center container horizontally in FM's wide iframe */
 }
 
 svg {
-  display: block;
-  margin: auto;
-  max-width: 783px;
+  position: absolute;
+  width: 100%;
 }
 
 </style>
-<body>
-<link rel="stylesheet" href="chart.css" type="text/css">
-<link rel="stylesheet" href="button.css" type="text/css">
-<div id="container"></div>
+
+<div id='container'></div>
+
 <script src="bundle.min.js"></script>
