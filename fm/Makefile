@@ -6,7 +6,7 @@ mobile:
 	cp ~/Sites/d3-components/mobile/index.html mobile/0/index.html
 	cp ~/Sites/d3-components/hpsi1/test.html mobile/hpsi1/index.html
 	cp ~/Sites/d3-components/hpsi2/test.html mobile/hpsi2/index.html
-	cp ~/Sites/d3-components/hpsi3/test.html mobile/hpsi3/index.html
+	cp ~/Sites/d3-components/hpsi3/production.html mobile/hpsi3/index.html
 	cp ~/Sites/d3-components/hpsi1/bundle.min.js mobile/hpsi1
 	cp ~/Sites/d3-components/hpsi2/bundle.min.js mobile/hpsi2
 	cp ~/Sites/d3-components/hpsi3/bundle.min.js mobile/hpsi3

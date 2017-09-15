@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>hpsi3</title>
+<title>hpsi 3</title>
 <style>
 
 body {
@@ -10,19 +10,25 @@ body {
   padding: 0;
 }
 
+#outer-container {
+  max-width: 783px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 #container {
   position: relative;
-  height: 0;                  /* IE needs this */
-  padding-bottom: 130.27%;    /* IE needs this too */
+  height: 0;
+  padding-bottom: 132.82%;
   width: 100%;
-  margin: 0 auto;    /* center container horizontally in FM's wide iframe */
-  max-width: 783px;
+  margin: 0 auto;
 }
 
 svg {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
   width: 100%;
 }
 
@@ -39,7 +45,7 @@ text {
 
 </style>
 <body>
-<div id="outer">
+<div id="outer-container">
   <div id='container'>
     <svg></svg>
     <a id="download-link"></a>
