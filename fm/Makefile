@@ -15,10 +15,9 @@ mobile:
 	cp ~/Sites/d3-components/hpsi3/data.csv mobile/hpsi3
 
 mlss:
-	cp ~/Sites/fm/mlss/2/index.html mlss/2
-	cp ~/Sites/fm/mlss/2/bundle.min.js mlss/2
-	cp ~/Sites/fm/mlss/2/fm.csv mlss/2
-	cp ~/Sites/fm/mlss/mobile/index.html mlss/mobile
+	cp ~/Sites/d3-components/mlss/index.html mlss/3
+	cp ~/Sites/d3-components/mlss/bundle.min.js mlss/3
+	cp ~/Sites/d3-components/mlss/data.csv mlss/3
 
 assistance:
 	cp ~/Sites/fm/assistance/3/* assistance/3
