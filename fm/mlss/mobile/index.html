@@ -7,7 +7,7 @@
 body {
     margin: 0;
     background: #fff;
-    font-family: 'Glypha-55Roman',"Georgia","Century",serif;
+    font-family: 'Glypha-55Roman',"Georgia","Century", sans-serif;
 }
 
 header {
@@ -30,22 +30,37 @@ p {
 .left-column {
   min-width: 230px;  /* min column width on FM */
   vertical-align: top;
-  float:left;
   background: #eee;
+}
+
+.right-column {
+  width: 38%;
+  background: #7fbacb;
+  vertical-align: top;
+  float:left;
 }
 
 .container {
   position: relative;
-  padding-bottom: 52.08%;  /*  for (1 / aspect ratio) = 500 / 960 = 0.5208 */
   padding-top: 0px;
   height: 0;
+}
+
+.mobile {
+/*  padding-bottom: 118.77%; /* HPSI mobile */
+  padding-bottom: 52.08%; /* MLSS */
+}
+
+.desktop {
+/*  padding-bottom: 118.77%; /* HPSI mobile */
+  padding-bottom: 52.08%; /* MLSS */
 }
 
 /* In HTML5, iframe width & height must be in px */
 iframe {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -63,8 +78,9 @@ iframe {
 }
 
 </style>
-
 <body>
+
+<header></header>
 
 <div id="nav_main"></div>
 
@@ -72,22 +88,28 @@ iframe {
 
 <div class="row">
   <div class="page_title">
-    Mobile demo
+    
+  </div>
+</div>
+
+<div class='spacer'></div>
+
+<div class="row">
+  <div class="page_title">
+<!--  Mobile #1 -->
   </div>
 </div>
 
 <div class="row">
-    <div style="max-width: 320px">  <!-- 330px simulates mobile width -->
-      <div class='container'>
-        <iframe src="../2" frameborder="0" scrolling="no"></iframe>
+    <div style="max-width: 230px">
+      <div class='container mobile'>
+<!--        <iframe src="../hpsi1" frameborder="0" scrolling="no"></iframe> -->
+        <iframe src="../3" frameborder="0" scrolling="no"></iframe>
       </div>
       <div class='left-column'>
         <p>
-          This demo is 320px wide (the width of the iPhone SE).
-        <p>
-          Additional padding makes things narrower.
-          FM's component (.iw_component) is 290px, and
-          FM's article (.article-wrapper.padding-30) leaves 230px.
+          This mobile demo is 230px wide. 
+          It simulates a 320px viewport (e.g., iPhone SE) with 45px borders on each side.
       </div>
     </div>
 </div>
@@ -96,20 +118,60 @@ iframe {
 
 <div class="row">
   <div class="page_title">
-    Responsive demo
+<!--  Mobile #2 -->
   </div>
 </div>
 
 <div class="row">
-  <div style="max-width: 783px; margin: 0 auto;">
-    <div class='container'>
-      <iframe src="../2" frameborder="0" scrolling="no"></iframe>
+    <div style="max-width: 320px">
+      <div class='container mobile'>
+<!--        <iframe src="../hpsi1" frameborder="0" scrolling="no"></iframe> -->
+        <iframe src="../3" frameborder="0" scrolling="no"></iframe>
+      </div>
+      <div class='left-column'>
+        <p>
+          This mobile demo is 320px wide. 
+          It simulates a 320px viewport (e.g., iPhone SE) with no borders.
+      </div>
+    </div>
+</div>
+
+<div class='spacer'></div>
+
+<div class="row">
+  <div class="page_title">
+  </div>
+</div>
+
+<div class="row">
+  <div style="max-width: 400px">
+    <div class='container mobile'>
+<!--      <iframe src="../hpsi3" frameborder="0" scrolling="no"></iframe> -->
+      <iframe src="../3" frameborder="0" scrolling="no"></iframe>
     </div>
     <div class='left-column' style="min-width: 320px;">
       <p>
-      This demo is responsive -- it adjusts to browser width.
-      The maximum content width is 783px, which is maximum FM column width (843px) minus 30px borders.
-      It's easy to limit the chart to a smaller maximum.
+      This demo has maximum content width of 400px.  
+   </div>
+  </div>
+</div>
+
+<div class='spacer'></div>
+
+<div class="row">
+  <div class="page_title">
+  </div>
+</div>
+
+<div class="row">
+  <div style="max-width: 783px">
+    <div class='container desktop'>
+<!--       <iframe src="../hpsi2" frameborder="0" scrolling="no"></iframe> -->
+      <iframe src="../3" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div class='left-column3' style="min-width: 320px;">
+      <p>
+      This demo has maximum content width of 783px (843px minus 30px borders).
    </div>
   </div>
 </div>

@@ -18,6 +18,7 @@ mlss:
 	cp ~/Dropbox/fm/mlss/index.html mlss/3
 	cp ~/Dropbox/fm/mlss/bundle.min.js mlss/3
 	cp ~/Dropbox/fm/mlss/data.csv mlss/3
+	cp ~/Sites/fm/mlss/mobile/index.html mlss/mobile
 
 assistance:
 	cp ~/Sites/fm/assistance/3/* assistance/3
