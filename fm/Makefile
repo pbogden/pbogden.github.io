@@ -14,14 +14,12 @@ mobile:
 	cp ~/Sites/d3-components/hpsi2/data.csv mobile/hpsi2
 	cp ~/Sites/d3-components/hpsi3/data.csv mobile/hpsi3
 
+# Copy MLSS files from Dropbox (this confirms that I'm using production version)
 mlss:
-	cp ~/Sites/d3-components/mlss3/index.html mlss/5
-	cp ~/Sites/d3-components/mlss3/bundle.min.js mlss/5
-	cp ~/Sites/d3-components/mlss3/data.tsv mlss/5
-	cp ~/Dropbox/fm/mlss/index.html mlss/4
-	cp ~/Dropbox/fm/mlss/bundle.min.js mlss/4
-	cp ~/Dropbox/fm/mlss/data.tsv mlss/4
-	cp ~/Sites/fm/mlss/mobile/index.html mlss/mobile
+	cp ~/Dropbox/fm/mlss/index.html mlss/mlss
+	cp ~/Dropbox/fm/mlss/bundle.min.js mlss/mlss
+	cp ~/Dropbox/fm/mlss/data.tsv mlss/mlss
+	cp ~/Sites/d3-components/mobile/index.html mlss/mobile
 
 assistance:
 	cp ~/Sites/fm/assistance/3/* assistance/3
