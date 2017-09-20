@@ -15,6 +15,9 @@ mobile:
 	cp ~/Sites/d3-components/hpsi3/data.csv mobile/hpsi3
 
 mlss:
+	cp ~/Sites/d3-components/mlss3/index.html mlss/5
+	cp ~/Sites/d3-components/mlss3/bundle.min.js mlss/5
+	cp ~/Sites/d3-components/mlss3/data.tsv mlss/5
 	cp ~/Dropbox/fm/mlss/index.html mlss/4
 	cp ~/Dropbox/fm/mlss/bundle.min.js mlss/4
 	cp ~/Dropbox/fm/mlss/data.tsv mlss/4
