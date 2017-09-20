@@ -16,9 +16,10 @@ mobile:
 
 # Copy MLSS files from Dropbox (this confirms that I'm using production version)
 mlss:
-	cp ~/Dropbox/fm/mlss/index.html mlss/mlss
-	cp ~/Dropbox/fm/mlss/bundle.min.js mlss/mlss
-	cp ~/Dropbox/fm/mlss/data.tsv mlss/mlss
+	cp ~/Sites/d3-components/mlss/mlss.zip mlss/mlss
+	cp ~/Sites/d3-components/mlss/index.html mlss/mlss
+	cp ~/Sites/d3-components/mlss/bundle.min.js mlss/mlss
+	cp ~/Sites/d3-components/mlss/data.tsv mlss/mlss
 	cp ~/Sites/d3-components/mobile/index.html mlss/mobile
 
 assistance:
