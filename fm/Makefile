@@ -14,7 +14,6 @@ mobile:
 	cp ~/Sites/d3-components/hpsi2/data.csv mobile/hpsi2
 	cp ~/Sites/d3-components/hpsi3/data.csv mobile/hpsi3
 
-# Copy MLSS files from Dropbox (this confirms that I'm using production version)
 mlss:
 	cp ~/Sites/d3-components/mlss/mlss.zip mlss/mlss
 	cp ~/Sites/d3-components/mlss/index.html mlss/mlss
