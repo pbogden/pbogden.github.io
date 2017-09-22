@@ -20,6 +20,8 @@ mlss:
 	cp ~/Sites/d3-components/mlss/bundle.min.js mlss/mlss
 	cp ~/Sites/d3-components/mlss/data.tsv mlss/mlss
 	cp ~/Sites/d3-components/mobile/index.html mlss/mobile
+	cp ~/Sites/d3-components/mlss-png/mlss1.png mlss/mlss
+	cp ~/Sites/d3-components/mlss-png/mlss2.png mlss/mlss
 
 assistance:
 	cp ~/Sites/fm/assistance/3/* assistance/3
