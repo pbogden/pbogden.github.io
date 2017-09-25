@@ -15,6 +15,7 @@ mobile:
 	cp ~/Sites/d3-components/hpsi3/data.csv mobile/hpsi3
 
 mlss:
+	cp ~/Sites/d3-components/mlss-gif/mlss.gif mlss/gif
 	cp ~/Sites/d3-components/mlss/mlss.zip mlss/mlss
 	cp ~/Sites/d3-components/mlss/index.html mlss/mlss
 	cp ~/Sites/d3-components/mlss/bundle.min.js mlss/mlss
