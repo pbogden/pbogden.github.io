@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>hpsi mobile</title>
+<title>mobile</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 
 body {
-    margin: 0;
-    background: #fff;
-    font-family: 'Glypha-55Roman',"Georgia","Century",serif;
+  margin: 0;
+  font-family: 'Glypha-55Roman',"Georgia","Century", sans-serif;
+  background: #ecebed;
 }
 
 header {
-    height: 70px;
-    width: 100%;
-    background: #000f2b;
-    margin: 0px auto;
+  height: 70px;
+  width: 100%;
+  background: #000f2b;
+  margin: 0px auto;
 }
 
 .row {
   width: 100%;
   background: #fff;
   display: inline-block;
+  background: #ecebed;
 }
 
 p {
@@ -28,9 +29,9 @@ p {
 }
 
 .left-column {
-  min-width: 320px;  /* min column width on FM */
+  min-width: 230px;  /* min column width on FM */
   vertical-align: top;
-  background: #eee;
+  background: #;
 }
 
 .right-column {
@@ -42,24 +43,23 @@ p {
 
 .container {
   position: relative;
-  padding-bottom: 126.44%; /*  desktop */
   padding-top: 0px;
   height: 0;
 }
 
 .mobile {
-  padding-bottom: 118.77%; /* mobile */
+  padding-bottom: 62.5%; /* 960-by-600 */
 }
 
-.responsive1 {
-  padding-bottom: 126.44%; /* desktop, no brush */
+.desktop {
+  padding-bottom: 62.5%; /* 960-by-600 */
 }
 
 /* In HTML5, iframe width & height must be in px */
 iframe {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -83,23 +83,29 @@ iframe {
 
 <div id="nav_main"></div>
 
+<div class="row">
+  <div class="page_title">
+    
+  </div>
+</div>
+
 <div class='spacer'></div>
 
 <div class="row">
   <div class="page_title">
-    Mobile demo
+<!--  Mobile #1 -->
   </div>
 </div>
 
 <div class="row">
-    <div style="max-width: 330px">  <!-- 330px simulates mobile width -->
+    <div style="max-width: 230px">
       <div class='container mobile'>
-        <iframe src="../hpsi1" frameborder="0" scrolling="no"></iframe>
+        <iframe src="../mlss" frameborder="0" scrolling="no"></iframe>
       </div>
       <div class='left-column'>
         <p>
-          This demo is 330px wide.
-          With 45px borders, content needs to be 230px wide.
+          This mobile demo is 230px wide. 
+          It simulates a 320px viewport (e.g., iPhone SE) with 45px borders on each side.
       </div>
     </div>
 </div>
@@ -108,21 +114,38 @@ iframe {
 
 <div class="row">
   <div class="page_title">
-    Desktop 1
+<!--  Mobile #2 -->
+  </div>
+</div>
+
+<div class="row">
+    <div style="max-width: 320px">
+      <div class='container mobile'>
+        <iframe src="../mlss" frameborder="0" scrolling="no"></iframe>
+      </div>
+      <div class='left-column'>
+        <p>
+          This mobile demo is 320px wide. 
+          It simulates a 320px viewport (e.g., iPhone SE) with no borders.
+      </div>
+    </div>
+</div>
+
+<div class='spacer'></div>
+
+<div class="row">
+  <div class="page_title">
   </div>
 </div>
 
 <div class="row">
   <div style="max-width: 400px">
-    <div class='container responsive1'>
-      <iframe src="../hpsi3" frameborder="0" scrolling="no"></iframe>
+    <div class='container mobile'>
+      <iframe src="../mlss" frameborder="0" scrolling="no"></iframe>
     </div>
     <div class='left-column' style="min-width: 320px;">
       <p>
-      This demo is responsive -- it adjusts to browser width.
-      The maximum content width is 400px.  
-      <p>
-      This version has a PNG-download link, which only works on desktop.
+      This demo has maximum content width of 400px.  
    </div>
   </div>
 </div>
@@ -131,20 +154,17 @@ iframe {
 
 <div class="row">
   <div class="page_title">
-    Desktop 2
   </div>
 </div>
 
 <div class="row">
   <div style="max-width: 783px">
-    <div class='container'>
-      <iframe src="../hpsi2" frameborder="0" scrolling="no"></iframe>
+    <div class='container desktop'>
+      <iframe src="../mlss" frameborder="0" scrolling="no"></iframe>
     </div>
     <div class='left-column3' style="min-width: 320px;">
       <p>
-      This responsive demo has maximum content width of 783px, which is 843px minus 30px borders.
-      <p>
-      This version has a "brush" for adjusting the horizontal scale.
+      This demo has maximum content width of 783px (843px minus 30px borders).
    </div>
   </div>
 </div>
