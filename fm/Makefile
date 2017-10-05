@@ -5,12 +5,14 @@ all: mobile
 gtm:
 	cp ~/Sites/d3-components/mlss/test_gtm.html mlss/mlss/test.html
 
+# Be careful about updating HPSI mobile -- it may conflict with MLSS
 mobile:
-	cp ~/Sites/d3-components/mobile/index.html mobile/0/index.html
-	cp ~/Sites/d3-components/hpsi3/index.html mobile/hpsi3
-	cp ~/Sites/d3-components/hpsi3/bundle.min.js mobile/hpsi3
-	cp ~/Sites/d3-components/hpsi3/data.csv mobile/hpsi3
+	cp ~/Sites/d3-components/mobile/hpsi.html mobile/0/index.html
+	cp ~/Sites/d3-components/hpsi4/index.html mobile/hpsi4
+	cp ~/Sites/d3-components/hpsi4/bundle.min.js mobile/hpsi4
+	cp ~/Sites/d3-components/hpsi4/data.csv mobile/hpsi4
 
+# Be careful about updating MLSS mobile -- it may conflict with HPSI
 mlss:
 	cp ~/Sites/d3-components/mlss-gif/mlss.gif mlss/gif
 	cp ~/Sites/d3-components/mlss/mlss.zip mlss/mlss
