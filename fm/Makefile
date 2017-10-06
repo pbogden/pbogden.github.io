@@ -59,7 +59,7 @@ multi:
 	cp ~/Sites/fm/multi/10/final.gif ./multi/final.gif
 
 zip:
-	cp ~/Sites/single/bundle/graphic.zip ./zip
+	cp ~/Sites/d3-components/hpsi4/hpsi.zip zip
 
 static:
 	cp ~/Sites/single/svg-only/svg-only.svg ./single/static
