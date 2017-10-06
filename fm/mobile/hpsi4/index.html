@@ -10,6 +10,12 @@ body {
   padding: 0;
 }
 
+/* Use this container to limit width */
+#outer-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 #container {
   position: relative;
   height: 0;
@@ -34,8 +40,10 @@ text {
 </style>
 <body>
 
-<div id='container'>
-    <svg></svg>
+<div id='outer-container'>
+  <div id='container'>
+      <svg></svg>
+  </div>
 </div>
 
 <script src="bundle.min.js"></script>
