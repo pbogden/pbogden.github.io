@@ -1,6 +1,10 @@
 all: mobile
 
-.PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga zip homeownership multi progress2017 test assistance mobile mlss gtm
+.PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga zip homeownership multi progress2017 test assistance mobile mlss gtm png
+
+png:
+	cp ~/Sites/d3-components/d3-svg2png/index.html png
+	cp ~/Sites/d3-components/d3-svg2png/d3-svg2png.js png
 
 gtm:
 	cp ~/Sites/d3-components/mlss/test_gtm.html mlss/mlss/test.html
