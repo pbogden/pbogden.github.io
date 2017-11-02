@@ -6,7 +6,7 @@ d3.svg2png = function() {
 
   // Create the desination image
   var img = new Image();
-  img.crossOrigin = "anonymous";  // Fixes IE problem
+  img.setAttribute('crossOrigin', 'anonymous');  // Fixes IE problem?
 
   function my(selection) {
     svg = selection.node();
