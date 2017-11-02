@@ -1,4 +1,4 @@
-d3.svg2png = function() {  
+d3.svg2png = function() {
   var sx = 0, sy = 0, sWidth = 960, sHeight = 500;  // Dimensions of full-size SVG
   var dx = 0, dy = 0, dWidth = 960, dHeight = 500;  // Save this part of SVG as PNG
 
@@ -6,6 +6,7 @@ d3.svg2png = function() {
 
   // Create the desination image
   var img = new Image();
+  img.crossOrigin = "anonymous";  // Fixes IE problem
 
   function my(selection) {
     svg = selection.node();
