@@ -4,7 +4,8 @@ all: mobile
 
 png:
 	cp ~/Sites/d3-components/d3-svg2png/index.html png
-	cp ~/Sites/d3-components/d3-svg2png/d3-svg2png.js png
+	cp ~/Sites/d3-components/d3-svg2png/d3.svg2png.js png
+	cp ~/Sites/d3-components/d3-svg2png/d3.min.js png
 
 gtm:
 	cp ~/Sites/d3-components/mlss/test_gtm.html mlss/mlss/test.html
