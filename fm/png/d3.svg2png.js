@@ -1,4 +1,3 @@
-d3.svg2png = function() {
   var sx = 0, sy = 0, sWidth = 960, sHeight = 500;  // Dimensions of full-size SVG
   var dx = 0, dy = 0, dWidth = 960, dHeight = 500;  // Save this part of SVG as PNG
 
@@ -17,7 +16,7 @@ d3.svg2png = function() {
         .attr("href", "#")
         .style("padding", "5px")
         .style("background-color", "#eee")
-        .html("Download")
+        .html("Download image")
         .on('click', function() {
           console.log('clicked');
 
