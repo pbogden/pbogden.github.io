@@ -1,3 +1,4 @@
+d3.svg2png = function() {  
   var sx = 0, sy = 0, sWidth = 960, sHeight = 500;  // Dimensions of full-size SVG
   var dx = 0, dy = 0, dWidth = 960, dHeight = 500;  // Save this part of SVG as PNG
 
@@ -35,7 +36,7 @@
           var svgBlob = new Blob([svgString], {type: "image/svg+xml"});
           var svgURL = URL.createObjectURL(svgBlob);
           img.src = svgURL;
-        });
+      });
   }
 
   // Draw the image on a canvas, then download the canvas as a PNG
