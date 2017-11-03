@@ -13,9 +13,9 @@ gtm:
 # Be careful about updating HPSI mobile -- it may conflict with MLSS
 mobile:
 	cp ~/Sites/d3-components/mobile/hpsi.html mobile/0/index.html
-	cp ~/Sites/d3-components/hpsi4/index.html mobile/hpsi4
-	cp ~/Sites/d3-components/hpsi4/bundle.min.js mobile/hpsi4
-	cp ~/Sites/d3-components/hpsi4/data.csv mobile/hpsi4
+	cp ~/Sites/d3-components/hpsi5/index.html mobile/hpsi5
+	cp ~/Sites/d3-components/hpsi5/bundle.min.js mobile/hpsi5
+	cp ~/Sites/d3-components/hpsi5/data.csv mobile/hpsi5
 
 # Be careful about updating MLSS mobile -- it may conflict with HPSI
 mlss:
