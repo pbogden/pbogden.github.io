@@ -1,6 +1,6 @@
 all: hpsi_latest
 
-.PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga zip homeownership multi progress2017 test assistance mobile mlss gtm png
+.PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga zip homeownership multi progress2017 test assistance mobile mlss mlss1 gtm png
 
 png:
 	cp ~/Sites/d3-components/d3-svg2png/index.html png
@@ -23,6 +23,12 @@ mobile:
 	cp ~/Sites/d3-components/hpsi6/bundle.min.js mobile/hpsi5
 	cp ~/Sites/d3-components/hpsi6/data.csv mobile/hpsi5
 
+# MLSS 1 -- Dec 2017 release
+mlss1:
+	cp ~/Sites/d3-components/mlss1/index.html mlss/mlss1
+	cp ~/Sites/d3-components/mlss1/bundle.min.js mlss/mlss1
+	cp ~/Sites/d3-components/mlss1/data.tsv mlss/mlss1
+
 # Be careful about updating MLSS mobile -- it may conflict with HPSI
 mlss:
 	cp ~/Sites/d3-components/mlss-gif/mlss.gif mlss/gif
@@ -30,7 +36,7 @@ mlss:
 	cp ~/Sites/d3-components/mlss/index.html mlss/mlss
 	cp ~/Sites/d3-components/mlss/bundle.min.js mlss/mlss
 	cp ~/Sites/d3-components/mlss/data.tsv mlss/mlss
-	cp ~/Sites/d3-components/mobile/index.html mlss/mobile
+#	cp ~/Sites/d3-components/mobile/index.html mlss/mobile
 	cp ~/Sites/d3-components/mlss-png/mlss1.png mlss/mlss
 	cp ~/Sites/d3-components/mlss-png/mlss2.png mlss/mlss
 
