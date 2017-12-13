@@ -1,6 +1,6 @@
-all: hpsi_latest
+all: mlss6
 
-.PHONY: fm3 fm5 fm6 fm7 fm8 fm9 fm10 fm11 fm12 fm16 fm27 fms fmr1 map1 map2 hpsi0 components0 gif talk talk2 iframe ga zip homeownership multi progress2017 test assistance mobile mlss mlss1 gtm png
+.PHONY: mlss6
 
 png:
 	cp ~/Sites/d3-components/d3-svg2png/index.html png
@@ -22,6 +22,11 @@ mobile:
 	cp ~/Sites/d3-components/hpsi6/index.html mobile/hpsi5
 	cp ~/Sites/d3-components/hpsi6/bundle.min.js mobile/hpsi5
 	cp ~/Sites/d3-components/hpsi6/data.csv mobile/hpsi5
+
+# MLSS 6 -- Prep for Dec 2017 release
+mlss6:
+	cp ~/Sites/fm/mlss/6/index.html mlss/6
+	cp ~/Sites/fm/mlss/6/bundle.min.js mlss/6
 
 # MLSS 1 -- Dec 2017 release
 mlss1:
