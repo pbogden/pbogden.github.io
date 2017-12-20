@@ -1,6 +1,6 @@
-all: mlss7
+all: mlss8
 
-.PHONY: mlss7
+.PHONY: mlss8
 
 png:
 	cp ~/Sites/d3-components/d3-svg2png/index.html png
@@ -22,6 +22,11 @@ mobile:
 	cp ~/Sites/d3-components/hpsi6/index.html mobile/hpsi5
 	cp ~/Sites/d3-components/hpsi6/bundle.min.js mobile/hpsi5
 	cp ~/Sites/d3-components/hpsi6/data.csv mobile/hpsi5
+
+# MLSS 8 -- Prep for Dec 2017 release
+mlss8:
+	cp ~/Sites/fm/mlss/8/index.html mlss/8
+	cp ~/Sites/fm/mlss/8/bundle.min.js mlss/8
 
 # MLSS 7 -- Prep for Dec 2017 release
 mlss7:
