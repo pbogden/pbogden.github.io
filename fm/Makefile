@@ -1,4 +1,4 @@
-all: mlss8
+all: mlss9
 
 .PHONY: mlss8
 
@@ -22,6 +22,11 @@ mobile:
 	cp ~/Sites/d3-components/hpsi6/index.html mobile/hpsi5
 	cp ~/Sites/d3-components/hpsi6/bundle.min.js mobile/hpsi5
 	cp ~/Sites/d3-components/hpsi6/data.csv mobile/hpsi5
+
+# MLSS 9 -- Prep for Dec 2017 release
+mlss9:
+	cp ~/Sites/fm/mlss/9/index.html mlss/9
+	cp ~/Sites/fm/mlss/9/bundle.min.js mlss/9
 
 # MLSS 8 -- Prep for Dec 2017 release
 mlss8:
