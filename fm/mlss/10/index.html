@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>mlss 10</title>
+<style>
+
+/* Use this container to limit width */
+#outer-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#container {
+  position: relative;
+  height: 0;
+  padding-bottom: 67%;  /* 67% for height / width = 500 / 750 */
+  padding-bottom: 52.08%;  /* 52.08% for height / width = 500 / 960 */
+  padding-bottom: 62.5%;   /* 600 / 960 */
+  width: 100%;
+  margin: 0 auto;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+text {
+  pointer-events: none;
+  user-select: none;
+}
+
+</style>
+
+<div id='outer-container'>
+  <div id='container'>
+      <svg></svg>
+  </div>
+</div>
+
+<script src="bundle.min.js"></script>
