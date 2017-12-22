@@ -27,6 +27,7 @@ mobile:
 mlss11:
 	cp ~/Sites/fm/mlss/11/index.html mlss/11
 	cp ~/Sites/fm/mlss/11/bundle.min.js mlss/11
+	cp ~/Sites/fm/mlss/11/mlss.zip mlss/11
 
 # MLSS 10 -- Prep for Dec 2017 release
 mlss10:
