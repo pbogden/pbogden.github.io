@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>mf 0</title>
+<style>
+
+.boundary {
+  fill: none;
+  stroke: #c0540f;  /* blue 100% */
+  stroke: #99660f;  /* bronze 100% */
+}
+
+.state {
+  fill: #d9d7dc;  /* light gray 100% */
+  fill: #edcac7;  /* salmon 30% */
+  fill: #ebe0cf;  /* bronze 20% */
+  fill: #f5efe7;  /* bronze 10% */
+}
+
+.state:hover {
+  fill: #ebe0cf;  /* bronze 20% */
+}
+
+.city {
+  fill: #007697;  /* blue 100% */
+}
+
+.city:hover, .city.active {
+  fill: #d9d7dc;    /* light gray 100% */
+  fill: #e2a8a3;    /* salmon 50% */
+  stroke: #c55147;    /* salmon 100% */
+  stroke-width: 5px;
+}
+
+#info {
+  position: absolute;
+  top: 1em;
+  left: 480px;
+  font-family: sans-serif;
+  font-size: 24px;
+}
+</style>
+<svg width="960" height="600"></svg>
+<div id='info' style='position: absolute; top: 1em; left: 480px; font-family: sans-serif; font-size: 24px;'></div>
+<script src="bundle.min.js"></script>

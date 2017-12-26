@@ -1,0 +1,333 @@
+[
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-84.3901849",
+    "33.7490987"
+   ]
+  },
+  "properties": {
+   "city": "Atlanta",
+   "state": "GA",
+   "file": "atlanta"
+  }
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-97.7436995",
+    "30.2711286"
+   ]
+  },
+  "properties": {
+   "city": "Austin",
+   "state": "TX",
+   "file": "austin"
+  }
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-80.8431268",
+    "35.2270869"
+   ]
+  },
+  "properties": {
+   "city": "Charlotte",
+   "state": "NC",
+   "file": "charlotte"
+  }
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-87.6244212",
+    "41.8755546"
+   ]
+  },
+  "properties": {
+   "city": "Chicago",
+   "state": "IL",
+   "file": "chicago"
+  }
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-84.5124602",
+    "39.1014537"
+   ]
+  },
+  "properties": {
+   "city": "Cincinnati",
+   "state": "OH",
+   "file": "cincinnati"
+  }
+ },
+ {
+  "city": "Cleveland",
+  "state": "OH"
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-83.0007065",
+    "39.9622601"
+   ]
+  },
+  "properties": {
+   "city": "Columbus",
+   "state": "OH",
+   "file": "columbus"
+  }
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-96.7968559",
+    "32.7762719"
+   ]
+  },
+  "properties": {
+   "city": "Dallas",
+   "state": "TX",
+   "file": "dallas"
+  }
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-104.9847034",
+    "39.7391536"
+   ]
+  },
+  "properties": {
+   "city": "Denver",
+   "state": "CO",
+   "file": "denver"
+  }
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-86.1583502",
+    "39.7683331"
+   ]
+  },
+  "properties": {
+   "city": "Indianapolis",
+   "state": "IN",
+   "file": "indianapolis"
+  }
+ },
+ {
+  "city": "Kansas",
+  "state": "MO"
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-115.149225",
+    "36.1662859"
+   ]
+  },
+  "properties": {
+   "city": "Las Vegas",
+   "state": "NV",
+   "file": "las-vegas"
+  }
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-118.244476",
+    "34.054935"
+   ]
+  },
+  "properties": {
+   "city": "Los Angeles",
+   "state": "CA",
+   "file": "los-angeles"
+  }
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-86.7743531",
+    "36.1622296"
+   ]
+  },
+  "properties": {
+   "city": "Nashville",
+   "state": "TN",
+   "file": "nashville"
+  }
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-73.9866136",
+    "40.7306458"
+   ]
+  },
+  "properties": {
+   "city": "New York",
+   "state": "NY",
+   "file": "new-york"
+  }
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-122.2713563",
+    "37.8044557"
+   ]
+  },
+  "properties": {
+   "city": "Oakland",
+   "state": "CA",
+   "file": "oakland"
+  }
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-117.8503088",
+    "33.7872568"
+   ]
+  },
+  "properties": {
+   "city": "Orange",
+   "state": "CA",
+   "file": "orange"
+  }
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-81.3790475",
+    "28.5421232"
+   ]
+  },
+  "properties": {
+   "city": "Orlando",
+   "state": "FL",
+   "file": "orlando"
+  }
+ },
+ {
+  "city": "Palm Beach",
+  "state": "FL"
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-112.0773456",
+    "33.4485866"
+   ]
+  },
+  "properties": {
+   "city": "Phoenix",
+   "state": "AZ",
+   "file": "phoenix"
+  }
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-122.6741949",
+    "45.5202471"
+   ]
+  },
+  "properties": {
+   "city": "Portland",
+   "state": "OR",
+   "file": "portland"
+  }
+ },
+ {
+  "city": "San Jose",
+  "state": "CA"
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-82.458444",
+    "27.9477595"
+   ]
+  },
+  "properties": {
+   "city": "Tampa",
+   "state": "FL",
+   "file": "tampa"
+  }
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-122.3300624",
+    "47.6038321"
+   ]
+  },
+  "properties": {
+   "city": "Seattle",
+   "state": "WA",
+   "file": "seattle"
+  }
+ },
+ {
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-77.0366456",
+    "38.8949549"
+   ]
+  },
+  "properties": {
+   "city": "Washington",
+   "state": "DC",
+   "file": "dc"
+  }
+ }
+]

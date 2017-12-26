@@ -1,6 +1,12 @@
-all: mlss11
+all: mf0
 
 .PHONY: mlss11
+
+mf0:
+	cp ~/Sites/fm/mf/0/bundle.min.js mf/0/
+	cp ~/Sites/fm/mf/0/index.html mf/0/
+	cp ~/Sites/fm/mf/0/data.json mf/0/
+	cp ~/Sites/fm/mf/0/10m.json mf/0/
 
 png:
 	cp ~/Sites/d3-components/d3-svg2png/index.html png
