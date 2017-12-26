@@ -31,8 +31,8 @@ mlss11:
 	cp ~/Sites/fm/mlss/mlss-gif/mlss.gif mlss/11
 	cp ~/Sites/fm/mlss/mlss-gif/mlsst.gif mlss/11
 	cp ~/Sites/fm/mlss/mlss-gif/mlssf.gif mlss/11
-	cp ~/Sites/fm/mlss/mlss-gif/data/mlss30.png mlss/11/mlss1.png
-	cp ~/Sites/fm/mlss/mlss-gif/data/mlss10.png mlss/11/mlss2.png
+	cp ~/Sites/fm/mlss/mlss-gif/mlsst.png mlss/11/
+	cp ~/Sites/fm/mlss/mlss-gif/mlssf.png mlss/11/
 
 # MLSS 10 -- Prep for Dec 2017 release
 mlss10:
