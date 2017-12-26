@@ -29,6 +29,8 @@ mlss11:
 	cp ~/Sites/fm/mlss/11/bundle.min.js mlss/11
 	cp ~/Sites/fm/mlss/11/mlss.zip mlss/11
 	cp ~/Sites/fm/mlss/mlss-gif/mlss.gif mlss/11
+	cp ~/Sites/fm/mlss/mlss-gif/mlsst.gif mlss/11
+	cp ~/Sites/fm/mlss/mlss-gif/mlssf.gif mlss/11
 	cp ~/Sites/fm/mlss/mlss-gif/data/mlss30.png mlss/11/mlss1.png
 	cp ~/Sites/fm/mlss/mlss-gif/data/mlss10.png mlss/11/mlss2.png
 
