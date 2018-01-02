@@ -75,8 +75,19 @@
   }
  },
  {
-  "city": "Cleveland",
-  "state": "OH"
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-81.6934446",
+    "41.5051613"
+   ]
+  },
+  "properties": {
+   "city": "Cleveland",
+   "state": "OH",
+   "file": "cleveland"
+  }
  },
  {
   "type": "Feature",
@@ -139,8 +150,19 @@
   }
  },
  {
-  "city": "Kansas",
-  "state": "MO"
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-94.5630298",
+    "39.0844687"
+   ]
+  },
+  "properties": {
+   "city": "Kansas City",
+   "state": "MO",
+   "file": "kansas-city"
+  }
  },
  {
   "type": "Feature",
@@ -248,8 +270,19 @@
   }
  },
  {
-  "city": "Palm Beach",
-  "state": "FL"
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-80.4494174",
+    "26.6279798"
+   ]
+  },
+  "properties": {
+   "city": "Palm Beach",
+   "state": "FL",
+   "file": "palm-beach"
+  }
  },
  {
   "type": "Feature",
@@ -282,8 +315,19 @@
   }
  },
  {
-  "city": "San Jose",
-  "state": "CA"
+  "type": "Feature",
+  "geometry": {
+   "type": "Point",
+   "coordinates": [
+    "-121.8905833",
+    "37.3361905"
+   ]
+  },
+  "properties": {
+   "city": "San Jose",
+   "state": "CA",
+   "file": "san-jose"
+  }
  },
  {
   "type": "Feature",
