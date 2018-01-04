@@ -1,6 +1,6 @@
 all: mf0
 
-.PHONY: mlss11
+.PHONY: mlss11 gif
 
 mf0:
 	cp ~/Sites/fm/mf/0/bundle.min.js mf/0/
