@@ -1,6 +1,6 @@
-all: mf0
+all: hpsi_latest
 
-.PHONY: mlss11 gif
+.PHONY: gif hpsi_latest
 
 mf0:
 	cp ~/Sites/fm/mf/0/bundle.min.js mf/0/
@@ -16,11 +16,11 @@ png:
 gtm:
 	cp ~/Sites/d3-components/mlss/test_gtm.html mlss/mlss/test.html
 
-# Latest HPSI (Dec 2017)
+# Latest HPSI (Dec -- for 1 Jan 2017 release)
 hpsi_latest:
-	cp ~/Sites/d3-components/hpsi6/index.html mobile/hpsi6
-	cp ~/Sites/d3-components/hpsi6/bundle.min.js mobile/hpsi6
-	cp ~/Sites/d3-components/hpsi6/data.csv mobile/hpsi6
+	cp ~/Sites/d3-components/hpsi7/index.html mobile/hpsi7
+	cp ~/Sites/d3-components/hpsi7/bundle.min.js mobile/hpsi7
+	cp ~/Sites/d3-components/hpsi7/data.csv mobile/hpsi7
 
 # Be careful about updating HPSI mobile -- it may conflict with MLSS
 mobile:
