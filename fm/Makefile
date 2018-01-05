@@ -1,6 +1,6 @@
-all: hpsi_latest
+all: hpsi_latest zip7
 
-.PHONY: gif hpsi_latest
+.PHONY: gif hpsi_latest zip7
 
 mf0:
 	cp ~/Sites/fm/mf/0/bundle.min.js mf/0/
@@ -117,8 +117,8 @@ verizon:
 multi:
 	cp ~/Sites/fm/multi/10/final.gif ./multi/final.gif
 
-zip6:
-	cp ~/Sites/d3-components/hpsi6/hpsi.zip zip
+zip7:
+	cp ~/Sites/d3-components/hpsi7/hpsi.zip zip
 
 static:
 	cp ~/Sites/single/svg-only/svg-only.svg ./single/static
