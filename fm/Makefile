@@ -1,6 +1,21 @@
-all: mf0
+all: hpsi_latest zip
 
-.PHONY: mlss11
+.PHONY: gif hpsi_latest zip
+
+# Latest HPSI (Feb 2018)
+hpsi_latest:
+	cp ~/Sites/d3-components/hpsi8/index.html    mobile/hpsi8
+	cp ~/Sites/d3-components/hpsi8/bundle.min.js mobile/hpsi8
+	cp ~/Sites/d3-components/hpsi8/data.csv      mobile/hpsi8
+
+# Latest HPSI zip (Feb 2018)
+zip:
+	cp ~/Sites/d3-components/hpsi8/hpsi.zip zip
+
+gif:
+	cp ~/Sites/fm/hpsi/2/hpsi.gif gif   # animated once through
+	cp ~/Sites/fm/hpsi/2/final.gif gif  # continuous loop
+	cp ~/Sites/fm/hpsi/2/final.png gif  # PNG of final image
 
 mf0:
 	cp ~/Sites/fm/mf/0/bundle.min.js mf/0/
@@ -15,12 +30,6 @@ png:
 
 gtm:
 	cp ~/Sites/d3-components/mlss/test_gtm.html mlss/mlss/test.html
-
-# Latest HPSI (Dec 2018)
-hpsi_latest:
-	cp ~/Sites/d3-components/hpsi8/index.html mobile/hpsi8
-	cp ~/Sites/d3-components/hpsi8/bundle.min.js mobile/hpsi8
-	cp ~/Sites/d3-components/hpsi8/data.csv mobile/hpsi8
 
 # Be careful about updating HPSI mobile -- it may conflict with MLSS
 mobile:
@@ -116,9 +125,6 @@ verizon:
 
 multi:
 	cp ~/Sites/fm/multi/10/final.gif ./multi/final.gif
-
-zip6:
-	cp ~/Sites/d3-components/hpsi6/hpsi.zip zip
 
 static:
 	cp ~/Sites/single/svg-only/svg-only.svg ./single/static
@@ -305,11 +311,6 @@ components0:
 	cp ~/Sites/fm/hpsi/1/styles.css components0
 	cp ~/Sites/fm/hpsi/1/bundle.min.js components0
 	cp ~/Sites/fm/hpsi/data/data.csv data
-
-gif:
-	cp ~/Sites/fm/hpsi/2/hpsi.gif gif   # animated once through
-	cp ~/Sites/fm/hpsi/2/final.gif gif  # continuous loop
-	cp ~/Sites/fm/hpsi/2/final.png gif  # PNG of final image
 
 hpsi1:
 	cp ~/Sites/fm/hpsi/1/index.html hpsi/1
