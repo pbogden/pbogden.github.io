@@ -16,11 +16,11 @@ png:
 gtm:
 	cp ~/Sites/d3-components/mlss/test_gtm.html mlss/mlss/test.html
 
-# Latest HPSI (Dec 2017)
+# Latest HPSI (Dec 2018)
 hpsi_latest:
-	cp ~/Sites/d3-components/hpsi6/index.html mobile/hpsi6
-	cp ~/Sites/d3-components/hpsi6/bundle.min.js mobile/hpsi6
-	cp ~/Sites/d3-components/hpsi6/data.csv mobile/hpsi6
+	cp ~/Sites/d3-components/hpsi8/index.html mobile/hpsi8
+	cp ~/Sites/d3-components/hpsi8/bundle.min.js mobile/hpsi8
+	cp ~/Sites/d3-components/hpsi8/data.csv mobile/hpsi8
 
 # Be careful about updating HPSI mobile -- it may conflict with MLSS
 mobile:
