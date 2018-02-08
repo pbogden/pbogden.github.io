@@ -1,6 +1,6 @@
 all: hpsi_latest zip
 
-.PHONY: gif hpsi_latest zip
+.PHONY: gif hpsi_latest zip verizon2017
 
 # Latest HPSI (Feb 2018)
 hpsi_latest:
@@ -18,10 +18,10 @@ gif:
 	cp ~/Sites/fm/hpsi/2/final.png gif  # PNG of final image
 
 verizon2017:
-	cp ~/Sites/single/verizon2017/test.html single/verizon/index.html
-	cp ~/Sites/single/verizon2017/bundle.min.js single/verizon/2017
-	cp ~/Sites/single/verizon2017/bins2016.json single/verizon/2017
-	cp ~/Sites/single/verizon/svg2png.js single/verizon
+	cp ~/Sites/single/verizon2017/test.html single/verizon2017/index.html
+	cp ~/Sites/single/verizon2017/bundle.min.js single/verizon2017
+	cp ~/Sites/single/verizon2017/bins2017.json single/verizon2017
+	cp ~/Sites/single/verizon/svg2png.js single/verizon2017
 	cp ~/Sites/single/data/us.json single/data
 
 mf0:
