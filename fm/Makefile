@@ -17,6 +17,7 @@ gif:
 	cp ~/Sites/fm/hpsi/2/final.gif gif  # continuous loop
 	cp ~/Sites/fm/hpsi/2/final.png gif  # PNG of final image
 
+# Note: I downloaded and saved a PNG of default values (by hand) for Katie
 verizon2017:
 	cp ~/Sites/single/verizon2017/test.html single/verizon2017/index.html
 	cp ~/Sites/single/verizon2017/bundle.min.js single/verizon2017
