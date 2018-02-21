@@ -1,6 +1,6 @@
 all: hpsi_latest zip
 
-.PHONY: gif hpsi_latest zip verizon2017
+.PHONY: gif hpsi_latest zip verizon2017 dynamic3
 
 # Latest HPSI (Feb 2018)
 hpsi_latest:
@@ -113,6 +113,11 @@ progress2017:
 	cp ~/Sites/single/progress2017/test.html single/progress2017/index.html
 	cp ~/Sites/single/progress2017/d3.min.js single/progress2017
 	cp ~/Sites/single/progress2017/bundle.min.js single/progress2017
+
+dynamic3:
+	cp ~/Sites/single/dynamic2/final600.gif single/dynamic3
+	cp ~/Sites/single/dynamic2/final1200.gif single/dynamic3
+	cp ~/Sites/single/dynamic2/final2400.gif single/dynamic3
 
 dynamic2: verizon
 	cp ~/Sites/single/dynamic2/test.html single/dynamic2/index.html
