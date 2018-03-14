@@ -2,15 +2,12 @@ all: mlss12
 
 .PHONY: gif hpsi_latest zip verizon2017 dynamic3
 
-# Latest HPSI (Feb 2018)
+# Latest HPSI (#9 -- Mar 2018)
 hpsi_latest:
-	cp ~/Sites/d3-components/hpsi8/index.html    mobile/hpsi8
-	cp ~/Sites/d3-components/hpsi8/bundle.min.js mobile/hpsi8
-	cp ~/Sites/d3-components/hpsi8/data.csv      mobile/hpsi8
-
-# Latest HPSI zip (Feb 2018)
-zip:
-	cp ~/Sites/d3-components/hpsi8/hpsi.zip zip
+	cp ~/Sites/d3-components/hpsi9/index.html    mobile/hpsi9
+	cp ~/Sites/d3-components/hpsi9/bundle.min.js mobile/hpsi9
+	cp ~/Sites/d3-components/hpsi9/data.csv      mobile/hpsi9
+	cp ~/Sites/d3-components/hpsi9/hpsi.zip zip
 
 gif:
 	cp ~/Sites/fm/hpsi/2/hpsi.gif gif   # animated once through
