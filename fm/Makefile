@@ -1,4 +1,4 @@
-all: hpsi_latest zip
+all: mlss12
 
 .PHONY: gif hpsi_latest zip verizon2017 dynamic3
 
@@ -45,6 +45,11 @@ mobile:
 	cp ~/Sites/d3-components/hpsi6/index.html mobile/hpsi5
 	cp ~/Sites/d3-components/hpsi6/bundle.min.js mobile/hpsi5
 	cp ~/Sites/d3-components/hpsi6/data.csv mobile/hpsi5
+
+# MLSS 12 -- Prep for Mar 2018 release
+mlss12:
+	cp ~/Sites/fm/mlss/12/index.html    mlss/12
+	cp ~/Sites/fm/mlss/12/bundle.min.js mlss/12
 
 # MLSS 11 -- Prep for Dec 2017 release
 mlss11:
