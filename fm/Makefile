@@ -48,6 +48,8 @@ mlss12:
 	cp ~/Sites/fm/mlss/12/index.html    mlss/12
 	cp ~/Sites/fm/mlss/12/bundle.min.js mlss/12
 	cp ~/Sites/fm/mlss/12/mlss.zip      mlss/12
+	cp ~/Sites/fm/mlss/12/fbook.png     mlss/12
+	cp ~/Sites/fm/mlss/12/tweet.png     mlss/12
 
 # MLSS 11 -- Prep for Dec 2017 release
 mlss11:
