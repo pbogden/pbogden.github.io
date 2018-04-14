@@ -7,7 +7,7 @@
 
 [housing demo](http://pbogden.com/single) -- The iterative process: a case study
 
-## What's shaking?  A: Interactive graphics
+## What's shaking?
 
 [earthquake demo](http://pbogden.com/shake) -- Interactive visualization meet data deluge
 
