@@ -13,4 +13,4 @@
 
 ## Getting serious
 
-[visualizr.io](http://visualizr.io) -- Where the real work gets done
+[visualizr.io](http://visualizr.io) -- Where the work gets done
