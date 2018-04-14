@@ -1,8 +1,4 @@
 
-## The secret plan
-
-[boat club demo](http://pbogden.com/racing/budget) -- Fighting gender bias with visual budgets
-
 ## Head of the Potomac
 
 [racing demo](http://pbogden.com/racing) -- Were you really faster or just going with the flow?
