@@ -9,7 +9,7 @@
 
 ## What's shaking?
 
-[earthquake demo](http://pbogden.com/shake) -- Interactive visualization meet data deluge
+[earthquake demo](http://pbogden.com/shake) -- Interactive maps meet data deluge
 
 ## Getting serious
 
