@@ -1,7 +1,7 @@
 
 # The secret plan
 
-[potomac boat club demo](http://pbogden.com/racing/budget) -- Fighting gender bias with budgets
+[potomac boat club demo](http://pbogden.com/racing/budget) -- Fighting gender bias with visual budgeting
 
 # Head of the Potomac
 
