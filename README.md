@@ -5,11 +5,11 @@
 
 # Head of the Potomac
 
-[racing demo](http://pbogden.com/racing) -- Were you faster or just going with the flow?
+[racing demo](http://pbogden.com/racing) -- Were you really faster or just going with the flow?
 
 # What's shaking?
 
-[earthquake demo](http://pbogden.com) -- Interactive visualization meet data deluge
+[earthquake demo](http://pbogden.com/shake) -- Interactive visualization meet data deluge
 
 # Corporate communications
 
