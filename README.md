@@ -1,5 +1,5 @@
 
-## Head of the Potomac data modeling
+## Head of the Potomac data analytics
 
 [racing demo](http://pbogden.com/racing) -- Were you really faster or just going with the flow?
 
