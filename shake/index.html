@@ -1,52 +1,109 @@
 <!DOCTYPE html>
-<meta charset='utf-8'>
-<title>shake</title>
+<html>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-<link rel="apple-touch-icon" sizes="114x114" href="shaking-retina.png">
-<meta name="apple-touch-fullscreen" content="yes" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Pbogden.github.io : Pages" />
 
-<style>
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/pygment_trac.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
 
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+    <title>pbogden</title>
+  </head>
 
-.line, path.domain {
-  fill: none;
-  stroke: black;
-  stroke-width: 1.5px;
-}
+  <body>
 
-.stations, .stations svg {
-  position: absolute;
-}
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="http://www.pbogden.com">pbogden.com</a>
 
-.stations svg {
-  width: 60px;
-  height: 20px;
-  padding-right: 100px;
-  font: 10px sans-serif;
-}
+          <h1 id="project_title">pbogden.com</h1>
+          <h2 id="project_tagline">science & tech in the public interest</h2>
 
-.stations circle, .dot {
-  fill: brown;
-  stroke: black;
-  stroke-width: 1.5px;
-}
+        </header>
+    </div>
 
-.brush .extent {
-  stroke: #fff;
-  fill-opacity: .125;
-}
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        
+<h3>Taking on the data deluge</h3>
 
-</style>
-<body>
-<script src="bundle.min.js"></script>
+The U.S. Government's <a href="https://www.data.gov/open-gov/">open data initiatives</a> have
+created all sorts of new data sources. The challenge is to extract
+useful information from the <a href='http://www.economist.com/node/15579717' target='_blank'>data deluge</a>.
+Fortunately, recent advances in data visualization can help.  For example...
+</p>
+
+<h4>Demo</h4>
+
+<p>
+If you're using a modern browser, you should see two graphics below. 
+The Google Map shows earthquake locations, and the scatter plot shows when they occured.
+These kinds of visualizations aren't new, and <a href="http://www.usgs.gov">USGS</a> has allowed
+you to download their earthquake data for years.
+What's relatively new is that your browser automatically acquired real-time data for the 
+last 7 days when you opened this Web page.
+That's just the beginning...
+</p>
+
+<p>
+<noscript><h5>Bummer! Your seem to be using an old browser...</h5>
+<font color='red'>This demo requires a browser that supports HTML5 and JavaScript.</font>
+</noscript>
+</p>
+
+<iframe src="shake/" width="640" height="500" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+<p>
+You also downloaded some software for analyzing your newly acquired data.
+Try it.  Click with your mouse (or tap with your finger) and drag on the <strong>lower</strong> plot to 
+create a "filter" (a translucent gray box) for the data displayed on the map. 
+You can then drag the filter along the lower plot to change (dynamically) the data displayed on the map.  
+Once you get the hang of it, you can drill down into the data and geolocate the 
+largest earthquakes, or the smallest, or the most recent, etc.
+Your browser has become a powerful tool for analytics and visualization, 
+and all you had to do was open the Web page.
+</p>
+
+
+<h4>Free app</h4>
+
+If you have a smart phone, bookmark <a href="http://pbogden.com/shake">this link</a>. Better yet, if your browser offers the option, try "Add to home screen". With mobile Safari, this puts a new yellow/orange mobile app on your home screen called "What's shaking?" It acquires the latest data every time you open it.
+</p>
+
+<h4>Spreadsheets beware</h4>
+
+<p>
+This only begins to demonstrate the potential for new kinds of data-driven applications.
+If you're a <a href='http://en.wikipedia.org/wiki/Pivot_table' target='_blank'>pivot table</a> fan, 
+then think about how long it would take you to do the same thing with your 
+favorite spreadsheet program or <a href="http://en.wikipedia.org/wiki/Geographic_information_system">GIS</a>, 
+if you can do it at all.
+This isn't a new software product.  
+It's a new approach to data analytics and visualization.
+</p>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+  </body>
+</html>
+
+<!-- Google analytics: http://www.google.com/analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65949751-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
