@@ -10,9 +10,9 @@ hpsi_latest:
 	cp ~/Sites/d3-components/hpsi9/hpsi.zip zip
 
 gif:
-	cp ~/Sites/fm/hpsi/2/hpsi.gif gif   # animated once through
-	cp ~/Sites/fm/hpsi/2/final.gif gif  # continuous loop
-	cp ~/Sites/fm/hpsi/2/final.png gif  # PNG of final image
+	cp ~/Sites/fm/hpsi/gif/hpsi.gif  gif  # animate once, then stop
+	cp ~/Sites/fm/hpsi/gif/final.gif gif  # continuous loop
+	cp ~/Sites/fm/hpsi/gif/final.png gif  # PNG of final image
 
 # Note: I downloaded and saved a PNG of default values (by hand) for Katie
 verizon2017:
