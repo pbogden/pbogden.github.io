@@ -1,3 +1,4 @@
+<title>pbogden.com</title>
 
 ## Head of the Potomac data analytics
 
