@@ -10,6 +10,7 @@ hpsi-jun:
 	cp ~/Sites/d3-components/hpsi-jun/index.html    hpsi/hpsi-jun
 	cp ~/Sites/d3-components/hpsi-jun/bundle.min.js hpsi/hpsi-jun
 	cp ~/Sites/d3-components/hpsi-jun/data.json     hpsi/hpsi-jun
+	cp ~/Sites/d3-components/hpsi-jun/hpsi.zip      hpsi/hpsi-jun
 
 gif:
 	cp ~/Sites/fm/hpsi/gif/hpsi.gif  gif  # animate once, then stop
