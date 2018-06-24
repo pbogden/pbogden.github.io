@@ -5,6 +5,7 @@
 * [Neighboring Congressional Districts](https://bl.ocks.org/mbostock/raw/8814734/)
 * [Airport Connections](https://mbostock.github.io/d3/talk/20111116/airports.html)
 * [Dorling Cartogram](https://bl.ocks.org/veltman/raw/33dbad5aa12d92b977fd29128eb5358e/)
+* [Visualizr graphic](http://pbogden.com/visualizr)
 
 #### NYTimes
 
