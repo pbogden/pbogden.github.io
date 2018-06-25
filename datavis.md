@@ -1,4 +1,4 @@
-# Dava viz demos
+# Data viz demos
 
 #### Misc demos
 
