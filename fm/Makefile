@@ -7,10 +7,12 @@ hpsi.zip:
 
 # NOTE: Everything is from hpsi/8 *except* bundle.min.js
 hpsi-jun:
-	cp ~/Sites/d3-components/hpsi-jun/index.html    hpsi/hpsi-jun
-	cp ~/Sites/d3-components/hpsi-jun/bundle.min.js hpsi/hpsi-jun
-	cp ~/Sites/d3-components/hpsi-jun/data.json     hpsi/hpsi-jun
-	cp ~/Sites/d3-components/hpsi-jun/hpsi.zip      hpsi/hpsi-jun
+	cp ~/Sites/d3-components/hpsi-jun/index.html        hpsi/hpsi-jun
+	cp ~/Sites/d3-components/hpsi-jun/bundle.min.js     hpsi/hpsi-jun
+	cp ~/Sites/d3-components/hpsi-jun/data.json         hpsi/hpsi-jun
+	cp ~/Sites/d3-components/hpsi-jun/hpsi.zip          hpsi/hpsi-jun
+	cp ~/Sites/d3-components/hpsi-jun/demo.html         hpsi/hpsi-jun
+	cp ~/Sites/d3-components/hpsi-jun/bootstrap.min.css hpsi/hpsi-jun
 
 gif:
 	cp ~/Sites/fm/hpsi/gif/hpsi.gif  gif  # animate once, then stop
