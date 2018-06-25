@@ -2,8 +2,9 @@
 
 #### Misc demos
 
-* [HPSI-jun](https://pbogden.com/fm/hpsi/hpsi-jun/demo.html)
-* [HPSI (configurable)](https://www.visualizr.io/hpsi/)
+* [HPSI-jun](https://pbogden.com/fm/hpsi/hpsi-jun/demo.html) (June 2018 release)
+* [HPSI (April 2018)](https://pbogden.com/fm/hpsi/hpsi-jun/demo.html) (April 2018)
+* [HPSI (visualizr.io)](https://www.visualizr.io/hpsi/) (configurable)
 * [MF map demo](https://pbogden.com/fm/mf/1)
 * [MLSS Dec 2017](https://pbogden.com/fm/mlss/11/)
 * [Simple Chart Transitions](https://bl.ocks.org/mbostock/raw/1256572/)
