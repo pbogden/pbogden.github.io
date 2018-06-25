@@ -78,6 +78,8 @@ mlss11:
 	cp ~/Sites/fm/mlss/mlss-gif/mlssf.gif mlss/11
 	cp ~/Sites/fm/mlss/mlss-gif/mlsst.png mlss/11/
 	cp ~/Sites/fm/mlss/mlss-gif/mlssf.png mlss/11/
+	cp ~/Sites/fm/mlss/11/demo.html       mlss/11
+	cp ~/Sites/fm/mlss/11/bootstrap.min.css mlss/11
 
 # MLSS 10 -- Prep for Dec 2017 release
 mlss10:
