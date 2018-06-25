@@ -1,9 +1,17 @@
-all: mlss12
+all: 
 
-.PHONY: gif hpsi_latest zip verizon2017 dynamic3
+.PHONY: hpsi gif hpsi_latest zip verizon2017 dynamic3
 
 hpsi.zip:
 	cp ~/Sites/d3-components/hpsi/hpsi.zip zip
+
+# Latest from d3-components
+hpsi:
+	cp ~/Sites/d3-components/hpsi/index.html        hpsi/hpsi
+	cp ~/Sites/d3-components/hpsi/bundle.min.js     hpsi/hpsi
+	cp ~/Sites/d3-components/hpsi/data.json         hpsi/hpsi
+	cp ~/Sites/d3-components/hpsi/demo.html         hpsi/hpsi
+	cp ~/Sites/d3-components/hpsi/bootstrap.min.css hpsi/hpsi
 
 # NOTE: Everything is from hpsi/8 *except* bundle.min.js
 hpsi-jun:
