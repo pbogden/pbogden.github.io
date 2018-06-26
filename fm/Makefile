@@ -1,6 +1,6 @@
 all: 
 
-.PHONY: hpsi gif hpsi_latest zip verizon2017 dynamic3
+.PHONY: hpsi gif hpsi_latest zip verizon2017 dynamic3 mlss
 
 hpsi.zip:
 	cp ~/Sites/d3-components/hpsi/hpsi.zip zip
@@ -115,11 +115,12 @@ mlss1:
 # Be careful about updating MLSS mobile -- it may conflict with HPSI
 mlss:
 	cp ~/Sites/d3-components/mlss-gif/mlss.gif mlss/gif
+	cp ~/Sites/d3-components/mlss/demo.html mlss/mlss
+	cp ~/Sites/d3-components/mlss/bootstrap.min.css mlss/mlss
 	cp ~/Sites/d3-components/mlss/mlss.zip mlss/mlss
 	cp ~/Sites/d3-components/mlss/index.html mlss/mlss
 	cp ~/Sites/d3-components/mlss/bundle.min.js mlss/mlss
 	cp ~/Sites/d3-components/mlss/data.tsv mlss/mlss
-#	cp ~/Sites/d3-components/mobile/index.html mlss/mobile
 	cp ~/Sites/d3-components/mlss-png/mlss1.png mlss/mlss
 	cp ~/Sites/d3-components/mlss-png/mlss2.png mlss/mlss
 

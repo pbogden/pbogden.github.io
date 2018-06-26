@@ -6,7 +6,9 @@
 * [HPSI (April 2018)](https://pbogden.com/fm/hpsi/hpsi/demo.html) (April 2018)
 * [HPSI (visualizr.io)](https://www.visualizr.io/hpsi/) (configurable)
 * [MF map demo](https://pbogden.com/fm/mf/1)
-* [MLSS Dec 2017](https://pbogden.com/fm/mlss/11/demo.html)
+* MLSS
+    * [Dec 2017](https://pbogden.com/fm/mlss/11/demo.html)
+    * [Sep 2017](https://pbogden.com/fm/mlss/mlss/demo.html)
 * Original [Myth debunked](https://pbogden.com/myth/) and the [simpler version](https://pbogden.com/fm/25/)
 * [Simple Chart Transitions](https://bl.ocks.org/mbostock/raw/1256572/)
 * [Neighboring Congressional Districts](https://bl.ocks.org/mbostock/raw/8814734/)
