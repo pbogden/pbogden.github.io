@@ -2,10 +2,12 @@
 
 #### Miscellaneous demos
 
-* [HPSI-jun](https://pbogden.com/fm/hpsi/hpsi-jun/demo.html) (June 2018 release)
-* [HPSI (April 2018)](https://pbogden.com/fm/hpsi/hpsi/demo.html) (April 2018)
-* [HPSI (visualizr.io)](https://www.visualizr.io/hpsi/) (configurable)
-* [MF map demo](https://pbogden.com/fm/mf/1)
+* HPSI
+    * [June 2018 release](https://pbogden.com/fm/hpsi/hpsi-jun/demo.html)
+    * [April 2018 release](https://pbogden.com/fm/hpsi/hpsi/demo.html)
+    * [visualizr.io](https://www.visualizr.io/hpsi/) (configuration tools)
+* MF
+    * [map demo](https://pbogden.com/fm/mf/1)
 * MLSS
     * [Dec 2017](https://pbogden.com/fm/mlss/11/demo.html)
     * [Sep 2017](https://pbogden.com/fm/mlss/mlss/demo.html)
