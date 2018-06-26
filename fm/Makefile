@@ -1,16 +1,26 @@
-all: mlss12
+all: 
 
-.PHONY: gif hpsi_latest zip verizon2017 dynamic3
+.PHONY: hpsi gif hpsi_latest zip verizon2017 dynamic3
 
 hpsi.zip:
 	cp ~/Sites/d3-components/hpsi/hpsi.zip zip
 
+# Latest from d3-components
+hpsi:
+	cp ~/Sites/d3-components/hpsi/index.html        hpsi/hpsi
+	cp ~/Sites/d3-components/hpsi/bundle.min.js     hpsi/hpsi
+	cp ~/Sites/d3-components/hpsi/data.json         hpsi/hpsi
+	cp ~/Sites/d3-components/hpsi/demo.html         hpsi/hpsi
+	cp ~/Sites/d3-components/hpsi/bootstrap.min.css hpsi/hpsi
+
 # NOTE: Everything is from hpsi/8 *except* bundle.min.js
 hpsi-jun:
-	cp ~/Sites/d3-components/hpsi-jun/index.html    hpsi/hpsi-jun
-	cp ~/Sites/d3-components/hpsi-jun/bundle.min.js hpsi/hpsi-jun
-	cp ~/Sites/d3-components/hpsi-jun/data.json     hpsi/hpsi-jun
-	cp ~/Sites/d3-components/hpsi-jun/hpsi.zip      hpsi/hpsi-jun
+	cp ~/Sites/d3-components/hpsi-jun/index.html        hpsi/hpsi-jun
+	cp ~/Sites/d3-components/hpsi-jun/bundle.min.js     hpsi/hpsi-jun
+	cp ~/Sites/d3-components/hpsi-jun/data.json         hpsi/hpsi-jun
+	cp ~/Sites/d3-components/hpsi-jun/hpsi.zip          hpsi/hpsi-jun
+	cp ~/Sites/d3-components/hpsi-jun/demo.html         hpsi/hpsi-jun
+	cp ~/Sites/d3-components/hpsi-jun/bootstrap.min.css hpsi/hpsi-jun
 
 gif:
 	cp ~/Sites/fm/hpsi/gif/hpsi.gif  gif  # animate once, then stop
@@ -68,6 +78,8 @@ mlss11:
 	cp ~/Sites/fm/mlss/mlss-gif/mlssf.gif mlss/11
 	cp ~/Sites/fm/mlss/mlss-gif/mlsst.png mlss/11/
 	cp ~/Sites/fm/mlss/mlss-gif/mlssf.png mlss/11/
+	cp ~/Sites/fm/mlss/11/demo.html       mlss/11
+	cp ~/Sites/fm/mlss/11/bootstrap.min.css mlss/11
 
 # MLSS 10 -- Prep for Dec 2017 release
 mlss10:

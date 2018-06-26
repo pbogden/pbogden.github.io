@@ -1,10 +1,13 @@
-# Dava viz demos
+# Data viz demos
 
 #### Misc demos
 
-* [HPSI-jun](https://pbogden.com/fm/hpsi/hpsi-jun/)
+* [HPSI-jun](https://pbogden.com/fm/hpsi/hpsi-jun/demo.html) (June 2018 release)
+* [HPSI (April 2018)](https://pbogden.com/fm/hpsi/hpsi/demo.html) (April 2018)
+* [HPSI (visualizr.io)](https://www.visualizr.io/hpsi/) (configurable)
 * [MF map demo](https://pbogden.com/fm/mf/1)
-* [MLSS Dec 2017](https://pbogden.com/fm/mlss/11/)
+* [MLSS Dec 2017](https://pbogden.com/fm/mlss/11/demo.html)
+* Original [Myth debunked](https://pbogden.com/myth/) and the [simpler version](https://pbogden.com/fm/25/)
 * [Simple Chart Transitions](https://bl.ocks.org/mbostock/raw/1256572/)
 * [Neighboring Congressional Districts](https://bl.ocks.org/mbostock/raw/8814734/)
 * [Airport Connections](https://mbostock.github.io/d3/talk/20111116/airports.html)

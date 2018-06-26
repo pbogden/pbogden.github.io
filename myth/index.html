@@ -6,15 +6,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Fixed top navbar example for Bootstrap</title>
+    <title>Myth debunked</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <style>
        /* Show it is fixed to the top */
        body {
-         min-height: 75rem;
          padding-top: 4.5rem;
          background-color: #d9d7dc;
        }
@@ -25,18 +24,24 @@
 
       .content-column {
           background-color: #ffffff;
+         background-color: #d9d7dc;
       }
 
-      .embed-responsive-960by600 { 
-          padding-bottom: 62.5%; 
+      .embed-responsive-543by453 { 
+          padding-bottom: 83.43%; 
       }
+
+      iframe {
+         background-color: #d9d7dc;
+      }
+
     </style>
   </head>
 
   <body>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Multifamily demo</a>
+      <a class="navbar-brand" href="#">Myth debunked</a>
     </nav>
 
   <div class="container">
@@ -44,8 +49,8 @@
     <div class="row">
       <div class="col-md-2">
       </div>
-      <div class="col-md-8 my-5">
-        <h3>Multifamily Market Intelligence Archive</h3>
+      <div class="col-md-8 my-1">
+        <h3>Millennials not Boomers</h3>
       </div>
       <div class="col-md-2">
       </div>
@@ -54,16 +59,26 @@
     <div class="row">
       <div class="col-md-2">
       </div>
-      <div class="col-md-8 content-column">
-        <h4 class="mt-2">Quarterly Metro Outlook</h4>
-        <hr>
-
-        <div class='embed-responsive embed-responsive-960by600'>
-          <iframe src="../0/" class="embed-responsive-item" frameborder="0" scrolling ="no"></iframe>
-        </div>
-
+      <div class="col-md-6 content-column">
+          <i>The tweet</i>
+          <img src="tweet.png" class="img-fluid" alt="Responsive image">
       </div>
+      <div class="col-md-4">
+      </div>
+    </div><!-- /.row -->
+
+
+    <div class="row">
       <div class="col-md-2">
+      </div>
+      <div class="col-md-10 content-column">
+        <hr>
+        <i>The original</i>
+        <div class='embed-responsive embed-responsive-543by453'>
+          <iframe src="https://pbogden.com/fm/26/" class="embed-responsive-item" frameborder="0" scrolling ="no"></iframe>
+        </div>
+      </div>
+      <div class="col-md-0">
       </div>
     </div><!-- /.row -->
 
