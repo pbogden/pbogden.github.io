@@ -17,3 +17,5 @@
 * [America's Cup](https://archive.nytimes.com/www.nytimes.com/interactive/2013/09/25/sports/americas-cup-course.html)
 * [Federal Budget](http://www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html?_r=0)
 * [Corporate Taxes](https://archive.nytimes.com/www.nytimes.com/interactive/2013/05/25/sunday-review/corporate-taxes.html)
+* [Mapping Migration](https://www.nytimes.com/2014/08/16/upshot/mapping-migration-in-the-united-states-since-1900.html)
+* [324,000 Swings](https://www.nytimes.com/interactive/2014/09/14/sports/baseball/jeter-swings.html)
