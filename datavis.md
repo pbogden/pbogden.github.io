@@ -11,6 +11,9 @@
     * [the article](http://www.fanniemae.com/portal/research-insights/perspectives/030116-simmons.html)
     * [the tweet](https://pbogden.com/myth/)
     * [a simpler version](https://pbogden.com/fm/25/)
+
+#### Misc tidbits
+
 * [Simple Chart Transitions](https://bl.ocks.org/mbostock/raw/1256572/)
 * [Neighboring Congressional Districts](https://bl.ocks.org/mbostock/raw/8814734/)
 * [Airport Connections](https://mbostock.github.io/d3/talk/20111116/airports.html)
