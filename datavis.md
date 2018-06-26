@@ -1,15 +1,19 @@
-# Data viz demos
+# Data viz
 
-#### Misc demos
+#### Miscellaneous demos
 
 * [HPSI-jun](https://pbogden.com/fm/hpsi/hpsi-jun/demo.html) (June 2018 release)
 * [HPSI (April 2018)](https://pbogden.com/fm/hpsi/hpsi/demo.html) (April 2018)
 * [HPSI (visualizr.io)](https://www.visualizr.io/hpsi/) (configurable)
 * [MF map demo](https://pbogden.com/fm/mf/1)
-* MLSS
-    * [Dec 2017](https://pbogden.com/fm/mlss/11/demo.html)
-    * [Sep 2017](https://pbogden.com/fm/mlss/mlss/demo.html)
-* Original [Myth debunked](https://pbogden.com/myth/) and the [simpler version](https://pbogden.com/fm/25/)
+* [MLSS Dec 2017](https://pbogden.com/fm/mlss/11/demo.html)
+* Myth debunked
+    * [the article](http://www.fanniemae.com/portal/research-insights/perspectives/030116-simmons.html)
+    * [the tweet](https://pbogden.com/myth/)
+    * [a simpler version](https://pbogden.com/fm/25/)
+
+#### Miscellaneous tidbits
+
 * [Simple Chart Transitions](https://bl.ocks.org/mbostock/raw/1256572/)
 * [Neighboring Congressional Districts](https://bl.ocks.org/mbostock/raw/8814734/)
 * [Airport Connections](https://mbostock.github.io/d3/talk/20111116/airports.html)
@@ -22,3 +26,5 @@
 * [America's Cup](https://archive.nytimes.com/www.nytimes.com/interactive/2013/09/25/sports/americas-cup-course.html)
 * [Federal Budget](http://www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html?_r=0)
 * [Corporate Taxes](https://archive.nytimes.com/www.nytimes.com/interactive/2013/05/25/sunday-review/corporate-taxes.html)
+* [Mapping Migration](https://www.nytimes.com/2014/08/16/upshot/mapping-migration-in-the-united-states-since-1900.html)
+* [324,000 Swings](https://www.nytimes.com/interactive/2014/09/14/sports/baseball/jeter-swings.html)
