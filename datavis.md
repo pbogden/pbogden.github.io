@@ -1,4 +1,4 @@
-# Data viz demos
+# Data viz
 
 #### Miscellaneous demos
 
