@@ -22,7 +22,10 @@ hpsi:
 #	cp ~/Sites/d3-components/mlss/demo.html         mlss
 #	cp ~/Sites/d3-components/mlss/bootstrap.min.css mlss
 
-	cp ~/Sites/fm/mlss/11/index.html        mlss11
-	cp ~/Sites/fm/mlss/11/bundle.min.js     mlss11
-	cp ~/Sites/fm/mlss/11/demo.html         mlss11
-	cp ~/Sites/fm/mlss/11/bootstrap.min.css mlss11
+#	cp ~/Sites/fm/mlss/11/index.html        mlss11
+#	cp ~/Sites/fm/mlss/11/bundle.min.js     mlss11
+#	cp ~/Sites/fm/mlss/11/demo.html         mlss11
+#	cp ~/Sites/fm/mlss/11/bootstrap.min.css mlss11
+
+	cp ~/Sites/pbogden.github.io/fm/25/*        myth2
+
