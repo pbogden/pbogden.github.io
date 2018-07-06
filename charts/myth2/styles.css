@@ -1,0 +1,91 @@
+svg {
+  font-size: 24px;
+}
+
+path {
+  fill: none;
+  stroke: #000;
+}
+
+.story-text {
+  pointer-events: none; 
+}
+
+#info, #tooltip {
+  position: absolute;
+}
+
+#tooltip {
+  visibility: hidden;
+  background-color: #D3D3D3;  /* light gray */
+  border-style: ridge;
+  padding: 5px 5px 5px 5px;
+  font-size: 0.7em;
+}
+
+#myth {
+  position: relative;
+  left: 0px;
+  top: 100px;
+  width: 250px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #d3d3d3;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+    background-color: #d3d3d3;
+}
+
+#info{
+  top: 150px;
+  left: 500px;
+  font: 40px sans-serif;
+}
+
+.axis {
+  font: 0.9em sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.axis line {
+  stroke: #000;
+}
+
+.selector rect, .backButton rect {
+  stroke: #000;
+  fill-opacity: 0.5;
+  cursor: pointer;
+}
+
+.selector rect.active {
+  fill-opacity: 0.9;
+}
+
+.selector rect:hover {
+  fill-opacity: 1;
+}
+
+.select-year rect {
+  fill: #757575; 
+  fill-opacity: .2;
+}
+
+.select-year rect:hover {
+  fill-opacity: 1;
+  cursor: pointer;
+}
+
+#container {
+  width: 100%;
+}
