@@ -479,9 +479,6 @@ fm22:
 	cp ../../fm22/*.css 22
 	cp ../../fm22/bundle.min.js 22
 
-fm27:
-	cp ../../fm/millenials/27/millenials.zip millenials/27
-
 fm25:
 	cp ../../fm25/index.html 25
 	cp ../../fm25/data.json 25
