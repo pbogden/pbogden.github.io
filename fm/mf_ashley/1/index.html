@@ -12,7 +12,7 @@ var svg = d3.select("svg")
     path = d3.geoPath().projection(d3.geoIdentity());
 
 d3.queue()
-    .defer(d3.json, "http://localhost/~pbogden/mapping/fm_ashley/us-albers-10m.json")
+    .defer(d3.json, "../data/us-albers-10m.json")
     .defer(d3.json, "sums.json")
     .await(ready);
 
