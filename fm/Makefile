@@ -366,8 +366,10 @@ mf_ashley:
 	-mkdir mf_ashley
 	-mkdir mf_ashley/0
 	-mkdir mf_ashley/1
+	-mkdir mf_ashley/data
 	cp ~/Sites/fm/mf_ashley/0/* mf_ashley/0
 	cp ~/Sites/fm/mf_ashley/1/* mf_ashley/1
+	cp ~/Sites/fm/mf_ashley/data/us-albers-10m.json mf_ashley/data
 
 map1:
 	cp ../../fmap1/*.png map1
