@@ -1,18 +1,48 @@
 <!DOCTYPE html>
+<style>
+  form { position: absolute; top: 20px; left: 20px; font-family: sans-serif; }
+  #min { position: absolute; top: 120px; left: 20px; font-family: sans-serif; }
+  #max { position: absolute; top: 240px; left: 20px; font-family: sans-serif; }
+</style>
+<form>
+  Scale type<br>
+  <label><input type='radio' name='scale' value='scaleLinear' checked> Linear</label><br>
+  <label><input type='radio' name='scale' value='scaleLog'> Log</label>
+</form>
+<form id='min'>
+  Min color<br>
+  <label><input type='radio' name='min-color' value='blue' checked> Blue</label><br>
+  <label><input type='radio' name='min-color' value='gray'> Gray</label><br>
+  <label><input type='radio' name='min-color' value='green'> Green</label>
+</form>
+<form id='max'>
+  Max color<br>
+  <label><input type='radio' name='max-color' value='blue'> Blue</label><br>
+  <label><input type='radio' name='max-color' value='gray'> Gray</label><br>
+  <label><input type='radio' name='max-color' value='green' checked> Green</label>
+</form>
 <svg width="960" height="500"></svg>
 <script src="../../js/d3.min.js"></script>
 <script src="../../js/topojson.min.js"></script>
+<script src="https://d3js.org/d3-hsv.v0.1.min.js"></script>
 <script>
 
 var gray = '#edebe9';
 var blue = '#085280';
 var green = '#2c6937';
+var colors = { gray: '#edebe9', blue: '#085280', green: '#2c6937' };
+var minValue = 64;
+var maxValue = 54419;
+
+var i0 = d3.interpolateHsvLong(d3.hsv(blue), d3.hsv(green)),
+    scale = d3.scaleLog().domain([minValue, maxValue]).range([minValue, maxValue]),
+    color = d3.scaleSequential(i0).domain([minValue, maxValue]);
 
 var svg = d3.select("svg")
     path = d3.geoPath().projection(d3.geoIdentity());
 
 d3.queue()
-    .defer(d3.json, "http://localhost/~pbogden/mapping/fm_ashley/us-albers-10m.json")
+    .defer(d3.json, "../data/us-albers-10m.json")
     .defer(d3.json, "sums.json")
     .await(ready);
 
@@ -22,13 +52,13 @@ function ready(error, us, sums) {
   console.log( topojson.feature(us, us.objects.states), sums )
 
   // state interiors
-  svg.selectAll('path')
+  svg.selectAll('path.state')
       .data( topojson.feature(us, us.objects.states).features )
     .enter().append('path')
-      .attr('fill', gray)
+      .attr('class', 'state')
       .attr('d', path)
       .each(function(d) { d.properties.sum = sums[d.properties.STATE]; })
-      .on('mouseover', function(d) { console.log(d.properties.STATE) });
+      .on('mouseover', function(d) { console.log(d.properties.STATE, d.properties.sum) })
 
   // state boundaries
   svg.append('path')
@@ -47,7 +77,28 @@ function ready(error, us, sums) {
       .attr('font-size', 10)
       .attr('font-family', 'sans-serif')
       .attr('text-anchor', 'middle')
-      .text(function(d) { return d.properties.sum; })
+//      .text(function(d) { return d.properties.sum; })
+
+  // Set initial color for states
+  d3.select('input:checked').each(changed)
 }
 
+d3.selectAll('input').on('change', changed)
+
+function changed() {
+  var minColor = d3.select('input[name="min-color"]:checked').property('value')
+  var maxColor = d3.select('input[name="max-color"]:checked').property('value')
+  var scaleType= d3.select('input[name="scale"]:checked').property('value')
+  console.log('colors', minColor, maxColor)
+
+  i0 = d3.interpolateHsvLong(d3.hsv(colors[minColor]), d3.hsv(colors[maxColor])),
+  scale = d3[scaleType]().domain([minValue, maxValue]).range([minValue, maxValue]),
+  color = d3.scaleSequential(i0).domain([minValue, maxValue]);
+
+  console.log('changed', this)
+  svg.selectAll('path.state')
+      .attr('fill', function(d) { return d.properties.sum
+                                ? color(scale(d.properties.sum))
+                                         : gray; })
+}
 </script>
