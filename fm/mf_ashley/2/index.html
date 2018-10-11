@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<svg width="960" height="500"></svg>
+<script src="../../js/d3.min.js"></script>
+<script src="../../js/topojson.min.js"></script>
+<script>
+
+var gray = '#edebe9';
+var blue = '#085280';
+var green = '#2c6937';
+
+var svg = d3.select("svg")
+    path = d3.geoPath().projection(d3.geoIdentity());
+
+d3.queue()
+    .defer(d3.json, "http://localhost/~pbogden/mapping/fm_ashley/us-albers-10m.json")
+    .defer(d3.json, "sums.json")
+    .await(ready);
+
+function ready(error, us, sums) {
+  if (error) throw error;
+
+  console.log( topojson.feature(us, us.objects.states), sums )
+
+  // state interiors
+  svg.selectAll('path')
+      .data( topojson.feature(us, us.objects.states).features )
+    .enter().append('path')
+      .attr('fill', gray)
+      .attr('d', path)
+      .each(function(d) { d.properties.sum = sums[d.properties.STATE]; })
+      .on('mouseover', function(d) { console.log(d.properties.STATE) });
+
+  // state boundaries
+  svg.append('path')
+      .datum( topojson.mesh(us, us.objects.states) )
+      .attr('fill', 'none')
+      .attr('stroke', '#ffffff')
+      .attr('stroke-width', 2)
+      .attr('d', path)
+
+  // labels
+  svg.selectAll('text')
+      .data( topojson.feature(us, us.objects.states).features )
+    .enter().append('text')
+      .attr('x', function(d) { return path.centroid(d)[0]; })
+      .attr('y', function(d) { return path.centroid(d)[1]; })
+      .attr('font-size', 10)
+      .attr('font-family', 'sans-serif')
+      .attr('text-anchor', 'middle')
+      .text(function(d) { return d.properties.sum; })
+}
+
+</script>
