@@ -1,6 +1,6 @@
 all: 
 
-.PHONY: hpsi gif hpsi_latest zip verizon2017 dynamic3 mlss
+.PHONY: hpsi gif hpsi_latest zip verizon2017 dynamic3 mlss mf_ashley
 
 hpsi.zip:
 	cp ~/Sites/d3-components/hpsi/hpsi.zip zip
@@ -361,6 +361,13 @@ hpsi0:
 	cp ~/Sites/fm/hpsi/0/styles.css hpsi/0
 	cp ~/Sites/fm/hpsi/0/bundle.min.js hpsi/0
 	cp ~/Sites/fm/hpsi/data/data.csv hpsi/data
+
+mf_ashley:
+	-mkdir mf_ashley
+	-mkdir mf_ashley/0
+	-mkdir mf_ashley/1
+	cp ~/Sites/fm/mf_ashley/0/* mf_ashley/0
+	cp ~/Sites/fm/mf_ashley/1/* mf_ashley/1
 
 map1:
 	cp ../../fmap1/*.png map1
