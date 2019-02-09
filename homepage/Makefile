@@ -1,9 +1,14 @@
 
-# NOTE...
+# NOTE...Make two changes before sending to production...
 #
-#    Change the link in `index.html` to use the bootstrap CDN:
+#    1. Change the link in `index.html` to use the bootstrap CDN:
 #
 # <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+#
+#    2. Load the dynamic graphic with https
+#
+#  <iframe id='my-graphic' src="https://pbogden.com/homepage/graphic" ...
+
 #
 
 
