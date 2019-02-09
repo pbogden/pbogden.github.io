@@ -56,7 +56,7 @@
 
 
 <!--
-        Dynamic graphic at the top of the page (below the red nav-bar/header)
+      Dynamic graphic at the top of the page (below the red nav-bar/header)
 
     .position-relative is a shorthand utility (not responsive) for quickly
             configuring position of an element
@@ -64,20 +64,6 @@
     .overflow-hidden is a shorthand utility (not responsive) for quickly
             configuring how content overflows an element
             Ref: https://getbootstrap.com/docs/4.2/utilities/overflow/
--->
-<!-- <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-light">
-  <iframe id='my-graphic' src="graphic/index.html"
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-width: 0;">
-   </iframe>
-  <div class="col-lg-6 mx-auto">
-    <h1 class="display-4 font-weight-light">visualizr.io</h1>
-    <p class="lead font-weight-normal">Data analytics and visualization specialists.
-    Our platform puts your data to work for you.
-  </div>
-</div> -->
-
-<!--
-           .jumbotron
 
       xs    no breakpoint, this is the default
       sm    min-width: 576px;
@@ -85,17 +71,16 @@
       lg    min-width: 992px;
       xl    min-width: 1200px;
 
-      breakpoints
-        See: https://getbootstrap.com/docs/4.2/layout/overview/#responsive-breakpoints
+  breakpoints
+    See: https://getbootstrap.com/docs/4.2/layout/overview/#responsive-breakpoints
 -->
 <div class="jumbotron" style="position: relative; background-color: #bac5c6;">
-  <iframe id='my-graphic' src="/~pbogden/d3-components/visualizr/index.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-width: 0;"></iframe>
+  <iframe id='my-graphic' src="graphic" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-width: 0;"></iframe>
   <div class="container" style="pointer-events: none;">
     <div class="row">
       <div class="col-12 text-center">
         <div class="display-4">visualizr.io</div>
         <div class="lead font-weight-normal">Data analytics and visualization specialists</div>
-        <!-- <div class="h4">Data analytics and visualization specialists</div> -->
       </div>
     </div>
   </div>
@@ -214,5 +199,8 @@
   </footer>
 </div><!-- /.container -->
 
+<script src="../node_modules/jquery/dist//jquery.slim.min.js"></script>
+<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="../bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
