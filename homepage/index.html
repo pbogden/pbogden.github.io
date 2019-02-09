@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>visualizr.io</title>
+
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="../bootstrap-4.2.1-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="product.css" />
+
+    <style>
+     .my-inner-box {
+       width: 80%;
+       /* height: 250px; */
+       font-size: 1rem;
+       font-weight: 300;
+       border-radius: 21px;
+     }
+    </style>
+</head>
+<!--
+        This page was modified from a bootstrap example
+            It's based on Apple's marketing pages
+            Bootstrap's original: https://getbootstrap.com/docs/
+-->
+<body>
+<!--
+        This is the red nav-bar/header at the top of the page
+
+        It's based on the bootstrap starter template...
+            https://getbootstrap.com/docs/4.2/examples/starter-template/
+
+        .fixed-top is one of the shorthand utilities for quickly positioning elements
+            See: https://getbootstrap.com/docs/4.2/utilities/position/
+        .justify-content-end right aligns the content in the <nav>
+            See: https://getbootstrap.com/docs/4.2/components/navs/
+-->
+<nav class="navbar navbar-expand-md navbar-dark red-header fixed-top">
+  <a class="navbar-brand" href="#">visualizr.io</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+    <ul class="navbar-nav float-right">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sign in</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<!--
+        Dynamic graphic at the top of the page (below the red nav-bar/header)
+
+    .position-relative is a shorthand utility (not responsive) for quickly
+            configuring position of an element
+            Ref: https://getbootstrap.com/docs/4.1/utilities/position/
+    .overflow-hidden is a shorthand utility (not responsive) for quickly
+            configuring how content overflows an element
+            Ref: https://getbootstrap.com/docs/4.2/utilities/overflow/
+-->
+<!-- <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-light">
+  <iframe id='my-graphic' src="graphic/index.html"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-width: 0;">
+   </iframe>
+  <div class="col-lg-6 mx-auto">
+    <h1 class="display-4 font-weight-light">visualizr.io</h1>
+    <p class="lead font-weight-normal">Data analytics and visualization specialists.
+    Our platform puts your data to work for you.
+  </div>
+</div> -->
+
+<!--
+           .jumbotron
+
+      xs    no breakpoint, this is the default
+      sm    min-width: 576px;
+      md    min-width: 768px
+      lg    min-width: 992px;
+      xl    min-width: 1200px;
+
+      breakpoints
+        See: https://getbootstrap.com/docs/4.2/layout/overview/#responsive-breakpoints
+-->
+<div class="jumbotron" style="position: relative; background-color: #bac5c6;">
+  <iframe id='my-graphic' src="/~pbogden/d3-components/visualizr/index.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-width: 0;"></iframe>
+  <div class="container" style="pointer-events: none;">
+    <div class="row">
+      <div class="col-12 text-center">
+        <div class="display-4">visualizr.io</div>
+        <div class="lead font-weight-normal">Data analytics and visualization specialists</div>
+        <!-- <div class="h4">Data analytics and visualization specialists</div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+      First pair of content boxes.  They're side-by-side for wide viewports.
+
+      .d-flex creates a flexbox container
+          See: https://getbootstrap.com/docs/4.1/utilities/flex/
+      .flex-md-equal is custom CSS defined in: product.css
+      .w-100 is a grid-system layout style that allows for equal-width columns that have multiple lines
+          This occurs when the columns become vertical in mobile viewports (I think that's the idea)
+          See: https://getbootstrap.com/docs/4.2/layout/grid/#equal-width-multi-row
+      .light-background and .dark-background are defined in "styles.css"
+      .shadow is one of 3 bootstrap box-shadow classes for quickly adding shadows to elements
+          .shadow-lg is another one, but I don't think it looks as good in this page
+          .box-shadow and .text-shadow are standard CSS
+          See: https://getbootstrap.com/docs/4.2/utilities/shadows/
+-->
+
+<!-- <div class="d-md-flex flex-md-equal w-100"> -->
+<div class="container-fluid">
+  <div class="row light-background">
+    <div class="col-md-1">
+    </div>
+    <!--
+          Upper-left content box, immediately below the dynamic graphic.
+
+         .py-3 adds padding around the inner box so the shadow is "inside"
+        .display-5 is just a bit more "expressive" heading typography than h5
+            See: https://getbootstrap.com/docs/4.2/content/typography/#display-headings
+    -->
+    <div class="col-md-5 light-background py-3 text-center">
+      <div class="h2 pt-3 font-weight-light">Bring your data to life.</div>
+      <div class="lead">We create dynamic, interactive visualizations.</div>
+      <div class="my-inner-box dark-background shadow mx-auto my-3">
+        <div class="p-4 text-left">
+          We solve problems with data.
+          We use a sequence of working prototypes to hone in on a solution,
+          and to promote out-of-the-box thinking.
+          The only requirements: (1) a problem
+          to be solved, and (2) data. In most cases,
+          you'll see your data start coming alive in a week.
+        </div>
+      </div>
+    </div>
+
+    <!-- upper-right content box mmediately below the dynamic graphic (2nd box down on mobile) -->
+       <!-- .mx-auto centers the sub-box within the containing box -->
+       <!-- .my-3 adds just enough margin so shadows are completely inside the containing box -->
+    <div class="col-md-5 py-3 text-center">
+      <div class="h2 pt-3 font-weight-light">Discover hidden value.</div>
+      <div class="lead">We make complex data understandable.</div>
+      <div class="my-inner-box dark-background shadow mx-auto my-3">
+        <div class="p-4 text-left">
+          We use scientific analysis to distinguish signal from noise.
+          Statistical and mathematical methods can uncover new insights; the same with visualizations.
+          Maps and fusion with other data sources can help put your data in context.
+          We pull everything together in the results.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-1">
+    </div>
+  </div><!-- /.row -->
+
+<!--
+        Here's the second pair of content boxes.
+-->
+<!-- <div class="d-md-flex flex-md-equal w-100"> -->
+  <div class="row dark-background">
+    <div class="col-md-1">
+    </div>
+
+    <div class="col-md-5 py-3 text-center">
+       <div class="h2 pt-3 font-weight-light">Streamline your business.</div>
+       <div class="lead">Our platform puts your data to work for you.</div>
+       <div class="my-inner-box light-background shadow mx-auto my-3">
+         <div class="p-4 text-left">
+           We offer a range of options, from standalone graphics to apps
+           that integrate into your workflow:
+           <ul class='my-0'>
+             <li>interactive charts and graphs,
+             <li>custom, dynamic visualizations,
+             <li>dashboards with live data streams,
+             <li>full-stack, database-backed Web apps.
+           </ul>
+         </div>
+       </div>
+    </div>
+
+    <div class="col-md-5 dark-background py-3 text-center">
+       <div class="h2 pt-3 font-weight-light">Let your data tell the story.</div>
+       <div class="lead">Contact us to see our case studies.</div>
+       <div class="my-inner-box light-background shadow mx-auto my-3">
+         <div class="p-4 text-left">
+           We've worked with corporate communications departments, newrooms on a deadline,
+           and economists doing research.  We've developed mapping
+           apps that manage big data in the cloud, and real-time geospatial
+           dashboards that monitor environmental risk.
+           Contact us for demos.
+         </div>
+       </div>
+    </div>
+
+    <div class="col-md-1">
+    </div>
+  </div><!-- /.row -->
+</div><!-- /.container -->
+
+<div class="container">
+  <footer class="footer">
+    <font class='text-muted'><span>&copy; Visualizr LLC 2019</span></font>
+  </footer>
+</div><!-- /.container -->
+
+<script src="../node_modules/jquery/dist//jquery.slim.min.js"></script>
+<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="../bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

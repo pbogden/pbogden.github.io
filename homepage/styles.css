@@ -1,0 +1,51 @@
+body {
+  padding-top: 56px; /* top navbar is 56px */
+}
+
+/* Not sure it's a good idea to change .jumbotron this way */
+.jumbotron {
+  margin: 0px;
+}
+
+body, .light-background {
+  background-color: #f3f3f1; /* parchment */
+}
+
+/* med-school palette: https://projects.iq.harvard.edu/hmsidentityguide/color */
+/* https://www.seas.harvard.edu/communications/identity-guidelines/color-palettes */
+.dark-background {
+  background-color: #1E1E1E;  /* ink */
+  background-color: #8C8179;  /* mortar */
+  background-color: #8996A0;  /* slate */
+  background-color: #808285;  /* cool gray 8 (HBS) */
+  background-color: #B6B6B6;  /* cool gray 4 (HBS) */
+  background-color: #BAC5C6;  /* shade (med school))*/
+}
+
+/* .jumbotron {
+  background-color: #bac5c6;
+} */
+
+.red-header, .red-header a {
+  background-color: #a41034;
+  color: #f3f3f1;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
