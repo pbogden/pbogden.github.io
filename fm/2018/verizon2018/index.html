@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>verizon 2018</title>
+<style>
+
+.hexagons {
+  fill: none;
+  stroke-width: 0.5px;
+/*  stroke: #000; */
+}
+
+form, img {
+  position: absolute;
+  left: 1em;
+}
+
+#download-link {
+  position: absolute;
+  top: 1em;
+  left: 400px;
+  padding: 5px;
+}
+
+</style>
+
+<a id="download-link" download='verizon.png'>Download as PNG</a>
+
+<form>
+  <input id="land" type="checkbox">
+  <label for="#land">land</label><br>
+  <input id="flat" type="checkbox" checked>
+  <label for="#flat">flat 70%</label><br>
+  <input id="background" type="checkbox">
+  <label for="#background">background</label><br>
+</form>
+
+<form id='strokewidth' style="top: 90px;">
+<b>Line width</b><br>
+  <input id="width1" type="radio" name="width" value="1px" checked>
+  <label for="#width1">1px</label><br>
+  <input id="width2" type="radio" name="width" value="2px">
+  <label for="#width1">2px</label><br>
+</form>
+
+<form id="strokeshade" style="top: 160px;">
+<b>Line strength</b><br>
+  <input id="width1" type="radio" name="shade" value="0.1">
+  <label for="#width1">10%</label><br>
+  <input id="width2" type="radio" name="shade" value="0.2">
+  <label for="#width2">20%</label><br>
+  <input id="width2" type="radio" name="shade" value="0.3">
+  <label for="#width2">30%</label><br>
+  <input id="width2" type="radio" name="shade" value="0.4">
+  <label for="#width2">40%</label><br>
+  <input id="width5" type="radio" name="shade" value="0.5" checked>
+  <label for="#width5">50%</label><br>
+  <input id="width10" type="radio" name="shade" value="1.0">
+  <label for="#width10">100%</label><br>
+</form>
+
+<form style="top: 300px;">
+<b>Circle color</b></br>
+  <input id="fmblue" type="radio" name="color" value="interpolateFMblue">
+  <label for="#fmblue">FM blue</label><br>
+  <input id="fmnavy" type="radio" name="color" value="interpolateFMnavy">
+  <label for="#fmnavy">FM navy</label><br>
+  <input id="blue" type="radio" name="color" value="interpolateBlues" checked>
+  <label for="#blue">blue</label><br>
+  <input id="red" type="radio" name="color" value="interpolateReds">
+  <label for="#red">red</label><br>
+  <input id="green" type="radio" name="color" value="interpolateGreens">
+  <label for="#green">green</label><br>
+  <input id="orange" type="radio" name="color" value="interpolateOranges">
+  <label for="#orange">orange</label><br>
+  <input id="brown" type="radio" name="color" value="interpolateYlOrBr">
+  <label for="#brown">brown</label><br>
+  <input id="purple-blue" type="radio" name="color" value="interpolatePuBu">
+  <label for="#purple-blue">purple-blue</label><br>
+  <input id="purple-red" type="radio" name="color" value="interpolatePuRd">
+  <label for="#purple-red">purple-red</label><br>
+  <input id="yellow-green" type="radio" name="color" value="interpolateYlGn">
+  <label for="#yellow-green">yellow-green</label><br>
+</form>
+
+<!-- <img src="att.png" width="200px" style="left: 750px; top:320px;"/> -->
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="bundle.min.js"></script>
