@@ -3,6 +3,9 @@
 
 Various map products
 
+* [local version](http://localhost/~pbogden/fm/single/2018)
+* [remote version](http://pbogden.com/fm/single/2018)
+
 ## Development repository
 
 * (http://github.com/pbogden/single)

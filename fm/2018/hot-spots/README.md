@@ -1,6 +1,6 @@
 # Hot spots
 
-https://observablehq.com/@pbogden/hot-spots@1168
+https://observablehq.com/@pbogden/hot-spots@1192
 
 View this notebook in your browser by running a web server in this folder. For
 example:

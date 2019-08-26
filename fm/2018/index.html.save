@@ -20,9 +20,16 @@ new Runtime().module(define, name => {
   if (name === "map") {
     return new Inspector(document.querySelector("#map"));
   }
-  if (name === "radioView") {
-    return new Inspector(document.querySelector("#radioView"));
-  }
+  // if (name === "map") {
+  //    return new Inspector(document.body);
+  // }
+  // if (name === "radioView") {
+  //   return new Inspector(document.querySelector("#radioView"));
+  // }
 });
+
+
+//const runtime = new Runtime();
+//const main = runtime.module(define, Inspector.into(document.body));
 
 </script>
