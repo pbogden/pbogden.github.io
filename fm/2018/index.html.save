@@ -5,9 +5,9 @@
 <body style='margin:0'>
 
 <div id='container'>
-    <div id='radioView' style="position: absolute; left: 50%; top: 5%">
-    </div>
     <div id='map'>
+    </div>
+    <div id='radio-view' style="position: absolute; left: 50%; top: 5%; padding: 5px; background: rgba(255,255,255,.5);">
     </div>
 </div>
 
@@ -20,12 +20,9 @@ new Runtime().module(define, name => {
   if (name === "map") {
     return new Inspector(document.querySelector("#map"));
   }
-  // if (name === "map") {
-  //    return new Inspector(document.body);
-  // }
-  // if (name === "radioView") {
-  //   return new Inspector(document.querySelector("#radioView"));
-  // }
+  if (name === "radioView") {
+    return new Inspector(document.querySelector("#radio-view"));
+  }
 });
 
 
