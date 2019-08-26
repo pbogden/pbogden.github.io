@@ -1,4 +1,4 @@
-// https://observablehq.com/@pbogden/2018-bubble@529
+// https://observablehq.com/@pbogden/2018-bubble@533
 export default function define(runtime, observer) {
   const main = runtime.module();
   main.variable(observer()).define(["md"], function(md){return(
@@ -38,6 +38,13 @@ d3.select(chart).selectAll('circle.bubble').data().map(d => d.single)
       // .style("height", "auto");
       .attr("width", "960px")
       .attr("height", "600px");
+  
+  svg.append("g").append("rect")
+      .attr("fill", "red")
+      .attr("width", "960")
+      .attr("height", "600")
+      .attr("x", 0)
+      .attr("y", 0);
   
   const legend = svg.append("g")
       .attr('id', 'legend')
