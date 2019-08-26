@@ -1,10 +1,13 @@
-// https://observablehq.com/@pbogden/2018-bubble@536
+// https://observablehq.com/@pbogden/2018-bubble@551
 export default function define(runtime, observer) {
   const main = runtime.module();
   main.variable(observer()).define(["md"], function(md){return(
 md`# 2018 bubble`
 )});
-  main.variable(observer("viewof object")).define("viewof object", ["form","html"], function(form,html){return(
+  main.variable(observer("objectValue")).define("objectValue", ["Generators","objectView"], function(Generators,objectView){return(
+Generators.input(objectView)
+)});
+  main.variable(observer("objectView")).define("objectView", ["form","html"], function(form,html){return(
 form(html`<form>
   <div>
     <label><input name="year" type="radio" value="2018" checked> <i>2018</i></label>
@@ -15,7 +18,6 @@ form(html`<form>
   </div>
 </form>`)
 )});
-  main.variable(observer("object")).define("object", ["Generators", "viewof object"], (G, _) => G.input(_));
   main.define("initial z", function(){return(
 42
 )});
@@ -34,10 +36,10 @@ d3.select(chart).selectAll('circle.bubble').data().map(d => d.single)
 
   const svg = d3.create("svg")
       .attr("viewBox", "0 0 960 600")
-      // .style("width", "100%")
-      // .style("height", "auto");
-      .attr("width", "960px")
-      .attr("height", "600px");
+      .style("width", "100%")
+      .style("height", "auto");
+      // .attr("width", "960px")
+      // .attr("height", "600px");
   
   svg.append("g").append("rect")
       .attr("fill", "#fff")
@@ -108,10 +110,10 @@ d3.extent(data.map(d => d.single))
   main.variable(observer()).define(["data"], function(data){return(
 data.map(d => d.single)
 )});
-  main.variable(observer("data")).define("data", ["d3","object","topojson","us"], async function(d3,object,topojson,us)
+  main.variable(observer("data")).define("data", ["d3","objectValue","topojson","us"], async function(d3,objectValue,topojson,us)
 {
   const path = d3.geoPath();
-  let json = await d3.json("https://pbogden.com/single/data/data" + object.year + ".json")
+  let json = await d3.json("https://pbogden.com/single/data/data" + objectValue.year + ".json")
   let myMap = new Map();
   Object.keys(json).forEach((key) => myMap.set(key, json[key]));
   

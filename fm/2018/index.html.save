@@ -2,10 +2,10 @@
 <meta charset="utf-8">
 <title>2018 bubble</title>
 <link rel="stylesheet" type="text/css" href="./inspector.css">
-<body style='margin:0'>
+<body>
 
 <div id='container'>
-    <div id='objectView' style="position: absolute; left: 50%; top: 5%">
+    <div id='objectView' style="position: absolute; width:auto;">
     </div>
     <div id='chart'>
     </div>
@@ -20,7 +20,7 @@ new Runtime().module(define, name => {
   if (name === "chart") {
     return new Inspector(document.querySelector("#chart"));
   }
-  if (name === "objectView") {
+  if (name === "object") {
     return new Inspector(document.querySelector("#objectView"));
   }
 });
