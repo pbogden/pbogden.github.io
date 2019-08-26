@@ -4,12 +4,12 @@
 <link rel="stylesheet" type="text/css" href="./inspector.css">
 <body style='margin:0'>
 
-<!-- <div id='container'>
+<div id='container'>
     <div id='radioView' style="position: absolute; left: 50%; top: 5%">
     </div>
     <div id='map'>
     </div>
-</div> -->
+</div>
 
 <script type="module">
 
@@ -17,9 +17,9 @@ import {Runtime, Inspector} from "./runtime.js";
 import define from "./@pbogden/hot-spots.js";
 
 new Runtime().module(define, name => {
-  // if (name === "map") {
-  //   return new Inspector(document.querySelector("#map"));
-  // }
+  if (name === "map") {
+    return new Inspector(document.querySelector("#map"));
+  }
   // if (name === "map") {
   //    return new Inspector(document.body);
   // }
@@ -29,7 +29,7 @@ new Runtime().module(define, name => {
 });
 
 
-const runtime = new Runtime();
-const main = runtime.module(define, Inspector.into(document.body));
+//const runtime = new Runtime();
+//const main = runtime.module(define, Inspector.into(document.body));
 
 </script>
