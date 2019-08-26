@@ -3,8 +3,8 @@
 
 Various map products
 
-* [local version](http://localhost/~pbogden/fm/2018)
-* [remote version](http://pbogden.com/fm/2018) -- pbogden.github.io
+* (http://localhost/~pbogden/fm/2018)
+* (http://pbogden.com/fm/2018)
 
 ## Development repository
 
