@@ -1,6 +1,6 @@
 # 2018 bubble
 
-https://observablehq.com/@pbogden/2018-bubble@533
+https://observablehq.com/@pbogden/2018-bubble@536
 
 View this notebook in your browser by running a web server in this folder. For
 example:

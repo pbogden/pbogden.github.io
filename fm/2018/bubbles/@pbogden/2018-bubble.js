@@ -1,4 +1,4 @@
-// https://observablehq.com/@pbogden/2018-bubble@533
+// https://observablehq.com/@pbogden/2018-bubble@536
 export default function define(runtime, observer) {
   const main = runtime.module();
   main.variable(observer()).define(["md"], function(md){return(
@@ -40,7 +40,7 @@ d3.select(chart).selectAll('circle.bubble').data().map(d => d.single)
       .attr("height", "600px");
   
   svg.append("g").append("rect")
-      .attr("fill", "red")
+      .attr("fill", "#fff")
       .attr("width", "960")
       .attr("height", "600")
       .attr("x", 0)
@@ -69,7 +69,7 @@ d3.select(chart).selectAll('circle.bubble').data().map(d => d.single)
  
   svg.append("path")
       .datum(topojson.feature(us, us.objects.nation))
-      .attr("fill", "#ccc")
+      .attr("fill", "#d9d7dc") // fm background
       .attr("d", path);
   
   svg.append("path")
