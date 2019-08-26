@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Hot spots</title>
+<link rel="stylesheet" type="text/css" href="./inspector.css">
+<body style='margin:0'>
+
+<div id='container'>
+    <div id='radioView' style="position: absolute; left: 50%; top: 5%">
+    </div>
+    <div id='map'>
+    </div>
+</div>
+
+<script type="module">
+
+import {Runtime, Inspector} from "./runtime.js";
+import define from "./@pbogden/hot-spots.js";
+
+new Runtime().module(define, name => {
+  if (name === "map") {
+    return new Inspector(document.querySelector("#map"));
+  }
+  if (name === "radioView") {
+    return new Inspector(document.querySelector("#radioView"));
+  }
+});
+
+</script>

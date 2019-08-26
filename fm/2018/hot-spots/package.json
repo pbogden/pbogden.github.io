@@ -1,0 +1,14 @@
+{
+  "name": "@pbogden/hot-spots",
+  "main": "@pbogden/hot-spots.js",
+  "version": "1168.0.0",
+  "homepage": "https://observablehq.com/@pbogden/hot-spots",
+  "author": {
+    "name": "pbogden",
+    "url": "https://observablehq.com/@pbogden"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
