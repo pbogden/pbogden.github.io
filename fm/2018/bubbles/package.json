@@ -1,0 +1,14 @@
+{
+  "name": "@pbogden/2018-bubble",
+  "main": "@pbogden/2018-bubble.js",
+  "version": "529.0.0",
+  "homepage": "https://observablehq.com/@pbogden/2018-bubble",
+  "author": {
+    "name": "pbogden",
+    "url": "https://observablehq.com/@pbogden"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
