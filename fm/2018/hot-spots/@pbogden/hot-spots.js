@@ -1,4 +1,4 @@
-// https://observablehq.com/@pbogden/hot-spots@1168
+// https://observablehq.com/@pbogden/hot-spots@1192
 import define1 from "../@mbostock/form-input.js";
 
 export default function define(runtime, observer) {
@@ -20,13 +20,27 @@ form(html`<form>
   </div>
 </form>`)
 )});
-  main.variable(observer("map")).define("map", ["d3","DOM","width","height","basemap"], function(d3,DOM,width,height,basemap)
+  main.variable(observer("map")).define("map", ["d3","DOM","width","height","basemap","data","loan_rate"], function(d3,DOM,width,height,basemap,data,loan_rate)
 {
   const div = d3.select(DOM.element('div')).style('width', width + 'px').style('height', height + 'px');
   const svg = div.append('svg').style('position', 'absolute').attr('width', '100%').attr('height', '100%'); 
   
   div.node().insertBefore(basemap.canvas, svg.node());
   d3.select(basemap.canvas).style('position', 'absolute');
+
+  div.select('svg').selectAll("circle")
+    .data(data)
+    .join("circle")
+  //     .sort(function(a,b) { return Math.abs(b.properties[budget]) - Math.abs(a.properties[budget]) })
+      .attr("fill", d => loan_rate(d) > 0.04 ? '#c55147' : '#007697')
+      .attr('fill-opacity', d => loan_rate(d) > 0.04 ? .8 : .5)
+      .attr('cx', d => d[1].x)
+      .attr('cy', d => d[1].y)
+      .attr("r", d => d[1].households > 1000 ? 70 * loan_rate(d) : null)
+  //     .on('mouseover click', (d) => div.property("value", d.properties).dispatch("input"))
+  //     .on('mouseout', () => div.property("value", "").dispatch("input"))
+  
+  // div.property("value", "").dispatch('input');
   
   return div.node();
 }
@@ -79,27 +93,6 @@ form(html`<form>
 }
 );
   main.variable(observer("url")).define("url", ["Generators", "viewof url"], (G, _) => G.input(_));
-  main.variable(observer()).define(["d3","map","data","loan_rate","html"], function(d3,map,data,loan_rate,html)
-{
-  d3.select(map).select('svg').selectAll("circle")
-    .data(data)
-    .join("circle")
-  //     .sort(function(a,b) { return Math.abs(b.properties[budget]) - Math.abs(a.properties[budget]) })
-      .attr("fill", d => loan_rate(d) > 0.04 ? '#c55147' : '#007697')
-      .attr('fill-opacity', d => loan_rate(d) > 0.04 ? .8 : .5)
-      .attr('cx', d => d[1].x)
-      .attr('cy', d => d[1].y)
-      .attr("r", d => d[1].households > 1000 ? 70 * loan_rate(d) : null)
-  //     .on('mouseover click', (d) => div.property("value", d.properties).dispatch("input"))
-  //     .on('mouseout', () => div.property("value", "").dispatch("input"))
-  
-  // div.property("value", "").dispatch('input');
-  return html`Add circles`
-}
-);
-  main.variable(observer()).define(["d3","map"], function(d3,map){return(
-d3.select(map).select('svg').selectAll('circle').nodes()
-)});
   main.variable(observer()).define(["md"], function(md){return(
 md`### Data`
 )});
