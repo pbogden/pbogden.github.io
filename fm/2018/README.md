@@ -3,6 +3,13 @@
 
 Various map products
 
+* (http://localhost/~pbogden/fm/2018)
+* (http://pbogden.com/fm/2018)
+
+## Development repository
+
+* (http://github.com/pbogden/single)
+
 ## observable notebooks
 
 * Note that only selected cells from the notebooks are added, and I removed margins from the body element

@@ -7,7 +7,11 @@
 <div id='container'>
     <div id='map'>
     </div>
+<<<<<<< HEAD
     <div id='radio-view' style="position: absolute; left: 50%; top: 5%; padding: 10px; background: rgba(255,255,255,.5)">
+=======
+    <div id='radio-view' style="position: absolute; left: 50%; top: 5%; padding: 5px; background: rgba(255,255,255,.5);">
+>>>>>>> 7049600b35abab522a7f15370cfae9d69c37eb59
     </div>
 </div>
 
@@ -16,7 +20,18 @@
 import {Runtime, Inspector} from "./runtime.js";
 import define from "./@pbogden/hot-spots.js";
 
+<<<<<<< HEAD
 const runtime = new Runtime()
+=======
+new Runtime().module(define, name => {
+  if (name === "map") {
+    return new Inspector(document.querySelector("#map"));
+  }
+  if (name === "radioView") {
+    return new Inspector(document.querySelector("#radio-view"));
+  }
+});
+>>>>>>> 7049600b35abab522a7f15370cfae9d69c37eb59
 
 runtime.module(define, name => {
   if (name === "radioView") {
@@ -27,7 +42,11 @@ runtime.module(define, name => {
  }
 });
 
+<<<<<<< HEAD
 // const runtime = new Runtime();
+=======
+//const runtime = new Runtime();
+>>>>>>> 7049600b35abab522a7f15370cfae9d69c37eb59
 //const main = runtime.module(define, Inspector.into(document.body));
 
 </script>
