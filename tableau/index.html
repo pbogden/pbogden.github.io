@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>My D3 demo</title>
+<style>
+
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
+body {
+  margin: 0 0;
+  overflow-y: hidden; // hide vertical
+  overflow-x: hidden; // hide horizontal
+}
+
+h4 {
+  text-align: center;
+}
+
+button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+</style>
+<body>
+
+  <div>
+    <h4>Dashboard name: <span id="dashboard_name"></span></h4>
+    <button id='reset-button'>Reset</button>
+  </div>
+
+<script src="d3.v5.min.js"></script>
+<script src="topojson-client.min.js"></script>
+<script src="tableau.extensions.1.latest.js"></script>
+<script>
+
+const width = window.innerWidth;
+const margin = {top: 20, right: 0, bottom: 30, left: 40};
+const height = window.innerHeight;
+
+Promise.all([
+    d3.json("us-10m.json"),
+    d3.json("states.json")
+]).then(plotit)
+.catch(function(err) {
+    console.log('error reading data', err)
+})
+
+function plotit(files) {
+
+  const us = files[0];
+  const json = files[1];
+  console.log("Here's the data:", us, json)
+
+  const svg = d3.select('body').append("svg")
+      .style("width", "100%")
+      .style("height", "auto")
+      .attr("viewBox", [0, 0, 960, 600]);
+
+  const projection = d3.geoAlbers().scale(1280).translate([480, 300])
+  const path = d3.geoPath(projection);
+  const scale = width / 960;
+
+  svg.append("g")
+    .selectAll("path")
+    .data(topojson.feature(us, us.objects.states).features)
+    .join("path")
+      .classed('interior', true)
+      .attr("fill", "darkgray")
+      .attr("d", path)
+      .on('mouseover', function(d) {
+        d3.select(this).style("fill", "red");
+        applyFilter(json[d.properties.STATE])
+      })
+      .on('mouseout', function() { d3.select(this).style("fill", null) })
+
+  svg.append("path")
+      .datum(topojson.mesh(us, us.objects.states, (a, b) => a !== b))
+      .classed('mesh', true)
+      .attr("fill", "none")
+      .attr("stroke", "white")
+      .attr("stroke-linejoin", "round")
+      .attr("d", path);
+
+  svg.append("path")
+      .datum(topojson.mesh(us, us.objects.nation))
+      .classed('nation', true)
+      .attr("fill", "none")
+      .attr("stroke", "black")
+      .attr("stroke-linejoin", "round")
+      .attr("d", path);
+
+  d3.select("#reset-button").on("click", reset)
+}
+
+// TABLEAU STUFF STARTS HERE
+const worksheetName = "Sale Map";
+let worksheet;
+
+window.onload = function() {
+  // Tell Tableau we'd like to initialize our extension
+  tableau.extensions.initializeAsync().then(function() {
+
+    // Set global
+    worksheet = getSelectedSheet(worksheetName);
+
+    // Get the dashboard name from the tableau namespace and set it as our title
+    const dashboardName = tableau.extensions.dashboardContent.dashboard.name;
+    d3.select('#dashboard_name').text(dashboardName)
+  });
+}
+
+// Reset the filter on the worksheet map
+function reset(){
+  console.log('Resetting filter on tableau map')
+  const fieldName = "State";
+  worksheet.clearFilterAsync("State");
+}
+
+
+function applyFilter(state) {
+  console.log('applyFilter', state)
+  const fieldName = "State";
+  worksheet.applyFilterAsync(fieldName, [state], tableau.FilterUpdateType.Replace);
+}
+
+
+// Go through all the worksheets in the dashboard and find the one we want
+function getSelectedSheet(worksheetName) {
+  return tableau.extensions.dashboardContent.dashboard.worksheets.find(function(sheet) {
+    return sheet.name === worksheetName;
+  });
+}
+
+</script>

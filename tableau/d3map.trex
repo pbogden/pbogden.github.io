@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest manifest-version="0.1" xmlns="http://www.tableau.com/xml/extension_manifest">
+  <dashboard-extension id="com.tableau.extensions.d3map" extension-version="0.1.0">
+    <default-locale>en_US</default-locale>
+    <name resource-id="name"/>
+    <description>Gets data from the dashboard</description>
+    <author name="pb" email="pb@example.com" organization="example" website="https://www.example.com"/>
+    <min-api-version>0.6</min-api-version>
+    <source-location>
+      <url>https://pbogden.com/tableau/index.html</url>
+    </source-location>
+    <icon></icon>
+    <permissions>
+    <permission>full data</permission>
+</permissions>
+  </dashboard-extension>
+  <resources>
+    <resource id="name">
+      <text locale="en_US">Demo</text>
+    </resource>
+  </resources>
+</manifest>
