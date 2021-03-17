@@ -15,6 +15,10 @@
 
 * [Millennials not Boomers](https://pbogden.com/myth/)
 
+## Myth debunked
+
+* [My observable](https://pbogden.com/myth/) -- Observable meets Jupyter
+
 ## Getting serious
 
 [visualizr.io](http://visualizr.io) -- Where the work gets done
