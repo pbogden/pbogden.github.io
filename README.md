@@ -17,7 +17,7 @@
 
 ## Myth debunked
 
-* [My observable](https://pbogden.com/myth/) -- Observable meets Jupyter
+* [My observable](https://github.com/pbogden/my_observable/) -- Observable meets Jupyter
 
 ## Getting serious
 
