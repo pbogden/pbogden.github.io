@@ -7,9 +7,17 @@
 
 [housing demo](http://pbogden.com/single) -- The iterative process: a case study
 
-## What's shaking? A: Interactive maps
+## What's shaking?
 
-[earthquake demo](http://pbogden.com/shake) -- Interactive graphics meet data deluge. Spreadsheets beware.
+[earthquake demo](http://pbogden.com/shake) -- Interactive data viz
+
+## Myth debunked
+
+* [Millennials not Boomers](https://pbogden.com/myth/)
+
+## Myth debunked
+
+* [My observable](https://github.com/pbogden/my_observable/) -- Observable meets Jupyter
 
 ## Getting serious
 
