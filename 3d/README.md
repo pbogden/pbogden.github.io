@@ -8,3 +8,4 @@ Embedding demo with observable notebook
 * [demo (public)](https://pbogden.github.io/3d)
 * [Introduction to embedding](https://observablehq.com/@observablehq/introduction-to-embedding)
 * [Advanced embedding and downloading](https://observablehq.com/@observablehq/downloading-and-embedding-notebooks)
+* [tachyons](http://tachyons.io/)
