@@ -1,7 +1,7 @@
 
 # 3d
 
-Embedding demo with observable notebook
+Embedding observable notebook
 
 * [Hello, ScatterGL!](https://observablehq.com/d/378cfe37389da2f5)
 * [demo (localhost)](http://localhost/~pbogden/pbogden.github.io/3d/)
