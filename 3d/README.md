@@ -3,9 +3,10 @@
 
 Embedding observable notebook
 
-* [demo.html (localhost)](http://localhost/~pbogden/pbogden.github.io/3d/demo.html)
 * [index.html (localhost)](http://localhost/~pbogden/pbogden.github.io/3d/)
 * [index.html (public)](https://pbogden.github.io/3d)
+* [demo.html (localhost)](http://localhost/~pbogden/pbogden.github.io/3d/demo.html)
+* [tachyons.html (localhost)](http://localhost/~pbogden/pbogden.github.io/3d/tachyons.html)
 
 ## References
 
