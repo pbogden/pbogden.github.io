@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/article.css">
-  <body class="w-100 sans-serif bg-white">
+  <body class="w-100 sans-serif bg-black">
 
 <header class="bg-black-90 fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
   <nav class="f6 fw6 ttu tracked">
@@ -15,17 +15,17 @@
   </nav>
 </header>
 
-<section data-name="component-info" class="pa3 pa5-ns bt b--black-10 black-70 bg-white">
+<section data-name="component-info" class="pa3 pa5-ns bt b--black-10 black-70 bg-black">
 <article class="cf">
+  <div class="fl w-100 w-50-ns bg-black tc">
+    <div id="chart3">
+      <h1>Column Two</h1>
+    </div>
+  </div>
   <div class="fl w-100 w-50-ns tc">
     <div id="buttons2" class="f4 f3-ns mt4">
     </div>
     <div id="chart2" class="f4 f3-ns mt4">
-    </div>
-  </div>
-  <div class="fl w-100 w-50-ns bg-light-gray tc">
-    <div id="chart3">
-      <h1>Column Two</h1>
     </div>
   </div>
 </article>
@@ -46,25 +46,18 @@ import notebook3 from "https://api.observablehq.com/d/378cfe37389da2f5.js?v=3";
 import notebook2 from "https://api.observablehq.com/d/e6569c4e3860e806.js?v=3";
 
 new Runtime().module(notebook2, name => {
-  if (name === "chart") {
-    return new Inspector(document.querySelector("#chart2"));
-  } else if (name === "viewof transform") {
-    return new Inspector(document.querySelector("#buttons2"));
-  } else if (name === "transforms") {
-    return true; 
-  } else if (name === "update") {
-    return true; 
-  } else if (name === "xAxis") {
-    return true; 
-  } else if (name === "yAxis") {
-    return true; 
-  }
+  if (name === "chart") return new Inspector(document.querySelector("#chart2"));
+  if (name === "viewof transform") return new Inspector(document.querySelector("#buttons2"));
+  if (name === "transforms") return true;
+  if (name === "update") return true;
+  if (name === "xAxis") return true;
+  if (name === "yAxis") return true;
 });
 
 new Runtime().module(notebook3, name => {
   if (name === "scattergl") {
     return new Inspector(document.querySelector("#chart3"));
-  } 
+  }
 });
 
 </script>
