@@ -1,30 +1,56 @@
 <!DOCTYPE html>
-<head>
+<html lang="en">
+  <title> </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/inspector.css">
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
-</head>
-<body>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/article.css">
+  <body class="w-100 sans-serif bg-white">
 
-<div id="chart"></div>
-<div id="height"></div>
-<div id="data"></div>
+<header class="bg-black-90 fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
+  <nav class="f6 fw6 ttu tracked">
+    <a class="link dim white dib mr3" href="#" title="Reset">Reset</a>
+    <a class="link dim white dib mr3" href="#" title="Something">Something</a>
+  </nav>
+</header>
+
+<section data-name="component-info" class="pa3 pa5-ns bt b--black-10 black-70 bg-white">
+<article class="cf">
+  <div class="fl w-100 w-50-ns bg-near-white tc">
+    <div id="data" class="f4 f3-ns mt4">
+    </div>
+  </div>
+  <div class="fl w-100 w-50-ns bg-light-gray tc">
+    <div id="chart">
+      <h1>Column Two</h1>
+    </div>
+  </div>
+</article>
+<article class="cf">
+  <div class="fl w-100 w-50-ns bg-near-white tc">
+    <h1>Column Three</h1>
+  </div>
+  <div class="fl w-100 w-50-ns bg-light-gray tc">
+    <h1>Column Four</h1>
+  </div>
+</article>
+</section>
 
 <script type="module">
 
-// Load the Observable runtime and inspector.
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-
-// Your notebook, compiled as an ES module.
 import notebook from "https://api.observablehq.com/d/378cfe37389da2f5.js?v=3";
 
 new Runtime().module(notebook, name => {
   if (name === "scattergl") {
     return new Inspector(document.querySelector("#chart"));
-  } else if (name === "height") {
-    return new Inspector(document.querySelector("#height"));
   } else if (name === "data") {
     return new Inspector(document.querySelector("#data"));
   }
 });
 
 </script>
+
+  </body>
+</html>
