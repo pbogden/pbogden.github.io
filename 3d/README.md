@@ -16,3 +16,4 @@ Embedding observable notebook
   * [default stylesheet](https://github.com/observablehq/inspector/blob/master/src/style.css)
   * [default stylesheet minified](https://github.com/observablehq/inspector/blob/master/src/style.css)
   * [tachyons](http://tachyons.io/) -- custom styling recommended by observable
+  * [fixed semi-transparent nav](http://tachyons.io/components/nav/fixed-semi-transparent/index.html)
