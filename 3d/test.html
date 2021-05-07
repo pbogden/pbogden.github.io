@@ -62,6 +62,38 @@
   </option>
 </select>
 
+<div id="observable-form">
+
+</div>
+
+<script type="module">
+
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import notebook from "https://api.observablehq.com/d/80f05060f1d974e0.js?v=3";
+import notebook3 from "https://api.observablehq.com/d/378cfe37389da2f5.js?v=3";
+import notebook2 from "https://api.observablehq.com/d/e6569c4e3860e806.js?v=3";
+
+new Runtime().module(notebook, name => {
+  if (name === "viewof mycolor") return new Inspector(document.querySelector("#observable-form"));
+});
+
+new Runtime().module(notebook2, name => {
+  if (name === "chart") return new Inspector(document.querySelector("#chart2"));
+  if (name === "viewof transform") return new Inspector(document.querySelector("#buttons2"));
+  if (name === "transforms") return true;
+  if (name === "update") return true;
+  if (name === "xAxis") return true;
+  if (name === "yAxis") return true;
+});
+
+new Runtime().module(notebook3, name => {
+  if (name === "scattergl") {
+    return new Inspector(document.querySelector("#chart3"));
+  }
+});
+
+</script>
+
 
   </body>
 </html>
