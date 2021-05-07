@@ -30,9 +30,17 @@
   </div>
 </article>
 <article class="cf">
+
   <div class="fl w-100 w-50-ns bg-gray tc">
-    <h1>Column Three</h1>
+    <div class="ph3 mt4">
+      <h1 class="f6 fw6 ttu tracked">Basic Button with Thick Border</h1>
+      <div id="chart">
+      </div>
+      <div id="chart-again">
+      </div>
+    </div>
   </div>
+
   <div class="fl w-100 w-50-ns bg-gray tc">
     <h1>Column Four</h1>
   </div>
@@ -44,6 +52,13 @@
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import notebook3 from "https://api.observablehq.com/d/378cfe37389da2f5.js?v=3";
 import notebook2 from "https://api.observablehq.com/d/e6569c4e3860e806.js?v=3";
+import notebook from "https://api.observablehq.com/d/80f05060f1d974e0.js?v=3";
+
+new Runtime().module(notebook, name => {
+  if (name === "viewof mycolor") {
+    return new Inspector(document.querySelector("#chart"));
+  }
+});
 
 new Runtime().module(notebook2, name => {
   if (name === "chart") return new Inspector(document.querySelector("#chart2"));
