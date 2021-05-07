@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/article.css">
   <body class="w-100 sans-serif bg-black">
 
-<header class="bg-black-90 fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
+<header class="bg-gray-90 fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
   <nav class="f6 fw6 ttu tracked">
     <a class="link dim gray dib mr3" href="#" title="Reset">Reset</a>
     <a class="link dim gray dib mr3" href="#" title="Something">Something</a>
@@ -16,35 +16,33 @@
 </header>
 
 <section data-name="component-info" class="pa3 pa5-ns bt b--black-10 black-70 bg-black">
-<article class="cf">
-  <div class="fl w-100 w-50-ns bg-black tc">
-    <div id="chart3">
-      <h1>Column Two</h1>
-    </div>
-  </div>
-  <div class="fl w-100 w-50-ns tc">
-    <div id="buttons2" class="f4 f3-ns mt4">
-    </div>
-    <div id="chart2" class="f4 f3-ns mt4">
-    </div>
-  </div>
-</article>
-<article class="cf">
-
-  <div class="fl w-100 w-50-ns bg-gray tc">
-    <div class="ph3 mt4">
-      <h1 class="f6 fw6 ttu tracked">Basic Button with Thick Border</h1>
-      <div id="chart">
-      </div>
-      <div id="chart-again">
+  <article class="cf">
+    <div class="fl w-100 w-50-ns bg-black tc">
+      <div id="chart3">
+        <h1>Column One</h1>
       </div>
     </div>
-  </div>
+    <div class="fl w-100 w-50-ns tc">
+      <div class="ph3 pt3 bg-gray">
+        <h1 class="f6 fw6 ttu tracked">Choose an option for interactive filtering</h1>
+        <div id="buttons2">
+        </div>
+      </div>
+      <div id="chart2" class="f4 f3-ns mt4">
+        <h1>Column Two</h1>
+      </div>
+    </div>
+  </article>
 
-  <div class="fl w-100 w-50-ns bg-gray tc">
-    <h1>Column Four</h1>
-  </div>
-</article>
+  <article class="cf">
+    <div class="fl w-100 w-50-ns bg-gray pv5 tc">
+      <h1>Placeholder #1</h1>
+    </div>
+
+    <div class="fl w-100 w-50-ns bg-gray pv5 tc">
+      <h1>Placeholder #2</h1>
+    </div>
+  </article>
 </section>
 
 <script type="module">
@@ -54,15 +52,9 @@ import notebook3 from "https://api.observablehq.com/d/378cfe37389da2f5.js?v=3";
 import notebook2 from "https://api.observablehq.com/d/e6569c4e3860e806.js?v=3";
 import notebook from "https://api.observablehq.com/d/80f05060f1d974e0.js?v=3";
 
-new Runtime().module(notebook, name => {
-  if (name === "viewof mycolor") {
-    return new Inspector(document.querySelector("#chart"));
-  }
-});
-
 new Runtime().module(notebook2, name => {
   if (name === "chart") return new Inspector(document.querySelector("#chart2"));
-  if (name === "viewof transform") return new Inspector(document.querySelector("#buttons2"));
+  if (name === "viewof options") return new Inspector(document.querySelector("#buttons2"));
   if (name === "transforms") return true;
   if (name === "update") return true;
   if (name === "xAxis") return true;
