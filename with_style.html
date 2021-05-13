@@ -4,48 +4,21 @@
 <title>with style</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
-<style>
-.lh-copy {
-    line-height: 1.5;
-}
+<link rel="stylesheet" href="basic.css">
+<link rel="stylesheet" href="button.css">
 
-.pa3 {
-    padding: 1rem;
-}
-
-.f3 {
-    font-size: 1.5rem;
-}
-
-.measure {
-    max-width: 30em;
-}
-
-@media screen and (min-width: 30em) {
-    .pa5-ns {
-        padding: 4rem;
-    }
-}
-
-@media screen and (min-width: 30em) and (max-width: 60em) {
-    .f2-m {
-        font-size: 2.25rem;
-    }
-}
-
-@media screen and (min-width: 60em) {
-    .f1-l {
-        font-size: 3rem;
-    }
-}
-</style>
 <body class="w-100 sans-serif bg-white">
 
 <main>
   <article class="pa3 pa5-ns">
 
     <h1 class="f3 f2-m f1-l">An Embedding Demo</h1>
-    <p>With styling</p>
+    <p>With
+      <a href="http://tachyons.io/components/articles/large-title-text/">basic</a>
+      and <a href="https://tachyons.io/components/buttons/basic/index.html">button</a>
+      styling from
+      <a href="https://tachyons.io">Tachyons</a>.
+    </p>
 
     <div id="chart"></div>
     <div id="button"></div>
