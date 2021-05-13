@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  max-width: 960px;
+  margin: 1em auto;
+  padding: 0 1em;
+  font-family: sans-serif;
+}
+
+a:link:not(:hover) {
+  text-decoration: none;
+}
+
+</style>
+<h1>Custom embedding demo</h1>
+<p>Compare with <a href="https://github.com/observablehq/examples/tree/main/custom-fluid-width">Custom Fluid Width</a></p>
+
+<!-- By CSS the chart element will fill 50% of the body -->
+<div id="chart" style="width: 50%;"></div>
+<div id="button"></div>
+<p>Reference: <a href="https://github.com/observablehq/examples">Observable Examples</a></p>
+
+<script type="module">
+
+import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import notebook from "https://api.observablehq.com/@pbogden/my-zoom-to-bounding-box.js?v=3";
+
+// Select the element into which we’ll embed the chart.
+const chart = document.querySelector("#chart");
+const button = document.querySelector("#button");
+
+// Instantiate a standard library that can be used by the definition of width below.
+const library = new Library();
+
+// Pass the custom library to the runtime when instantiating our notebook.
+const runtime = new Runtime(library);
+const main = runtime.module(notebook, name => {
+  if (name === "chart") {
+    return new Inspector(chart);
+  }
+  if (name === "viewof button") {
+    return new Inspector(button);
+  }
+  if (name === "recolor") return true;
+});
+
+// Redefine width as a generator that yields the chart element’s clientWidth (if
+// changed) whenever the window resize event fires. If desired, use a
+// ResizeObserver instead; see the custom-fluid-width-and-height example.
+main.redefine("width", library.Generators.observe(notify => {
+  let width = notify(chart.clientWidth); // initial width
+  function resized() {
+    let newWidth = chart.clientWidth;
+    if (newWidth !== width) {
+      notify(width = newWidth);
+    }
+  }
+  addEventListener("resize", resized);
+  return () => removeEventListener("resize", resized);
+}));
+
+</script>
