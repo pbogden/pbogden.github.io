@@ -1,7 +1,7 @@
 
 # pbogden.github.io
 
-* [Embedding demo](./with_style.html) [(with styling)](https://tachyons.io/components/articles/large-title-text/index.html)
+* [Embedding demo](./with_style.html) with styling
 * [Embedding demo (no styling)](./no_style.html)
 * [My Zoom To Bounding Box](https://observablehq.com/@pbogden/my-zoom-to-bounding-box)
 * [Embedding notebooks](https://observablehq.com/collection/@observablehq/embedding-notebooks)
