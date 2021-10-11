@@ -29,7 +29,7 @@
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 
 // Your notebook, compiled as an ES module.
-import notebook from "https://api.observablehq.com/@pbogden/brushable-earthquakes.js?v=3";
+import notebook from "https://api.observablehq.com/@pbogden/brushable-earthquakes-ii.js?v=3";
 
 new Runtime().module(notebook, name => {
   if (name === "mymap") {
@@ -38,7 +38,7 @@ new Runtime().module(notebook, name => {
   if (name === "mychart") {
     return new Inspector(document.querySelector("#button"));
   }
-  if (name === "filter_map") return true;
+  if (name === "map_filter") return true;
 });
 
 </script>
