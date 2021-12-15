@@ -57,6 +57,9 @@ I wanted to preserve creativity and expressiveness.
 As a kid and as an adult, I never want to do what someone tells me to do; I want freedom to make up my own mind.
 This necessitated a low-level approach at the beginning.
 Code for everything, even paragraphs of text! And the depth of modern web technologies is staggering."
+
+## What can you do with Observable?
+
 * Exploratory data analysis
   * [Scatterplot matrix](https://observablehq.com/@d3/brushable-scatterplot-matrix?collection=@d3/d3-brush)
   * [Observable Plot](https://observablehq.com/@observablehq/plot)
