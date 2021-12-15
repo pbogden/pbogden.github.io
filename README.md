@@ -46,6 +46,7 @@ Python & R, meet JavaScript. The barrier between web dev and data science has ne
   * Now it's AI, ML and Python analytics at less than "5% of the cost of a full-stack" development approach.
   * [Data science vs dashboards](https://plotly.com/comparing-dash-tableau-powerbi-einstein-analytics/) -- no comparison
   * They just got some VC funding to go big.
+  * BTW, it's not free.
 * [Observable, Inc](http://observablehq.com) by Mike Bostock
   * "Building a better computational medium." 
   * Founder @observablehq. Creator @d3. Former @nytgraphics. Pronounced BOSS-tock.
