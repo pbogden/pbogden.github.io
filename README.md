@@ -74,5 +74,5 @@ Code for everything, even paragraphs of text! And the depth of modern web techno
   * [Deck.gl](https://observablehq.com/@pessimistress/deck-gl-tutorial?collection=@pessimistress/deck-gl-tutorials)
   * [Scatter-gl](https://observablehq.com/d/386845a4a17cfb25?collection=@pbogden/3d) from [tensorflow.org](http://projector.tensorflow.org/)
 * We’re building from the bottom up to retain expressiveness, creativity, and flexibility.
-* We can reduce effort...Less work to prepare, and less to perform.
-* Reducing effort is incredibly exciting because it doesn’t just save time, it changes who engages in a task, and when!
+  * We can reduce effort...Less work to prepare, and less to perform.
+  * Reducing effort is incredibly exciting because it doesn’t just save time, it changes who engages in a task, and when!
