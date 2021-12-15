@@ -3,9 +3,10 @@
 
 ### What do I mean by web technologies?
 
-* I mean [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5).
+* I mean HTML5
 * I don't mean the latest version of a markup language (HTML) for rendering text and images in a browser.
-* I mean HTML5, the buzzword that represents a whole lot more...
+* I mean [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5), 
+the buzzword that represents a whole lot more...
   * It's a collection of modern technologies that includes HTML, CSS and other living web standards.
   * It includes the increasingly powerful JavaScript (not Java!) language that's built into all modern browsers.
   * And a powerful APIs (Application Programming Interfaces) for sophisticated hardware and data access.
