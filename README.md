@@ -14,24 +14,23 @@ the buzzword that represents a whole lot more...
 
 ### What's disruptive about HTML5?
 
-* HTML5 is to the modern web as Steve Jobs was to the rotary telephone.
-  * Steve Jobs repeatedly leveraged a disruptive combination: Art + STEM 
+* HTML5 is to the modern web as Steve Jobs was to the rotary phone.
+  * With Steve Jobs, the disruptive combination was: Art + STEM.
 * With HTML5, the disruptive combination is: Art + STEM + Data
 * New disciplines
   * Data Journalism (e.g., [NY Times](https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html))
 * New business models
   * BI (interactive charting) moved from desktop to the browser (Tableau, PowerBI, etc.)
-  * Desktop graphics moved to the browser (WebGL is OpenGL. And IE is dead, finally:-)
-  * 3-D Geospatial is in the browser ([google maps](https://www.google.com/maps/place/Portland,+ME/@43.6669249,-70.3515984,11z/data=!3m1!4b1!4m5!3m4!1s0x4cb29c72aab0ee2d:0x7e9db6b53372fa29!8m2!3d43.6590993!4d-70.2568189), mapbox, etc.) 
+  * 3-D desktop graphics moved to the browser (WebGL is OpenGL. And IE is dead, finally:-)
+  * ICYMI, 3-D Geospatial is in the browser ([google maps](https://www.google.com/maps/place/Portland,+ME/@43.6669249,-70.3515984,11z/data=!3m1!4b1!4m5!3m4!1s0x4cb29c72aab0ee2d:0x7e9db6b53372fa29!8m2!3d43.6590993!4d-70.2568189), mapbox, etc.) 
 * But none of this is really new.
 
 ### Data science in the browser
 
 Python & R, meet JavaScript. The barrier between web dev and data science has never been lower. That's really new.
 
-* When CS meets other displines, innovation happens.
+* When CS meets other disciplines, innovation happens.
   * Astronomers take pictures of black holes.
-  * Physicists
 * [Python](https://www.anaconda.com/blog/python-data-visualization-2018-why-so-many-libraries)
   * [Google Colab](https://colab.research.google.com/) -- Jupyter notebook on steroids, with a big-data back end and no configuration.
   * [Plotly.com](https://plotly.com/) -- "AI, ML, and Python analytics for business at 5% the cost of a full-stack approach."
