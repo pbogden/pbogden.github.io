@@ -70,7 +70,7 @@ Code for everything, even paragraphs of text! And the depth of modern web techno
   * [Golden ratio](https://observablehq.com/@mbostock/golden-mona-lisa)
 * Geospatial, modeling, collaboration, etc., etc.
   * [Streaming shapefiles](https://observablehq.com/@mbostock/streaming-shapefiles)
-  * [Fluid physics](Scientific modeling](https://observablehq.com/@mbostock/liquidfun)
+  * [Fluid physics](https://observablehq.com/@mbostock/liquidfun)
   * [Dynamical systems](https://observablehq.com/@mbostock/de-jong-attractor-ii?collection=@observablehq/webgl)
   * [Hello, Three.js!](https://observablehq.com/@mbostock/hello-three-js)
   * [Deck.gl](https://observablehq.com/@pessimistress/deck-gl-tutorial?collection=@pessimistress/deck-gl-tutorials)
