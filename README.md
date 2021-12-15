@@ -39,6 +39,7 @@ Python & R, meet JavaScript. The barrier between web dev and data science has ne
   * "Shiny apps are easy to write. No web development skills are required."
   * Under the hood, data visualization uses web technologies.
 * JavaScript -- [Observable](https://observablehq.com/) -- by Mike Bostock (creator of D3)
+  * This is it -- there's no hood to look under!
 
 ### So what's new?
 
