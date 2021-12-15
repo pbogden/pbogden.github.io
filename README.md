@@ -29,10 +29,9 @@ the buzzword that represents a whole lot more...
 
 Python & R, meet JavaScript. The barrier between web dev and data science has never been lower. That's really new.
 
-* When CS meets other disciplines, innovation happens.
-  * Astronomers take pictures of black holes.
 * [Python](https://www.anaconda.com/blog/python-data-visualization-2018-why-so-many-libraries)
   * [Google Colab](https://colab.research.google.com/) -- Jupyter notebook on steroids, with a big-data back end and no configuration.
+  * [Data visualization with Python](https://www.anaconda.com/blog/python-data-visualization-2018-why-so-many-libraries)
   * [Plotly.com](https://plotly.com/) -- "AI, ML, and Python analytics for business at 5% the cost of a full-stack approach."
 * [R](https://ggplot2.tidyverse.org/) -- R Studio, R Shiny
   * [R Shiny](https://shiny.rstudio.com/) is the R counterpart.
