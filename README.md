@@ -33,7 +33,7 @@ Python & R, meet JavaScript. The barrier between web dev and data science has ne
   * [Google Colab](https://colab.research.google.com/) -- Jupyter notebook on steroids, with a big-data back end and no configuration.
   * [Data visualization with Python](https://www.anaconda.com/blog/python-data-visualization-2018-why-so-many-libraries)
   * [Plotly.com](https://plotly.com/) -- "AI, ML, and Python analytics for business at 5% the cost of a full-stack approach."
-  * Under the hood, data visualization uses web technologies.
+    * Under the hood, data visualization uses web technologies.
 * [R](https://ggplot2.tidyverse.org/) -- R Studio, R Shiny
   * [R Studio](https://shiny.rstudio.com/) is the R counterpart.
   * "Shiny apps are easy to write. No web development skills are required."
