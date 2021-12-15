@@ -29,13 +29,15 @@ the buzzword that represents a whole lot more...
 
 Python & R, meet JavaScript. The barrier between web dev and data science has never been lower. That's really new.
 
-* [Python](https://www.anaconda.com/blog/python-data-visualization-2018-why-so-many-libraries)
+* Python
   * [Google Colab](https://colab.research.google.com/) -- Jupyter notebook on steroids, with a big-data back end and no configuration.
   * [Data visualization with Python](https://www.anaconda.com/blog/python-data-visualization-2018-why-so-many-libraries)
   * [Plotly.com](https://plotly.com/) -- "AI, ML, and Python analytics for business at 5% the cost of a full-stack approach."
+  * Under the hood, data visualization uses web technologies.
 * [R](https://ggplot2.tidyverse.org/) -- R Studio, R Shiny
-  * [R Shiny](https://shiny.rstudio.com/) is the R counterpart.
+  * [R Studio](https://shiny.rstudio.com/) is the R counterpart.
   * "Shiny apps are easy to write. No web development skills are required."
+  * Under the hood, data visualization uses web technologies.
 * JavaScript -- [Observable](https://observablehq.com/) -- by Mike Bostock (creator of D3)
 
 ### So what's new?
