@@ -50,11 +50,11 @@ Python & R, meet JavaScript. The barrier between web dev and data science has ne
   * [Mike Bostock's vision](https://observablehq.com/@observablehq/future-of-data-work-q-a-with-mike-bostock) -- Published 7 Dec 2021
   * A new IDE -- an integrated *discovery* environment rather than *development* environment.
   * "I didn’t want to introduce limitations on the displays themselves.
-    * Constraints would make the problem easier, but uninteresting.
-    * I wanted to preserve creativity and expressiveness.
-    * As a kid and as an adult, I never want to do what someone tells me to do; I want freedom to make up my own mind.
-    * This necessitated a low-level approach at the beginning.
-    * Code for everything, even paragraphs of text! And the depth of modern web technologies is staggering."
+Constraints would make the problem easier, but uninteresting.
+I wanted to preserve creativity and expressiveness.
+As a kid and as an adult, I never want to do what someone tells me to do; I want freedom to make up my own mind.
+This necessitated a low-level approach at the beginning.
+Code for everything, even paragraphs of text! And the depth of modern web technologies is staggering."
 * Exploratory data analysis
   * [Scatterplot matrix](https://observablehq.com/@d3/brushable-scatterplot-matrix?collection=@d3/d3-brush)
   * [Observable Plot](https://observablehq.com/@observablehq/plot)
