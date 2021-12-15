@@ -9,6 +9,7 @@
   * It's a collection of modern technologies that includes HTML, CSS and other living web standards.
   * It includes the increasingly powerful JavaScript (not Java!) language that's built into all modern browsers.
   * And a powerful APIs (Application Programming Interfaces) for sophisticated hardware and data access.
+  * "And the depth of modern web technologies is staggering." -- [Mike Bostock](https://observablehq.com/@observablehq/future-of-data-work-q-a-with-mike-bostock)
 
 ### What's disruptive about HTML5?
 
