@@ -74,13 +74,15 @@ Code for everything, even paragraphs of text! And the depth of modern web techno
   * [Shuffling algorithm](https://observablehq.com/@mbostock/visualizing-order)
   * [Linked Lists](https://observablehq.com/@mbostock/linked-lists?collection=@mbostock/data-structures)
   * [Golden ratio](https://observablehq.com/@mbostock/golden-mona-lisa)
-* Geospatial, modeling, collaboration, etc., etc.
+* Geospatial analysis, modeling, collaboration, etc., etc.
   * [Streaming shapefiles](https://observablehq.com/@mbostock/streaming-shapefiles)
   * [Fluid physics](https://observablehq.com/@mbostock/liquidfun)
   * [Dynamical systems](https://observablehq.com/@mbostock/de-jong-attractor-ii?collection=@observablehq/webgl)
   * [Hello, Three.js!](https://observablehq.com/@mbostock/hello-three-js)
   * [Deck.gl](https://observablehq.com/@pessimistress/deck-gl-tutorial?collection=@pessimistress/deck-gl-tutorials)
   * [Scatter-gl](https://observablehq.com/d/386845a4a17cfb25?collection=@pbogden/3d) from [tensorflow.org](http://projector.tensorflow.org/)
+* Data science, ML, AI, etc.
+* Collaboration and innovation!
 * "We’re building from the bottom up to retain expressiveness, creativity, and flexibility."
   * "We can reduce effort...Less work to prepare, and less to perform."
   * "Reducing effort is incredibly exciting because it doesn’t just save time, it changes who engages in a task, and when!"
