@@ -25,7 +25,7 @@ the buzzword that represents a whole lot more...
   * ICYMI, 3-D Geospatial is in the browser ([google maps](https://www.google.com/maps/place/Portland,+ME/@43.6669249,-70.3515984,11z/data=!3m1!4b1!4m5!3m4!1s0x4cb29c72aab0ee2d:0x7e9db6b53372fa29!8m2!3d43.6590993!4d-70.2568189), mapbox, etc.) 
 * But none of this is really new.
 
-### Data science in the browser
+### Data science in a browser
 
 Python & R, meet JavaScript. The barrier between web dev and data science has never been lower. That's really new.
 
