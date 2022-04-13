@@ -17,7 +17,7 @@
       <h1>Portland</h1>
       <div id="map"></div>
       <div id="brush"></div>
-      <div id="brushd"></div>
+      <div id="brushed"></div>
     </div>
 
     <div class="col-sm-1">
@@ -40,8 +40,9 @@ new Runtime().module(notebook, name => {
   if (name === "brush") {
     return new Inspector(document.querySelector("#brush"));
   }
-  if (name === "brushed") 
+  if (name === "brushed") {
     return new Inspector(document.querySelector("#brushed"));
+  }
 });
 
 </script>
