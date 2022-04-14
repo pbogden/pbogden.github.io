@@ -1,7 +1,7 @@
 
 # pbogden.github.io
 
-* [Portland dots](./portland.html)
+* [Portland dots](./portland.html) -- test
 * [Brushable earthquakes](./quakes.html)
 * [Embedding demo](./with_style.html) with styling
 * [Embedding demo (no styling)](./no_style.html)
