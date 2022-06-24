@@ -1,0 +1,121 @@
+
+# DS 5010
+
+## Introduction to Programming for Data Science
+
+* **Instructor**: Philip Bogden, p.bogden@northeastern.edu
+* **Office Hours**: Fridays 2-4pm or by appointment (on Teams: https://teams.northeastern.edu)
+* **Piazza**: Class-related Q&A: https://piazza.com/class/kye80qzrk8z4y4
+* **Canvas**: Schedule, assignments, grades: https://northeastern.instructure.com/courses/103312
+* **Github**: Assignment submissions -- you'll be invited to github classroom using your northeastern email.
+* **Colab**: Prototyping and in-class exercises. Use your husky.neu.edu email: https://colab.research.google.com
+
+## Introduction to Programming for Data Science
+
+Offers an introductory course on fundamentals of programming and data structures. 
+Covers lists, arrays, trees, hash tables, etc.; 
+program design, programming practices, testing, debugging, maintainability, data collection techniques, 
+and data cleaning and preprocessing. 
+Includes a class project, where students use the concepts covered to collect data from the web, 
+clean and preprocess the data, and make it ready for analysis. 
+(This course description is from the [Academic Catalog](This course description is from the Academic Catalog.))
+
+## Course objectives
+
+This course builds on the foundation provided by CS 5001, 5002 and 5003.
+Students will apply programming basics to the design and implementation of data science applications.
+In particular, students will be introduced to programming as a collaborative discipline. 
+The primary language is Python. At the end of DS 5010, a student should be able to do the following:
+
+* Acquire data from various sources
+  * Design and write a program that uses a Python's built-in data structures to...
+  * Read and process a large collection (more than 100) of files on a local or remote file system
+  * Read and process data from a web-accessible API 
+  * Compute basic statistics and create standard charts (histograms, scatterplots, etc.) with Matplotlib
+* Document code so others can use it, including:
+  * Detailed in-line documentation for functions and modules.
+  * API documentation for packages.
+  * Clean, well-organized, self-documenting code (and knowing when that's sufficient).
+* Write modular code for an entire data processing pipeline that includes:
+  * Testing (and test-driven development when appropriate) with standard tools,
+  * Error checking, raising exceptions that help with debugging data,
+  * Automating tasks when appropriate.
+* Manage version-controlled source code for a small project
+  * Write project documentation for reproducibility, with proper and authoritative attribution.
+  * Develop code collaboratively using git and github command-line tools
+  * Use pull requests to communicate and discuss issues with collaborators
+* Use common packages for data manipulation and basic visualization (e.g., Numpy, Pandas, Matplotlib)
+  * Know when to use these packages for efficient implementation of tasks learned in the beginning of the course.
+  * Know how to read and use the standard API documentation for usage and customization.
+  * Know when to use (and not to use) stackoverflow, google and random blogs on the Internet.
+* Read & process common non-tabular data formats (e.g., JSON, GeoJSON, shapefiles)
+  * Combine disparate datasets and data types (e.g., with FIPS codes) to facilitate geospatial analysis
+  * Perform basic geospatial data visualization using matplotlib
+  * Use other standard tools for geospatial visualization and analysis.
+* Read code in the other two data science languages (R & JavaScript) for understanding
+  * Write functionally equivalent code in Python
+
+## Schedule (Spring 2022)
+
+The schedule below and other detail in this syllabus are subject to change.
+
+| Date   | Week   | Topic |
+| ---    | ---    | ---   |
+| 20-21 Jan | 1   | github, colab, jupyter | 
+| 27-28 Jan | 2   | Basics of reading and plotting data |
+| 3-4 Feb   | 3   | Case Study #1: Vaccine effectiveness | 
+| 10-11 Feb | 4   | --- |
+| 17-18 Feb | 5   | Case Study #2: Data structures | 
+| 17-18 Feb | 5   | --- | 
+| 24-25 Feb | 6   | Case Study #3: Numpy, Pandas & Seaborn |
+| 3-4 Mar   | 7   | --- | 
+| 10-11 Mar | 8   | Case Study #4: USGS Earthquakes API |
+| 17-18 Mar | --- | Spring Break -- NO CLASS |
+| 24-25 Mar | 9   | --- | 
+| 31-Mar/1 Apr | 10 | Case Study #5: GPCOG project |
+| 7-8 Apr   | 11  | --- |
+| 14-15 Apr | 12  | --- |
+| 21-22 Apr | 13  | --- |
+| 28-29 Apr | 14  | --- |
+| 4-5 May   | 15  | Finals week |
+
+## Approach
+
+* Case studies -- Students will develop code collaboratively on a series of case studies that are central to the course.
+* Lecture -- Lectures will provide context for in-class acitivies, but account for a small fraction of total class time.
+* In-class exercises -- collaborative software-development activities will advance the case studies.
+* Homework assignments -- individual assignments and collaborative coding will continue between class sessions.
+* Reading -- Occasional reading assignments will be assigned in advance of related in-class exercises.
+* Quizzes -- Occasional short (~15-minute) quizzes will assess reading comprehension.
+* In-class discussion -- Immediately following quizzes we'll discuss quiz solutions.
+
+## Texts
+
+* [Python Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook) (2016) by Jake VanderPlas
+  * We'll use Chapters 2-4, which cover data management, processing and visualization with Numpy, Pandas and Matplotlib.
+  * DS 5110 covers the material in Chapter 5 on machine learning with Scikit-Learn.
+  * The entire book is available for free on github in the form of Jupyter notebooks that launch automatically in Colab.
+* [A Whirlwind Tour of Python](https://jakevdp.github.io/WhirlwindTourOfPython/) (2016) by Jake VanderPlas
+  * The book is freely available as HTML and on Github as a collection of executable Jupyter notebooks.
+* [Python for Data Analysis, 3rd Ed](https://learning.oreilly.com/library/view/python-for-data/9781098104023/) by Wes McKinney
+  * Data wrangling with Pandas, Numpy & Jupyter -- the 3rd edition is an early release, available on O'Reilly
+* [Learning Python, 5th Edition](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/) by Mark Lutz
+  * This book published in 2013 (old) has complementary material on OOP.
+* [R for Data Science (R4DS)](https://r4ds.had.co.nz/) by Wickham & Grolemund
+  * This introductory book uses R, one of the two other data science programming languages (the third is JavaScript).
+
+## Development environment
+
+You should have a standard Python development environment installed on your computer, 
+including a text editor or IDE. You will find modern recommendations in McKinney's text.
+
+You should also install Git as described here: https://docs.github.com/en/get-started/quickstart/set-up-git.
+
+## Assessment
+
+ | Activity | Contribution |
+ | --- | --- |
+ | Homework | 50% |
+ | Quizzes  | 10% |
+ | Project | 30% |
+ | Class Participation | 10% |
