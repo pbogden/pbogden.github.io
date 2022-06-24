@@ -82,12 +82,30 @@ The schedule below and other detail in this syllabus are subject to change.
 ## Approach
 
 * Case studies -- Students will develop code collaboratively on a series of case studies that are central to the course.
+* Project -- A final XN-style project/case study will span several weeks at the end of the course.
 * Lecture -- Lectures will provide context for in-class acitivies, but account for a small fraction of total class time.
 * In-class exercises -- collaborative software-development activities will advance the case studies.
 * Homework assignments -- individual assignments and collaborative coding will continue between class sessions.
 * Reading -- Occasional reading assignments will be assigned in advance of related in-class exercises.
 * Quizzes -- Occasional short (~15-minute) quizzes will assess reading comprehension.
 * In-class discussion -- Immediately following quizzes we'll discuss quiz solutions.
+
+## Case studies
+
+Projects allow students to gain experience working in small teams on practical problems.
+Code development occurs with a shared github repository using basic tools for collaborative coding 
+such as prototyping in branches, pull requests, merging after independent collaborator review, 
+discussing new functionality with “issues”, etc.  
+Project documentation, attribution and reproducibility are critically important. 
+Documentation should have sufficient detail so that another technical teams could pick 
+up and expand upon the project at a later date.
+Projects include a front-facing github-pages site that provides an overview understandable by a non-technical audience.
+The repo and gh-pages site can contribute to student porfolios.
+
+Examples from Spring 2022:
+
+* [Vaccines case study](ds5010.github.io/vaccines)
+* [Broadband project](ds5010.github.io/broadband)
 
 ## Texts
 
