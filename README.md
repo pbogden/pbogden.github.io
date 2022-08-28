@@ -1,6 +1,6 @@
 
 # Classes
 
-* [DS 5010](./ds5010.md)
-* [DS 5110](./ds5110.md)
-* [CS 7290](./cs7290.md)
+* [DS 5010](http://pbogden.github.io/ds5010)
+* [DS 5110](http://pbogden.github.io/ds5110)
+* [CS 7290](http://pbogden.github.io/ds7290)
