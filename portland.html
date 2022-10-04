@@ -43,6 +43,7 @@ new Runtime().module(notebook, name => {
   if (name === "brushed") {
     return new Inspector(document.querySelector("#brushed"));
   }
+  if (name === "styling") return true;
 });
 
 </script>
