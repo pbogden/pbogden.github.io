@@ -40,7 +40,14 @@ new Runtime().module(notebook, name => {
   if (name === "brush") {
     return new Inspector(document.querySelector("#brush"));
   }
+<<<<<<< HEAD
+  if (name === "brushed") {
+    return new Inspector(document.querySelector("#brushed"));
+  }
+  if (name === "styling") return true;
+=======
   if (name === "brushed") return true;
+>>>>>>> 60df5870ae6cf15d9c17e88a528e7bc295017f3b
 });
 
 </script>
