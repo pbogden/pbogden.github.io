@@ -31,7 +31,7 @@
           <a class="nav-link active" href="/quakes/explorer.html">Explorer</a>
         </li>
       </ul>
-      <a class="navbar-brand" href="https://observablehq.com/@pbogden/brushable-earthquakes-ii">
+      <a class="navbar-brand" href="https://observablehq.com/d/2bcfe5c4ba7eba77">
         <img class="navbar-brand" src="./observable.svg" height="40px">
       </a>
     </div><!-- /.collapse -->
@@ -46,14 +46,11 @@
     </div>
     <div class="col-sm-6">
       <div class="row">
-        <h4>Interactive selection of map data...</h4>
+        <h4>Select map data...</h4>
         <!-- See: https://getbootstrap.com/docs/5.0/helpers/ratio/ -->
         <div id="mypoint" class="ratio" style="--bs-aspect-ratio: 50%;"></div>
         <div id="myradius"></div>
-          <div class="d-flex align-items-center justify-content-center">
-            <div id="mybrush">
-            </div>
-          </div>
+        <div id="mybrush" class="ratio" style="--bs-aspect-ratio: 50%"></div>
       </div>
     </div>
   </div>
@@ -91,10 +88,9 @@ const main = new Runtime().module(notebook, name => {
 // Redefine width and height to be a generator created by the resizer function
 // below to observe the size of the container.
 const library = new Library();
-const container = document.querySelector("#mypoint");
 
-main.redefine("width", resizer(container, "width"));
-//main.redefine("height", resizer(container, "height"));
+main.redefine("width", resizer(document.querySelector("#mypoint"), "width"));
+main.redefine("width", resizer(document.querySelector("#mybrush"), "width"));
 
 // Rather making separate generators for width and height, here’s a generalized
 // generator “factory” that watches the given dimension of the given element.
