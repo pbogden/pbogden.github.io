@@ -3,3 +3,4 @@
 * [CS 7290](http://pbogden.github.io/cs7290)
 * [Quakes](./quakes)
 * [Brainstorming](./bioscience)
+* [schedule](schedule.md)
