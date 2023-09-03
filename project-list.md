@@ -21,7 +21,7 @@
   Perhaps that was because recent summers were hottest on record. 
   They're interested in relating utility costs/usage to temperature and humidity (especially humidity).
 
-### NECS -- New England Cancer specialists
+### NECS -- New England Cancer Specialists
 
 * Stakeholder
   * Dr. Christian Thomas, New England Cancer Specialists, Scarborough, Maine & Philip Bogden (primary POC)
