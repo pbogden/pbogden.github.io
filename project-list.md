@@ -95,8 +95,6 @@
 
 ## MCA -- fall 2023
 
-## mca -- fall 2023
-
 * Stakeholders
   * Meghan Grabill, Research & Analytics Senior Manager, Maine Connectivity Authority (MCA)
   * Jake Inger, MSDS candidate, The Roux Institute, Northeastern University
