@@ -95,21 +95,25 @@
 
 ## MCA -- fall 2023
 
+## mca -- fall 2023
+
 * Stakeholders
   * Meghan Grabill, Research & Analytics Senior Manager, Maine Connectivity Authority (MCA)
   * Jake Inger, MSDS candidate, The Roux Institute, Northeastern University
+* Data
+  * Socieconomic data from the [American Community Survey (ACS)](https://www.census.gov/programs-surveys/acs)
+  at the U.S. Census. 
+  * Broadband data come from the [FCC broadband data collection](https://www.fcc.gov/BroadbandData).
 * Story
   * MCA is is a quasi-governmental agency charged with achieving the universal access of affordable
-  high-speed broadband in Maine.
+  high-speed broadband in Maine. 
   Allocation of funds need to be distributed in an equitable fashion, and the concept of "digital equity"
   has emerged as an important metric for allocating those funds. The goal of this project is to build on
   ongoing work to define digital equity around the nation and refine it for the state of Maine.
-  This project builds on previous work by DS 5010 students: https://ds5010.github.io/broadband-3
-  and some DS5110 students.
-* Data
-  * Socieconomic data from the American Community Survey (census.gov) and broadband data from the FCC (fcc.gov)
-  have been the focus of several data science classes at The Roux Institute. These culminated in a recent
-  synthesis that's nicely summarized in Jake Inger's [github repo](https://github.com/jinger12/final-maps-update).
+  This project builds on previous work by students in DS 5110 and DS 5010 at The Roux Institute,
+  for example: https://ds5010.github.io/broadband-3.
+  These culminated in a recent synthesis that's nicely summarized in Jake Inger's 
+  [github repo](https://github.com/jinger12/final-maps-update).
   The goal of this project is to use publicly available data to further investigate
   relationships between digital equity and the underlying socieconomic and technical realities in Maine.
-  Outcomes could include, for example, interactive maps that help convey the issues to a non-technical audience.
+  Potential outcomes include, for example, interactive maps that help convey the issues to a non-technical audience.
