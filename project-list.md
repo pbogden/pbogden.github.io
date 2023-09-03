@@ -35,8 +35,8 @@
   A new dataset permits evaluation of uncertainty and emotional well-being among cancer survivors.
   Preliminary evidence suggests that such prognosic uncertainty might confer benefits because it may give patients 
   a chance to hope for a more favorable outcome. 
-  * The New England Cancer Center in Maine started collecting data in late 2022 from adult cancer
-  survivors presenting for follow-up appointments to discuss surveillance test results.
+  * The New England Cancer Specialists in Maine started collecting data in late 2022 from adult cancer
+  survivors presenting for follow-up appointments to discuss surveillance-test results.
   The patients were asked to fill out a survey about their attitudes 
   regarding cancer recurrence, cancer-related distress, and coping strategies, along with sociodemographic 
   information, cancer stage, and cancer status. 
