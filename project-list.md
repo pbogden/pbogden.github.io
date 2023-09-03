@@ -93,7 +93,7 @@
   * http://www.ncbi.nlm.nih.gov/pmc/ar8cles/PMC9038109
   * https://github.com/kiharalab/OC_Finder
 
-## MCA -- fall 2023
+## MCA
 
 * Stakeholders
   * Meghan Grabill, Research & Analytics Senior Manager, Maine Connectivity Authority (MCA)
