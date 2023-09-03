@@ -1,7 +1,7 @@
 
 # Projects -- fall 2023
 
-# PMA -- Portland Museum of Art
+### PMA -- Portland Museum of Art
 
 * Stakeholder
   * Portland Museum of Art (PMA) leadership (See Alicia Jalbert and/or Dave Munger for contact information)
