@@ -2,12 +2,12 @@
 
 Crosswalk of learning goals -- KB & PB -- from KB's 11 modules (slides), 12th module: project presentations
 
-| module  | KB | PB | differences |
-| ---     | ---   | --- | --- |
+| module  | KB  | PB  | differences |
+| ---     | --- | --- | ---         |
 | 1 -- Intro | course expectations and policies | ✓ | |
-|         | tools and resources | ✓ | PB: git, command-line, colab | |
-|         | introduction to data science | ✓ | |
-|         | introduction to R | reproducibility | PB: github-classroom (no notebooks) |
+|            | tools and resources | ✓ | PB: git, command-line, colab |
+|            | introduction to data science | ✓ | |
+|            | introduction to R | reproducibility | PB: github-classroom (no notebooks) |
 | 2 -- Data Viz | common statistical graphics | ✓ | |
 | | how to look at data | ✓ | |
 | | key ingredients of useful plots | ✓ | |
@@ -19,9 +19,6 @@ Crosswalk of learning goals -- KB & PB -- from KB's 11 modules (slides), 12th mo
 | 4 -- EDA | What is EDA? | in PB modules 2 & 3 | not a separate module |
 | | Variation and covariation in data | '' | '' | 
 | | “Interesting” visualizations | '' | '' | 
-
-| module  | KB | PB | differences |
-| ---     | ---   | --- | --- |
 | 5 -- SQL | What is relational data? | ✓ | PB calls the module: 04-Relational |
 | | What is SQL? | ✓ | |
 | | Basics of relational algebra | ✓ | |
