@@ -7,7 +7,7 @@ Crosswalk of learning goals -- KB & PB -- from KB's 11 modules (slides), 12th mo
 | 1 -- Intro | course expectations and policies | ✓ | |
 |            | tools and resources | ✓ | PB: git, command-line, colab |
 |            | introduction to data science | ✓ | |
-|            | introduction to R | reproducibility | PB: github-classroom (no notebooks) |
+|            | introduction to R | Python (assumed) | PB: github-classroom (no notebooks) |
 | 2 -- Data Viz | common statistical graphics | ✓ | |
 | | how to look at data | ✓ | |
 | | key ingredients of useful plots | ✓ | |
