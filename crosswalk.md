@@ -19,6 +19,9 @@ Crosswalk of learning goals -- KB & PB -- from KB's 11 modules (slides), 12th mo
 | 4 -- EDA | What is EDA? | in PB modules 2 & 3 | not a separate module |
 | | Variation and covariation in data | '' | '' | 
 | | “Interesting” visualizations | '' | '' | 
+
+| module  | KB | PB | differences |
+| ---     | ---   | --- | --- |
 | 5 -- SQL | What is relational data? | ✓ | PB calls the module: 04-Relational |
 | | What is SQL? | ✓ | |
 | | Basics of relational algebra | ✓ | |
