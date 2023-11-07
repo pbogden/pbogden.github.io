@@ -51,12 +51,12 @@ Crosswalk of learning goals -- KB & PB -- from KB's 11 modules (slides), 12th mo
 
 | module  | KB | PB |
 | ---     | ---   | --- |
-| 10-Trees | N/A | beyond linear models |
+| 10-Trees | N/A | beyond linear models with Trees & SVMs |
 | | N/A | decision-tree basics, random forest, ensembles of weak learners |
-| | N/A | SVM with nonlinear kernels |
+| | N/A | SVM with nonlinear kernel (relationship to logistic regression) |
 | | N/A | intro to image processing (faces and digits) |
 | 12-Deep | N/A | optional module (there is no related homework) |
-| | N/A | comes before projects only when holidays and scheduling allows |
+| | N/A | comes before projects only when holidays and scheduling allow |
 | | N/A | intro to neural networks (perceptron, relationship to logistic regression) |
 | | N/A | function approximation, nonlinearity, stochastic GD (tensorflow playground) |
 
@@ -71,7 +71,7 @@ Crosswalk of learning goals -- KB & PB -- from KB's 11 modules (slides), 12th mo
   * Simple statistical plots (histograms, box plots, scatterplots)
   * Relationship to probability distributions (normalizing histograms)
   * Random number generators (central limit theorem demo)
-  * Seaborn & Matplotlib -- OO nature of standard libraries for DS
+  * Seaborn & Matplotlib -- OO nature of core DS packages
 * 3 -- Tidy 
   * Processing and managing tidy/tabular data -- faceting
   * Converting messy data to tidy table
