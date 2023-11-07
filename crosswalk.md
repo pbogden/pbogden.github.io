@@ -82,7 +82,7 @@ Crosswalk of learning goals -- KB & PB -- from KB's 11 modules (slides), 12th mo
   * SQLite -- loading and querying a database with SQLite3
 * 5 -- Regression
   * Intro to linear regression with statsmodels
-  * Statistical hypothesis testing (p-values, $R^2$, etc.) with statsmodels
+  * Statistical hypothesis testing (p-values, $R^2$ , etc.) with statsmodels
   * Data processing with 2-D arrays, processing pipelnes, the estimators API
   * Visualizing residuals, assessing model assumptions (e.g., Gaussian errors)
 * 6 -- Classification
