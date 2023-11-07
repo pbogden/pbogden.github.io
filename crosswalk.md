@@ -16,7 +16,7 @@ Crosswalk of learning goals -- KB & PB -- from KB's 11 modules (slides), 12th mo
 | | Structuring data for data science | ✓ | |
 | | Data wrangling and transformation | ✓ | |
 | | Summarizing data | ✓ | |
-| 4 -- EDA | What is EDA? | in PB's modules 2 & 3 | not a separate module |
+| 4 -- EDA | What is EDA? | in PB modules 2 & 3 | not a separate module |
 | | Variation and covariation in data | '' | '' | 
 | | “Interesting” visualizations | '' | '' | 
 | 5 -- SQL | What is relational data? | ✓ | PB calls the module: 04-Relational |
