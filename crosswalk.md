@@ -1,5 +1,14 @@
 # Crosswalk
 
+## Assessment language
+
+Outcome:
+
+* Students are able to access and import a dataset; 
+* they are able to clean, transform, and visualize the dataset appropriately for a well-described analytic goal.
+
+## KB & PB
+
 Crosswalk of learning goals -- KB & PB -- from KB's 11 modules (slides), 12th module: project presentations
 
 | module  | KB  | PB  | differences |
