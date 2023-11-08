@@ -1,3 +1,6 @@
+ds5110:
+	cp ../ds5110/charter/ds5110.md .
+
 crosswalk:
 	cp ../ds5110/charter/crosswalk.md .
 
