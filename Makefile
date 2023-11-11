@@ -1,3 +1,6 @@
+ds5010:
+	cp ../ds5110/charter/ds5010.md .
+
 ds5110:
 	cp ../ds5110/charter/ds5110.md .
 
