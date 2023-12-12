@@ -1,3 +1,6 @@
+cs5610:
+	cp ../webdev/syllabus.md cs5610.md
+
 ds5010:
 	cp ../ds5110/charter/ds5010.md .
 
