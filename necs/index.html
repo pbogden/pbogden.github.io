@@ -47,6 +47,7 @@
     <div class="col-sm-10">
       <div id="category"></div>
       <div id="chart"></div>
+      <div id="age"></div>
     </div>
     <div class="col-sm-1">
     </div>
@@ -63,6 +64,7 @@ import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/run
 //import define from "https://api.observablehq.com/d/cd9a4d4828dd2a6e@350.js?v=4";
 import define from "https://api.observablehq.com/d/cd9a4d4828dd2a6e.js?v=4";
 new Runtime().module(define, name => {
+  if (name === "viewof age") return new Inspector(document.querySelector("#age"));
   if (name === "viewof category") return new Inspector(document.querySelector("#category"));
   if (name === "chart") return new Inspector(document.querySelector("#chart"));
   return ["tidy"].includes(name);
