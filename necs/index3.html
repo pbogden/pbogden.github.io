@@ -43,8 +43,8 @@
     <div class="col-sm-1">
     </div>
     <div class="col-sm-10">
-      <div id="category" style="display: inline-block;"></div>
-      <div id="age" style="display: inline-block; float: right;"></div>
+      <div id="category"></div>
+      <div id="question"></div>
       <div id="chart"></div>
     </div>
     <div class="col-sm-1">
@@ -65,6 +65,7 @@ import define from "https://api.observablehq.com/@pbogden/necs-facet.js?v=4";
 new Runtime().module(define, name => {
   if (name === "viewof age") return new Inspector(document.querySelector("#age"));
   if (name === "viewof my_category") return new Inspector(document.querySelector("#category"));
+  if (name === "viewof question") return new Inspector(document.querySelector("#question"));
   if (name === "chart") return new Inspector(document.querySelector("#chart"));
   return ["tidy"].includes(name);
 });
