@@ -60,10 +60,11 @@
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
 //import define from "https://api.observablehq.com/d/cd9a4d4828dd2a6e@350.js?v=4";
-import define from "https://api.observablehq.com/@class/necs-tidy-ii.js?v=4";
+//import define from "https://api.observablehq.com/@class/necs-tidy-ii.js?v=4";
+import define from "https://api.observablehq.com/@pbogden/necs-facet.js?v=4";
 new Runtime().module(define, name => {
   if (name === "viewof age") return new Inspector(document.querySelector("#age"));
-  if (name === "viewof category") return new Inspector(document.querySelector("#category"));
+  if (name === "viewof my_category") return new Inspector(document.querySelector("#category"));
   if (name === "chart") return new Inspector(document.querySelector("#chart"));
   return ["tidy"].includes(name);
 });
