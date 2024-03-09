@@ -3,5 +3,4 @@
 * [CS 5610](http://pbogden.github.io/cs5610)
 * [CS 7290](http://pbogden.github.io/cs7290)
 * [Quakes](./quakes)
-* [NECS](./necs)
-* [Brainstorming](./bioscience)
+* [Uncertainty](./necs)
