@@ -15,16 +15,15 @@
 
 <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
   <div class="container">
-    <a class="navbar-brand" href="/necs">prototype</a>
+    <a class="navbar-brand" href="/uncertainty">Uncertainty Project</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
-          <a class="nav-link active" href="/necs">Before</a>
-        </li>
 <!--
+        <li class="nav-item">
+          <a class="nav-link active" href="/uncertainty">Before</a>
         <li class="nav-item">
           <a class="nav-link" href="/necs/index2.html">Latest</a>
         </li>
@@ -33,7 +32,7 @@
         </li>
 -->
       </ul>
-      <a class="navbar-brand" href="https://observablehq.com/d/cd9a4d4828dd2a6e">
+      <a class="navbar-brand" href="https://observablehq.com/@pbogden/redcap">
         <img class="navbar-brand" src="./observable.svg" height="40px">
       </a>
     </div>
@@ -45,8 +44,8 @@
     <div class="col-sm-1">
     </div>
     <div class="col-sm-10">
-      <div id="category" style="display: inline-block;"></div>
-      <div id="age" style="display: inline-block; float: right;"></div>
+      <div id="color" style="display: inline-block;"></div>
+      <div id="type" style="display: inline-block; float: right;"></div>
       <div id="chart"></div>
     </div>
     <div class="col-sm-1">
@@ -61,11 +60,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-//import define from "https://api.observablehq.com/d/cd9a4d4828dd2a6e@350.js?v=4";
-import define from "https://api.observablehq.com/d/cd9a4d4828dd2a6e.js?v=4";
+import define from "https://api.observablehq.com/@pbogden/redcap.js@370?v=4";
 new Runtime().module(define, name => {
-  if (name === "viewof age") return new Inspector(document.querySelector("#age"));
-  if (name === "viewof category") return new Inspector(document.querySelector("#category"));
+  if (name === "viewof type") return new Inspector(document.querySelector("#type"));
+  if (name === "viewof color") return new Inspector(document.querySelector("#color"));
   if (name === "chart") return new Inspector(document.querySelector("#chart"));
   return ["tidy"].includes(name);
 });
