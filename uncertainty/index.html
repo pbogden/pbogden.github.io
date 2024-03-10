@@ -60,7 +60,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/@pbogden/redcap.js@370?v=4";
+import define from "https://api.observablehq.com/@pbogden/redcap@370.js?v=4";
 new Runtime().module(define, name => {
   if (name === "viewof type") return new Inspector(document.querySelector("#type"));
   if (name === "viewof color") return new Inspector(document.querySelector("#color"));
