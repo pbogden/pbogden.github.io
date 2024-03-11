@@ -68,7 +68,7 @@ import define from "https://api.observablehq.com/@pbogden/redcap.js?v=4";
 new Runtime().module(define, name => {
   if (name === "viewof type") return new Inspector(document.querySelector("#type"));
   if (name === "viewof construct") return new Inspector(document.querySelector("#construct"));
-  if (name === "chart") return new Inspector(document.querySelector("#chart"));
+  if (name === "chart2") return new Inspector(document.querySelector("#chart"));
   return ["tidy"].includes(name);
 });
 </script>
