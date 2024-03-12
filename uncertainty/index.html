@@ -47,9 +47,22 @@
   <div class="row mt-2">
     <div class="col-sm-1">
     </div>
+    <div class="col-sm-5">
+      <div id="construct"></div>
+    </div>
+    <div class="col-sm-2">
+      <div id="fx"></div>
+    </div>
+    <div class="col-sm-3">
+      <div id="type"></div>
+    </div>
+    <div class="col-sm-1">
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-sm-1">
+    </div>
     <div class="col-sm-10">
-      <div id="construct" style="display: inline-block;"></div>
-      <div id="type" style="display: inline-block; float: right;"></div>
       <div id="chart"></div>
     </div>
     <div class="col-sm-1">
@@ -68,6 +81,7 @@ import define from "https://api.observablehq.com/@pbogden/redcap.js?v=4";
 new Runtime().module(define, name => {
   if (name === "viewof type") return new Inspector(document.querySelector("#type"));
   if (name === "viewof construct") return new Inspector(document.querySelector("#construct"));
+  if (name === "viewof fx") return new Inspector(document.querySelector("#fx"));
   if (name === "chart2") return new Inspector(document.querySelector("#chart"));
   return ["tidy"].includes(name);
 });
