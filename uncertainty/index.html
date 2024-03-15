@@ -50,13 +50,22 @@
     <div class="col-sm-5">
       <div id="construct"></div>
     </div>
-    <div class="col-sm-2">
-      <div id="fx"></div>
-    </div>
     <div class="col-sm-3">
       <div id="type"></div>
     </div>
     <div class="col-sm-1">
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-3">
+      <div id="fx"></div>
+    </div>
+    <div class="col-sm-6">
+      <div id="legend"></div>
+    </div>
+    <div id="legend" class="col-sm-1">
     </div>
   </div>
   <div class="row mt-2">
@@ -82,6 +91,7 @@ new Runtime().module(define, name => {
   if (name === "viewof type") return new Inspector(document.querySelector("#type"));
   if (name === "viewof construct") return new Inspector(document.querySelector("#construct"));
   if (name === "viewof fx") return new Inspector(document.querySelector("#fx"));
+  if (name === "legend") return new Inspector(document.querySelector("#legend"));
   if (name === "chart2") return new Inspector(document.querySelector("#chart"));
   return ["tidy"].includes(name);
 });
